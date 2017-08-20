@@ -27,6 +27,7 @@ if (isset($_POST["submit"]))
     <input type="e-mail" name="e-mail">
     <input name="submit" type="submit" value="Submit">
 </form>
+<a href="./login.php"> Log in </a>
 
 <?php
 ?>
