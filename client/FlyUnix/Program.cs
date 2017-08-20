@@ -9,7 +9,7 @@ namespace FlyUnix
     {
         static void Main(string[] args)
         {
-            string deviceId = ShellHandler.GetFirstMACAdrress();
+            string deviceId = ShellHandler.GetDeviceId();
             string deviceName = ShellHandler.GetDeviceName();
 
             deviceId = deviceId.Replace(Environment.NewLine, String.Empty);

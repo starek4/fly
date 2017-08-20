@@ -22,9 +22,9 @@ public static class ShellHandler
         return result;
     }
 
-    public static string GetFirstMACAdrress()
+    public static string GetDeviceId()
     {
-        return ExecuteBashCommand("ifconfig | grep -oP 'HWaddr \\K.*' | sed 's/://g' | awk 'NR==1{print $1}'");
+        return GetDeviceName();
     }
 
     public static string GetDeviceName()
