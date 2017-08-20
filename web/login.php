@@ -25,6 +25,3 @@ if (isset($_POST["submit"]))
     <input name="submit" type="submit" value="Submit">
 </form>
 <a href="./registration.php"> Register here </a>
-
-<?php
-?>
