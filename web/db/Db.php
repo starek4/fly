@@ -21,30 +21,57 @@ class Db{
         }
     }
 
-    private function ExecQuery($query){
-        // Send query to database
+    // Simply sends query to database (just to comply OO style)
+    private function ExecQuery($query)
+    {
         return $this->mysqli->query($query);        
     }
 
-    public function Select($query){
-        $select = $this->ExecQuery($query);
-        if ($select === false)
-        {
-            echo "Error when doing Select: " . $query;
-            exit;
-        }
-        for ($res = array(); $tmp = $select->fetch_array();) $res[] = $tmp;
-        return $res;
-    }
+    public function Query($query, $variable_types, $variables)
+    {
+        $stmt = $this->mysqli->prepare($query);
+        $stmt->bind_param($variable_types, ...$variables);
 
-    public function Query($query){
-        $update = $this->ExecQuery($query);
-
-        if($update === false)
+        $stmt->execute();
+        if($stmt === false)
         {
+            $stmt->close();
             echo "Error when ExecQuery: " . $query;
             exit;
         }
+        $stmt->close();
+    }
+
+    public function Select($query, $variable_types, $variables)
+    {
+        $stmt = $this->mysqli->prepare($query);
+        $stmt->bind_param($variable_types, ...$variables);
+        $stmt->execute();
+
+        if($stmt === false)
+        {
+            $stmt->close();
+            exit;
+        }
+
+        $meta = $stmt->result_metadata(); 
+        while ($field = $meta->fetch_field()) 
+        { 
+            $params[] = &$row[$field->name]; 
+        } 
+    
+        call_user_func_array(array($stmt, 'bind_result'), $params); 
+    
+        while ($stmt->fetch()) { 
+            foreach($row as $key => $val) 
+            { 
+                $c[$key] = $val; 
+            } 
+            $result[] = $c; 
+        } 
+
+        $stmt->close();
+        return $result;
     }
 }
 
