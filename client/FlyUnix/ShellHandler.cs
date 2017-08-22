@@ -1,11 +1,10 @@
-using System;
 using System.Diagnostics;
 public static class ShellHandler
 {
     private static string ExecuteBashCommand(this string cmd)
     {
         var escapedArgs = cmd.Replace("\"", "\\\"");
-        var process = new Process()
+        var process = new Process
         {
             StartInfo = new ProcessStartInfo
             {

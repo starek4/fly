@@ -2,6 +2,7 @@
 using System.Threading;
 using Shared.API;
 using CommandLine;
+using Shared.Logger;
 
 namespace FlyUnix
 {
