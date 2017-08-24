@@ -33,6 +33,7 @@ namespace FlyWindows
                 {
                     if(client.GetShutdownPending(deviceId, options.Login))
                     {
+                        Logger.Info("Received shutdown message.");
                         client.ClearShutdownPending(deviceId);
                         PowerShellHandler.ShutdownPc();
                         return;

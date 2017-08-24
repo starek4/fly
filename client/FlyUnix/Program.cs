@@ -33,6 +33,7 @@ namespace FlyUnix
                 {
                     if(client.GetShutdownPending(deviceId, options.Login))
                     {
+                        Logger.Info("Received shutdown message.");
                         client.ClearShutdownPending(deviceId);
                         ShellHandler.Shutdown();
                         return;
