@@ -5,14 +5,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Logger\**" />
+    <EmbeddedResource Remove="Logger\**" />
+    <None Remove="Logger\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
     <PackageReference Include="System.IO" Version="4.3.0" />
     <PackageReference Include="System.IO.FileSystem" Version="4.3.0" />
     <PackageReference Include="System.Net.Http" Version="4.3.2" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Logger\" />
   </ItemGroup>
 
 </Project>

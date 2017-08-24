@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Net.Http;
 using Newtonsoft.Json;
 using Shared.API.Models;
-using EventLogger;
+using Shared.Logging;
 
 namespace Shared.API
 {
@@ -11,7 +11,7 @@ namespace Shared.API
     {
         private string Post(string apiPath, Dictionary<string, string> body)
         {
-            var baseAddress = new Uri("http://fly.starekit.cz/api/" + apiPath);
+            var baseAddress = new Uri("https://fly.starekit.cz/api/" + apiPath);
             using (var httpClient = new HttpClient { BaseAddress = baseAddress })
             {
                 using (var content = new FormUrlEncodedContent(body))

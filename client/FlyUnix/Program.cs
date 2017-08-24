@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Threading;
 using Shared.API;
-using CommandLine;
-using EventLogger;
+using Shared.CLI;
 
 namespace FlyUnix
 {
@@ -17,21 +16,18 @@ namespace FlyUnix
             deviceName = deviceName.Replace(Environment.NewLine, String.Empty);
 
             Client client = new Client();
-            CommandLineOptions options = new CommandLineOptions();
-            if (Parser.Default.ParseArguments(args, options))
+            Arguments arguments = new Arguments();
+            if (Parser.Parse(args, ref arguments))
             {
-                if (!client.VerifyUserLogin(options.Login, options.Password))
-                {
-                    Logger.Fatal("Failed to log in - invalid credentials.");
+                if (!client.VerifyUserLogin(arguments.Login, arguments.Password))
                     return;
-                }
 
                 if (!client.VerifyDeviceId(deviceId))
-                    client.AddDevice(options.Login, deviceId, deviceName);
+                    client.AddDevice(arguments.Login, deviceId, deviceName);
 
                 while (true)
                 {
-                    if(client.GetShutdownPending(deviceId, options.Login))
+                    if(client.GetShutdownPending(deviceId, arguments.Login))
                     {
                         client.ClearShutdownPending(deviceId);
                         ShellHandler.Shutdown();
@@ -40,8 +36,6 @@ namespace FlyUnix
                     Thread.Sleep(30 * 1000);
                 }
             }
-            else
-                Logger.Fatal("Failed to log in - credentials were not specified.");
         }
     }
 }
