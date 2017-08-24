@@ -9,17 +9,17 @@ namespace Shared.CLI
         {
             if (args.Length != 4)
             {
-                Logger.Fatal("Bad arguments count.");
+                Logger.Fatal("Invalid arguments count.");
                 return false;
             }
 
             Dictionary<string, string> parsedArgs = new Dictionary<string, string>()
             {
-                {args[0], args[1]},
-                { args[2], args[3]}
+                { args[0], args[1] },
+                { args[2], args[3] }
             };
 
-            if (parsedArgs != null && parsedArgs.ContainsKey("-l") && parsedArgs.ContainsKey("-p"))
+            if (parsedArgs.ContainsKey("-l") && parsedArgs.ContainsKey("-p"))
             {
                 arguments.Login = parsedArgs["-l"];
                 arguments.Password = parsedArgs["-p"];

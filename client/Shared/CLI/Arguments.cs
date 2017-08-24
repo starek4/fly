@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Shared.CLI
+﻿namespace Shared.CLI
 {
     public class Arguments
     {

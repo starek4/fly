@@ -14,9 +14,9 @@ namespace FlyDroid.Activities
     [Activity(Label = "FlyDroid")]
     public class TableActivity : ListActivity
     {
-        private Client client = new Client();
+        private readonly Client client = new Client();
         private List<Device> devices = new List<Device>();
-        private List<string> devicesNames = new List<string>();
+        private readonly List<string> devicesNames = new List<string>();
 
         private string login;
 

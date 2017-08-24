@@ -10,7 +10,7 @@ namespace FlyDroid.Activities
     {
         private string deviceId;
         private Button shutdownButton;
-        private Client client = new Client();
+        private readonly Client client = new Client();
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);

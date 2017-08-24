@@ -8,7 +8,7 @@ namespace Shared.Logging
     public static class Logger
     {
         private static readonly string windowsPath = "fly.log";
-        private static readonly Dictionary<LogEntryType, string> typeMapper = new Dictionary<LogEntryType, string>
+        private static readonly Dictionary<LogEntryType, string> TypeMapper = new Dictionary<LogEntryType, string>
         {
             { LogEntryType.Fatal, "FATAL: "},
             { LogEntryType.Info, "INFO: "},
@@ -33,10 +33,10 @@ namespace Shared.Logging
         private static void Write(LogEntryType type, string msg)
         {
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
-                File.AppendAllText(windowsPath, DateTime.Now + typeMapper[type] + msg + Environment.NewLine);
+                File.AppendAllText(windowsPath, DateTime.Now + TypeMapper[type] + msg + Environment.NewLine);
             else if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
             {
-                new Syslog().Send(type,typeMapper, DateTime.Now + msg);
+                new Syslog().Send(type,TypeMapper, msg);
             }
         }
     }
