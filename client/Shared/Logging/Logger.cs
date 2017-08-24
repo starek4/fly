@@ -34,6 +34,10 @@ namespace Shared.Logging
         {
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
                 File.AppendAllText(windowsPath, DateTime.Now + TypeMapper[type] + msg + Environment.NewLine);
+            else if (RuntimeInformation.FrameworkDescription.Contains("Mono"))
+            {
+                // TODO: Phone logging...
+            }
             else if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
             {
                 new Syslog().Send(type,TypeMapper, msg);
