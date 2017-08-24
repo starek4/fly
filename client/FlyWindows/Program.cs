@@ -2,7 +2,7 @@
 using System;
 using System.Threading;
 using CommandLine;
-using Shared.Logger;
+using EventLogger;
 
 namespace FlyWindows
 {
@@ -33,7 +33,6 @@ namespace FlyWindows
                 {
                     if(client.GetShutdownPending(deviceId, options.Login))
                     {
-                        Logger.Info("Received shutdown message.");
                         client.ClearShutdownPending(deviceId);
                         PowerShellHandler.ShutdownPc();
                         return;

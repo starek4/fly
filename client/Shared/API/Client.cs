@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Net.Http;
 using Newtonsoft.Json;
 using Shared.API.Models;
+using EventLogger;
 
 namespace Shared.API
 {
@@ -30,17 +31,17 @@ namespace Shared.API
                 JsonConvert.DeserializeObject<VerifyUserLoginResponse>(httpContent);
             if (content.Status == "pass" && content.Valid == "yes")
             {
-                Logger.Logger.Info("Successfully logged in.");
+                Logger.Info("Successfully logged in.");
                 return true;
             }
             else if (content.Status == "pass" && content.Valid == "no")
             {
-                Logger.Logger.Error("Failed to log in - invalid credentials.");
+                Logger.Error("Failed to log in - invalid credentials.");
                 return false;
             }
             else
             {
-                Logger.Logger.Error("Failed to log in - bad request or server unreachable.");
+                Logger.Error("Failed to log in - bad request or server unreachable.");
                 return false;
             }
         }
@@ -53,7 +54,7 @@ namespace Shared.API
                 JsonConvert.DeserializeObject<ChangeShutdownPendingResponse>(httpContent);
             if (content.Status == "yes")
                 return true;
-            Logger.Logger.Error("Failed to clear pending shutdown.");
+            Logger.Error("Failed to clear pending shutdown.");
             return false;
         }
 
@@ -64,7 +65,7 @@ namespace Shared.API
                 JsonConvert.DeserializeObject<ChangeShutdownPendingResponse>(httpContent);
             if (content.Status == "yes")
                 return true;
-            Logger.Logger.Error("Failed to set pending shutdown.");
+            Logger.Error("Failed to set pending shutdown.");
             return false;
         }
 
@@ -74,7 +75,10 @@ namespace Shared.API
                 new Dictionary<string, string> { { "Device_id", deviceId }, { "Login", login } });
             GetShutdownPendingResponse content = JsonConvert.DeserializeObject<GetShutdownPendingResponse>(httpContent);
             if (content.Shutdown == "yes")
+            {
+                Logger.Info("Received shutdown message.");
                 return true;
+            }
             return false;
         }
 
@@ -85,10 +89,10 @@ namespace Shared.API
             AddDeviceResponse content = JsonConvert.DeserializeObject<AddDeviceResponse>(httpContent);
             if (content.Result == "yes")
             {
-                Logger.Logger.Info("New device successfully registered: " + name);
+                Logger.Info("New device successfully registered: " + name);
                 return true;
             }
-            Logger.Logger.Error("Failed to register device: " + name);
+            Logger.Error("Failed to register device: " + name);
             return false;
         }
 
@@ -99,17 +103,17 @@ namespace Shared.API
             VerifyDeviceIdResponse content = JsonConvert.DeserializeObject<VerifyDeviceIdResponse>(httpContent);
             if (content.Status == "pass" && content.IsRegistered == "yes")
             {
-                Logger.Logger.Info("Device already registered - skipping registration.");
+                Logger.Info("Device already registered - skipping registration.");
                 return true;
             }
             else if (content.Status == "pass" && content.IsRegistered == "no")
             {
-                Logger.Logger.Info("Device is not yet registered - proceed to register.");
+                Logger.Info("Device is not yet registered - proceed to register.");
                 return false;
             }
             else
             {
-                Logger.Logger.Info("Cannot verify device registration - bad request or server unreachable.");
+                Logger.Info("Cannot verify device registration - bad request or server unreachable.");
                 return false;
             }
         }

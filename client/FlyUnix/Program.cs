@@ -2,7 +2,7 @@
 using System.Threading;
 using Shared.API;
 using CommandLine;
-using Shared.Logger;
+using EventLogger;
 
 namespace FlyUnix
 {
@@ -33,7 +33,6 @@ namespace FlyUnix
                 {
                     if(client.GetShutdownPending(deviceId, options.Login))
                     {
-                        Logger.Info("Received shutdown message.");
                         client.ClearShutdownPending(deviceId);
                         ShellHandler.Shutdown();
                         return;
