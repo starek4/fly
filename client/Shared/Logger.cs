@@ -2,7 +2,7 @@
 using System.IO;
 using System.Runtime.InteropServices;
 
-namespace Shared.Logger
+namespace EventLogger
 {
     public static class Logger
     {
