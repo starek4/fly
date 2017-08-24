@@ -22,7 +22,7 @@ namespace FlyUnix
             {
                 if (!client.VerifyUserLogin(options.Login, options.Password))
                 {
-                    Logger.Fatal("Credentials were wrong.");
+                    Logger.Fatal("Failed to log in - invalid credentials.");
                     return;
                 }
 
@@ -33,6 +33,7 @@ namespace FlyUnix
                 {
                     if(client.GetShutdownPending(deviceId, options.Login))
                     {
+                        Logger.Info("Received shutdown message.");
                         client.ClearShutdownPending(deviceId);
                         ShellHandler.Shutdown();
                         return;
@@ -41,7 +42,7 @@ namespace FlyUnix
                 }
             }
             else
-                Logger.Fatal("Credentials were not specified.");
+                Logger.Fatal("Failed to log in - credentials were not specified.");
         }
     }
 }

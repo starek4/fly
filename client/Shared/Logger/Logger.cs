@@ -33,7 +33,7 @@ namespace Shared.Logger
 
         public static void Fatal(string msg)
         {
-            File.AppendAllText(path, "ERROR: " + msg + Environment.NewLine);
+            File.AppendAllText(path, "FATAL: " + msg + Environment.NewLine);
         }
     }
 }
