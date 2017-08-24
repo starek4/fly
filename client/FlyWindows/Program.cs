@@ -22,7 +22,7 @@ namespace FlyWindows
             {
                 if (!client.VerifyUserLogin(options.Login, options.Password))
                 {
-                    Logger.Fatal("Credentials were wrong.");
+                    Logger.Fatal("Failed to log in - invalid credentials.");
                     return;
                 }
 
@@ -41,7 +41,7 @@ namespace FlyWindows
                 }
             }
             else
-                Logger.Fatal("Credentials were not specified.");
+                Logger.Fatal("Failed to log in - credentials were not specified.");
         }
     }
 }
