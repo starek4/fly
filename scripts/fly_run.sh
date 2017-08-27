@@ -1,7 +1,5 @@
 #!/bin/sh
 # Script for executing fly client
-# Checks for entered credentials and prints help, if invalid credentials were provided
-# 	or if -h / any invalid parameters were specified
 
 PrintHelp()
 {
@@ -12,6 +10,7 @@ PrintHelp()
 # Reset in case getopts has been used previously in the shell.
 OPTIND=1
 
+# Check for passed arguments
 while getopts ":hl:p:" opt; do
   case $opt in
 	h)
@@ -37,7 +36,7 @@ while getopts ":hl:p:" opt; do
   esac
 done
 
-# If getopts isn't triggered
+# If getopts isn't triggered (invalid parameters)
 if [ $OPTIND -eq 1 ];
 then
 	if [ "$1" == "" ];
@@ -54,8 +53,20 @@ fi
 which dotnet 2> /dev/null 1> /dev/null
 if [ $? -ge 1 ]; 
 then
-	(>&2 echo "Dotnet isn't isntalled! Please install dotnet fisrt.")
-	exit
+	(>&2 echo "Dotnet wasn't found! Ensure you have dotnet installed and set it's executable into \$PATH.")
+	exit 1
+fi
+
+# Verify ip / ifconfig presence
+which ip 2> /dev/null 1> /dev/null
+if [ $? -ge 1 ]; 
+then
+	which ifconfig 2> /dev/null 1> /dev/null
+	if [ $? -ge 1 ]; 
+	then
+		(>&2 echo "Couldn't find 'ip' or 'ifconfig' utilities installed! Aborting.")
+		exit 1
+	fi
 fi
 
 # Launch client
