@@ -11,7 +11,7 @@
     }
     else
     {
-        echo "<table>";
+        echo "<table id=\"main_table\">";
             echo "<tr>";
                 echo "<th>Device name</th>";
                 echo "<th>Action</th>";
@@ -19,10 +19,17 @@
             foreach($deviceList as $device){
                 echo "<tr>";
                     echo "<td>".$device["Name"]."</td>";
-                    echo "<td><button onclick=\"SeteShutdownState()\" id=\"shutdown\" name=\"" . $device["Device_id"] . "\">Shutdown</button></td>";
-                echo "</tr>";
+                    echo "<td><button onclick=\"SetShutdownState(this.name)\" id=\"shutdown\" name=\"" . $device["Device_id"] . "\">Shutdown</button></td>";
+                    echo "<td><button onclick=\"DeleteDevice('".$_SESSION["login"]."', this.name);\" id=\"deleteDevice\" name=\"" . $device["Device_id"] . "\">Delete device</button></td>";
+                    echo "</tr>";
             }
         echo "</table>";
-        echo '<script src="./js/shutdownButoonHandler.js"></script>';
+
+        // JS sources
+        echo '<script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>';
+
+        // Button handlers
+        echo '<script src="./js/shutdownButtonHandler.js"></script>';
+        echo '<script src="./js/deleteDeviceButtonHandler.js"></script>';
     }
 ?>
