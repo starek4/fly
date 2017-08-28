@@ -13,7 +13,7 @@ class UserRepository{
     {
         $hashPasswd = password_hash($passwd, PASSWORD_DEFAULT);
         $query = "INSERT INTO `Users` (`Login`, `Pass`, `Email`) VALUES (?,?,?)";
-        $variables = array($login, $passwd, $email);
+        $variables = array($login, $hashPasswd, $email);
         $this->db->Query($query, "sss", $variables);
     }
     
