@@ -40,7 +40,7 @@ namespace Shared.Logging
             }
             else if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
             {
-                new Syslog().Send(type,TypeMapper, msg);
+                File.AppendAllText(windowsPath, DateTime.Now + TypeMapper[type] + msg + Environment.NewLine); // TEMP solution for linux logging
             }
         }
     }
