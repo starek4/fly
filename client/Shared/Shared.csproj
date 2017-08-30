@@ -17,4 +17,8 @@
     <PackageReference Include="System.Net.Http" Version="4.3.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="API\Exceptions\" />
+  </ItemGroup>
+
 </Project>

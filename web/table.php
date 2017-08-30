@@ -2,9 +2,26 @@
 
     require_once(__DIR__ . "/db/DeviceRepository.php");
 
-    $deviceRep = new DeviceRepository();
+    try
+    {
+        $deviceRep = new DeviceRepository();
+    }
+    catch (Exception $e)
+    {
+        echo $e->getMessage();
+        exit;
+    }
 
-    $deviceList = $deviceRep->GetDevicesByLogin($_SESSION["login"]);
+    try
+    {
+        $deviceList = $deviceRep->GetDevicesByLogin($_SESSION["login"]);
+    }
+    catch (Exception $e)
+    {
+        echo "Cannot get user's devices:" . $e->getMessage();
+        exit;
+    }
+    
     if($deviceList == NULL)
     {
         echo "No devices were found!";

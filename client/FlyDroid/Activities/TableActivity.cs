@@ -39,9 +39,9 @@ namespace FlyDroid.Activities
             StartActivity(intent);
         }
 
-        private void GetDevices()
+        private async void GetDevices()
         {
-            devices = new List<Device>(client.GetDevices(login));
+            devices = new List<Device>(await client.GetDevices(login));
             RunOnUiThread(() =>
             {
                 foreach (Device device in devices)

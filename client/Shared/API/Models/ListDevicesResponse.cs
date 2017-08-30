@@ -2,7 +2,7 @@
 
 namespace Shared.API.Models
 {
-    public class ListDevicesResponse
+    public class ListDevicesResponse : BaseResponse
     {
         public List<Device> Devices { get; set; }
     }

@@ -36,13 +36,13 @@ require_once(__DIR__ . "/Db.php");
         public function SetShutdownPending($device_id)
         {
             $query = "UPDATE `Devices` SET `Is_shutdown_pending` = ? WHERE `Device_id` = ?";
-            return $this->db->Query($query, "is", array(1, $device_id));
+            $this->db->Query($query, "is", array(1, $device_id));
         }
 
         public function ClearShutdownPending($device_id)
         {
             $query = "UPDATE `Devices` SET `Is_shutdown_pending` = ? WHERE `Device_id` = ?";
-            return $this->db->Query($query, "is", array(0, $device_id));
+            $this->db->Query($query, "is", array(0, $device_id));
         }
 
         public function VerifyDeviceId($device_id)

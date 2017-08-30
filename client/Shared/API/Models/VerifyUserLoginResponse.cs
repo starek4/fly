@@ -1,8 +1,7 @@
 ﻿namespace Shared.API.Models
 {
-    public class VerifyUserLoginResponse
+    public class VerifyUserLoginResponse : BaseResponse
     {
-        public string Status { get; set; }
-        public string Valid { get; set; }
+        public bool Valid { get; set; }
     }
 }

@@ -3,15 +3,32 @@ require_once(__DIR__ . "/db/UserRepository.php");
 
 if (isset($_POST["submit"]))
 {
-    $userRepository = new UserRepository();
+    try
+    {
+        $userRepository = new UserRepository();
+        $check = $userRepository->CheckIfUserExists($_POST["login"]);
+    }
+    catch (Exception $e)
+    {
+        echo "Cannot verify user" . $e->getMessage();
+        exit;
+    }
 
-    $variable = $userRepository->CheckIfUserExists($_POST["login"]);;
-
-    if($userRepository->CheckIfUserExists($_POST["login"]) == true){
+    if($check)
+    {
         echo "<p style=\"color:red;\">The user already exists! </p>";
     }
-    else{
-        $userRepository->AddUser($_POST["login"], $_POST["password"], $_POST["e-mail"]);
+    else
+    {
+        try
+        {
+            $userRepository->AddUser($_POST["login"], $_POST["password"], $_POST["e-mail"]);
+        }
+        catch (Exception $e)
+        {
+            echo "Cannot add user: " . $e->getMessage();
+            exit;
+        }
         echo "<p style=\"color:green;\">Registration was successful!</p>";
     }
 }

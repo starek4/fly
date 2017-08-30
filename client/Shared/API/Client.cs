@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Net.Http;
+using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Shared.API.Models;
 using Shared.Logging;
@@ -9,32 +10,42 @@ namespace Shared.API
 {
     public class Client
     {
-        private string Post(string apiPath, Dictionary<string, string> body)
+        private async Task<string> Post(string apiPath, Dictionary<string, string> body)
         {
             var baseAddress = new Uri("https://fly.starekit.cz/api/" + apiPath);
             using (var httpClient = new HttpClient { BaseAddress = baseAddress })
             {
                 using (var content = new FormUrlEncodedContent(body))
                 {
-                    using (var response = httpClient.PostAsync(baseAddress, content).Result)
+                    try
                     {
-                        return response.Content.ReadAsStringAsync().Result;
+                        using (var response = await httpClient.PostAsync(baseAddress, content))
+                        {
+                            return await response.Content.ReadAsStringAsync();
+                        }
+                    }
+                    catch (HttpRequestException exception)
+                    {
+                        Logger.Error("Error when connecting server: " + exception);
+                        return String.Empty;
                     }
                 }
             }
         }
 
-        public bool VerifyUserLogin(string login, string password)
+        public async Task<bool> VerifyUserLogin(string login, string password)
         {
-            var httpContent = Post("verifyUserLogin.php", new Dictionary<string, string> { { "Login", login }, { "Password", password } });
-            VerifyUserLoginResponse content =
-                JsonConvert.DeserializeObject<VerifyUserLoginResponse>(httpContent);
-            if (content.Status == "pass" && content.Valid == "yes")
+            var httpContent = await Post("verifyUserLogin.php", new Dictionary<string, string> { { "Login", login }, { "Password", password } });
+            if (httpContent == String.Empty)
+                throw new HttpRequestException("Error when connecting server.");
+
+            VerifyUserLoginResponse response = JsonConvert.DeserializeObject<VerifyUserLoginResponse>(httpContent);
+            if (response.Success && response.Valid)
             {
                 Logger.Info("Successfully logged in.");
                 return true;
             }
-            else if (content.Status == "pass" && content.Valid == "no")
+            else if (response.Success && response.Valid == false)
             {
                 Logger.Error("Failed to log in - invalid credentials.");
                 return false;
@@ -42,88 +53,106 @@ namespace Shared.API
             else
             {
                 Logger.Error("Failed to log in - bad request or server unreachable.");
-                return false;
+                throw new HttpRequestException("Database error");
             }
         }
 
-        public bool ClearShutdownPending(string deviceId)
+        public async Task<bool> ClearShutdownPending(string deviceId)
         {
-            var httpContent = Post("clearShutdownPending.php",
-                new Dictionary<string, string> { { "Device_id", deviceId } });
-            ChangeShutdownPendingResponse content =
-                JsonConvert.DeserializeObject<ChangeShutdownPendingResponse>(httpContent);
-            if (content.Status == "yes")
+            var httpContent = await Post("clearShutdownPending.php", new Dictionary<string, string> { { "Device_id", deviceId } });
+            if (httpContent == String.Empty)
+                throw new HttpRequestException("Error when connecting server.");
+            BaseResponse response = JsonConvert.DeserializeObject<BaseResponse>(httpContent);
+            if (response.Success)
                 return true;
             Logger.Error("Failed to clear pending shutdown.");
-            return false;
+            Logger.Error("API error: " + response.Error);
+            throw new HttpRequestException("Database error");
         }
 
-        public bool SetShutdownPending(string deviceId)
+        public async Task<bool> SetShutdownPending(string deviceId)
         {
-            var httpContent = Post("setShutdownPending.php", new Dictionary<string, string> { { "Device_id", deviceId } });
-            ChangeShutdownPendingResponse content =
-                JsonConvert.DeserializeObject<ChangeShutdownPendingResponse>(httpContent);
-            if (content.Status == "yes")
+            var httpContent = await Post("setShutdownPending.php", new Dictionary<string, string> { { "Device_id", deviceId } });
+            if (httpContent == String.Empty)
+                throw new HttpRequestException("Error when connecting server.");
+            BaseResponse response = JsonConvert.DeserializeObject<BaseResponse>(httpContent);
+            if (response.Success)
                 return true;
             Logger.Error("Failed to set pending shutdown.");
-            return false;
+            Logger.Error("API error: " + response.Error);
+            throw new HttpRequestException("Database error");
         }
 
-        public bool GetShutdownPending(string deviceId, string login)
+        public async Task<bool> GetShutdownPending(string deviceId, string login)
         {
-            var httpContent = Post("getShutdownPending.php",
-                new Dictionary<string, string> { { "Device_id", deviceId }, { "Login", login } });
-            GetShutdownPendingResponse content = JsonConvert.DeserializeObject<GetShutdownPendingResponse>(httpContent);
-            if (content.Shutdown == "yes")
+            var httpContent = await Post("getShutdownPending.php", new Dictionary<string, string> { { "Device_id", deviceId }, { "Login", login } });
+            if (httpContent == String.Empty)
+                throw new HttpRequestException("Error when connecting server.");
+            GetShutdownPendingResponse response = JsonConvert.DeserializeObject<GetShutdownPendingResponse>(httpContent);
+            if (response.Success)
             {
-                Logger.Info("Received shutdown message.");
-                return true;
+                if (response.Shutdown)
+                {
+                    Logger.Info("Received shutdown message.");
+                    return true;
+                }
+                return false;
             }
-            return false;
+            Logger.Error("Failed to get pending shutdown.");
+            Logger.Error("API error: " + response.Error);
+            throw new HttpRequestException("Database error");
         }
 
-        public bool AddDevice(string login, string deviceId, string name)
+        public async Task<bool> AddDevice(string login, string deviceId, string name)
         {
-            var httpContent = Post("addDevice.php",
-                new Dictionary<string, string> { { "Login", login }, { "Device_id", deviceId }, { "Name", name } });
-            AddDeviceResponse content = JsonConvert.DeserializeObject<AddDeviceResponse>(httpContent);
-            if (content.Result == "yes")
+            var httpContent = await Post("addDevice.php", new Dictionary<string, string> { { "Login", login }, { "Device_id", deviceId }, { "Name", name } });
+            if (httpContent == String.Empty)
+                throw new HttpRequestException("Error when connecting server.");
+            BaseResponse response = JsonConvert.DeserializeObject<BaseResponse>(httpContent);
+            if (response.Success)
             {
                 Logger.Info("New device successfully registered: " + name);
                 return true;
             }
             Logger.Error("Failed to register device: " + name);
-            return false;
+            Logger.Error("API error: " + response.Error);
+            throw new HttpRequestException("Database error");
         }
 
-        public bool VerifyDeviceId(string deviceId)
+        public async Task<bool> VerifyDeviceId(string deviceId)
         {
-            var httpContent = Post("verifyDeviceId.php",
-                new Dictionary<string, string> { { "Device_id", deviceId } });
-            VerifyDeviceIdResponse content = JsonConvert.DeserializeObject<VerifyDeviceIdResponse>(httpContent);
-            if (content.Status == "pass" && content.IsRegistered == "yes")
+            var httpContent = await Post("verifyDeviceId.php", new Dictionary<string, string> { { "Device_id", deviceId } });
+            if (httpContent == String.Empty)
+                throw new HttpRequestException("Error when connecting server.");
+            VerifyDeviceIdResponse response = JsonConvert.DeserializeObject<VerifyDeviceIdResponse>(httpContent);
+            if (response.Success && response.IsRegistered)
             {
                 Logger.Info("Device already registered - skipping registration.");
                 return true;
             }
-            else if (content.Status == "pass" && content.IsRegistered == "no")
+            if (response.Success && response.IsRegistered == false)
             {
                 Logger.Info("Device is not yet registered - proceed to register.");
                 return false;
             }
-            else
-            {
-                Logger.Info("Cannot verify device registration - bad request or server unreachable.");
-                return false;
-            }
+            Logger.Info("Cannot verify device registration - bad request or server unreachable.");
+            Logger.Error("API error: " + response.Error);
+            throw new HttpRequestException("Database error");
         }
 
-        public IEnumerable<Device> GetDevices(string login)
+        public async Task<IEnumerable<Device>> GetDevices(string login)
         {
-            var httpContent = Post("getDevices.php",
-                new Dictionary<string, string> { { "Login", login } });
-            ListDevicesResponse content = JsonConvert.DeserializeObject<ListDevicesResponse>(httpContent);
-            return content.Devices;
+            var httpContent = await Post("getDevices.php", new Dictionary<string, string> { { "Login", login } });
+            if (httpContent == String.Empty)
+                throw new HttpRequestException("Error when connecting server.");
+            ListDevicesResponse response = JsonConvert.DeserializeObject<ListDevicesResponse>(httpContent);
+            if (response.Success)
+            {
+                return response.Devices;
+            }
+            Logger.Error("Failed to get devices");
+            Logger.Error("API error: " + response.Error);
+            throw new HttpRequestException("Database error");
         }
     }
 }

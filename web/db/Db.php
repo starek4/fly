@@ -7,56 +7,54 @@ class Db
 
     function __construct()
     {
-        $str = file_get_contents(__DIR__ . '/config.json');
-        $credentials = json_decode($str, true);
+        $configFileContent = file_get_contents(__DIR__ . '/config.json');
+        $credentials = json_decode($configFileContent, true);
         $this->mysqli = new mysqli('127.0.0.1', $credentials["dbUser"], $credentials["dbPass"], $credentials["dbName"]);
         if ($this->mysqli->connect_errno)
         {
-            echo "Failed to connect to the database.";
-            echo "Errno: " . $this->mysqli->connect_errno . "\n";
-            echo "Error: " . $this->mysqli->connect_error . "\n";
-            exit;
+            throw new Exception("Cannot connect to DB.");
         }
+            
         // Set UTF-8 encoding
         $this->mysqli->query("SET NAMES 'utf8'");
     }
 
     public function Query($query, $variable_types, $variables)
     {
-        $stmt = $this->mysqli->prepare($query);
-        $stmt->bind_param($variable_types, ...$variables);
+        $statement = $this->mysqli->prepare($query);
+        $statement->bind_param($variable_types, ...$variables);
 
-        $stmt->execute();
-        if($stmt === false)
+        $statement->execute();
+        if($statement === false)
         {
-            $stmt->close();
-            echo "Error when ExecQuery: " . $query;
-            exit;
+            $statement->close();
+            throw new Exception("Cannot exec query: " . $query);
         }
-        $stmt->close();
+        $statement->close();
     }
 
     public function Select($query, $variable_types, $variables)
     {
-        $stmt = $this->mysqli->prepare($query);
-        $stmt->bind_param($variable_types, ...$variables);
-        $stmt->execute();
+        $statement = $this->mysqli->prepare($query);
+        $statement->bind_param($variable_types, ...$variables);
+        $statement->execute();
 
-        if($stmt === false)
+        if($statement === false)
         {
-            $stmt->close();
-            exit;
+            $statement->close();
+            throw new Exception("Cannot exec query: " . $query);
         }
 
-        $meta = $stmt->result_metadata(); 
+        $meta = $statement->result_metadata(); 
         while ($field = $meta->fetch_field()) 
         { 
             $params[] = &$row[$field->name]; 
         } 
     
-        call_user_func_array(array($stmt, 'bind_result'), $params); 
+        call_user_func_array(array($statement, 'bind_result'), $params); 
     
-        while ($stmt->fetch()) { 
+        while ($statement->fetch())
+        {
             foreach($row as $key => $val) 
             { 
                 $c[$key] = $val; 
@@ -64,7 +62,7 @@ class Db
             $result[] = $c; 
         } 
 
-        $stmt->close();
+        $statement->close();
         return $result;
     }
 }

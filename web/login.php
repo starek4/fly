@@ -5,9 +5,27 @@ require_once(__DIR__ . "/db/UserRepository.php");
 if (isset($_POST["submit"]))
 {
     $session = new Session();
-    $userRepository = new UserRepository();
+    try
+    {
+        $userRepository = new UserRepository();
+    }
+    catch (Exception $e)
+    {
+        echo $e->getMessage();
+        exit;
+    }
 
-    if ($userRepository->CheckPassword($_POST["login"], $_POST["password"]))
+    try
+    {
+        $check = $userRepository->CheckPassword($_POST["login"], $_POST["password"]);
+    }
+    catch (Exception $e)
+    {
+        echo "Cannot verify user" . $e->getMessage();
+        exit;
+    }
+    
+    if ($check)
     {
         $session->LoginUser($_POST["login"]);
         header("Location: index.php");

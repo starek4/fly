@@ -1,17 +1,34 @@
 <?php
     $response = array();
 
+    if (!isset($_POST) || !isset($_POST["Login"]) || !isset($_POST["Device_id"]) || !isset($_POST["Name"]))
+    {
+        $response["Success"] = false;
+        $response["Error"] = "Bad parameters.";
+        echo json_encode($response, JSON_PRETTY_PRINT);
+        exit;
+    }
+
     $login = $_POST["Login"];
     $device_id = $_POST["Device_id"];
     $device_name = $_POST["Name"];
 
     require_once(__DIR__ . "/../db/DeviceRepository.php");
 
-    $deviceRepo = new DeviceRepository();
+    try
+    {
+        $deviceRepo = new DeviceRepository();
+        $result = $deviceRepo->AddDevice($login, $device_id, $device_name);
+    }
+    catch (Exception $e)
+    {
+        $response["Success"] = false;
+        $response["Error"] = $e->getMessage();
+        echo json_encode($response, JSON_PRETTY_PRINT);
+        exit;
+    }
 
-    $result = $deviceRepo->AddDevice($login, $device_id, $device_name);
-    if($result === false)    $response["Result"] = "no";
-    else    $response["Result"] = "yes";
-
+    $response["Success"] = true;
+    $response["Error"] = "";
     echo json_encode($response, JSON_PRETTY_PRINT);
 ?>

@@ -19,17 +19,19 @@ namespace FlyUnix
             Arguments arguments = new Arguments();
             if (Parser.Parse(args, ref arguments))
             {
-                if (!client.VerifyUserLogin(arguments.Login, arguments.Password))
+                if (!client.VerifyUserLogin(arguments.Login, arguments.Password).Result)
                     return;
 
-                if (!client.VerifyDeviceId(deviceId))
-                    client.AddDevice(arguments.Login, deviceId, deviceName);
+                if (!client.VerifyDeviceId(deviceId).Result)
+                {
+                    var success = client.AddDevice(arguments.Login, deviceId, deviceName).Result;
+                }
 
                 while (true)
                 {
-                    if(client.GetShutdownPending(deviceId, arguments.Login))
+                    if(client.GetShutdownPending(deviceId, arguments.Login).Result)
                     {
-                        client.ClearShutdownPending(deviceId);
+                        var success = client.ClearShutdownPending(deviceId).Result;
                         ShellHandler.Shutdown();
                         return;
                     }

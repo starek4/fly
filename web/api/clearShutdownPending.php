@@ -4,18 +4,29 @@
 
     if (!isset($_POST) || !isset($_POST["Device_id"]))
     {
-        $response["Status"] = "error";
+        $response["Success"] = false;
+        $response["Error"] = "Bad parameters.";
+        echo json_encode($response, JSON_PRETTY_PRINT);
+        exit;
     }
-    else
+
+    $device_id = $_POST["Device_id"];
+    require_once(__DIR__ . "/../db/DeviceRepository.php");
+
+    try
     {
-        $device_id = $_POST["Device_id"];
-    
-        require_once(__DIR__ . "/../db/DeviceRepository.php");
         $deviceRepo = new DeviceRepository();
-    
         $result = $deviceRepo->ClearShutdownPending($device_id);
-        if ($result === false) $response["Status"] = "no";
-        else $response["Status"] = "yes";
     }
+    catch (Exception $e)
+    {
+        $response["Success"] = false;
+        $response["Error"] = $e->getMessage();
+        echo json_encode($response, JSON_PRETTY_PRINT);
+        exit;
+    }
+
+    $response["Success"] = true;
+    $response["Error"] = "";
     echo json_encode($response, JSON_PRETTY_PRINT);
 ?>

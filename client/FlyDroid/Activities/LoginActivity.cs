@@ -36,9 +36,9 @@ namespace FlyDroid.Activities
             };
         }
 
-        private void VerifyUserLogin()
+        private async void VerifyUserLogin()
         {
-            if (!client.VerifyUserLogin(login.Text, password.Text))
+            if (! await client.VerifyUserLogin(login.Text, password.Text))
             {
                 RunOnUiThread(() =>
                 {

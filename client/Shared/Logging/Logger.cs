@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Runtime.InteropServices;
+using System.Security;
 
 namespace Shared.Logging
 {
@@ -33,14 +34,47 @@ namespace Shared.Logging
         private static void Write(LogEntryType type, string msg)
         {
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
-                File.AppendAllText(windowsPath, DateTime.Now + TypeMapper[type] + msg + Environment.NewLine);
+            {
+                try
+                {
+                    File.AppendAllText(windowsPath, DateTime.Now + TypeMapper[type] + msg + Environment.NewLine);
+                }
+                catch (Exception exception)
+                {
+                    if (exception is PathTooLongException
+                        || exception is DirectoryNotFoundException
+                        || exception is IOException
+                        || exception is UnauthorizedAccessException
+                        || exception is NotSupportedException
+                        || exception is SecurityException)
+                    {
+                        // TODO: Handle this exception in GUI and exit GUI application...
+                    }
+                }
+            }
             else if (RuntimeInformation.FrameworkDescription.Contains("Mono"))
             {
                 // TODO: Phone logging...
             }
             else if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
             {
-                File.AppendAllText(windowsPath, DateTime.Now + TypeMapper[type] + msg + Environment.NewLine); // TEMP solution for linux logging
+                // TEMP solution for linux logging
+                try
+                {
+                    File.AppendAllText(windowsPath, DateTime.Now + TypeMapper[type] + msg + Environment.NewLine);
+                }
+                catch (Exception exception)
+                {
+                    if (exception is PathTooLongException
+                        || exception is DirectoryNotFoundException
+                        || exception is IOException
+                        || exception is UnauthorizedAccessException
+                        || exception is NotSupportedException
+                        || exception is SecurityException)
+                    {
+                        // TODO: Handle this exception in some way and exit application...
+                    }
+                }
             }
         }
     }

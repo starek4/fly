@@ -1,8 +1,7 @@
-﻿namespace Shared.API.Models
+namespace Shared.API.Models
 {
-    public class GetShutdownPendingResponse
+    public class GetShutdownPendingResponse : BaseResponse
     {
-        public string Status { get; set; }
-        public string Shutdown { get; set; }
+        public bool Shutdown { get; set; }
     }
 }

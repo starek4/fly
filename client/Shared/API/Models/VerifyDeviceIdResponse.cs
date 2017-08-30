@@ -1,8 +1,7 @@
 ﻿namespace Shared.API.Models
 {
-    public class VerifyDeviceIdResponse
+    public class VerifyDeviceIdResponse : BaseResponse
     {
-        public string Status { get; set; }
-        public string IsRegistered { get; set; }
+        public bool IsRegistered { get; set; }
     }
 }
