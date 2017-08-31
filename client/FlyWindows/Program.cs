@@ -2,7 +2,6 @@
 using System;
 using System.Threading;
 using Shared.CLI;
-using Shared.Logging;
 
 namespace FlyWindows
 {
@@ -20,21 +19,25 @@ namespace FlyWindows
             Arguments arguments = new Arguments();
             if (Parser.Parse(args, ref arguments))
             {
-                if (!client.VerifyUserLogin(arguments.Login, arguments.Password).Result)
+                bool isUserVerified = RequestHandler.DoRequest(client.VerifyUserLogin(arguments.Login, arguments.Password));
+                if (!isUserVerified)
                 {
                     return;
                 }
 
-                if (!client.VerifyDeviceId(deviceId).Result)
+                bool isDeviceVerified = RequestHandler.DoRequest(client.VerifyDeviceId(deviceId));
+
+                if (!isDeviceVerified)
                 {
-                    var success = client.AddDevice(arguments.Login, deviceId, deviceName).Result;
+                    RequestHandler.DoRequest(() => client.AddDevice(arguments.Login, deviceId, deviceName));
                 }
 
                 while (true)
                 {
-                    if(client.GetShutdownPending(deviceId, arguments.Login).Result)
+                    bool isShutdownPending = RequestHandler.DoRequest(client.GetShutdownPending(deviceId, arguments.Login));
+                    if(isShutdownPending)
                     {
-                        var success = client.ClearShutdownPending(deviceId).Result;
+                        RequestHandler.DoRequest(() => client.ClearShutdownPending(deviceId));
                         PowerShellHandler.ShutdownPc();
                         return;
                     }
