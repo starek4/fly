@@ -6,7 +6,10 @@ namespace FlyWindows
 {
     public static class PowerShellHandler
     {
-        private static readonly string GetUUIDString = "get-wmiobject Win32_ComputerSystemProduct  | Select-Object -ExpandProperty UUID";
+        private static readonly string GetUUIDStringCommand = "get-wmiobject Win32_ComputerSystemProduct  | Select-Object -ExpandProperty UUID";
+        private static readonly string ShutdownCommand = "shutdown /s";
+        private static readonly string GetDeviceNameCommand = "$env:computername";
+
         private static string ExecutePowerShellScript(string script)
         {
             Runspace runspace = RunspaceFactory.CreateRunspace();
@@ -27,17 +30,17 @@ namespace FlyWindows
 
         public static string GetUUID()
         {
-            return ExecutePowerShellScript(GetUUIDString);
+            return ExecutePowerShellScript(GetUUIDStringCommand);
         }
 
         public static void ShutdownPc()
         {
-            ExecutePowerShellScript("shutdown /s");
+            ExecutePowerShellScript(ShutdownCommand);
         }
 
         public static string GetDeviceName()
         {
-            return ExecutePowerShellScript("$env:computername");
+            return ExecutePowerShellScript(GetDeviceNameCommand);
         }
     }
 }
