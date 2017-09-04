@@ -8,7 +8,7 @@ namespace Shared.Logging
 {
     public class LinuxLogger : BaseLogger, ILogger
     {
-        private const string path = "~/.fly/fly.log";
+        private const string Path = "~/.fly/fly.log";
 
         public void Error(string msg)
         {
@@ -34,7 +34,7 @@ namespace Shared.Logging
         {
             try
             {
-                File.AppendAllText(path, FormatLog(DateTime.Now.ToString(CultureInfo.InvariantCulture), type, msg, Environment.NewLine));
+                File.AppendAllText(Path, FormatLog(DateTime.Now.ToString(CultureInfo.InvariantCulture), type, msg, Environment.NewLine));
             }
             catch (Exception exception)
             {

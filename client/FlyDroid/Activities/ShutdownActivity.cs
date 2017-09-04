@@ -21,7 +21,7 @@ namespace FlyDroid.Activities
             shutdownButton.Click += delegate
             {
                 shutdownButton.Enabled = false;
-                client.SetShutdownPending(deviceId);
+                client.SetShutdownPending(deviceId).Wait();
                 Finish();
             };
         }

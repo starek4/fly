@@ -1,14 +1,13 @@
 using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Shared.CLI;
+using Xunit;
 
-namespace UnitTests
+namespace SharedUnitTests
 {
-    [TestClass]
-    public class CliParser
+    public class CliParserTests
     {
         // Right parameters: client -l login -p password
-        [TestMethod]
+        [Fact]
         public void InvalidOrderArguments()
         {
             string[] arguments = 
@@ -20,10 +19,10 @@ namespace UnitTests
             };
             Arguments parsedArguments = new Arguments();
             bool result = Parser.Parse(arguments, ref parsedArguments);
-            Assert.IsFalse(result);
+            Assert.False(result);
         }
 
-        [TestMethod]
+        [Fact]
         public void InvalidCountArguments()
         {
             string[] arguments =
@@ -36,19 +35,19 @@ namespace UnitTests
             };
             Arguments parsedArguments = new Arguments();
             bool result = Parser.Parse(arguments, ref parsedArguments);
-            Assert.IsFalse(result);
+            Assert.False(result);
         }
 
-        [TestMethod]
+        [Fact]
         public void EmptyArguments()
         {
             string[] arguments = { };
             Arguments parsedArguments = new Arguments();
             bool result = Parser.Parse(arguments, ref parsedArguments);
-            Assert.IsFalse(result);
+            Assert.False(result);
         }
 
-        [TestMethod]
+        [Fact]
         public void InvaliArgumentsName()
         {
             string[] arguments =
@@ -60,10 +59,10 @@ namespace UnitTests
             };
             Arguments parsedArguments = new Arguments();
             bool result = Parser.Parse(arguments, ref parsedArguments);
-            Assert.IsFalse(result);
+            Assert.False(result);
         }
 
-        [TestMethod]
+        [Fact]
         public void ValidArguments()
         {
             string[] arguments =
@@ -75,10 +74,10 @@ namespace UnitTests
             };
             Arguments parsedArguments = new Arguments();
             bool result = Parser.Parse(arguments, ref parsedArguments);
-            Assert.IsTrue(result);
+            Assert.True(result);
         }
 
-        [TestMethod]
+        [Fact]
         public void ValidArgumentsDifferentOrder()
         {
             string[] arguments =
@@ -90,10 +89,10 @@ namespace UnitTests
             };
             Arguments parsedArguments = new Arguments();
             bool result = Parser.Parse(arguments, ref parsedArguments);
-            Assert.IsTrue(result);
+            Assert.True(result);
         }
 
-        [TestMethod]
+        [Fact]
         public void ValidStoringCredentials()
         {
             string[] arguments =
@@ -108,11 +107,11 @@ namespace UnitTests
             if (result)
             {
                 if (parsedArguments.Login != String.Empty && parsedArguments.Password != String.Empty)
-                    Assert.IsTrue(true);
+                    Assert.True(true);
             }
             else
             {
-                Assert.Fail("Wrong parsing arguments...");
+                Assert.True(false, "Wrong parsing arguments...");
             }
         }
     }

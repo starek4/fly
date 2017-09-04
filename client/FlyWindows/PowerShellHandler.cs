@@ -28,7 +28,7 @@ namespace FlyWindows
             return stringBuilder.ToString();
         }
 
-        public static string GetUUID()
+        public static string GetId()
         {
             return ExecutePowerShellScript(GetUUIDStringCommand);
         }

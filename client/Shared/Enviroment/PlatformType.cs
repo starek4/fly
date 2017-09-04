@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Shared.Enviroment
+﻿namespace Shared.Enviroment
 {
     public enum PlatformType
     {

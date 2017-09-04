@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlyUnix", "FlyUnix\FlyUnix.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared", "Shared\Shared.csproj", "{56482B43-92A5-450A-AC76-28823778F6DC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedUnitTests", "UnitTests\SharedUnitTests.csproj", "{3E0BA2BF-FBB9-4990-9116-CA0470F444C0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedUnitTests", "SharedUnitTests\SharedUnitTests.csproj", "{052EB2F0-B5E8-48F1-BFCE-196DE9C76403}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,10 +37,10 @@ Global
 		{56482B43-92A5-450A-AC76-28823778F6DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56482B43-92A5-450A-AC76-28823778F6DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{56482B43-92A5-450A-AC76-28823778F6DC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3E0BA2BF-FBB9-4990-9116-CA0470F444C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3E0BA2BF-FBB9-4990-9116-CA0470F444C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3E0BA2BF-FBB9-4990-9116-CA0470F444C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3E0BA2BF-FBB9-4990-9116-CA0470F444C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{052EB2F0-B5E8-48F1-BFCE-196DE9C76403}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{052EB2F0-B5E8-48F1-BFCE-196DE9C76403}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{052EB2F0-B5E8-48F1-BFCE-196DE9C76403}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{052EB2F0-B5E8-48F1-BFCE-196DE9C76403}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,8 +1,14 @@
 ﻿using System.Collections.Generic;
+using System.Net.Http;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using RichardSzalay.MockHttp;
+using Shared.API.Enums;
 using Shared.API.Exceptions;
-using Shared.API.Models;
+using Shared.API.Mappers;
+using Shared.API.Mock;
+using Shared.API.PostModels;
+using Shared.API.ResponseModels;
 using Shared.Enviroment;
 using Shared.Logging;
 
@@ -11,15 +17,30 @@ namespace Shared.API
     public class Client
     {
         private readonly ILogger logger;
+        private readonly PostRequest requestHandler = new PostRequest();
+        private readonly HttpClient client;
 
-        public Client()
+        public Client(bool mock = false)
         {
             logger = EnviromentHelper.GetLogger();
+
+            if (mock)
+            {
+                var mockHttp = new MockHttpMessageHandler();
+                ApiResponses.FillRules(mockHttp);
+                client = mockHttp.ToHttpClient();
+            }
+            else
+            {
+                client = new HttpClient();
+            }
         }
 
         public async Task<bool> VerifyUserLogin(string login, string password)
         {
-            var httpContent = await PostRequest.DoRequest("verifyUserLogin.php", new Dictionary<string, string> { { "Login", login }, { "Password", password } });
+            var data = new VerifyUserLoginPostData(login, password).Data;
+            var apiPath = ApiPathMapper.GetPath(ApiPaths.VerifyUserLogin);
+            var httpContent = await requestHandler.DoRequest(client, apiPath, data);
             VerifyUserLoginResponse response = JsonConvert.DeserializeObject<VerifyUserLoginResponse>(httpContent);
             CheckResponse(response);
             if (response.Valid)
@@ -31,23 +52,29 @@ namespace Shared.API
             return false;
         }
 
-        public async void ClearShutdownPending(string deviceId)
+        public async Task ClearShutdownPending(string deviceId)
         {
-            var httpContent = await PostRequest.DoRequest("clearShutdownPending.php", new Dictionary<string, string> { { "Device_id", deviceId } });
+            var data = new ClearShutdownPendingPostData(deviceId).Data;
+            var apiPath = ApiPathMapper.GetPath(ApiPaths.ClearShutdownPending);
+            var httpContent = await requestHandler.DoRequest(client, apiPath, data);
             BaseResponse response = JsonConvert.DeserializeObject<BaseResponse>(httpContent);
             CheckResponse(response);
         }
 
-        public async void SetShutdownPending(string deviceId)
+        public async Task SetShutdownPending(string deviceId)
         {
-            var httpContent = await PostRequest.DoRequest("setShutdownPending.php", new Dictionary<string, string> { { "Device_id", deviceId } });
+            var data = new SetShutdownPendingPostData(deviceId).Data;
+            var apiPath = ApiPathMapper.GetPath(ApiPaths.SetShutdownPending);
+            var httpContent = await requestHandler.DoRequest(client, apiPath, data);
             BaseResponse response = JsonConvert.DeserializeObject<BaseResponse>(httpContent);
             CheckResponse(response);
         }
 
         public async Task<bool> GetShutdownPending(string deviceId, string login)
         {
-            var httpContent = await PostRequest.DoRequest("getShutdownPending.php", new Dictionary<string, string> { { "Device_id", deviceId }, { "Login", login } });
+            var data = new GetShutdownPendingPostData(deviceId, login).Data;
+            var apiPath = ApiPathMapper.GetPath(ApiPaths.GetShutdownPending);
+            var httpContent = await requestHandler.DoRequest(client, apiPath, data);
             GetShutdownPendingResponse response = JsonConvert.DeserializeObject<GetShutdownPendingResponse>(httpContent);
             CheckResponse(response);
             if (response.Shutdown)
@@ -58,16 +85,20 @@ namespace Shared.API
             return false;
         }
 
-        public async void AddDevice(string login, string deviceId, string name)
+        public async Task AddDevice(string login, string deviceId, string name)
         {
-            var httpContent = await PostRequest.DoRequest("addDevice.php", new Dictionary<string, string> { { "Login", login }, { "Device_id", deviceId }, { "Name", name } });
+            var data = new AddDevicePostData(deviceId, login, name).Data;
+            var apiPath = ApiPathMapper.GetPath(ApiPaths.AddDevice);
+            var httpContent = await requestHandler.DoRequest(client, apiPath, data);
             BaseResponse response = JsonConvert.DeserializeObject<BaseResponse>(httpContent);
             CheckResponse(response);
         }
 
         public async Task<bool> VerifyDeviceId(string deviceId)
         {
-            var httpContent = await PostRequest.DoRequest("verifyDeviceId.php", new Dictionary<string, string> { { "Device_id", deviceId } });
+            var data = new VerifyDeviceIdPostData(deviceId).Data;
+            var apiPath = ApiPathMapper.GetPath(ApiPaths.VerifyDeviceId);
+            var httpContent = await requestHandler.DoRequest(client, apiPath, data);
             VerifyDeviceIdResponse response = JsonConvert.DeserializeObject<VerifyDeviceIdResponse>(httpContent);
             CheckResponse(response);
             if (response.IsRegistered)
@@ -81,10 +112,21 @@ namespace Shared.API
 
         public async Task<IEnumerable<Device>> GetDevices(string login)
         {
-            var httpContent = await PostRequest.DoRequest("getDevices.php", new Dictionary<string, string> { { "Login", login } });
+            var data = new GetDevicesPostData(login).Data;
+            var apiPath = ApiPathMapper.GetPath(ApiPaths.GetDevices);
+            var httpContent = await requestHandler.DoRequest(client, apiPath, data);
             ListDevicesResponse response = JsonConvert.DeserializeObject<ListDevicesResponse>(httpContent);
             CheckResponse(response);
             return response.Devices;
+        }
+
+        public async Task DeleteDevice(string login, string deviceId)
+        {
+            var data = new DeleteDevicePostData(deviceId, login).Data;
+            var apiPath = ApiPathMapper.GetPath(ApiPaths.DeleteDevice);
+            var httpContent = await requestHandler.DoRequest(client, apiPath, data);
+            BaseResponse response = JsonConvert.DeserializeObject<BaseResponse>(httpContent);
+            CheckResponse(response);
         }
 
         private void CheckResponse(BaseResponse response)

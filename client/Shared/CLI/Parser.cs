@@ -6,18 +6,18 @@ namespace Shared.CLI
 {
     public static class Parser
     {
-        private static readonly ILogger logger;
+        private static readonly ILogger Logger;
 
         static Parser()
         {
-            logger = EnviromentHelper.GetLogger();
+            Logger = EnviromentHelper.GetLogger();
         }
 
         public static bool Parse(string[] args, ref Arguments arguments)
         {
             if (args.Length != 4)
             {
-                logger.Fatal("Invalid arguments count.");
+                Logger.Fatal("Invalid arguments count.");
                 return false;
             }
 
@@ -36,7 +36,7 @@ namespace Shared.CLI
                 arguments.Password = parsedArgs["-p"];
                 return true;
             }
-            logger.Fatal("Failed to log in - credentials were not specified correctly.");
+            Logger.Fatal("Failed to log in - credentials were not specified correctly.");
             return false;
         }
     }

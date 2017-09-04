@@ -29,7 +29,7 @@ namespace FlyUnix
 
                 if (!isDeviceVerified)
                 {
-                    RequestHandler.DoRequest(() => client.AddDevice(arguments.Login, deviceId, deviceName));
+                    RequestHandler.DoRequest(() => client.AddDevice(arguments.Login, deviceId, deviceName).Wait());
                 }
 
                 while (true)
@@ -37,7 +37,7 @@ namespace FlyUnix
                     bool isShutdownPending = RequestHandler.DoRequest(client.GetShutdownPending(deviceId, arguments.Login));
                     if (isShutdownPending)
                     {
-                        RequestHandler.DoRequest(() => client.ClearShutdownPending(deviceId));
+                        RequestHandler.DoRequest(() => client.ClearShutdownPending(deviceId).Wait());
                         ShellHandler.Shutdown();
                         return;
                     }

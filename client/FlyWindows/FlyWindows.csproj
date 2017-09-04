@@ -76,6 +76,9 @@
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="RichardSzalay.MockHttp, Version=3.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RichardSzalay.MockHttp.3.2.0\lib\net45\RichardSzalay.MockHttp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.IO.FileSystem, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
@@ -85,7 +88,7 @@
       <HintPath>..\packages\System.IO.FileSystem.Primitives.4.3.0\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
     </Reference>
     <Reference Include="System.Management.Automation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Management.Automation.6.1.7601.17515\lib\net45\System.Management.Automation.dll</HintPath>
+      <HintPath>C:\Users\stare\Desktop\fly\fly\client\packages\System.Management.Automation.6.1.7601.17515\lib\net45\System.Management.Automation.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Net.Http, Version=4.1.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">

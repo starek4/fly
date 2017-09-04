@@ -4,7 +4,7 @@ namespace Shared.Logging
 {
     public class BaseLogger
     {
-        private Dictionary<LogEntryType, string> TypeMapper { get; set; } = new Dictionary<LogEntryType, string>
+        private Dictionary<LogEntryType, string> TypeMapper { get; } = new Dictionary<LogEntryType, string>
         {
             {LogEntryType.Fatal, "FATAL: "},
             {LogEntryType.Info, "INFO: "},

@@ -9,7 +9,7 @@ namespace FlyWindows
     {
         static void Main(string[] args)
         {
-            string deviceId = PowerShellHandler.GetUUID();
+            string deviceId = PowerShellHandler.GetId();
             string deviceName = PowerShellHandler.GetDeviceName();
 
             deviceId = deviceId.Replace(Environment.NewLine, String.Empty);
@@ -29,7 +29,7 @@ namespace FlyWindows
 
                 if (!isDeviceVerified)
                 {
-                    RequestHandler.DoRequest(() => client.AddDevice(arguments.Login, deviceId, deviceName));
+                    RequestHandler.DoRequest(() => client.AddDevice(arguments.Login, deviceId, deviceName).Wait());
                 }
 
                 while (true)
@@ -37,7 +37,7 @@ namespace FlyWindows
                     bool isShutdownPending = RequestHandler.DoRequest(client.GetShutdownPending(deviceId, arguments.Login));
                     if(isShutdownPending)
                     {
-                        RequestHandler.DoRequest(() => client.ClearShutdownPending(deviceId));
+                        RequestHandler.DoRequest(() => client.ClearShutdownPending(deviceId).Wait());
                         PowerShellHandler.ShutdownPc();
                         return;
                     }

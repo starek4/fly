@@ -7,7 +7,7 @@ using Android.OS;
 using Android.Views;
 using Android.Widget;
 using Shared.API;
-using Shared.API.Models;
+using Shared.API.ResponseModels;
 
 namespace FlyDroid.Activities
 {

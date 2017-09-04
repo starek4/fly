@@ -7,28 +7,25 @@ using Shared.Logging;
 
 namespace Shared.API
 {
-    public static class PostRequest
+    public class PostRequest
     {
-        public static async Task<string> DoRequest(string apiPath, Dictionary<string, string> body)
+        public async Task<string> DoRequest(HttpClient httpClient, string apiPath, Dictionary<string, string> body)
         {
             ILogger logger = EnviromentHelper.GetLogger();
-            var baseAddress = new Uri("https://fly.starekit.cz/api/" + apiPath);
-            using (var httpClient = new HttpClient { BaseAddress = baseAddress })
+            var path = new Uri(BaseUrl.Path + apiPath);
+            using (var content = new FormUrlEncodedContent(body))
             {
-                using (var content = new FormUrlEncodedContent(body))
+                try
                 {
-                    try
+                    using (var response = await httpClient.PostAsync(path, content))
                     {
-                        using (var response = await httpClient.PostAsync(baseAddress, content))
-                        {
-                            return await response.Content.ReadAsStringAsync();
-                        }
+                        return await response.Content.ReadAsStringAsync();
                     }
-                    catch (HttpRequestException exception)
-                    {
-                        logger.Error("Error when connecting server: " + exception);
-                        throw new HttpRequestException("Error when communucating with network...");
-                    }
+                }
+                catch (HttpRequestException exception)
+                {
+                    logger.Error("Error when connecting server: " + exception);
+                    throw new HttpRequestException("Error when communucating with network...");
                 }
             }
         }

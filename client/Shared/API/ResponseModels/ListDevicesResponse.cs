@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Shared.API.Models
+namespace Shared.API.ResponseModels
 {
     public class ListDevicesResponse : BaseResponse
     {

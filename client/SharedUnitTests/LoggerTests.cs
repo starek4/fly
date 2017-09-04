@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Globalization;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Shared.Logging;
+using Xunit;
+using Shared.Enviroment;
 
 namespace SharedUnitTests
 {
-    [TestClass]
     public class LoggerTests
     {
-        [TestMethod]
+        [Fact]
         public void FormatLogTestWindows()
         {
             string now = DateTime.Now.ToString(CultureInfo.InvariantCulture);
@@ -16,7 +16,17 @@ namespace SharedUnitTests
             string msg = "test";
             BaseLogger logger = new BaseLogger();
             string formated = logger.FormatLog(now, LogEntryType.Info, msg, Environment.NewLine);
-            Assert.IsTrue(formated == expectedResult);
+            Assert.True(formated == expectedResult);
+        }
+
+        [Fact]
+        public void GetLoggerValid()
+        {
+            var logger = EnviromentHelper.GetLogger();
+            if (logger is WindowsLogger)
+                Assert.True(true);
+            else
+                Assert.True(false, "Wrong type of logger...");
         }
     }
 }

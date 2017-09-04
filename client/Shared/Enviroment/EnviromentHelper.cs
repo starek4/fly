@@ -1,4 +1,5 @@
-﻿using System.Runtime.InteropServices;
+﻿using System;
+using System.Runtime.InteropServices;
 using Shared.Logging;
 
 namespace Shared.Enviroment
@@ -7,24 +8,29 @@ namespace Shared.Enviroment
     {
         private static PlatformType GetPlatformType()
         {
+            if (RuntimeInformation.FrameworkDescription.Contains("Mono"))
+                return PlatformType.Phone;
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
                 return PlatformType.Windows;
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
                 return PlatformType.Linux;
-            if (RuntimeInformation.FrameworkDescription.Contains("Mono"))
-                return PlatformType.Phone;
             return PlatformType.Unknown;
         }
 
         public static ILogger GetLogger()
         {
-            if (GetPlatformType() == PlatformType.Windows)
-                return new WindowsLogger();
-            if (GetPlatformType() == PlatformType.Linux)
-                return new LinuxLogger();
-            if (GetPlatformType() == PlatformType.Phone)
-                return new PhoneLogger();
-            return null;
+            var type = GetPlatformType();
+            switch (type)
+            {
+                case PlatformType.Linux:
+                    return new LinuxLogger();
+                case PlatformType.Windows:
+                    return new WindowsLogger();
+                case PlatformType.Phone:
+                    return new PhoneLogger();
+                default:
+                    throw new NotImplementedException("This type of device has no implemented logger...");
+            }
         }
     }
 }

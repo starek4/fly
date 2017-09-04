@@ -1,4 +1,4 @@
-namespace Shared.API.Models
+namespace Shared.API.ResponseModels
 {
     public class GetShutdownPendingResponse : BaseResponse
     {
