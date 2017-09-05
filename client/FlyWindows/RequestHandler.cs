@@ -16,10 +16,12 @@ namespace FlyWindows
             catch (HttpRequestException exception)
             {
                 // TODO: Handle HTTP request exception...
+                throw new NotImplementedException(exception.Message);
             }
             catch (DatabaseException exception)
             {
                 // TODO: Handle database request exception...
+                throw new NotImplementedException(exception.Message);
             }
         }
         public static bool DoRequest(Task<bool> request)

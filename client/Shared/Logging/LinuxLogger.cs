@@ -45,7 +45,7 @@ namespace Shared.Logging
                     || exception is NotSupportedException
                     || exception is SecurityException)
                 {
-                    throw new LoggerException();
+                    throw new LoggerException(exception.Message);
                 }
             }
         }

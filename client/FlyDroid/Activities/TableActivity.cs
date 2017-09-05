@@ -24,10 +24,7 @@ namespace FlyDroid.Activities
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.Table);
-            ListAdapter = new ArrayAdapter<String>(this, Android.Resource.Layout.SimpleListItem1, devicesNames);
-
             login = Intent.GetStringExtra("login");
-
             new Thread(GetDevices).Start();
         }
 
@@ -42,14 +39,14 @@ namespace FlyDroid.Activities
         private async void GetDevices()
         {
             devices = new List<Device>(await client.GetDevices(login));
+            devicesNames.Clear();
+            foreach (Device device in devices)
+            {
+                devicesNames.Add(device.Name);
+            }
             RunOnUiThread(() =>
             {
-                foreach (Device device in devices)
-                {
-                    devicesNames.Clear();
-                    devicesNames.Add(device.Name);
-                    ListAdapter = new ArrayAdapter<String>(this, Android.Resource.Layout.SimpleListItem1, devicesNames);
-                }
+                ListAdapter = new ArrayAdapter<String>(this, Android.Resource.Layout.SimpleListItem1, devicesNames);
             });
         }
     }

@@ -29,12 +29,15 @@
 
     $index = 0;
     $devices = array();
-    foreach($result as $device)
+    if ($result != NULL)
     {
-        $devices[$index]["DeviceId"] = $device["Device_id"];
-        $devices[$index]["Name"] = $device["Name"];
-        $devices[$index]["Status"] = $device["Status"];
-        $index = $index + 1;
+        foreach($result as $device)
+        {
+            $devices[$index]["DeviceId"] = $device["Device_id"];
+            $devices[$index]["Name"] = $device["Name"];
+            $devices[$index]["Status"] = $device["Status"];
+            $index = $index + 1;
+        }
     }
     $response["Success"] = true;
     $response["Error"] = "";

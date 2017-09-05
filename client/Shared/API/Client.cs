@@ -41,7 +41,7 @@ namespace Shared.API
             var data = new VerifyUserLoginPostData(login, password).Data;
             var apiPath = ApiPathMapper.GetPath(ApiPaths.VerifyUserLogin);
             var httpContent = await requestHandler.DoRequest(client, apiPath, data);
-            VerifyUserLoginResponse response = JsonConvert.DeserializeObject<VerifyUserLoginResponse>(httpContent);
+            VerifyUserLoginResponse response = Convert<VerifyUserLoginResponse>(httpContent);
             CheckResponse(response);
             if (response.Valid)
             {
@@ -57,7 +57,7 @@ namespace Shared.API
             var data = new ClearShutdownPendingPostData(deviceId).Data;
             var apiPath = ApiPathMapper.GetPath(ApiPaths.ClearShutdownPending);
             var httpContent = await requestHandler.DoRequest(client, apiPath, data);
-            BaseResponse response = JsonConvert.DeserializeObject<BaseResponse>(httpContent);
+            BaseResponse response = Convert<BaseResponse>(httpContent);
             CheckResponse(response);
         }
 
@@ -66,7 +66,7 @@ namespace Shared.API
             var data = new SetShutdownPendingPostData(deviceId).Data;
             var apiPath = ApiPathMapper.GetPath(ApiPaths.SetShutdownPending);
             var httpContent = await requestHandler.DoRequest(client, apiPath, data);
-            BaseResponse response = JsonConvert.DeserializeObject<BaseResponse>(httpContent);
+            BaseResponse response = Convert<BaseResponse>(httpContent);
             CheckResponse(response);
         }
 
@@ -75,7 +75,7 @@ namespace Shared.API
             var data = new GetShutdownPendingPostData(deviceId, login).Data;
             var apiPath = ApiPathMapper.GetPath(ApiPaths.GetShutdownPending);
             var httpContent = await requestHandler.DoRequest(client, apiPath, data);
-            GetShutdownPendingResponse response = JsonConvert.DeserializeObject<GetShutdownPendingResponse>(httpContent);
+            GetShutdownPendingResponse response = Convert<GetShutdownPendingResponse>(httpContent);
             CheckResponse(response);
             if (response.Shutdown)
             {
@@ -90,7 +90,7 @@ namespace Shared.API
             var data = new AddDevicePostData(deviceId, login, name).Data;
             var apiPath = ApiPathMapper.GetPath(ApiPaths.AddDevice);
             var httpContent = await requestHandler.DoRequest(client, apiPath, data);
-            BaseResponse response = JsonConvert.DeserializeObject<BaseResponse>(httpContent);
+            BaseResponse response = Convert<BaseResponse>(httpContent);
             CheckResponse(response);
         }
 
@@ -99,7 +99,7 @@ namespace Shared.API
             var data = new VerifyDeviceIdPostData(deviceId).Data;
             var apiPath = ApiPathMapper.GetPath(ApiPaths.VerifyDeviceId);
             var httpContent = await requestHandler.DoRequest(client, apiPath, data);
-            VerifyDeviceIdResponse response = JsonConvert.DeserializeObject<VerifyDeviceIdResponse>(httpContent);
+            VerifyDeviceIdResponse response = Convert<VerifyDeviceIdResponse>(httpContent);
             CheckResponse(response);
             if (response.IsRegistered)
             {
@@ -115,7 +115,7 @@ namespace Shared.API
             var data = new GetDevicesPostData(login).Data;
             var apiPath = ApiPathMapper.GetPath(ApiPaths.GetDevices);
             var httpContent = await requestHandler.DoRequest(client, apiPath, data);
-            ListDevicesResponse response = JsonConvert.DeserializeObject<ListDevicesResponse>(httpContent);
+            ListDevicesResponse response = Convert<ListDevicesResponse>(httpContent);
             CheckResponse(response);
             return response.Devices;
         }
@@ -125,7 +125,7 @@ namespace Shared.API
             var data = new DeleteDevicePostData(deviceId, login).Data;
             var apiPath = ApiPathMapper.GetPath(ApiPaths.DeleteDevice);
             var httpContent = await requestHandler.DoRequest(client, apiPath, data);
-            BaseResponse response = JsonConvert.DeserializeObject<BaseResponse>(httpContent);
+            BaseResponse response = Convert<BaseResponse>(httpContent);
             CheckResponse(response);
         }
 
@@ -136,6 +136,12 @@ namespace Shared.API
                 logger.Error("API error: " + response.Error);
                 throw new DatabaseException("Database error");
             }
+        }
+
+        private T Convert<T>(string httpContent)
+        {
+            // This code can generate exception JsonException which have to be catched!
+            return JsonConvert.DeserializeObject<T>(httpContent);
         }
     }
 }

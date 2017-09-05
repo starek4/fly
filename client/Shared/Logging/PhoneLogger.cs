@@ -30,10 +30,11 @@ namespace Shared.Logging
             try
             {
                 // TODO: Implement logging...
+                throw new NotImplementedException(type + msg);
             }
             catch (Exception exception)
             {
-                throw new LoggerException();
+                throw new LoggerException(exception.Message);
             }
         }
     }
