@@ -12,7 +12,7 @@ namespace SharedUnitTests
         public void FormatLogTestWindows()
         {
             string now = DateTime.Now.ToString(CultureInfo.InvariantCulture);
-            string expectedResult = now + "INFO: " + "test" + Environment.NewLine;
+            string expectedResult = now + " " + "INFO: " + "test" + Environment.NewLine;
             string msg = "test";
             BaseLogger logger = new BaseLogger();
             string formated = logger.FormatLog(now, LogEntryType.Info, msg, Environment.NewLine);

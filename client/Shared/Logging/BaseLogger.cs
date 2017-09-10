@@ -14,7 +14,7 @@ namespace Shared.Logging
 
         public string FormatLog(string dateTime, LogEntryType type, string msg, string newline)
         {
-            return dateTime + TypeMapper[type] + msg + newline;
+            return dateTime + " " + TypeMapper[type] + msg + newline;
         }
     }
 }
