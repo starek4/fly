@@ -24,7 +24,7 @@ namespace Shared.API
                 }
                 catch (HttpRequestException exception)
                 {
-                    logger.Error("Error when connecting server: " + exception);
+                    logger.Error("Error when connecting server: " + Environment.NewLine + exception);
                     throw new HttpRequestException("Error when communucating with network...");
                 }
             }
