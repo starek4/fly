@@ -56,7 +56,7 @@
       <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\netstandard1.3\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="RichardSzalay.MockHttp, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\RichardSzalay.MockHttp.3.2.0\lib\portable-net45+win8+wpa81\RichardSzalay.MockHttp.dll</HintPath>
+      <HintPath>..\packages\RichardSzalay.MockHttp.3.2.1\lib\portable-net45+win8+wpa81\RichardSzalay.MockHttp.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.IO.Compression" />
