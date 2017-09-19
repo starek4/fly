@@ -16,14 +16,12 @@ namespace Shared.API
 {
     public class Client
     {
-        private readonly ILogger logger;
+        private readonly ILogger logger = EnviromentHelper.GetLogger();
         private readonly PostRequest requestHandler = new PostRequest();
         private readonly HttpClient client;
 
         public Client(bool mock = false)
         {
-            logger = EnviromentHelper.GetLogger();
-
             if (mock)
             {
                 var mockHttp = new MockHttpMessageHandler();

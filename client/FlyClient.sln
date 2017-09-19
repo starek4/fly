@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlyWindows", "FlyWindows\FlyWindows.csproj", "{0C49EEC8-6E26-40EB-B246-2B6F8513EC30}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlyDroid", "FlyDroid\FlyDroid.csproj", "{0198EE48-172E-41C0-A344-79230E6B83C5}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlyUnix", "FlyUnix\FlyUnix.csproj", "{F6605AE6-3109-43CB-BE2C-2645A6384C2E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared", "Shared\Shared.csproj", "{56482B43-92A5-450A-AC76-28823778F6DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedUnitTests", "SharedUnitTests\SharedUnitTests.csproj", "{052EB2F0-B5E8-48F1-BFCE-196DE9C76403}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedUnitTests", "SharedUnitTests\SharedUnitTests.csproj", "{052EB2F0-B5E8-48F1-BFCE-196DE9C76403}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlyWindowsWPF", "FlyWindowsWPF\FlyWindowsWPF.csproj", "{8F4F82E7-4438-4DFD-8161-5051C2CB5C58}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,10 +19,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0C49EEC8-6E26-40EB-B246-2B6F8513EC30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0C49EEC8-6E26-40EB-B246-2B6F8513EC30}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0C49EEC8-6E26-40EB-B246-2B6F8513EC30}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0C49EEC8-6E26-40EB-B246-2B6F8513EC30}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0198EE48-172E-41C0-A344-79230E6B83C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0198EE48-172E-41C0-A344-79230E6B83C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0198EE48-172E-41C0-A344-79230E6B83C5}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
@@ -41,6 +37,10 @@ Global
 		{052EB2F0-B5E8-48F1-BFCE-196DE9C76403}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{052EB2F0-B5E8-48F1-BFCE-196DE9C76403}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{052EB2F0-B5E8-48F1-BFCE-196DE9C76403}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F4F82E7-4438-4DFD-8161-5051C2CB5C58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F4F82E7-4438-4DFD-8161-5051C2CB5C58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F4F82E7-4438-4DFD-8161-5051C2CB5C58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F4F82E7-4438-4DFD-8161-5051C2CB5C58}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
