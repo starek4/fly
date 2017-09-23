@@ -1,7 +1,4 @@
-﻿using System;
-using Shared.Logging.Exceptions;
-
-namespace Shared.Logging
+﻿namespace Shared.Logging
 {
     public class PhoneLogger : BaseLogger, ILogger
     {
@@ -27,15 +24,6 @@ namespace Shared.Logging
 
         private void Write(LogEntryType type, string msg)
         {
-            try
-            {
-                // TODO: Implement logging...
-                throw new NotImplementedException(type + msg);
-            }
-            catch (Exception exception)
-            {
-                throw new LoggerException(exception.Message);
-            }
         }
     }
 }
