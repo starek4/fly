@@ -26,7 +26,7 @@ namespace Shared.Logging
 
         private void Write(LogEntryType type, string msg)
         {
-            throw new NotImplementedException(type + " " + msg);
+            
         }
     }
 }
