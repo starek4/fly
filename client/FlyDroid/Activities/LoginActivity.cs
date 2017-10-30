@@ -8,7 +8,7 @@ using Shared.API;
 
 namespace FlyDroid.Activities
 {
-    [Activity(Label = "FlyDroid", MainLauncher = true)]
+    [Activity(Label = "Fly client", MainLauncher = true)]
     public class LoginActivity : Activity
     {
         private EditText login;
