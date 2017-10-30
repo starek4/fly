@@ -14,23 +14,23 @@ namespace FlyDroid.Activities
     [Activity(Label = "FlyDroid")]
     public class TableActivity : ListActivity
     {
-        private readonly Client client = new Client();
-        private List<Device> devices = new List<Device>();
-        private readonly List<string> devicesNames = new List<string>();
+        private readonly Client _client = new Client();
+        private List<Device> _devices = new List<Device>();
+        private readonly List<string> _devicesNames = new List<string>();
 
-        private string login;
+        private string _login;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.Table);
-            login = Intent.GetStringExtra("login");
+            _login = Intent.GetStringExtra("login");
             new Thread(GetDevices).Start();
         }
 
         protected override void OnListItemClick(ListView l, View v, int position, long id)
         {
-            var device = devices[position];
+            var device = _devices[position];
             var intent = new Intent(this, typeof(ShutdownActivity));
             intent.PutExtra("device_id", device.DeviceId);
             StartActivity(intent);
@@ -38,15 +38,15 @@ namespace FlyDroid.Activities
 
         private async void GetDevices()
         {
-            devices = new List<Device>(await client.GetDevices(login));
-            devicesNames.Clear();
-            foreach (Device device in devices)
+            _devices = new List<Device>(await _client.GetDevices(_login));
+            _devicesNames.Clear();
+            foreach (Device device in _devices)
             {
-                devicesNames.Add(device.Name);
+                _devicesNames.Add(device.Name);
             }
             RunOnUiThread(() =>
             {
-                ListAdapter = new ArrayAdapter<String>(this, Android.Resource.Layout.SimpleListItem1, devicesNames);
+                ListAdapter = new ArrayAdapter<String>(this, Android.Resource.Layout.SimpleListItem1, _devicesNames);
             });
         }
     }

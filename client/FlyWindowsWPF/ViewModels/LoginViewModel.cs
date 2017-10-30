@@ -17,11 +17,11 @@ namespace FlyWindowsWPF.ViewModels
 {
     public class LoginViewModel : BaseViewModel
     {
-        private string password;
-        private readonly ILogger logger = EnviromentHelper.GetLogger();
-        private readonly Client client = new Client();
-        private string status;
-        private bool isEnabledLoginButton;
+        private string _password;
+        private readonly ILogger _logger = EnviromentHelper.GetLogger();
+        private readonly Client _client = new Client();
+        private string _status;
+        private bool _isEnabledLoginButton;
         public TrayController TrayController { private get; set; }
 
         public string Login { get; set; }
@@ -33,12 +33,17 @@ namespace FlyWindowsWPF.ViewModels
 
         public string Status
         {
-            get => status;
+            get => _status;
             set
             {
-                status = value;
+                _status = value;
                 NotifyPropertyChanged(nameof(Status));
             }
+        }
+
+        private void ExitApp()
+        {
+            Application.Current.Shutdown();
         }
 
         private void LoginAction(object parameter)
@@ -46,11 +51,11 @@ namespace FlyWindowsWPF.ViewModels
             DisableLoginButton();
             if (parameter is PasswordBox passwordContainer)
             {
-                password = passwordContainer.Password;
+                _password = passwordContainer.Password;
             }
             else
             {
-                logger.Fatal("Wrong command argument provided.");
+                _logger.Fatal("Wrong command argument provided.");
                 throw new NotImplementedException("Wrong command argument.");
             }
 
@@ -59,13 +64,13 @@ namespace FlyWindowsWPF.ViewModels
         
         private async Task ProcessLogin()
         {
-            bool isUserVerified = await RequestHandler.DoRequest(client.VerifyUserLogin(Login, password));
+            bool isUserVerified = await RequestHandler.DoRequest(_client.VerifyUserLogin(Login, _password));
             Status = isUserVerified ? "Login successfully verified." : "Login denied!";
             if (isUserVerified)
             {
-                bool isDeviceRegistered = await RequestHandler.DoRequest(client.VerifyDeviceId(DeviceIdentifierHelper.DeviceIdentifier));
+                bool isDeviceRegistered = await RequestHandler.DoRequest(_client.VerifyDeviceId(DeviceIdentifierHelper.DeviceIdentifier));
                 if (isDeviceRegistered == false)
-                    await RequestHandler.DoRequest(client.AddDevice(Login, DeviceIdentifierHelper.DeviceIdentifier, DeviceNameHelper.DeviceName));
+                    await RequestHandler.DoRequest(_client.AddDevice(Login, DeviceIdentifierHelper.DeviceIdentifier, DeviceNameHelper.DeviceName));
                 new Thread(StartLoop).Start();
             }
             else
@@ -79,10 +84,10 @@ namespace FlyWindowsWPF.ViewModels
             HideWindow();
             while (true)
             {
-                bool isShutdownPending = await RequestHandler.DoRequest(client.GetShutdownPending(DeviceIdentifierHelper.DeviceIdentifier, Login));
+                bool isShutdownPending = await RequestHandler.DoRequest(_client.GetShutdownPending(DeviceIdentifierHelper.DeviceIdentifier, Login));
                 if (isShutdownPending)
                 {
-                    await RequestHandler.DoRequest(client.ClearShutdownPending(DeviceIdentifierHelper.DeviceIdentifier));
+                    await RequestHandler.DoRequest(_client.ClearShutdownPending(DeviceIdentifierHelper.DeviceIdentifier));
                     TrayController.MakeTooltip("Fly client", "Shutdown request registered.", BalloonIcon.None);
                     ShutdownPc.DoShutdownRequest();
                     return;
@@ -94,13 +99,13 @@ namespace FlyWindowsWPF.ViewModels
 
         private void EnableLoginButton()
         {
-            isEnabledLoginButton = true;
+            _isEnabledLoginButton = true;
             LoginButtonCommand.Refresh();
         }
 
         private void DisableLoginButton()
         {
-            isEnabledLoginButton = false;
+            _isEnabledLoginButton = false;
             LoginButtonCommand.Refresh();
         }
 
@@ -110,17 +115,33 @@ namespace FlyWindowsWPF.ViewModels
             TrayController.MakeTooltip("Fly client", "Running in background...", BalloonIcon.None);
         }
 
-        private CommandHandler loginButtonCommand;
+        private RelayCommand _exitAppCommand;
+        public RelayCommand ExitAppCommand
+        {
+            get
+            {
+                return _exitAppCommand ?? (_exitAppCommand = new RelayCommand(
+                           p => true,
+                           p => ExitApp()));
+            }
+        }
 
-        public CommandHandler LoginButtonCommand => loginButtonCommand ?? (loginButtonCommand = new CommandHandler(LoginAction, something => isEnabledLoginButton));
+        private RelayCommand _loginButtonCommand;
+        public RelayCommand LoginButtonCommand
+        {
+            get
+            {
+                return _loginButtonCommand ?? (_loginButtonCommand = new RelayCommand( p => _isEnabledLoginButton, LoginAction));
+            }
+        }
 
-        private Visibility isVisible = Visibility.Visible;
+        private Visibility _isVisible = Visibility.Visible;
         public Visibility IsVisible
         {
-            get => isVisible;
+            get => _isVisible;
             set
             {
-                isVisible = value;
+                _isVisible = value;
                 NotifyPropertyChanged(nameof(IsVisible));
             }
         }

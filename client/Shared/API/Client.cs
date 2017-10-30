@@ -16,9 +16,9 @@ namespace Shared.API
 {
     public class Client
     {
-        private readonly ILogger logger = EnviromentHelper.GetLogger();
-        private readonly PostRequest requestHandler = new PostRequest();
-        private readonly HttpClient client;
+        private readonly ILogger _logger = EnviromentHelper.GetLogger();
+        private readonly PostRequest _requestHandler = new PostRequest();
+        private readonly HttpClient _client;
 
         public Client(bool mock = false)
         {
@@ -26,11 +26,11 @@ namespace Shared.API
             {
                 var mockHttp = new MockHttpMessageHandler();
                 ApiResponses.FillRules(mockHttp);
-                client = mockHttp.ToHttpClient();
+                _client = mockHttp.ToHttpClient();
             }
             else
             {
-                client = new HttpClient();
+                _client = new HttpClient();
             }
         }
 
@@ -38,15 +38,15 @@ namespace Shared.API
         {
             var data = new VerifyUserLoginPostData(login, password).Data;
             var apiPath = ApiPathMapper.GetPath(ApiPaths.VerifyUserLogin);
-            var httpContent = await requestHandler.DoRequest(client, apiPath, data);
+            var httpContent = await _requestHandler.DoRequest(_client, apiPath, data);
             VerifyUserLoginResponse response = Convert<VerifyUserLoginResponse>(httpContent);
             CheckResponse(response);
             if (response.Valid)
             {
-                logger.Info("Successfully logged in.");
+                _logger.Info("Successfully logged in.");
                 return true;
             }
-            logger.Error("Failed to log in - invalid credentials.");
+            _logger.Error("Failed to log in - invalid credentials.");
             return false;
         }
 
@@ -54,7 +54,7 @@ namespace Shared.API
         {
             var data = new ClearShutdownPendingPostData(deviceId).Data;
             var apiPath = ApiPathMapper.GetPath(ApiPaths.ClearShutdownPending);
-            var httpContent = await requestHandler.DoRequest(client, apiPath, data);
+            var httpContent = await _requestHandler.DoRequest(_client, apiPath, data);
             BaseResponse response = Convert<BaseResponse>(httpContent);
             CheckResponse(response);
         }
@@ -63,7 +63,7 @@ namespace Shared.API
         {
             var data = new SetShutdownPendingPostData(deviceId).Data;
             var apiPath = ApiPathMapper.GetPath(ApiPaths.SetShutdownPending);
-            var httpContent = await requestHandler.DoRequest(client, apiPath, data);
+            var httpContent = await _requestHandler.DoRequest(_client, apiPath, data);
             BaseResponse response = Convert<BaseResponse>(httpContent);
             CheckResponse(response);
         }
@@ -72,12 +72,12 @@ namespace Shared.API
         {
             var data = new GetShutdownPendingPostData(deviceId, login).Data;
             var apiPath = ApiPathMapper.GetPath(ApiPaths.GetShutdownPending);
-            var httpContent = await requestHandler.DoRequest(client, apiPath, data);
+            var httpContent = await _requestHandler.DoRequest(_client, apiPath, data);
             GetShutdownPendingResponse response = Convert<GetShutdownPendingResponse>(httpContent);
             CheckResponse(response);
             if (response.Shutdown)
             {
-                logger.Info("Received shutdown message.");
+                _logger.Info("Received shutdown message.");
                 return true;
             }
             return false;
@@ -87,7 +87,7 @@ namespace Shared.API
         {
             var data = new AddDevicePostData(deviceId, login, name).Data;
             var apiPath = ApiPathMapper.GetPath(ApiPaths.AddDevice);
-            var httpContent = await requestHandler.DoRequest(client, apiPath, data);
+            var httpContent = await _requestHandler.DoRequest(_client, apiPath, data);
             BaseResponse response = Convert<BaseResponse>(httpContent);
             CheckResponse(response);
         }
@@ -96,15 +96,15 @@ namespace Shared.API
         {
             var data = new VerifyDeviceIdPostData(deviceId).Data;
             var apiPath = ApiPathMapper.GetPath(ApiPaths.VerifyDeviceId);
-            var httpContent = await requestHandler.DoRequest(client, apiPath, data);
+            var httpContent = await _requestHandler.DoRequest(_client, apiPath, data);
             VerifyDeviceIdResponse response = Convert<VerifyDeviceIdResponse>(httpContent);
             CheckResponse(response);
             if (response.IsRegistered)
             {
-                logger.Info("Device already registered - skipping registration.");
+                _logger.Info("Device already registered - skipping registration.");
                 return true;
             }
-            logger.Info("Device is not yet registered - proceed to register.");
+            _logger.Info("Device is not yet registered - proceed to register.");
             return false;
         }
 
@@ -112,7 +112,7 @@ namespace Shared.API
         {
             var data = new GetDevicesPostData(login).Data;
             var apiPath = ApiPathMapper.GetPath(ApiPaths.GetDevices);
-            var httpContent = await requestHandler.DoRequest(client, apiPath, data);
+            var httpContent = await _requestHandler.DoRequest(_client, apiPath, data);
             ListDevicesResponse response = Convert<ListDevicesResponse>(httpContent);
             CheckResponse(response);
             return response.Devices;
@@ -122,7 +122,7 @@ namespace Shared.API
         {
             var data = new DeleteDevicePostData(deviceId, login).Data;
             var apiPath = ApiPathMapper.GetPath(ApiPaths.DeleteDevice);
-            var httpContent = await requestHandler.DoRequest(client, apiPath, data);
+            var httpContent = await _requestHandler.DoRequest(_client, apiPath, data);
             BaseResponse response = Convert<BaseResponse>(httpContent);
             CheckResponse(response);
         }
@@ -131,7 +131,7 @@ namespace Shared.API
         {
             if (!response.Success)
             {
-                logger.Error("API error: " + response.Error);
+                _logger.Error("API error: " + response.Error);
                 throw new DatabaseException("Database error");
             }
         }
