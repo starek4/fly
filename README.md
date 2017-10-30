@@ -14,7 +14,7 @@ Unzip downloaded file and run install.sh script.
 #### Run client
 fly -l \<login\> -p \<password\>
 ### Android
-Android version Lollipop (API 21) of higher
+Android Lollipop (API 21) or higher version
 #### Download
 https://fly.starekit.cz/client/droid/fly.apk
 
