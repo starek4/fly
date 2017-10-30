@@ -11,8 +11,19 @@ if (isset($_POST["submit"]))
 }
 
 require_once(__DIR__ . "/table.php");
-
 ?>
-<form method="POST">
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Fly - table</title>
+</head>
+
+<body>
+    <form method="POST">
     <input name="submit" type="submit" value="Logout">
-</form>
+    </form>
+</body>
+</html>
+

@@ -35,11 +35,23 @@ if (isset($_POST["submit"]))
 }
 
 ?>
-<form method="POST">
-    Login:<br>
-    <input type="text" name="login" required><br>
-    Password:<br>
-    <input type="password" name="password" required><br>
-    <input name="submit" type="submit" value="Submit">
-</form>
-<a href="./registration.php"> Register here </a>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Fly - login</title>
+</head>
+
+<body>
+    <form method="POST">
+        Login:<br>
+        <input type="text" name="login" required><br>
+        Password:<br>
+        <input type="password" name="password" required><br>
+        <input name="submit" type="submit" value="Submit">
+    </form>
+    <a href="./registration.php"> Register here </a>
+</body>
+</html>

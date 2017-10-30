@@ -32,10 +32,17 @@ if (isset($_POST["submit"]))
         echo "<p style=\"color:green;\">Registration was successful!</p>";
     }
 }
-
 ?>
 
-<form method="POST">
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Fly - registration</title>
+</head>
+
+<body>
+    <form method="POST">
     Login:<br>
     <input type="text" name="login" required><br>
     Password:<br>
@@ -43,5 +50,7 @@ if (isset($_POST["submit"]))
     E-mail:<br>
     <input type="e-mail" name="e-mail">
     <input name="submit" type="submit" value="Submit">
-</form>
-<a href="./login.php"> Log in </a>
+    </form>
+    <a href="./login.php"> Log in </a>
+</body>
+</html>
