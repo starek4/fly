@@ -18,10 +18,10 @@ namespace FlyDroid.Activities
 
             _deviceId = Intent.GetStringExtra("device_id");
             _shutdownButton = FindViewById<Button>(Resource.Id.shutdown);
-            _shutdownButton.Click += delegate
+            _shutdownButton.Click += async delegate
             {
                 _shutdownButton.Enabled = false;
-                _client.SetShutdownPending(_deviceId).Wait();
+                await _client.SetShutdownPending(_deviceId);
                 Finish();
             };
         }
