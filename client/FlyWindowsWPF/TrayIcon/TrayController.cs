@@ -4,16 +4,16 @@ namespace FlyWindowsWPF.TrayIcon
 {
     public class TrayController
     {
-        private readonly TaskbarIcon taskbarIconController;
+        private readonly TaskbarIcon _taskbarIconController;
 
         public TrayController(TaskbarIcon taskbarIconController)
         {
-            this.taskbarIconController = taskbarIconController;
+            _taskbarIconController = taskbarIconController;
         }
 
         public void MakeTooltip(string title, string text, BalloonIcon icon)
         {
-            taskbarIconController.ShowBalloonTip(title, text, icon);
+            _taskbarIconController.ShowBalloonTip(title, text, icon);
         }
     }
 }

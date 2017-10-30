@@ -11,11 +11,11 @@ namespace FlyDroid.Activities
     [Activity(Label = "Fly client", MainLauncher = true)]
     public class LoginActivity : Activity
     {
-        private EditText login;
-        private EditText password;
-        private Button loginButton;
-        private TextView status;
-        Client client = new Client();
+        private EditText _login;
+        private EditText _password;
+        private Button _loginButton;
+        private TextView _status;
+        readonly Client _client = new Client();
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -24,36 +24,36 @@ namespace FlyDroid.Activities
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Login);
 
-            login = FindViewById<EditText>(Resource.Id.login);
-            password = FindViewById<EditText>(Resource.Id.password);
-            loginButton = FindViewById<Button>(Resource.Id.loginButton);
-            status = FindViewById<TextView>(Resource.Id.status);
+            _login = FindViewById<EditText>(Resource.Id.login);
+            _password = FindViewById<EditText>(Resource.Id.password);
+            _loginButton = FindViewById<Button>(Resource.Id.loginButton);
+            _status = FindViewById<TextView>(Resource.Id.status);
 
-            loginButton.Click += delegate
+            _loginButton.Click += delegate
             {
-                loginButton.Enabled = false;
+                _loginButton.Enabled = false;
                 new Thread(VerifyUserLogin).Start();
             };
         }
 
         private async void VerifyUserLogin()
         {
-            if (! await client.VerifyUserLogin(login.Text, password.Text))
+            if (! await _client.VerifyUserLogin(_login.Text, _password.Text))
             {
                 RunOnUiThread(() =>
                 {
-                    loginButton.Enabled = true;
-                    status.Text = "Wrong username or password";
+                    _loginButton.Enabled = true;
+                    _status.Text = "Wrong username or password";
                 });
             }
             else
             {
                 RunOnUiThread(() =>
                 {
-                    loginButton.Enabled = true;
-                    status.Text = String.Empty;
+                    _loginButton.Enabled = true;
+                    _status.Text = String.Empty;
                     var intent = new Intent(this, typeof(TableActivity));
-                    intent.PutExtra("login", login.Text);
+                    intent.PutExtra("login", _login.Text);
                     StartActivity(intent);
                 });
             }

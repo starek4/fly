@@ -24,7 +24,16 @@
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <tb:TaskbarIcon x:Name="ShutdownNotifyIcon" IconSource="\shutdown.ico" ToolTipText="Fly client" />
+        <tb:TaskbarIcon x:Name="ShutdownNotifyIcon" IconSource="\shutdown.ico" ToolTipText="Fly client">
+            <tb:TaskbarIcon.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Exit"
+                              Command="{Binding ExitAppCommand}"
+                              CommandParameter="{Binding}">
+                    </MenuItem>
+                </ContextMenu>
+            </tb:TaskbarIcon.ContextMenu>
+        </tb:TaskbarIcon>
 
         <Label FontSize="18" Padding="20 0 0 0" VerticalAlignment="Center" Grid.Row="0" Grid.Column="0" Content="Fly client"></Label>
 

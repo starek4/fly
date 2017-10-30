@@ -35,7 +35,7 @@ namespace Shared.Logging
         {
             try
             {
-                System.IO.Directory.CreateDirectory(LogFilePath);
+                Directory.CreateDirectory(LogFilePath);
                 File.AppendAllText(LogFilePath + FileName, FormatLog(DateTime.Now.ToString(CultureInfo.InvariantCulture), type, msg, Environment.NewLine));
             }
             catch (Exception exception)

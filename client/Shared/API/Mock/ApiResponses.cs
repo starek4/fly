@@ -10,7 +10,7 @@ namespace Shared.API.Mock
 {
     public static class ApiResponses
     {
-        private static string header = "application/json";
+        private static string _header = "application/json";
         private static readonly List<ExpectedResponseModel> Responses = new List<ExpectedResponseModel>();
         public static readonly string ValidMetadata = "valid";
         public static readonly string InvalidMetadata = "wrong";
@@ -162,7 +162,7 @@ namespace Shared.API.Mock
         {
             foreach (var response in Responses)
             {
-                handler.When(response.Path).WithPartialContent(response.Metadata).Respond(header, response.Response);
+                handler.When(response.Path).WithPartialContent(response.Metadata).Respond(_header, response.Response);
             }
         }
     }

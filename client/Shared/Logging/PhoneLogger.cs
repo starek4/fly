@@ -1,4 +1,6 @@
-﻿namespace Shared.Logging
+﻿using System;
+
+namespace Shared.Logging
 {
     public class PhoneLogger : BaseLogger, ILogger
     {
@@ -24,6 +26,7 @@
 
         private void Write(LogEntryType type, string msg)
         {
+            throw new NotImplementedException(type + " " + msg);
         }
     }
 }

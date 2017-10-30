@@ -8,20 +8,20 @@ namespace FlyDroid.Activities
     [Activity(Label = "FlyDroid")]
     public class ShutdownActivity : Activity
     {
-        private string deviceId;
-        private Button shutdownButton;
-        private readonly Client client = new Client();
+        private string _deviceId;
+        private Button _shutdownButton;
+        private readonly Client _client = new Client();
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.Shutdown);
 
-            deviceId = Intent.GetStringExtra("device_id");
-            shutdownButton = FindViewById<Button>(Resource.Id.shutdown);
-            shutdownButton.Click += delegate
+            _deviceId = Intent.GetStringExtra("device_id");
+            _shutdownButton = FindViewById<Button>(Resource.Id.shutdown);
+            _shutdownButton.Click += delegate
             {
-                shutdownButton.Enabled = false;
-                client.SetShutdownPending(deviceId).Wait();
+                _shutdownButton.Enabled = false;
+                _client.SetShutdownPending(_deviceId).Wait();
                 Finish();
             };
         }
