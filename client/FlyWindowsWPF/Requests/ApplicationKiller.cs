@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.Diagnostics;
+using System.Windows;
 
 namespace FlyWindowsWPF.Requests
 {
@@ -7,7 +8,7 @@ namespace FlyWindowsWPF.Requests
         private static void KillApp(string message)
         {
             MessageBox.Show(message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-            Application.Current.Shutdown();
+            Process.GetCurrentProcess().Kill();
         }
 
         public static void NetworkError()

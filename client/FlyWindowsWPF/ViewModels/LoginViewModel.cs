@@ -71,30 +71,13 @@ namespace FlyWindowsWPF.ViewModels
                 bool isDeviceRegistered = await RequestHandler.DoRequest(_client.VerifyDeviceId(DeviceIdentifierHelper.DeviceIdentifier));
                 if (isDeviceRegistered == false)
                     await RequestHandler.DoRequest(_client.AddDevice(Login, DeviceIdentifierHelper.DeviceIdentifier, DeviceNameHelper.DeviceName));
-                new Thread(StartLoop).Start();
+                HideWindow();
+                new Thread(() => ClientLoop.Loop(_client, TrayController, Login)).Start();
             }
             else
             {
                 EnableLoginButton();
             }
-        }
-
-        private async void StartLoop()
-        {
-            HideWindow();
-            while (true)
-            {
-                bool isShutdownPending = await RequestHandler.DoRequest(_client.GetShutdownPending(DeviceIdentifierHelper.DeviceIdentifier, Login));
-                if (isShutdownPending)
-                {
-                    await RequestHandler.DoRequest(_client.ClearShutdownPending(DeviceIdentifierHelper.DeviceIdentifier));
-                    TrayController.MakeTooltip("Fly client", "Shutdown request registered.", BalloonIcon.None);
-                    ShutdownPc.DoShutdownRequest();
-                    return;
-                }
-                Thread.Sleep(30 * 1000);
-            }
-
         }
 
         private void EnableLoginButton()
