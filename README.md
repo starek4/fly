@@ -18,4 +18,4 @@ iOS 11.1 and higher<br />
 **Download**: https://fly.starekit.cz/client/ios/fly.ipa
 
 ## Using fly
-You can register on this website https://fly.starekit.cz/. After registration, you can manage your devides from website control panel or you can use android app for that.
+You can register on this website https://fly.starekit.cz/. After registration, you can manage your devides from website control panel or you can use phone app for that.
