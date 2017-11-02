@@ -14,9 +14,13 @@ Unzip downloaded file and run install.sh script.
 #### Run client
 fly -l \<login\> -p \<password\>
 ### Android
-Android Lollipop (API 21) or higher version
+Android Lollipop (API 21) and higher
 #### Download
 https://fly.starekit.cz/client/droid/fly.apk
+### iOS
+iOS 11.1 and higher
+#### Download
+*To be done...*
 
 ## Using fly
 You can register on this website https://fly.starekit.cz/. After registration, you can manage your devides from website control panel or you can use android app for that.
