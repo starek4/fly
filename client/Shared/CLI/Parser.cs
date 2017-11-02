@@ -17,7 +17,7 @@ namespace Shared.CLI
         {
             if (args.Length != 4)
             {
-                Logger.Fatal("Invalid arguments count.");
+                Logger?.Fatal("Invalid arguments count.");
                 return false;
             }
 
@@ -36,7 +36,7 @@ namespace Shared.CLI
                 arguments.Password = parsedArgs["-p"];
                 return true;
             }
-            Logger.Fatal("Failed to log in - credentials were not specified correctly.");
+            Logger?.Fatal("Failed to log in - credentials were not specified correctly.");
             return false;
         }
     }

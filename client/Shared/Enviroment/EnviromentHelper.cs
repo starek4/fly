@@ -27,7 +27,7 @@ namespace Shared.Enviroment
                 case PlatformType.Windows:
                     return new WindowsLogger();
                 case PlatformType.Phone:
-                    return new PhoneLogger();
+                    return null;
                 default:
                     throw new NotImplementedException("This type of device has no implemented logger...");
             }

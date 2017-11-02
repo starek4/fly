@@ -43,10 +43,10 @@ namespace Shared.API
             CheckResponse(response);
             if (response.Valid)
             {
-                _logger.Info("Successfully logged in.");
+                _logger?.Info("Successfully logged in.");
                 return true;
             }
-            _logger.Error("Failed to log in - invalid credentials.");
+            _logger?.Error("Failed to log in - invalid credentials.");
             return false;
         }
 
@@ -77,7 +77,7 @@ namespace Shared.API
             CheckResponse(response);
             if (response.Shutdown)
             {
-                _logger.Info("Received shutdown message.");
+                _logger?.Info("Received shutdown message.");
                 return true;
             }
             return false;
@@ -101,10 +101,10 @@ namespace Shared.API
             CheckResponse(response);
             if (response.IsRegistered)
             {
-                _logger.Info("Device already registered - skipping registration.");
+                _logger?.Info("Device already registered - skipping registration.");
                 return true;
             }
-            _logger.Info("Device is not yet registered - proceed to register.");
+            _logger?.Info("Device is not yet registered - proceed to register.");
             return false;
         }
 
@@ -131,7 +131,7 @@ namespace Shared.API
         {
             if (!response.Success)
             {
-                _logger.Error("API error: " + response.Error);
+                _logger?.Error("API error: " + response.Error);
                 throw new DatabaseException("Database error");
             }
         }

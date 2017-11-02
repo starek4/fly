@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FlyPhone.Views.ShutdownPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="{Binding DeviceName}"/>
+            <Button Command="{Binding ShutdownButtonCommand}" Text="Shutdown device"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

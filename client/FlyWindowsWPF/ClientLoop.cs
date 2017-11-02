@@ -25,14 +25,14 @@ namespace FlyWindowsWPF
             while (true)
             {
                 bool isShutdownPending = await CheckShutdown(client, login);
-                if (await CheckShutdown(client, login))
+                if (isShutdownPending)
                 {
                     await ClearShutdownState(client);
                     controller.MakeTooltip("Fly client", "Shutdown request registered.", BalloonIcon.None);
                     ShutdownPc.DoShutdownRequest();
                     return;
                 }
-                Thread.Sleep(30 * 1000);
+                Thread.Sleep(10 * 1000);
             }
         }
     }
