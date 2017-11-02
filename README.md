@@ -20,7 +20,7 @@ https://fly.starekit.cz/client/droid/fly.apk
 ### iOS
 iOS 11.1 and higher
 #### Download
-*To be done...*
+https://fly.starekit.cz/client/ios/fly.ipa
 
 ## Using fly
 You can register on this website https://fly.starekit.cz/. After registration, you can manage your devides from website control panel or you can use android app for that.
