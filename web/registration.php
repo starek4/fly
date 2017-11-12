@@ -59,12 +59,9 @@ if (isset($_POST["submit"]))
                         <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
                         <input id="txtUser" type="text" class="form-control" name="login" placeholder="Username">
                     </div>
-                    <div class="input-group mail-userinput">
+                    <div class="input-group login-userinput">
                         <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
                         <input  id="txtPassword" type="password" class="form-control" name="password" placeholder="Password">
-                        <span id="showPassword" class="input-group-btn">
-                            <button class="btn btn-default reveal" type="button"><i class="glyphicon glyphicon-eye-open"></i></button>
-                        </span>
                     </div>
                     <div class="input-group">
                         <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
