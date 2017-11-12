@@ -1,9 +1,9 @@
 <?php
-require_once(__DIR__ . "/Db.php");
+require_once(dirname(__FILE__) . "/Db.php");
 
     class DeviceRepository{
         var $db;
-        
+
         function __construct()
         {
             $this->db = new Db();

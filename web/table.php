@@ -1,6 +1,6 @@
 <?php
 
-    require_once(__DIR__ . "/db/DeviceRepository.php");
+    require_once(dirname(__FILE__) . "/db/DeviceRepository.php");
 
     try
     {
@@ -21,32 +21,43 @@
         echo "Cannot get user's devices:" . $e->getMessage();
         exit;
     }
-    
+
     if($deviceList == NULL)
     {
-        echo "No devices were found!";
+?>
+        <div class="wrapper">
+            <h1>No devices were found!</h1>
+        </div>
+<?php
     }
     else
     {
-        echo "<table id=\"main_table\">";
-            echo "<tr>";
-                echo "<th>Device name</th>";
-                echo "<th>Action</th>";
-            echo "</tr>";
-            foreach($deviceList as $device){
-                echo "<tr>";
-                    echo "<td>".$device["Name"]."</td>";
-                    echo "<td><button onclick=\"SetShutdownState(this.name)\" id=\"shutdown\" name=\"" . $device["Device_id"] . "\">Shutdown</button></td>";
-                    echo "<td><button onclick=\"DeleteDevice('".$_SESSION["login"]."', this.name);\" id=\"deleteDevice\" name=\"" . $device["Device_id"] . "\">Delete device</button></td>";
-                    echo "</tr>";
-            }
-        echo "</table>";
-
-        // JS sources
-        echo '<script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>';
-
-        // Button handlers
-        echo '<script src="./js/shutdownButtonHandler.js"></script>';
-        echo '<script src="./js/deleteDeviceButtonHandler.js"></script>';
-    }
 ?>
+        <div class="wrapper">
+        <div class="table">
+            <div class="row header green">
+                <div class="cell">Device name</div>
+                <div class="cell">Actions</div>
+            </div>
+
+<?php
+            foreach($deviceList as $device)
+            {
+?>
+                <div class="row">
+                    <div class="cell"><?php echo $device["Name"] ?></div>
+                    <div class="cell">
+                        <button onclick="SetShutdownState(this.name)" id="shutdown" name="<?php echo $device["Device_id"] ?>">Shutdown</button>
+                        <button onclick="DeleteDevice('<?php echo$_SESSION["login"] ?>', this.name);" id="deleteDevice" name="<?php echo $device["Device_id"] ?>">Delete device</button>
+                    </div>
+                </div>
+<?php
+            }
+        }
+?>
+        </div>
+        </div>
+
+        <!-- Button handlers -->
+        <script src="./js/shutdownButtonHandler.js"></script>
+        <script src="./js/deleteDeviceButtonHandler.js"></script>

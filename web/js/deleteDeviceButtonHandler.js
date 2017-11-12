@@ -10,6 +10,9 @@ function DeleteDevice(login, name)
         // TODO: Check return status...
     });
 
-    // Refresh page to reload table
-    location.reload(true);
+    setTimeout(function()
+    {
+        // Refresh page to reload table
+        location.reload(true);
+    }, 200);
 }

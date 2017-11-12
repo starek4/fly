@@ -14,7 +14,7 @@ class Db
         {
             throw new Exception("Cannot connect to DB.");
         }
-            
+
         // Set UTF-8 encoding
         $this->mysqli->query("SET NAMES 'utf8'");
     }

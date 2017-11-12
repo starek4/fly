@@ -1,5 +1,5 @@
 <?php
-require_once(__DIR__ . "/Db.php");
+require_once(dirname(__FILE__) . "/Db.php");
 
 class UserRepository{
     var $db;
@@ -16,7 +16,7 @@ class UserRepository{
         $variables = array($login, $hashPasswd, $email);
         $this->db->Query($query, "sss", $variables);
     }
-    
+
     public function DelUser($login)
     {
         $deviceQuery = "DELETE FROM `Devices` WHERE `Devices`.`User_login` = ?";
@@ -28,7 +28,7 @@ class UserRepository{
         // Delete user
         $this->db->Query($userQuery, "s", array(login));
     }
-    
+
     public function CheckPassword($login, $password)
     {
         $query = "SELECT `Pass` FROM `Users` WHERE `Login` = ?";
