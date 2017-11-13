@@ -23,7 +23,7 @@ require_once(dirname(__FILE__) . "/Db.php");
 
         public function GetDevicesByLogin($login)
         {
-            $query = "SELECT `Device_id`,`Name`,`Is_shutdown_pending` as Status FROM `Devices` WHERE `User_login` = ?";
+            $query = "SELECT `Device_id`,`Name`,`Is_shutdown_pending` as Status, `Last_active` FROM `Devices` WHERE `User_login` = ?";
             return $this->db->Select($query, "s", array($login));
         }
 
