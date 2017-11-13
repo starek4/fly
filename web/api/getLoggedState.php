@@ -5,7 +5,7 @@
     {
         $response["Success"] = false;
         $response["Error"] = "Bad parameters.";
-        $response["Shutdown"] = false;
+        $response["Logged"] = false;
         echo json_encode($response, JSON_PRETTY_PRINT);
         exit;
     }
@@ -17,14 +17,13 @@
     try
     {
         $deviceRepo = new DeviceRepository();
-        $deviceRepo->UpdateLastActive($device_id);
-        $result = $deviceRepo->GetShutdownPending($device_id);
+        $result = $deviceRepo->GetLoggedState($device_id);
     }
     catch (Exception $e)
     {
         $response["Success"] = false;
         $response["Error"] = $e->getMessage();
-        $response["Shutdown"] = false;
+        $response["Logged"] = false;
         echo json_encode($response, JSON_PRETTY_PRINT);
         exit;
     }
@@ -33,19 +32,19 @@
     {
         $response["Success"] = false;
         $response["Error"] = "Cannot find device: " . $device_id;
-        $response["Shutdown"] = false;
+        $response["Logged"] = false;
     }
-    elseif($result[0]["Is_shutdown_pending"] == "0")
+    elseif($result[0]["Is_logged"] == "0")
     {
         $response["Success"] = true;
         $response["Error"] = "";
-        $response["Shutdown"] = false;
+        $response["Logged"] = false;
     }
     else
     {
         $response["Success"] = true;
         $response["Error"] = "";
-        $response["Shutdown"] = true;
+        $response["Logged"] = true;
     }
     echo json_encode($response, JSON_PRETTY_PRINT);
 ?>

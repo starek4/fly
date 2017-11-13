@@ -33,7 +33,21 @@ namespace SharedUnitTests
             Client client = new Client(true);
             try
             {
-                client.GetShutdownPending(ApiResponses.ValidMetadata, ApiResponses.ValidMetadata).Wait();
+                client.GetShutdownPending(ApiResponses.ValidMetadata).Wait();
+            }
+            catch (Exception exception)
+            {
+                Assert.True(false, "Exception thrown in http client: " + exception);
+            }
+        }
+
+        [Fact]
+        public void GetLoggedState()
+        {
+            Client client = new Client(true);
+            try
+            {
+                client.GetLoggedState(ApiResponses.ValidMetadata).Wait();
             }
             catch (Exception exception)
             {
@@ -45,7 +59,18 @@ namespace SharedUnitTests
         public void GetShutdownInvalidException()
         {
             Client client = new Client(true);
-            var exception = Record.Exception(() => client.GetShutdownPending(ApiResponses.InvalidMetadata, ApiResponses.InvalidMetadata).Wait());
+            var exception = Record.Exception(() => client.GetShutdownPending(ApiResponses.InvalidMetadata).Wait());
+            if (exception != null)
+                Assert.IsType(typeof(DatabaseException), exception.InnerException);
+            else
+                Assert.True(false, "Exception was not throw");
+        }
+
+        [Fact]
+        public void GetLoggedStateInvalidException()
+        {
+            Client client = new Client(true);
+            var exception = Record.Exception(() => client.GetLoggedState(ApiResponses.InvalidMetadata).Wait());
             if (exception != null)
                 Assert.IsType(typeof(DatabaseException), exception.InnerException);
             else
@@ -128,6 +153,31 @@ namespace SharedUnitTests
         }
 
         [Fact]
+        public void SetLoggedStateValid()
+        {
+            Client client = new Client(true);
+            try
+            {
+                client.SetLoggedState(ApiResponses.ValidMetadata).Wait();
+            }
+            catch (Exception exception)
+            {
+                Assert.True(false, "Exception thrown in http client: " + exception);
+            }
+        }
+
+        [Fact]
+        public void SetLoggedStateInvalidException()
+        {
+            Client client = new Client(true);
+            var exception = Record.Exception(() => client.SetLoggedState(ApiResponses.InvalidMetadata).Wait());
+            if (exception != null)
+                Assert.IsType(typeof(DatabaseException), exception.InnerException);
+            else
+                Assert.True(false, "Exception was not throw");
+        }
+
+        [Fact]
         public void ClearShutdownValid()
         {
             Client client = new Client(true);
@@ -146,6 +196,31 @@ namespace SharedUnitTests
         {
             Client client = new Client(true);
             var exception = Record.Exception(() => client.ClearShutdownPending(ApiResponses.InvalidMetadata).Wait());
+            if (exception != null)
+                Assert.IsType(typeof(DatabaseException), exception.InnerException);
+            else
+                Assert.True(false, "Exception was not throw");
+        }
+
+        [Fact]
+        public void ClearLoggedStateValid()
+        {
+            Client client = new Client(true);
+            try
+            {
+                client.ClearLoggedState(ApiResponses.ValidMetadata).Wait();
+            }
+            catch (Exception exception)
+            {
+                Assert.True(false, "Exception thrown in http client: " + exception);
+            }
+        }
+
+        [Fact]
+        public void ClearLoggedStateInvalidException()
+        {
+            Client client = new Client(true);
+            var exception = Record.Exception(() => client.ClearLoggedState(ApiResponses.InvalidMetadata).Wait());
             if (exception != null)
                 Assert.IsType(typeof(DatabaseException), exception.InnerException);
             else

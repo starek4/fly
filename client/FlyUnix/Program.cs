@@ -34,7 +34,7 @@ namespace FlyUnix
 
                 while (true)
                 {
-                    bool isShutdownPending = RequestHandler.DoRequest(client.GetShutdownPending(deviceId, arguments.Login));
+                    bool isShutdownPending = RequestHandler.DoRequest(client.GetShutdownPending(deviceId));
                     if (isShutdownPending)
                     {
                         RequestHandler.DoRequest(() => client.ClearShutdownPending(deviceId).Wait());

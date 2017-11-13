@@ -3,9 +3,9 @@ using Shared.API.Mappers;
 
 namespace Shared.API.PostModels
 {
-    public class GetShutdownPendingPostData : BasePostData
+    public class GetLoggedStatePostData : BasePostData
     {
-        public GetShutdownPendingPostData(string deviceId)
+        public GetLoggedStatePostData(string deviceId)
         {
             Data.Add(DataTypeMapper.GetPath(DataTypes.DeviceId), deviceId);
         }

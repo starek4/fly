@@ -14,7 +14,10 @@ namespace Shared.API.Mappers
             { ApiPaths.SetShutdownPending, "setShutdownPending.php" },
             { ApiPaths.GetShutdownPending, "getShutdownPending.php" },
             { ApiPaths.VerifyDeviceId, "verifyDeviceId.php" },
-            { ApiPaths.DeleteDevice, "deleteDevice.php" }
+            { ApiPaths.DeleteDevice, "deleteDevice.php" },
+            { ApiPaths.ClearLoggedState, "clearLoggedState.php" },
+            { ApiPaths.SetLoggedState, "setLoggedState.php" },
+            { ApiPaths.GetLoggedState, "getLoggedState.php" }
         };
 
         public static string GetPath(ApiPaths path)

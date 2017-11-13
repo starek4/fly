@@ -27,6 +27,10 @@
         <tb:TaskbarIcon x:Name="ShutdownNotifyIcon" IconSource="\shutdown.ico" ToolTipText="Fly client">
             <tb:TaskbarIcon.ContextMenu>
                 <ContextMenu>
+                    <MenuItem Header="Logout and exit"
+                              Command="{Binding LogoutAndExitCommand}"
+                              CommandParameter="{Binding}">
+                    </MenuItem>
                     <MenuItem Header="Exit"
                               Command="{Binding ExitAppCommand}"
                               CommandParameter="{Binding}">

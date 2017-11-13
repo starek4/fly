@@ -28,7 +28,8 @@ namespace FlyWindowsWPF.ViewModels
 
         public LoginViewModel()
         {
-            EnableLoginButton();
+            Status = "Checking logging status...";
+            new Thread(IsDeviceLogged).Start();
         }
 
         public string Status
@@ -44,6 +45,12 @@ namespace FlyWindowsWPF.ViewModels
         private void ExitApp()
         {
             Application.Current.Shutdown();
+        }
+
+        private async void LogoutAndExit()
+        {
+            await _client.ClearLoggedState(DeviceIdentifierHelper.DeviceIdentifier);
+            ExitApp();
         }
 
         private void LoginAction(object parameter)
@@ -71,11 +78,30 @@ namespace FlyWindowsWPF.ViewModels
                 bool isDeviceRegistered = await RequestHandler.DoRequest(_client.VerifyDeviceId(DeviceIdentifierHelper.DeviceIdentifier));
                 if (isDeviceRegistered == false)
                     await RequestHandler.DoRequest(_client.AddDevice(Login, DeviceIdentifierHelper.DeviceIdentifier, DeviceNameHelper.DeviceName));
-                HideWindow();
-                new Thread(() => ClientLoop.Loop(_client, TrayController, Login)).Start();
+                IntoTray();
             }
             else
             {
+                EnableLoginButton();
+            }
+        }
+
+        private async void IntoTray()
+        {
+            await RequestHandler.DoRequest(_client.SetLoggedState(DeviceIdentifierHelper.DeviceIdentifier));
+            Status = String.Empty;
+            HideWindow();
+            new Thread(() => ClientLoop.Loop(_client, TrayController, Login)).Start();
+        }
+
+        private async void IsDeviceLogged()
+        {
+            bool logged = await RequestHandler.DoRequest(_client.GetLoggedState(DeviceIdentifierHelper.DeviceIdentifier));
+            if (logged)
+                IntoTray();
+            else
+            {
+                Status = String.Empty;
                 EnableLoginButton();
             }
         }
@@ -106,6 +132,17 @@ namespace FlyWindowsWPF.ViewModels
                 return _exitAppCommand ?? (_exitAppCommand = new RelayCommand(
                            p => true,
                            p => ExitApp()));
+            }
+        }
+
+        private RelayCommand _logoutAndExitCommand;
+        public RelayCommand LogoutAndExitCommand
+        {
+            get
+            {
+                return _logoutAndExitCommand ?? (_logoutAndExitCommand = new RelayCommand(
+                           p => true,
+                           p => LogoutAndExit()));
             }
         }
 

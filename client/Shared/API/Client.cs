@@ -68,9 +68,9 @@ namespace Shared.API
             CheckResponse(response);
         }
 
-        public async Task<bool> GetShutdownPending(string deviceId, string login)
+        public async Task<bool> GetShutdownPending(string deviceId)
         {
-            var data = new GetShutdownPendingPostData(deviceId, login).Data;
+            var data = new GetShutdownPendingPostData(deviceId).Data;
             var apiPath = ApiPathMapper.GetPath(ApiPaths.GetShutdownPending);
             var httpContent = await _requestHandler.DoRequest(_client, apiPath, data);
             GetShutdownPendingResponse response = Convert<GetShutdownPendingResponse>(httpContent);
@@ -78,6 +78,39 @@ namespace Shared.API
             if (response.Shutdown)
             {
                 _logger?.Info("Received shutdown message.");
+                return true;
+            }
+            return false;
+        }
+
+        public async Task ClearLoggedState(string deviceId)
+        {
+            var data = new ClearLoggedStatePostData(deviceId).Data;
+            var apiPath = ApiPathMapper.GetPath(ApiPaths.ClearLoggedState);
+            var httpContent = await _requestHandler.DoRequest(_client, apiPath, data);
+            BaseResponse response = Convert<BaseResponse>(httpContent);
+            CheckResponse(response);
+        }
+
+        public async Task SetLoggedState(string deviceId)
+        {
+            var data = new SetLoggedStatePostData(deviceId).Data;
+            var apiPath = ApiPathMapper.GetPath(ApiPaths.SetLoggedState);
+            var httpContent = await _requestHandler.DoRequest(_client, apiPath, data);
+            BaseResponse response = Convert<BaseResponse>(httpContent);
+            CheckResponse(response);
+        }
+
+        public async Task<bool> GetLoggedState(string deviceId)
+        {
+            var data = new GetLoggedStatePostData(deviceId).Data;
+            var apiPath = ApiPathMapper.GetPath(ApiPaths.GetLoggedState);
+            var httpContent = await _requestHandler.DoRequest(_client, apiPath, data);
+            GetLoggedStateResponse response = Convert<GetLoggedStateResponse>(httpContent);
+            CheckResponse(response);
+            if (response.Logged)
+            {
+                _logger?.Info("Device is already logged.");
                 return true;
             }
             return false;

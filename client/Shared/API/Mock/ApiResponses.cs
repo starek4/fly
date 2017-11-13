@@ -20,6 +20,7 @@ namespace Shared.API.Mock
         {
             // Valid responses
             var getShutdownPending = JsonConvert.SerializeObject(new GetShutdownPendingResponse {Error = String.Empty, Shutdown = false, Success = true});
+            var getLoggedState = JsonConvert.SerializeObject(new GetLoggedStateResponse { Error = String.Empty, Logged = false, Success = true });
             var verifyUserLoginResponse = JsonConvert.SerializeObject(new VerifyUserLoginResponse {Error = String.Empty, Success = true, Valid = false});
             var verifyDeviceIdResponse = JsonConvert.SerializeObject(new VerifyDeviceIdResponse { Error = String.Empty, Success = true, IsRegistered = false});
             var baseResponse = JsonConvert.SerializeObject(new BaseResponse { Error = String.Empty, Success = true });
@@ -31,6 +32,7 @@ namespace Shared.API.Mock
 
             // Invalid responses
             var getShutdownPendingInvalid = JsonConvert.SerializeObject(new GetShutdownPendingResponse { Error = String.Empty, Shutdown = true, Success = false });
+            var getLoggedStateInvalid = JsonConvert.SerializeObject(new GetLoggedStateResponse { Error = String.Empty, Logged = true, Success = false });
             var verifyUserLoginResponseInvalid = JsonConvert.SerializeObject(new VerifyUserLoginResponse { Error = String.Empty, Success = false, Valid = true });
             var verifyDeviceIdResponseInvalid = JsonConvert.SerializeObject(new VerifyDeviceIdResponse { Error = String.Empty, Success = false, IsRegistered = true });
             var baseResponseInvalid = JsonConvert.SerializeObject(new BaseResponse { Error = String.Empty, Success = false });
@@ -47,6 +49,13 @@ namespace Shared.API.Mock
             {
                 Path = BaseUrl.Path + ApiPathMapper.GetPath(ApiPaths.GetShutdownPending),
                 Response = getShutdownPending,
+                Metadata = ValidMetadata
+            });
+
+            Responses.Add(new ExpectedResponseModel
+            {
+                Path = BaseUrl.Path + ApiPathMapper.GetPath(ApiPaths.GetLoggedState),
+                Response = getLoggedState,
                 Metadata = ValidMetadata
             });
 
@@ -73,7 +82,21 @@ namespace Shared.API.Mock
 
             Responses.Add(new ExpectedResponseModel
             {
+                Path = BaseUrl.Path + ApiPathMapper.GetPath(ApiPaths.SetLoggedState),
+                Response = baseResponse,
+                Metadata = ValidMetadata
+            });
+
+            Responses.Add(new ExpectedResponseModel
+            {
                 Path = BaseUrl.Path + ApiPathMapper.GetPath(ApiPaths.ClearShutdownPending),
+                Response = baseResponse,
+                Metadata = ValidMetadata
+            });
+
+            Responses.Add(new ExpectedResponseModel
+            {
+                Path = BaseUrl.Path + ApiPathMapper.GetPath(ApiPaths.ClearLoggedState),
                 Response = baseResponse,
                 Metadata = ValidMetadata
             });
@@ -99,11 +122,19 @@ namespace Shared.API.Mock
                 Metadata = ValidMetadata
             });
 
+
             // Invalid requests
             Responses.Add(new ExpectedResponseModel
             {
                 Path = BaseUrl.Path + ApiPathMapper.GetPath(ApiPaths.GetShutdownPending),
                 Response = getShutdownPendingInvalid,
+                Metadata = InvalidMetadata
+            });
+
+            Responses.Add(new ExpectedResponseModel
+            {
+                Path = BaseUrl.Path + ApiPathMapper.GetPath(ApiPaths.GetLoggedState),
+                Response = getLoggedStateInvalid,
                 Metadata = InvalidMetadata
             });
 
@@ -131,6 +162,20 @@ namespace Shared.API.Mock
             Responses.Add(new ExpectedResponseModel
             {
                 Path = BaseUrl.Path + ApiPathMapper.GetPath(ApiPaths.ClearShutdownPending),
+                Response = baseResponseInvalid,
+                Metadata = InvalidMetadata
+            });
+
+            Responses.Add(new ExpectedResponseModel
+            {
+                Path = BaseUrl.Path + ApiPathMapper.GetPath(ApiPaths.SetLoggedState),
+                Response = baseResponseInvalid,
+                Metadata = InvalidMetadata
+            });
+
+            Responses.Add(new ExpectedResponseModel
+            {
+                Path = BaseUrl.Path + ApiPathMapper.GetPath(ApiPaths.ClearLoggedState),
                 Response = baseResponseInvalid,
                 Metadata = InvalidMetadata
             });

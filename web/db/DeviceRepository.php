@@ -27,10 +27,10 @@ require_once(dirname(__FILE__) . "/Db.php");
             return $this->db->Select($query, "s", array($login));
         }
 
-        public function GetShutdownPending($login, $device_id)
+        public function GetShutdownPending($device_id)
         {
-            $query = "SELECT `Is_shutdown_pending` FROM `Devices` WHERE `Device_id` = ? AND `User_login` = ?";
-            return $this->db->Select($query, "ss", array($device_id,$login));
+            $query = "SELECT `Is_shutdown_pending` FROM `Devices` WHERE `Device_id` = ?";
+            return $this->db->Select($query, "s", array($device_id));
         }
 
         public function SetShutdownPending($device_id)
@@ -47,8 +47,32 @@ require_once(dirname(__FILE__) . "/Db.php");
 
         public function VerifyDeviceId($device_id)
         {
-            $query = "Select `Device_id` FROM `Devices` WHERE `Device_id` = ?";
+            $query = "SELECT `Device_id` FROM `Devices` WHERE `Device_id` = ?";
             return $this->db->Select($query, "s", array($device_id));
+        }
+
+        public function UpdateLastActive($device_id)
+        {
+            $query = "UPDATE `Devices` SET `Last_active` = current_timestamp WHERE `Device_id` = ?";
+            return $this->db->Query($query, "s", array($device_id));
+        }
+
+        public function GetLoggedState($device_id)
+        {
+            $query = "SELECT `Is_logged` FROM `Devices` WHERE `Device_id` = ?";
+            return $this->db->Select($query, "s", array($device_id));
+        }
+
+        public function SetLoggedState($device_id)
+        {
+            $query = "UPDATE `Devices` SET `Is_logged` = ? WHERE `Device_id` = ?";
+            $this->db->Query($query, "is", array(1, $device_id));
+        }
+
+        public function ClearLoggedState($device_id)
+        {
+            $query = "UPDATE `Devices` SET `Is_logged` = ? WHERE `Device_id` = ?";
+            $this->db->Query($query, "is", array(0, $device_id));
         }
     }
 ?>

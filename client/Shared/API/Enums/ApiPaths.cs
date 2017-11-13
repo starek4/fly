@@ -9,6 +9,9 @@
         AddDevice,
         VerifyDeviceId,
         GetDevices,
-        DeleteDevice
+        DeleteDevice,
+        ClearLoggedState,
+        SetLoggedState,
+        GetLoggedState
     }
 }

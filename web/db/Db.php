@@ -45,22 +45,22 @@ class Db
             throw new Exception("Cannot exec query: " . $query);
         }
 
-        $meta = $statement->result_metadata(); 
-        while ($field = $meta->fetch_field()) 
-        { 
-            $params[] = &$row[$field->name]; 
-        } 
-    
-        call_user_func_array(array($statement, 'bind_result'), $params); 
-    
+        $meta = $statement->result_metadata();
+        while ($field = $meta->fetch_field())
+        {
+            $params[] = &$row[$field->name];
+        }
+
+        call_user_func_array(array($statement, 'bind_result'), $params);
+
         while ($statement->fetch())
         {
-            foreach($row as $key => $val) 
-            { 
-                $c[$key] = $val; 
-            } 
-            $result[] = $c; 
-        } 
+            foreach($row as $key => $val)
+            {
+                $c[$key] = $val;
+            }
+            $result[] = $c;
+        }
 
         $statement->close();
         return $result;
