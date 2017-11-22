@@ -90,8 +90,7 @@
     <ConsolePause>False</ConsolePause>
     <MtouchArch>ARMv7, ARM64</MtouchArch>
     <BuildIpa>True</BuildIpa>
-    <CodesignProvision>
-    </CodesignProvision>
+    <CodesignProvision>iOS Team Provisioning Profile: com.fly.FlyPhone</CodesignProvision>
     <CodesignKey>iPhone Developer: starek4@centrum.cz (UHS4LC6V88)</CodesignKey>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <SignAssembly>false</SignAssembly>

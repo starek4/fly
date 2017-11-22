@@ -13,7 +13,7 @@ All x64 distro's with **bash**, **uname** and **shutdown** command.<br />
 ### Android
 Android Lollipop (API 21) and higher<br />
 **Download**: https://fly.starekit.cz/client/droid/fly.apk
-### iOS [NOT SUPPORTED FOR NOW]
+### iOS
 iOS 11.1 and higher<br />
 **Download**: https://fly.starekit.cz/client/ios/fly.ipa
 
