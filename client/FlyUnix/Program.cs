@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Threading;
 using Shared.API;
 using Shared.CLI;
@@ -9,6 +10,12 @@ namespace FlyUnix
     {
         static void Main(string[] args)
         {
+            if(AlreadyRunning())
+            {
+                Console.WriteLine("Another instance of fly client is already running.");
+                return;
+            }
+
             string deviceId = ShellHandler.GetDeviceId();
             string deviceName = ShellHandler.GetDeviceName();
 
@@ -44,6 +51,21 @@ namespace FlyUnix
                     Thread.Sleep(30 * 1000);
                 }
             }
+            Console.WriteLine("Wrong arguments. Try it again: fly -l <login> -p <password>");
+        }
+
+        private static bool AlreadyRunning()
+        {
+            Process[] processes = Process.GetProcesses();
+            Process currentProc = Process.GetCurrentProcess();
+            foreach (Process process in processes)
+            {
+                if (currentProc.ProcessName == process.ProcessName && currentProc.Id != process.Id)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }
