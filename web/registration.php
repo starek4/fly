@@ -1,35 +1,38 @@
 <?php
-require_once(dirname(__FILE__) . "/db/UserRepository.php");
-$status = "";
-if (isset($_POST["submit"]))
-{
-    try
-    {
-        $userRepository = new UserRepository();
-        $check = $userRepository->CheckIfUserExists($_POST["login"]);
-    }
-    catch (Exception $e)
-    {
-        $status = "<font color=\"red\">Cannot verify user</font>";
-    }
+    require_once(dirname(__FILE__) . "/db/UserRepository.php");
 
-    if($check)
-    {
-        $status = "<font color=\"red\">The user already exists!</font>";
-    }
-    else
+    $status = "";
+
+    if (isset($_POST["submit"]))
     {
         try
         {
-            $userRepository->AddUser($_POST["login"], $_POST["password"], $_POST["e-mail"]);
+            $userRepository = new UserRepository();
+            $check = $userRepository->CheckIfUserExists($_POST["login"]);
         }
         catch (Exception $e)
         {
-            $status = "<font color=\"red\">Cannot add user</font>";
+            $status = "<font color=\"red\">Cannot verify user</font>";
+            $logger->Error("Cannot register user on registration page.");
         }
-        $status = "<font color=\"green\">Registration was successful!</font>";
+
+        if($check)
+        {
+            $status = "<font color=\"red\">The user already exists!</font>";
+        }
+        else
+        {
+            try
+            {
+                $userRepository->AddUser($_POST["login"], $_POST["password"], $_POST["e-mail"]);
+            }
+            catch (Exception $e)
+            {
+                $status = "<font color=\"red\">Cannot add user</font>";
+            }
+            $status = "<font color=\"green\">Registration was successful!</font>";
+        }
     }
-}
 ?>
 
 <!DOCTYPE html>

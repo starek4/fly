@@ -1,5 +1,5 @@
 <?php
-require_once(dirname(__FILE__) . "/Session.php");
+require_once(dirname(__FILE__) . "/includes/Session.php");
 require_once(dirname(__FILE__) . "/db/UserRepository.php");
 
 if (isset($_POST["submit"]))
@@ -12,6 +12,7 @@ if (isset($_POST["submit"]))
     catch (Exception $e)
     {
         echo $e->getMessage();
+        $logger->Error("Cannot create user repository on login page.");
         exit;
     }
 
@@ -22,6 +23,7 @@ if (isset($_POST["submit"]))
     catch (Exception $e)
     {
         $status = "<font color=\"red\">Cannot verify user!</font>";
+        $logger->Error("Cannot verify user on login page.");
     }
 
     if ($check)

@@ -1,6 +1,8 @@
 <?php
-    $response = array();
+    require_once(dirname(__FILE__) . "/../includes/Logger.php");
+    $logger = new Logger();
 
+    $response = array();
     if (!isset($_POST) || !isset($_POST["Device_id"]))
     {
         $response["Success"] = false;
@@ -8,6 +10,7 @@
         $response["Logged"] = false;
         $response["Login"] = "";
         echo json_encode($response, JSON_PRETTY_PRINT);
+        $logger->Error("Bad parameters.", $_POST);
         exit;
     }
 
@@ -27,6 +30,7 @@
         $response["Logged"] = false;
         $response["Login"] = "";
         echo json_encode($response, JSON_PRETTY_PRINT);
+        $logger->Error("Exception when getting logged state: " . $e->getMessage());
         exit;
     }
 
@@ -36,6 +40,7 @@
         $response["Error"] = "Cannot find device: " . $device_id;
         $response["Logged"] = false;
         $response["Login"] = "";
+        $logger->Info("Cannod find device: " . $device_id);
     }
     elseif($result[0]["Is_logged"] == "0")
     {
@@ -43,6 +48,7 @@
         $response["Error"] = "";
         $response["Logged"] = false;
         $response["Login"] = $result[0]["User_login"];
+        $logger->Info("Device is not logged: " . $device_id);
     }
     else
     {
@@ -50,6 +56,7 @@
         $response["Error"] = "";
         $response["Logged"] = true;
         $response["Login"] = $result[0]["User_login"];
+        $logger->Info("Device is logged: " . $device_id);
     }
     echo json_encode($response, JSON_PRETTY_PRINT);
 ?>

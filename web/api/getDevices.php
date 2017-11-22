@@ -1,12 +1,15 @@
 <?php
-    $response = array();
+    require_once(dirname(__FILE__) . "/../includes/Logger.php");
+    $logger = new Logger();
 
+    $response = array();
     if (!isset($_POST) || !isset($_POST["Login"]))
     {
         $response["Success"] = false;
         $response["Error"] = "Bad parameters.";
         $response["Devices"] = null;
         echo json_encode($response, JSON_PRETTY_PRINT);
+        $logger->Error("Bad parameters.", $_POST);
         exit;
     }
 
@@ -24,6 +27,7 @@
         $response["Success"] = false;
         $response["Error"] = $e->getMessage();
         echo json_encode($response, JSON_PRETTY_PRINT);
+        $logger->Error("Exception when getting device: " . $e->getMessage());
         exit;
     }
 
@@ -44,4 +48,5 @@
     $response["Error"] = "";
     $response["Devices"] = $devices;
     echo json_encode($response, JSON_PRETTY_PRINT);
+    $logger->Info("Devices successfully getted for user: " . $login, $devices);
 ?>

@@ -9,6 +9,7 @@
     catch (Exception $e)
     {
         echo $e->getMessage();
+        $logger->Error("Cannot create device repository on table page.");
         exit;
     }
 
@@ -19,6 +20,7 @@
     catch (Exception $e)
     {
         echo "Cannot get user's devices:" . $e->getMessage();
+        $logger->Error("Cannot get devices on table page.");
         exit;
     }
 

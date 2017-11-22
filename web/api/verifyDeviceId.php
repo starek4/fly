@@ -1,13 +1,15 @@
 <?php
+    require_once(dirname(__FILE__) . "/../includes/Logger.php");
+    $logger = new Logger();
 
     $response = array();
-
     if (!isset($_POST) || !isset($_POST["Device_id"]))
     {
         $response["Success"] = false;
         $response["Error"] = "Bad parameters.";
         $response["IsRegistered"] = false;
         echo json_encode($response, JSON_PRETTY_PRINT);
+        $logger->Error("Bad parameters.", $_POST);
         exit;
     }
 
@@ -26,6 +28,7 @@
         $response["Error"] = $e->getMessage();
         $response["IsRegistered"] = false;
         echo json_encode($response, JSON_PRETTY_PRINT);
+        $logger->Error("Exception when verifying device id " . $device_id . ": " . $e->getMessage());
         exit;
     }
 
@@ -34,12 +37,14 @@
         $response["Success"] = true;
         $response["Error"] = "";
         $response["IsRegistered"] = false;
+        $logger->Info("Device is not registered: " . $device_id);
     }
     else
     {
         $response["Success"] = true;
         $response["Error"] = "";
         $response["IsRegistered"] = true;
+        $logger->Info("Device is registered: " . $device_id);
     }
     echo json_encode($response, JSON_PRETTY_PRINT);
 

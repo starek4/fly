@@ -1,12 +1,14 @@
 <?php
+    require_once(dirname(__FILE__) . "/../includes/Logger.php");
+    $logger = new Logger();
 
     $response = array();
-
     if (!isset($_POST) || !isset($_POST["Device_id"]))
     {
         $response["Success"] = false;
         $response["Error"] = "Bad parameters.";
         echo json_encode($response, JSON_PRETTY_PRINT);
+        $logger->Error("Bad parameters.", $_POST);
         exit;
     }
 
