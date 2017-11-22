@@ -36,6 +36,7 @@
             $devices[$index]["DeviceId"] = $device["Device_id"];
             $devices[$index]["Name"] = $device["Name"];
             $devices[$index]["Status"] = $device["Status"];
+            $devices[$index]["LastActive"] = $device["Last_active"];
             $index = $index + 1;
         }
     }

@@ -9,7 +9,7 @@
             <Label Text="Password"></Label>
             <Entry IsPassword="True" Text="{Binding Password}"></Entry>
             <Button Command="{Binding LoginButtonCommand}" Text="Login"></Button>
-            <Label TextColor="Red" Text="{Binding Status}"></Label>
+            <Label HorizontalTextAlignment="Center" TextColor="Red" Text="{Binding Status}"></Label>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

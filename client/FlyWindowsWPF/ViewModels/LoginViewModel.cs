@@ -10,6 +10,7 @@ using FlyWindowsWPF.ViewModels.Base;
 using FlyWindowsWPF.ViewModels.Commands;
 using Hardcodet.Wpf.TaskbarNotification;
 using Shared.API;
+using Shared.API.ResponseModels;
 using Shared.Enviroment;
 using Shared.Logging;
 
@@ -77,7 +78,7 @@ namespace FlyWindowsWPF.ViewModels
             {
                 bool isDeviceRegistered = await RequestHandler.DoRequest(_client.VerifyDeviceId(DeviceIdentifierHelper.DeviceIdentifier));
                 if (isDeviceRegistered == false)
-                    await RequestHandler.DoRequest(_client.AddDevice(Login, DeviceIdentifierHelper.DeviceIdentifier, DeviceNameHelper.DeviceName));
+                    await RequestHandler.DoRequest(_client.AddDevice(Login, DeviceIdentifierHelper.DeviceIdentifier, DeviceNameHelper.DeviceName, true));
                 IntoTray();
             }
             else
@@ -91,13 +92,13 @@ namespace FlyWindowsWPF.ViewModels
             await RequestHandler.DoRequest(_client.SetLoggedState(DeviceIdentifierHelper.DeviceIdentifier));
             Status = String.Empty;
             HideWindow();
-            new Thread(() => ClientLoop.Loop(_client, TrayController, Login)).Start();
+            new Thread(() => ClientLoop.Loop(_client, TrayController)).Start();
         }
 
         private async void IsDeviceLogged()
         {
-            bool logged = await RequestHandler.DoRequest(_client.GetLoggedState(DeviceIdentifierHelper.DeviceIdentifier));
-            if (logged)
+            GetLoggedStateResponse logged = await RequestHandler.DoRequest(_client.GetLoggedState(DeviceIdentifierHelper.DeviceIdentifier));
+            if (logged.Logged)
                 IntoTray();
             else
             {

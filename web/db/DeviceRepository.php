@@ -9,10 +9,10 @@ require_once(dirname(__FILE__) . "/Db.php");
             $this->db = new Db();
         }
 
-        public function AddDevice($login, $device_id, $device_name)
+        public function AddDevice($login, $device_id, $device_name, $shutdownable)
         {
-            $query = "INSERT INTO `Devices` (`Id`, `Device_id`, `Name`, `User_login`) VALUES (NULL,?,?,?)";
-            $this->db->Query($query, "sss", array($device_id, $device_name, $login));
+            $query = "INSERT INTO `Devices` (`Id`, `Device_id`, `Name`, `User_login`, `Is_shutdownable`) VALUES (NULL,?,?,?,?)";
+            $this->db->Query($query, "sssi", array($device_id, $device_name, $login, $shutdownable));
         }
 
         public function DelDevice($login, $device_id)
@@ -23,7 +23,7 @@ require_once(dirname(__FILE__) . "/Db.php");
 
         public function GetDevicesByLogin($login)
         {
-            $query = "SELECT `Device_id`,`Name`,`Is_shutdown_pending` as Status, `Last_active` FROM `Devices` WHERE `User_login` = ?";
+            $query = "SELECT `Device_id`,`Name`,`Is_shutdown_pending` as Status,`Last_active` FROM `Devices` WHERE `User_login` = ? AND `Is_shutdownable` = 1";
             return $this->db->Select($query, "s", array($login));
         }
 
@@ -59,7 +59,7 @@ require_once(dirname(__FILE__) . "/Db.php");
 
         public function GetLoggedState($device_id)
         {
-            $query = "SELECT `Is_logged` FROM `Devices` WHERE `Device_id` = ?";
+            $query = "SELECT `Is_logged`,`User_login` FROM `Devices` WHERE `Device_id` = ?";
             return $this->db->Select($query, "s", array($device_id));
         }
 

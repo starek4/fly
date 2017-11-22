@@ -51,7 +51,7 @@
                         <?php
                             $time = strtotime($device['Last_active']);
                             $curtime = time();
-                            if (($curtime-$time) < (60))      // 1 minutes
+                            if (($curtime - $time) < 60)      // 1 minutes
                                 echo '<img width="20" src="images/green.png"></img>';
                             else
                                 echo '<img width="20" src="images/red.png"></img>';

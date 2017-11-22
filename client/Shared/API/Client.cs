@@ -101,7 +101,7 @@ namespace Shared.API
             CheckResponse(response);
         }
 
-        public async Task<bool> GetLoggedState(string deviceId)
+        public async Task<GetLoggedStateResponse> GetLoggedState(string deviceId)
         {
             var data = new GetLoggedStatePostData(deviceId).Data;
             var apiPath = ApiPathMapper.GetPath(ApiPaths.GetLoggedState);
@@ -111,14 +111,13 @@ namespace Shared.API
             if (response.Logged)
             {
                 _logger?.Info("Device is already logged.");
-                return true;
             }
-            return false;
+            return response;
         }
 
-        public async Task AddDevice(string login, string deviceId, string name)
+        public async Task AddDevice(string login, string deviceId, string name, bool shutdownable)
         {
-            var data = new AddDevicePostData(deviceId, login, name).Data;
+            var data = new AddDevicePostData(deviceId, login, name, shutdownable).Data;
             var apiPath = ApiPathMapper.GetPath(ApiPaths.AddDevice);
             var httpContent = await _requestHandler.DoRequest(_client, apiPath, data);
             BaseResponse response = Convert<BaseResponse>(httpContent);

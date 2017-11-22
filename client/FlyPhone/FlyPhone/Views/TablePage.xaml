@@ -5,15 +5,30 @@
     <ContentPage.Content>
         <StackLayout>
             <Label Margin="20" FontAttributes="Bold" Text="Devices"></Label>
-            <ListView ItemTapped="OnItemTapped" Margin="20" ItemsSource="{Binding Devices}">
+            <ListView HasUnevenRows='True' ItemTapped="OnItemTapped" Margin="20" ItemsSource="{Binding Devices}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Label Text="{Binding Name}"/>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                    <ColumnDefinition Width="50"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="0" Text="{Binding Name}"/>
+                                <Image Aspect="AspectFit" WidthRequest="20" HeightRequest="20" Grid.Column="1" Source="{Binding Image}" />
+                            </Grid>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="200"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="1" Command="{Binding LogoutButtonCommand}" Text="Logout"></Button>
+            </Grid>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

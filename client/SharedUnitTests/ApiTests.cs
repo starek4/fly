@@ -262,7 +262,7 @@ namespace SharedUnitTests
             Client client = new Client(true);
             try
             {
-                client.AddDevice(ApiResponses.ValidMetadata, ApiResponses.ValidMetadata, ApiResponses.ValidMetadata).Wait();
+                client.AddDevice(ApiResponses.ValidMetadata, ApiResponses.ValidMetadata, ApiResponses.ValidMetadata, true).Wait();
             }
             catch (Exception exception)
             {
@@ -274,7 +274,7 @@ namespace SharedUnitTests
         public void AddDeviceInvalidException()
         {
             Client client = new Client(true);
-            var exception = Record.Exception(() => client.AddDevice(ApiResponses.InvalidMetadata, ApiResponses.InvalidMetadata, ApiResponses.InvalidMetadata).Wait());
+            var exception = Record.Exception(() => client.AddDevice(ApiResponses.InvalidMetadata, ApiResponses.InvalidMetadata, ApiResponses.InvalidMetadata, true).Wait());
             if (exception != null)
                 Assert.IsType(typeof(DatabaseException), exception.InnerException);
             else

@@ -10,7 +10,8 @@ namespace Shared.API.Mappers
             { DataTypes.Login, "Login" },
             { DataTypes.Password, "Password" },
             { DataTypes.DeviceId, "Device_id" },
-            { DataTypes.Name, "Name" }
+            { DataTypes.Name, "Name" },
+            { DataTypes.Shutdownable, "Shutdownable" }
         };
 
         public static string GetPath(DataTypes path)

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2006
+VisualStudioVersion = 15.0.27004.2008
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlyUnix", "FlyUnix\FlyUnix.csproj", "{F6605AE6-3109-43CB-BE2C-2645A6384C2E}"
 EndProject
@@ -338,7 +338,7 @@ Global
 		{2EF2514A-8EF2-4057-B785-808449521C61}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
 		{2EF2514A-8EF2-4057-B785-808449521C61}.Debug|x64.ActiveCfg = Debug|iPhone
 		{2EF2514A-8EF2-4057-B785-808449521C61}.Debug|x86.ActiveCfg = Debug|iPhone
-		{2EF2514A-8EF2-4057-B785-808449521C61}.Release|Any CPU.ActiveCfg = Release|iPhoneSimulator
+		{2EF2514A-8EF2-4057-B785-808449521C61}.Release|Any CPU.ActiveCfg = Ad-Hoc|iPhoneSimulator
 		{2EF2514A-8EF2-4057-B785-808449521C61}.Release|ARM.ActiveCfg = Release|iPhone
 		{2EF2514A-8EF2-4057-B785-808449521C61}.Release|iPhone.ActiveCfg = Release|iPhone
 		{2EF2514A-8EF2-4057-B785-808449521C61}.Release|iPhone.Build.0 = Release|iPhone

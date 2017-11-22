@@ -19,10 +19,8 @@
     try
     {
         $userRepo = new UserRepository();
-        
-            // Verify, if user exists, then check if the password is valid
-            $validUser = $userRepo->CheckIfUserExists($login);
-            $validCredentials = $userRepo->CheckPassword($login, $password);
+        $validUser = $userRepo->CheckIfUserExists($login);
+        $validCredentials = $userRepo->CheckPassword($login, $password);
     }
     catch (Exception $e)
     {
@@ -32,7 +30,7 @@
         echo json_encode($response, JSON_PRETTY_PRINT);
         exit;
     }
-    
+
     if($validUser == true)
     {
         if($validCredentials == false)

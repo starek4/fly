@@ -1,10 +1,12 @@
-﻿using Xamarin.Forms;
+﻿using System.Net;
+using Xamarin.Forms;
 
 namespace FlyPhone
 {
 	public partial class App
 	{
-		public App()
+	    public static readonly string Hostname = Dns.GetHostName();
+        public App()
 		{
 			InitializeComponent();
 

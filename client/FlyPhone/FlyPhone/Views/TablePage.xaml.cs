@@ -1,7 +1,6 @@
 ﻿using FlyPhone.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using Device = Shared.API.ResponseModels.Device;
 
 namespace FlyPhone.Views
 {
@@ -11,12 +10,12 @@ namespace FlyPhone.Views
 		public TablePage(string login)
 		{
 			InitializeComponent();
-		    BindingContext = new TablePageViewModel(login);
+		    BindingContext = new TablePageViewModel(login, Navigation);
 		}
 
 	    private void OnItemTapped(object sender, ItemTappedEventArgs eventArgs)
 	    {
-            if (eventArgs?.Item is Device device)
+            if (eventArgs?.Item is DeviceCell device)
 	            Navigation.PushAsync(new ShutdownPage(device));
 	    }
     }

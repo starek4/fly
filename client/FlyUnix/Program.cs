@@ -29,7 +29,7 @@ namespace FlyUnix
 
                 if (!isDeviceVerified)
                 {
-                    RequestHandler.DoRequest(() => client.AddDevice(arguments.Login, deviceId, deviceName).Wait());
+                    RequestHandler.DoRequest(() => client.AddDevice(arguments.Login, deviceId, deviceName, true).Wait());
                 }
 
                 while (true)

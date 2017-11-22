@@ -1,8 +1,12 @@
 ﻿using System;
+using System.Net;
+using System.Threading;
 using FlyPhone.ViewModels.Base;
 using FlyPhone.Views;
 using Shared.API;
+using Shared.API.ResponseModels;
 using Xamarin.Forms;
+using Device = Xamarin.Forms.Device;
 
 namespace FlyPhone.ViewModels
 {
@@ -38,28 +42,56 @@ namespace FlyPhone.ViewModels
         public LoginPageViewModel(INavigation navigation)
         {
             _navigation = navigation;
+            Status = "Checking logging status...";
+            new Thread(IsDeviceLogged).Start();
+        }
+
+        private async void IsDeviceLogged()
+        {
+            SetLoginButtonEnabledState(false);
+            GetLoggedStateResponse logged = await _client.GetLoggedState(App.Hostname);
+            if (logged.Logged)
+            {
+                Status = String.Empty;
+                SetLoginButtonEnabledState(true);
+                Device.BeginInvokeOnMainThread(async () =>
+                {
+                    await _navigation.PushModalAsync(new NavigationPage(new TablePage(logged.Login)));
+                });
+            }
+            else
+            {
+                Status = String.Empty;
+                SetLoginButtonEnabledState(true);
+            }
         }
 
         private async void VerifyUserLogin()
         {
             SetLoginButtonEnabledState(false);
-            LoginButtonCommand.ChangeCanExecute();
             if (!await _client.VerifyUserLogin(Login, Password))
             {
                 Status = "Wrong username or password";
             }
             else
             {
+                bool isDeviceRegistered = await _client.VerifyDeviceId(App.Hostname);
+                if (isDeviceRegistered == false)
+                    await _client.AddDevice(Login, App.Hostname, App.Hostname, false);
+                await _client.SetLoggedState(App.Hostname);
                 Status = String.Empty;
-                await _navigation.PushAsync(new TablePage(Login));
+                await _navigation.PushModalAsync(new NavigationPage(new TablePage(Login)));
             }
             SetLoginButtonEnabledState(true);
         }
 
         private void SetLoginButtonEnabledState(bool isEnabled)
         {
-            _isEnabledLoginButton = isEnabled;
-            LoginButtonCommand.ChangeCanExecute();
+            Device.BeginInvokeOnMainThread(() =>
+            {
+                _isEnabledLoginButton = isEnabled;
+                LoginButtonCommand.ChangeCanExecute();
+            });
         }
     }
 }

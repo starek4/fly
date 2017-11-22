@@ -1,5 +1,4 @@
 ﻿using FlyPhone.ViewModels;
-using Shared.API.ResponseModels;
 using Xamarin.Forms.Xaml;
 
 namespace FlyPhone.Views
@@ -7,7 +6,7 @@ namespace FlyPhone.Views
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class ShutdownPage
 	{
-		public ShutdownPage(Device device)
+		public ShutdownPage(DeviceCell device)
 		{
 			InitializeComponent();
 		    BindingContext = new ShutdownPageViewModel(Navigation, device);

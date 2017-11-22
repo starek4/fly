@@ -1,7 +1,6 @@
 ﻿using FlyPhone.ViewModels.Base;
 using Shared.API;
 using Xamarin.Forms;
-using Device = Shared.API.ResponseModels.Device;
 
 namespace FlyPhone.ViewModels
 {
@@ -17,14 +16,14 @@ namespace FlyPhone.ViewModels
             }
         }
 
-        private readonly Device _device;
+        private readonly DeviceCell _device;
         private readonly Client _client = new Client();
         private readonly INavigation _navigation;
         private bool isEnabledShutdownButton = true;
         private Command _shutdownButtonCommand;
         private string _deviceName;
 
-        public ShutdownPageViewModel(INavigation navigation, Device device)
+        public ShutdownPageViewModel(INavigation navigation, DeviceCell device)
         {
             _navigation = navigation;
             _device = device;

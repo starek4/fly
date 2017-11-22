@@ -5,6 +5,7 @@
         DeviceId,
         Login,
         Password,
-        Name
+        Name,
+        Shutdownable
     }
 }

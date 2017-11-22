@@ -20,7 +20,7 @@ namespace FlyWindowsWPF
             await RequestHandler.DoRequest(client.ClearShutdownPending(DeviceIdentifierHelper.DeviceIdentifier));
         }
 
-        public static async void Loop(Client client, TrayController controller, string login)
+        public static async void Loop(Client client, TrayController controller)
         {
             while (true)
             {
@@ -33,6 +33,7 @@ namespace FlyWindowsWPF
                 }
                 Thread.Sleep(30 * 1000);
             }
+            // ReSharper disable once FunctionNeverReturns
         }
     }
 }
