@@ -1,13 +1,17 @@
-﻿using System.Diagnostics;
-using System.Windows;
+﻿using System;
+using System.Diagnostics;
+using Shared.Enviroment;
+using Shared.Logging;
 
-namespace FlyWindowsWPF.Requests
+namespace FlyUnix
 {
     public static class ApplicationKiller
     {
+        private static readonly ILogger Logger = EnviromentHelper.GetLogger();
         private static void KillApp(string message)
         {
-            MessageBox.Show(message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            Logger.Fatal(message);
+            Console.WriteLine(message);
             Process.GetCurrentProcess().Kill();
         }
 

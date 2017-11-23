@@ -6,7 +6,7 @@ using Shared.CLI;
 
 namespace FlyUnix
 {
-    class Program
+    static class Program
     {
         static void Main(string[] args)
         {

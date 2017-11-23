@@ -13,15 +13,13 @@ namespace FlyUnix
             {
                 action.Invoke();
             }
-            catch (HttpRequestException exception)
+            catch (HttpRequestException)
             {
-                // TODO: Handle HTTP request exception...
-                throw new NotImplementedException(exception.Message);
+                ApplicationKiller.NetworkError();
             }
-            catch (DatabaseException exception)
+            catch (DatabaseException)
             {
-                // TODO: Handle database request exception...
-                throw new NotImplementedException(exception.Message);
+                ApplicationKiller.DatabaseError();
             }
         }
         public static bool DoRequest(Task<bool> request)
@@ -37,12 +35,12 @@ namespace FlyUnix
                 {
                     if (e is HttpRequestException) // This we know how to handle.
                     {
-                        // TODO: Handle HTTP request exception...
+                        ApplicationKiller.NetworkError();
                         return true;
                     }
                     if (e is DatabaseException)
                     {
-                        // TODO: Handle database request exception...
+                        ApplicationKiller.DatabaseError();
                         return true;
                     }
                     return false;
