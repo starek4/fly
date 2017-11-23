@@ -16,6 +16,7 @@ namespace FlyPhone.ViewModels
         public string Password { get; set; }
         private string _status;
         private bool _isEnabledLoginButton = true;
+        private string _hostname = App.Hostname();
 
         public string Status
         {
@@ -48,8 +49,8 @@ namespace FlyPhone.ViewModels
         private async void IsDeviceLogged()
         {
             SetLoginButtonEnabledState(false);
-            
-            GetLoggedStateResponse logged = await RequestHandler.DoRequest(_client.GetLoggedState(App.Hostname));
+
+            GetLoggedStateResponse logged = await RequestHandler.DoRequest(_client.GetLoggedState(_hostname));
             if (logged.Logged)
             {
                 Status = String.Empty;
@@ -75,10 +76,10 @@ namespace FlyPhone.ViewModels
             }
             else
             {
-                bool isDeviceRegistered = await RequestHandler.DoRequest(_client.VerifyDeviceId(App.Hostname));
+                bool isDeviceRegistered = await RequestHandler.DoRequest(_client.VerifyDeviceId(_hostname));
                 if (isDeviceRegistered == false)
-                    await RequestHandler.DoRequest(_client.AddDevice(Login, App.Hostname, App.Hostname, false));
-                await RequestHandler.DoRequest(_client.SetLoggedState(App.Hostname));
+                    await RequestHandler.DoRequest(_client.AddDevice(Login, _hostname, _hostname, false));
+                await RequestHandler.DoRequest(_client.SetLoggedState(_hostname));
                 Status = String.Empty;
                 await _navigation.PushModalAsync(new NavigationPage(new TablePage(Login)));
             }

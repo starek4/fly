@@ -49,7 +49,7 @@ namespace FlyPhone.ViewModels
 
         private async void Logout()
         {
-            await RequestHandler.DoRequest(_client.ClearLoggedState(App.Hostname));
+            await RequestHandler.DoRequest(_client.ClearLoggedState(App.Hostname()));
             await _navigation.PopModalAsync();
         }
     }
