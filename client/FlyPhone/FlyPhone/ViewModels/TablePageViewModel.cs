@@ -25,7 +25,7 @@ namespace FlyPhone.ViewModels
 
         private async void GetDevices()
         {
-            var devices = new List<Device>(await _client.GetDevices(_login));
+            var devices = new List<Device>(await RequestHandler.DoRequest(_client.GetDevices(_login)));
             Devices.Clear();
             var green = ImageSource.FromFile("green.png");
             var red = ImageSource.FromFile("red.png");
@@ -49,7 +49,7 @@ namespace FlyPhone.ViewModels
 
         private async void Logout()
         {
-            await _client.ClearLoggedState(App.Hostname);
+            await RequestHandler.DoRequest(_client.ClearLoggedState(App.Hostname));
             await _navigation.PopModalAsync();
         }
     }

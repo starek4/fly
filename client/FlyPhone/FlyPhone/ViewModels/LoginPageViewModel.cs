@@ -1,8 +1,8 @@
 ﻿using System;
-using System.Net;
 using System.Threading;
 using FlyPhone.ViewModels.Base;
 using FlyPhone.Views;
+using Plugin.Toasts;
 using Shared.API;
 using Shared.API.ResponseModels;
 using Xamarin.Forms;
@@ -49,7 +49,8 @@ namespace FlyPhone.ViewModels
         private async void IsDeviceLogged()
         {
             SetLoginButtonEnabledState(false);
-            GetLoggedStateResponse logged = await _client.GetLoggedState(App.Hostname);
+            
+            GetLoggedStateResponse logged = await RequestHandler.DoRequest(_client.GetLoggedState(App.Hostname));
             if (logged.Logged)
             {
                 Status = String.Empty;
@@ -69,16 +70,16 @@ namespace FlyPhone.ViewModels
         private async void VerifyUserLogin()
         {
             SetLoginButtonEnabledState(false);
-            if (!await _client.VerifyUserLogin(Login, Password))
+            if (!await RequestHandler.DoRequest(_client.VerifyUserLogin(Login, Password)))
             {
                 Status = "Wrong username or password";
             }
             else
             {
-                bool isDeviceRegistered = await _client.VerifyDeviceId(App.Hostname);
+                bool isDeviceRegistered = await RequestHandler.DoRequest(_client.VerifyDeviceId(App.Hostname));
                 if (isDeviceRegistered == false)
-                    await _client.AddDevice(Login, App.Hostname, App.Hostname, false);
-                await _client.SetLoggedState(App.Hostname);
+                    await RequestHandler.DoRequest(_client.AddDevice(Login, App.Hostname, App.Hostname, false));
+                await RequestHandler.DoRequest(_client.SetLoggedState(App.Hostname));
                 Status = String.Empty;
                 await _navigation.PushModalAsync(new NavigationPage(new TablePage(Login)));
             }

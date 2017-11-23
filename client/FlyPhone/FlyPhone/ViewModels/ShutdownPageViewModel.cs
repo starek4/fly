@@ -19,7 +19,7 @@ namespace FlyPhone.ViewModels
         private readonly DeviceCell _device;
         private readonly Client _client = new Client();
         private readonly INavigation _navigation;
-        private bool isEnabledShutdownButton = true;
+        private bool _isEnabledShutdownButton = true;
         private Command _shutdownButtonCommand;
         private string _deviceName;
 
@@ -34,14 +34,25 @@ namespace FlyPhone.ViewModels
         {
             get
             {
-                return _shutdownButtonCommand ?? (_shutdownButtonCommand = new Command(p => ShutdownDevice(), p => isEnabledShutdownButton));
+                return _shutdownButtonCommand ?? (_shutdownButtonCommand = new Command(p => ShutdownDevice(), p => _isEnabledShutdownButton));
             }
         }
 
         private async void ShutdownDevice()
         {
-            await _client.SetShutdownPending(_device.DeviceId);
+            SetLoginButtonEnabledState(false);
+            await RequestHandler.DoRequest(_client.SetShutdownPending(_device.DeviceId));
+            SetLoginButtonEnabledState(true);
             await _navigation.PopAsync(true);
+        }
+
+        private void SetLoginButtonEnabledState(bool isEnabled)
+        {
+            Device.BeginInvokeOnMainThread(() =>
+            {
+                _isEnabledShutdownButton = isEnabled;
+                ShutdownButtonCommand.ChangeCanExecute();
+            });
         }
     }
 }

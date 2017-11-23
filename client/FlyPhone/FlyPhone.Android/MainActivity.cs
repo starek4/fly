@@ -1,6 +1,8 @@
 ﻿using Android.App;
 using Android.Content.PM;
 using Android.OS;
+using Plugin.Toasts;
+using Xamarin.Forms;
 
 namespace FlyPhone.Droid
 {
@@ -14,8 +16,13 @@ namespace FlyPhone.Droid
 
 			base.OnCreate (bundle);
 
-			Xamarin.Forms.Forms.Init (this, bundle);
-			LoadApplication (new App());
+			Forms.Init (this, bundle);
+
+            // Register and init toast notification
+		    DependencyService.Register<ToastNotification>();
+		    ToastNotification.Init(this);
+
+            LoadApplication (new App());
 		}
 	}
 }
