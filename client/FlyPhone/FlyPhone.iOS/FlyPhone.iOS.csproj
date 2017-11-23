@@ -114,6 +114,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="CloseApplication.cs" />
+    <Compile Include="IosDevice.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <None Include="Entitlements.plist" />

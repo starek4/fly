@@ -5,12 +5,16 @@ namespace FlyPhone
 {
 	public partial class App
 	{
-	    public static readonly string Hostname = Dns.GetHostName();
+	    public static string Hostname;
+
         public App()
 		{
 			InitializeComponent();
 
             MainPage = new NavigationPage(new LoginPage());
+
+		    IDevice device = DependencyService.Get<IDevice>();
+		    Hostname = device.GetIdentifier();
         }
 
 		protected override void OnStart ()

@@ -2,7 +2,6 @@
 using System.Threading;
 using FlyPhone.ViewModels.Base;
 using FlyPhone.Views;
-using Plugin.Toasts;
 using Shared.API;
 using Shared.API.ResponseModels;
 using Xamarin.Forms;
