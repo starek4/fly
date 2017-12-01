@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Threading;
+using FlyApi;
+using FlyApi.ResponseModels;
 using FlyPhone.ViewModels.Base;
 using FlyPhone.Views;
-using Shared.API;
-using Shared.API.ResponseModels;
 using Xamarin.Forms;
 using Device = Xamarin.Forms.Device;
 
@@ -16,7 +16,7 @@ namespace FlyPhone.ViewModels
         public string Password { get; set; }
         private string _status;
         private bool _isEnabledLoginButton = true;
-        private string _hostname = App.Hostname();
+        private readonly string _hostname = App.Hostname();
 
         public string Status
         {

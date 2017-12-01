@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Threading;
-using Shared.API;
-using Shared.CLI;
+using FlyApi;
+using FlyUnix.Cli;
 
 namespace FlyUnix
 {

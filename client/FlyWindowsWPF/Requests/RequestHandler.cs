@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Net.Http;
 using System.Threading.Tasks;
-using Shared.API.Exceptions;
-using Shared.API.ResponseModels;
+using FlyApi.Exceptions;
+using FlyApi.ResponseModels;
 
 namespace FlyWindowsWPF.Requests
 {

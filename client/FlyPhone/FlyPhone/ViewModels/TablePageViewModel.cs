@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using FlyApi;
 using FlyPhone.ViewModels.Base;
-using Shared.API;
 using Xamarin.Forms;
-using Device = Shared.API.ResponseModels.Device;
+using Device = FlyApi.ResponseModels.Device;
 
 namespace FlyPhone.ViewModels
 {

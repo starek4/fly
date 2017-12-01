@@ -1,16 +1,17 @@
 ﻿using System;
+using System.Security;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using FlyApi;
+using FlyApi.ResponseModels;
 using FlyWindowsWPF.PowerShell;
 using FlyWindowsWPF.Requests;
 using FlyWindowsWPF.TrayIcon;
 using FlyWindowsWPF.ViewModels.Base;
 using FlyWindowsWPF.ViewModels.Commands;
 using Hardcodet.Wpf.TaskbarNotification;
-using Shared.API;
-using Shared.API.ResponseModels;
 using Shared.Enviroment;
 using Shared.Logging;
 
@@ -18,7 +19,7 @@ namespace FlyWindowsWPF.ViewModels
 {
     public class LoginViewModel : BaseViewModel
     {
-        private string _password;
+        private SecureString _password;
         private readonly ILogger _logger = EnviromentHelper.GetLogger();
         private readonly Client _client = new Client();
         private string _status;
@@ -59,7 +60,7 @@ namespace FlyWindowsWPF.ViewModels
             DisableLoginButton();
             if (parameter is PasswordBox passwordContainer)
             {
-                _password = passwordContainer.Password;
+                _password = passwordContainer.SecurePassword;
             }
             else
             {
@@ -72,7 +73,7 @@ namespace FlyWindowsWPF.ViewModels
         
         private async Task ProcessLogin()
         {
-            bool isUserVerified = await RequestHandler.DoRequest(_client.VerifyUserLogin(Login, _password));
+            bool isUserVerified = await RequestHandler.DoRequest(_client.VerifyUserLoginSecuredPassword(Login, _password));
             Status = isUserVerified ? "Login successfully verified." : "Login denied!";
             if (isUserVerified)
             {

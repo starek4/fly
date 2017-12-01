@@ -14,7 +14,9 @@
                                     <ColumnDefinition Width="*"></ColumnDefinition>
                                     <ColumnDefinition Width="50"></ColumnDefinition>
                                 </Grid.ColumnDefinitions>
+                                <!-- ReSharper disable once Xaml.BindingWithContextNotResolved -->
                                 <Label Grid.Column="0" Text="{Binding Name}"/>
+                                <!-- ReSharper disable once Xaml.BindingWithContextNotResolved -->
                                 <Image Aspect="AspectFit" WidthRequest="20" HeightRequest="20" Grid.Column="1" Source="{Binding Image}" />
                             </Grid>
                         </ViewCell>

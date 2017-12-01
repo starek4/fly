@@ -1,10 +1,10 @@
 ﻿using System.Threading;
 using System.Threading.Tasks;
+using FlyApi;
 using FlyWindowsWPF.PowerShell;
 using FlyWindowsWPF.Requests;
 using FlyWindowsWPF.TrayIcon;
 using Hardcodet.Wpf.TaskbarNotification;
-using Shared.API;
 
 namespace FlyWindowsWPF
 {

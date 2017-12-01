@@ -1,5 +1,5 @@
-﻿using FlyPhone.ViewModels.Base;
-using Shared.API;
+﻿using FlyApi;
+using FlyPhone.ViewModels.Base;
 using Xamarin.Forms;
 
 namespace FlyPhone.ViewModels

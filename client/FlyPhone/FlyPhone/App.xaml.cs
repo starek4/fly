@@ -1,5 +1,4 @@
-﻿using System.Net;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace FlyPhone
 {
