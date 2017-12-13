@@ -18,6 +18,16 @@ namespace FlyPhone.ViewModels
         private bool _isEnabledLoginButton = true;
         private readonly string _hostname = App.Hostname();
 
+        public string EntryColor
+        {
+            get
+            {
+                if (Device.RuntimePlatform == Device.iOS || Device.RuntimePlatform == Device.macOS)
+                    return "#000000";
+                return "#FFFFFF";
+            }
+        }
+
         public string Status
         {
             get => _status;
@@ -27,6 +37,7 @@ namespace FlyPhone.ViewModels
                 NotifyPropertyChanged(nameof(Status));
             }
         }
+
 
         private Command _loginButtonCommand;
         public Command LoginButtonCommand
@@ -57,7 +68,7 @@ namespace FlyPhone.ViewModels
                 SetLoginButtonEnabledState(true);
                 Device.BeginInvokeOnMainThread(async () =>
                 {
-                    await _navigation.PushModalAsync(new NavigationPage(new TablePage(logged.Login)));
+                    await _navigation.PushModalAsync(new TablePage(logged.Login));
                 });
             }
             else
@@ -81,7 +92,7 @@ namespace FlyPhone.ViewModels
                     await RequestHandler.DoRequest(_client.AddDevice(Login, _hostname, _hostname, false));
                 await RequestHandler.DoRequest(_client.SetLoggedState(_hostname));
                 Status = String.Empty;
-                await _navigation.PushModalAsync(new NavigationPage(new TablePage(Login)));
+                await _navigation.PushModalAsync(new TablePage(Login));
             }
             SetLoginButtonEnabledState(true);
         }

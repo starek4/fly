@@ -8,7 +8,7 @@ namespace FlyPhone
 		{
 			InitializeComponent();
 
-            MainPage = new NavigationPage(new LoginPage());
+            MainPage = new LoginPage();
         }
 
 	    public static string Hostname()

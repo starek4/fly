@@ -20,7 +20,7 @@ namespace FlyPhone.ViewModels
         private readonly Client _client = new Client();
         private readonly INavigation _navigation;
         private bool _isEnabledShutdownButton = true;
-        private Command _shutdownButtonCommand;
+        private bool _isEnabledBackButton = true;
         private string _deviceName;
 
         public ShutdownPageViewModel(INavigation navigation, DeviceCell device)
@@ -30,6 +30,7 @@ namespace FlyPhone.ViewModels
             DeviceName = device.Name;
         }
 
+        private Command _shutdownButtonCommand;
         public Command ShutdownButtonCommand
         {
             get
@@ -43,7 +44,21 @@ namespace FlyPhone.ViewModels
             SetLoginButtonEnabledState(false);
             await RequestHandler.DoRequest(_client.SetShutdownPending(_device.DeviceId));
             SetLoginButtonEnabledState(true);
-            await _navigation.PopAsync(true);
+            await _navigation.PopModalAsync(true);
+        }
+
+        private Command _backButtonCommand;
+        public Command BackButtonCommand
+        {
+            get
+            {
+                return _backButtonCommand ?? (_backButtonCommand = new Command(p => Back(), p => _isEnabledBackButton));
+            }
+        }
+
+        private async void Back()
+        {
+            await _navigation.PopModalAsync(true);
         }
 
         private void SetLoginButtonEnabledState(bool isEnabled)

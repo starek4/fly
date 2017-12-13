@@ -8,21 +8,54 @@
         xmlns:tb="http://www.hardcodet.net/taskbar"
         Visibility="{Binding IsVisible, Mode=TwoWay}"
         mc:Ignorable="d"
-        Title="LoginWindow" Height="300" Width="350">
+        Title="Login" Height="340" Width="400"
+        Background="#3399FF">
 
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="50"></RowDefinition>
             <RowDefinition Height="50"></RowDefinition>
             <RowDefinition Height="50"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="30"></RowDefinition>
-            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="70"></RowDefinition>
+            <RowDefinition Height="60"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="25"></ColumnDefinition>
             <ColumnDefinition Width="100"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
+
+        <Label Foreground="White" FontWeight="Bold" FontSize="25" Padding="20 0 0 0" VerticalAlignment="Center" HorizontalContentAlignment="Center" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Content="Fly client"></Label>
+
+        <Label FontWeight="Bold" FontSize="16" Foreground="White" VerticalAlignment="Center" Grid.Row="1" Grid.Column="1" Content="Username"></Label>
+        <TextBox Foreground="Black" Text="{Binding Login}" Grid.Row="1" Grid.Column="2" Width="200" Height="25" FontSize="16"></TextBox>
+
+        <Label FontWeight="Bold" FontSize="16" Foreground="White" VerticalAlignment="Center" Grid.Row="2" Grid.Column="1" Content="Password"></Label>
+        <PasswordBox Foreground="Black" x:Name="PasswordBox" Grid.Row="2" Grid.Column="2" Width="200" Height="25" FontSize="16"></PasswordBox>
+
+        <Button FontSize="20" IsDefault="True" Foreground="White" Command="{Binding LoginButtonCommand}" CommandParameter="{Binding ElementName=PasswordBox}" Grid.Row="3" Grid.Column="2" Width="180" Height="35" Content="Login">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="#337AB7"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#286090"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+
+        <Label FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="4" Grid.Column="2" Content="{Binding Status}"></Label>
 
         <tb:TaskbarIcon x:Name="ShutdownNotifyIcon" IconSource="\shutdown.ico" ToolTipText="Fly client">
             <tb:TaskbarIcon.ContextMenu>
@@ -38,18 +71,6 @@
                 </ContextMenu>
             </tb:TaskbarIcon.ContextMenu>
         </tb:TaskbarIcon>
-
-        <Label FontSize="18" Padding="20 0 0 0" VerticalAlignment="Center" Grid.Row="0" Grid.Column="0" Content="Fly client"></Label>
-
-        <Label VerticalAlignment="Center" Grid.Row="1" Grid.Column="0" Content="Username"></Label>
-        <TextBox Text="{Binding Login}" Grid.Row="1" Grid.Column="1" Width="200" Height="20"></TextBox>
-
-        <Label VerticalAlignment="Center" Grid.Row="2" Grid.Column="0" Content="Password"></Label>
-        <PasswordBox x:Name="PasswordBox" Grid.Row="2" Grid.Column="1" Width="200" Height="20"></PasswordBox>
-
-        <Label VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="4" Grid.Column="1" Content="{Binding Status}"></Label>
-
-        <Button IsDefault="True" Command="{Binding LoginButtonCommand}" CommandParameter="{Binding ElementName=PasswordBox}" Grid.Row="5" Grid.Column="1" Width="150" Height="30" Content="Login"></Button>
     </Grid>
     
 </Window>

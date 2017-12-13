@@ -1,11 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="FlyPhone.Views.ShutdownPage">
+             x:Class="FlyPhone.Views.ShutdownPage"
+             BackgroundColor="#3399FF">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="{Binding DeviceName}"/>
-            <Button Command="{Binding ShutdownButtonCommand}" Text="Shutdown device"></Button>
-        </StackLayout>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="30"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="30"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="10"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Label Grid.Column="1" Grid.Row="1" FontSize="20" TextColor="White" Text="{Binding DeviceName}"/>
+            <Button Grid.Column="1" Grid.Row="2" TextColor="White" BackgroundColor="#337AB7" Command="{Binding ShutdownButtonCommand}" Text="Shutdown device"></Button>
+            <Button Grid.Column="1" Grid.Row="4" TextColor="White" BackgroundColor="#337AB7" Command="{Binding BackButtonCommand}" Text="Back to list"></Button>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
