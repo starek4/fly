@@ -19,5 +19,5 @@ Android Lollipop (API 21) and higher
 ### iOS
 iOS 11.1 and higher
 
-## How application looks like?
-![Application](https://starekit.cz/git/fly.jpg)
+## How Fly clients looks like?
+![Fly clients](https://starekit.cz/git/fly.jpg)
