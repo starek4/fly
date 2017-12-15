@@ -18,3 +18,6 @@ Android Lollipop (API 21) and higher
 
 ### iOS
 iOS 11.1 and higher
+
+## How application looks like?
+![Application](https://starekit.cz/git/fly.jpg)
