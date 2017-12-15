@@ -5,7 +5,7 @@
              BackgroundColor="#3399FF">
     <ContentPage.Content>
         <StackLayout>
-            <Label FontSize="16" TextColor="White" Margin="20" Text="Devices"></Label>
+            <Label FontSize="20" TextColor="White" Margin="20" Text="Devices"></Label>
             <ListView BackgroundColor="#3399FF" HasUnevenRows='True' ItemTapped="OnItemTapped" Margin="20" ItemsSource="{Binding Devices}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
@@ -15,8 +15,12 @@
                                     <ColumnDefinition Width="*"></ColumnDefinition>
                                     <ColumnDefinition Width="50"></ColumnDefinition>
                                 </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"></RowDefinition>
+                                    <RowDefinition Height="10"></RowDefinition>
+                                </Grid.RowDefinitions>
                                 <!-- ReSharper disable once Xaml.BindingWithContextNotResolved -->
-                                <Label FontSize="15" TextColor="White" Grid.Column="0" Text="{Binding Name}"/>
+                                <Label FontSize="18" TextColor="White" Grid.Column="0" Text="{Binding Name}"/>
                                 <!-- ReSharper disable once Xaml.BindingWithContextNotResolved -->
                                 <Image Aspect="AspectFit" WidthRequest="20" HeightRequest="20" Grid.Column="1" Source="{Binding Image}" />
                             </Grid>
