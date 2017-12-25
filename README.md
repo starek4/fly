@@ -2,7 +2,7 @@
 Remotely shutdown your device from a website or mobile application.
 
 ## Using fly
-Firstly you need to register on [Fly website](https://fly.starekit.cz/). Since you have a valid account you are able to log into any Fly client. Once you have running Fly client on some device, you can have shut down your devices from Fly website or from the mobile application.
+You need to register on [Fly website](https://fly.starekit.cz/) first. As soon as you have a valid account you are able to log into any Fly client. If you have running Fly client on some device, you can shut down your devices from Fly website or from the mobile application.
 
 ## Supported platforms
 You can download installers or packages for all platforms from [releases](https://github.com/starek4/fly/releases/latest).
@@ -21,5 +21,5 @@ Android Lollipop (API 21) or higher.
 ### iOS
 iOS 11.1 or higher.
 
-## How Fly clients looks like?
+## How do Fly clients look like?
 ![Fly clients](https://starekit.cz/git/fly.jpg)
