@@ -1,9 +1,11 @@
 ﻿using System.Diagnostics;
 using System.Windows;
+using FlyWindowsWPF.TrayIcon;
+using Hardcodet.Wpf.TaskbarNotification;
 
 namespace FlyWindowsWPF.Requests
 {
-    public static class ApplicationKiller
+    public static class ErrorHandler
     {
         private static void KillApp(string message)
         {
@@ -11,9 +13,10 @@ namespace FlyWindowsWPF.Requests
             Process.GetCurrentProcess().Kill();
         }
 
-        public static void NetworkError()
+        public static void NetworkError(TrayController controller)
         {
-            KillApp("Error with network connection.");
+            controller.MakeIconGray();
+            controller.MakeTooltip("Fly client", "Something wrong with internet connection...", BalloonIcon.None);
         }
 
         public static void DatabaseError()

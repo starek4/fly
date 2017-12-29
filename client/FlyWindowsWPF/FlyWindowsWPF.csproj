@@ -64,7 +64,7 @@
     <SuiteName>Fly client</SuiteName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationRevision>2</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -154,7 +154,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="ClientLoop.cs" />
-    <Compile Include="Requests\ApplicationKiller.cs" />
+    <Compile Include="Requests\ErrorHandler.cs" />
     <Compile Include="PowerShell\DeviceIdentifierHelper.cs" />
     <Compile Include="PowerShell\DeviceNameHelper.cs" />
     <Compile Include="PowerShell\PowerShellWrapper.cs" />
@@ -223,6 +223,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="shutdown_gray.ico" />
     <Content Include="System.Net.Http.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

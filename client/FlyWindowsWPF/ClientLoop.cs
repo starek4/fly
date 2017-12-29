@@ -10,24 +10,24 @@ namespace FlyWindowsWPF
 {
     public static class ClientLoop
     {
-        private static async Task<bool> CheckShutdown(Client client)
+        private static async Task<bool> CheckShutdown(Client client, TrayController controller)
         {
-            return await RequestHandler.DoRequest(client.GetShutdownPending(DeviceIdentifierHelper.DeviceIdentifier));
+            return await RequestHandler.DoRequest(client.GetShutdownPending(DeviceIdentifierHelper.DeviceIdentifier), controller);
         }
 
-        private static async Task ClearShutdownState(Client client)
+        private static async Task ClearShutdownState(Client client, TrayController controller)
         {
-            await RequestHandler.DoRequest(client.ClearShutdownPending(DeviceIdentifierHelper.DeviceIdentifier));
+            await RequestHandler.DoRequest(client.ClearShutdownPending(DeviceIdentifierHelper.DeviceIdentifier), controller);
         }
 
         public static async void Loop(Client client, TrayController controller)
         {
             while (true)
             {
-                bool isShutdownPending = await CheckShutdown(client);
+                bool isShutdownPending = await CheckShutdown(client, controller);
                 if (isShutdownPending)
                 {
-                    await ClearShutdownState(client);
+                    await ClearShutdownState(client, controller);
                     controller.MakeTooltip("Fly client", "Shutdown request registered.", BalloonIcon.None);
                     ShutdownPc.DoShutdownRequest();
                 }

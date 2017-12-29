@@ -73,13 +73,13 @@ namespace FlyWindowsWPF.ViewModels
         
         private async Task ProcessLogin()
         {
-            bool isUserVerified = await RequestHandler.DoRequest(_client.VerifyUserLoginSecuredPassword(Login, _password));
+            bool isUserVerified = await RequestHandler.DoRequest(_client.VerifyUserLoginSecuredPassword(Login, _password), TrayController);
             Status = isUserVerified ? "Login successfully verified." : "Login denied!";
             if (isUserVerified)
             {
-                bool isDeviceRegistered = await RequestHandler.DoRequest(_client.VerifyDeviceId(DeviceIdentifierHelper.DeviceIdentifier));
+                bool isDeviceRegistered = await RequestHandler.DoRequest(_client.VerifyDeviceId(DeviceIdentifierHelper.DeviceIdentifier), TrayController);
                 if (isDeviceRegistered == false)
-                    await RequestHandler.DoRequest(_client.AddDevice(Login, DeviceIdentifierHelper.DeviceIdentifier, DeviceNameHelper.DeviceName, true));
+                    await RequestHandler.DoRequest(_client.AddDevice(Login, DeviceIdentifierHelper.DeviceIdentifier, DeviceNameHelper.DeviceName, true), TrayController);
                 IntoTray();
             }
             else
@@ -90,7 +90,7 @@ namespace FlyWindowsWPF.ViewModels
 
         private async void IntoTray()
         {
-            await RequestHandler.DoRequest(_client.SetLoggedState(DeviceIdentifierHelper.DeviceIdentifier));
+            await RequestHandler.DoRequest(_client.SetLoggedState(DeviceIdentifierHelper.DeviceIdentifier), TrayController);
             Status = String.Empty;
             HideWindow();
             new Thread(() => ClientLoop.Loop(_client, TrayController)).Start();
@@ -98,7 +98,7 @@ namespace FlyWindowsWPF.ViewModels
 
         private async void IsDeviceLogged()
         {
-            GetLoggedStateResponse logged = await RequestHandler.DoRequest(_client.GetLoggedState(DeviceIdentifierHelper.DeviceIdentifier));
+            GetLoggedStateResponse logged = await RequestHandler.DoRequest(_client.GetLoggedState(DeviceIdentifierHelper.DeviceIdentifier), TrayController);
             if (logged.Logged)
                 IntoTray();
             else
