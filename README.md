@@ -13,7 +13,7 @@ All system versions with .NET Framework 4.6 installed.
 ### Linux x64
 All x64 distributions with **bash**, **uname** and **shutdown** command.
 **Install instructions**: Unzip downloaded file and run install.sh script.
-**Run client**: fly -l \<login\> -p \<password\>
+**Run client**: fly -l \<login\>
 
 ### Android
 Android Lollipop (API 21) or higher.

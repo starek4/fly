@@ -2,12 +2,18 @@
 using System.Diagnostics;
 using System.Threading;
 using FlyApi;
+using FlyApi.ResponseModels;
 using FlyUnix.Cli;
 
 namespace FlyUnix
 {
     static class Program
     {
+        private static readonly Client Client = new Client();
+        private static Arguments _arguments = new Arguments();
+        private static string _deviceId = ShellHandler.GetDeviceId();
+        private static string _deviceName = ShellHandler.GetDeviceName();
+
         static void Main(string[] args)
         {
             if(AlreadyRunning())
@@ -16,42 +22,47 @@ namespace FlyUnix
                 return;
             }
 
-            string deviceId = ShellHandler.GetDeviceId();
-            string deviceName = ShellHandler.GetDeviceName();
+            _deviceId = _deviceId.Replace(Environment.NewLine, String.Empty);
+            _deviceName = _deviceName.Replace(Environment.NewLine, String.Empty);
 
-            deviceId = deviceId.Replace(Environment.NewLine, String.Empty);
-            deviceName = deviceName.Replace(Environment.NewLine, String.Empty);
-
-            Client client = new Client();
-            Arguments arguments = new Arguments();
-            if (Parser.Parse(args, ref arguments))
+            if (Parser.Parse(args, ref _arguments))
             {
-                bool isUserVerified = RequestHandler.DoRequest(client.VerifyUserLogin(arguments.Login, arguments.Password));
-                if (!isUserVerified)
+                GetLoggedStateResponse logged = RequestHandler.DoRequest(Client.GetLoggedState(_deviceId));
+                if (!logged.Logged)
                 {
-                    return;
+                    _arguments.Password = PasswordGetter.GetPassword();
+
+                    bool isUserVerified = RequestHandler.DoRequest(Client.VerifyUserLoginSecuredPassword(_arguments.Login, _arguments.Password));
+                    if (!isUserVerified)
+                    {
+                        Console.WriteLine("Wrong credentials.");
+                        return;
+                    }
+                    RequestHandler.DoRequest(() => Client.SetLoggedState(_deviceId).Wait());
                 }
 
-                bool isDeviceVerified = RequestHandler.DoRequest(client.VerifyDeviceId(deviceId));
+                Console.WriteLine("Successfully verified. Fly client is now waiting for shutdown request...");
+
+                bool isDeviceVerified = RequestHandler.DoRequest(Client.VerifyDeviceId(_deviceId));
 
                 if (!isDeviceVerified)
                 {
-                    RequestHandler.DoRequest(() => client.AddDevice(arguments.Login, deviceId, deviceName, true).Wait());
+                    RequestHandler.DoRequest(() => Client.AddDevice(_arguments.Login, _deviceId, _deviceName, true).Wait());
                 }
 
                 while (true)
                 {
-                    bool isShutdownPending = RequestHandler.DoRequest(client.GetShutdownPending(deviceId));
+                    bool isShutdownPending = RequestHandler.DoRequest(Client.GetShutdownPending(_deviceId));
                     if (isShutdownPending)
                     {
-                        RequestHandler.DoRequest(() => client.ClearShutdownPending(deviceId).Wait());
+                        RequestHandler.DoRequest(() => Client.ClearShutdownPending(_deviceId).Wait());
                         ShellHandler.Shutdown();
                         return;
                     }
                     Thread.Sleep(30 * 1000);
                 }
             }
-            Console.WriteLine("Wrong arguments. Try it again: fly -l <login> -p <password>");
+            Console.WriteLine("Wrong arguments. Try it again: fly -l <login>");
         }
 
         private static bool AlreadyRunning()
