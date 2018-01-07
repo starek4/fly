@@ -22,7 +22,8 @@
                                 <!-- ReSharper disable once Xaml.BindingWithContextNotResolved -->
                                 <Label FontSize="18" TextColor="White" Grid.Column="0" Text="{Binding Name}"/>
                                 <!-- ReSharper disable once Xaml.BindingWithContextNotResolved -->
-                                <Image Aspect="AspectFit" WidthRequest="20" HeightRequest="20" Grid.Column="1" Source="{Binding Image}" />
+                                <Image Aspect="AspectFit" WidthRequest="20" HeightRequest="20" Grid.Row="0"
+                                       Grid.Column="1" Source="{Binding Image}" />
                             </Grid>
                         </ViewCell>
                     </DataTemplate>

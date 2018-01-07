@@ -57,7 +57,7 @@
 
         <Label FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="4" Grid.Column="2" Content="{Binding Status}"></Label>
 
-        <tb:TaskbarIcon x:Name="ShutdownNotifyIcon" IconSource="\shutdown.ico" ToolTipText="Fly client">
+        <tb:TaskbarIcon Grid.Row="0" Grid.Column="0" x:Name="ShutdownNotifyIcon" IconSource="\shutdown.ico" ToolTipText="Fly client">
             <tb:TaskbarIcon.ContextMenu>
                 <ContextMenu>
                     <MenuItem Header="Logout and exit"

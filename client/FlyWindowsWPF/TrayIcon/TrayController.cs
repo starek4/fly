@@ -8,7 +8,7 @@ namespace FlyWindowsWPF.TrayIcon
     public class TrayController
     {
         private readonly TaskbarIcon _taskbarIconController;
-        private bool isRed = true;
+        private bool _isRed = true;
 
         public TrayController(TaskbarIcon taskbarIconController)
         {
@@ -22,16 +22,16 @@ namespace FlyWindowsWPF.TrayIcon
 
         public void MakeIconGray()
         {
-            if (isRed)
+            if (_isRed)
                 Application.Current.Dispatcher.Invoke(() => { _taskbarIconController.IconSource = new BitmapImage(new Uri(@"pack://application:,,,/FlyClient;component/shutdown_gray.ico")); });
-            isRed = false;
+            _isRed = false;
         }
 
         public void MakeIconRed()
         {
-            if (!isRed)
+            if (!_isRed)
                 Application.Current.Dispatcher.Invoke(() => { _taskbarIconController.IconSource = new BitmapImage(new Uri(@"pack://application:,,,/FlyClient;component/shutdown.ico")); });
-            isRed = true;
+            _isRed = true;
         }
     }
 }

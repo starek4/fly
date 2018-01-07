@@ -9,6 +9,7 @@ namespace FlyWindowsWPF.Requests
 {
     public static class RequestHandler
     {
+        private static bool _isNetworkError;
         public static async Task DoRequest(Task request, TrayController trayController)
         {
             try
@@ -19,7 +20,11 @@ namespace FlyWindowsWPF.Requests
             {
                 if (exception is HttpRequestException)
                 {
-                    ErrorHandler.NetworkError(trayController);
+                    if (!_isNetworkError)
+                    {
+                        ErrorHandler.NetworkError(trayController);
+                        _isNetworkError = true;
+                    }
                 }
                 if (exception is DatabaseException)
                 {
@@ -27,6 +32,7 @@ namespace FlyWindowsWPF.Requests
                 }
             }
             trayController.MakeIconRed();
+            _isNetworkError = false;
         }
 
         public static async Task<bool> DoRequest(Task<bool> request, TrayController trayController)
@@ -40,7 +46,11 @@ namespace FlyWindowsWPF.Requests
             {
                 if (exception is HttpRequestException)
                 {
-                    ErrorHandler.NetworkError(trayController);
+                    if (!_isNetworkError)
+                    {
+                        ErrorHandler.NetworkError(trayController);
+                        _isNetworkError = true;
+                    }
                 }
                 if (exception is DatabaseException)
                 {
@@ -49,6 +59,7 @@ namespace FlyWindowsWPF.Requests
                 return false;
             }
             trayController.MakeIconRed();
+            _isNetworkError = false;
             return response;
         }
 
@@ -63,7 +74,11 @@ namespace FlyWindowsWPF.Requests
             {
                 if (exception is HttpRequestException)
                 {
-                    ErrorHandler.NetworkError(trayController);
+                    if (!_isNetworkError)
+                    {
+                        ErrorHandler.NetworkError(trayController);
+                        _isNetworkError = true;
+                    }
                 }
                 if (exception is DatabaseException)
                 {
@@ -72,6 +87,7 @@ namespace FlyWindowsWPF.Requests
                 return null;
             }
             trayController.MakeIconRed();
+            _isNetworkError = false;
             return response;
         }
     }
