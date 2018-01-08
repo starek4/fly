@@ -3,6 +3,13 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp2.0</TargetFramework>
     <RuntimeIdentifiers>linux-x64</RuntimeIdentifiers>
+    <Version>1.1.0</Version>
+    <Authors>Jan Stárek</Authors>
+    <Company>Fly</Company>
+    <Product>Fly client</Product>
+    <Description>Remotely shutdown your device...</Description>
+    <PackageProjectUrl>https://github.com/starek4/fly</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/starek4/fly</RepositoryUrl>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
