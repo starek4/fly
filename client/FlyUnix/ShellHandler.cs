@@ -1,4 +1,6 @@
+using System;
 using System.Diagnostics;
+using Shared.Enviroment;
 
 namespace FlyUnix
 {
@@ -36,7 +38,12 @@ namespace FlyUnix
 
         public static void Shutdown()
         {
-            ExecuteBashCommand("shutdown -h");
+            if (EnviromentHelper.GetPlatformType() == PlatformType.Linux)
+                ExecuteBashCommand("shutdown -h");
+            else if (EnviromentHelper.GetPlatformType() == PlatformType.Osx)
+                ExecuteBashCommand("sudo shutdown -h +1");
+            else
+                throw new NotImplementedException("This system is not supported.");
         }
     }
 }

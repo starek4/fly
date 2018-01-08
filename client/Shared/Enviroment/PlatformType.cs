@@ -4,6 +4,7 @@
     {
         Windows,
         Linux,
+        Osx,
         Phone,
         Unknown
     }

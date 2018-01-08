@@ -15,6 +15,11 @@ All x64 distributions with **bash**, **uname** and **shutdown** command.<br />
 **Install instructions**: Unzip downloaded file and run install.sh script.<br />
 **Run client**: fly -l \<login\>
 
+### OSX x64
+macOS Sierra and higher<br />
+**Install instructions**: Unzip downloaded file and run install.sh script.<br />
+**Run client as root**: sudo fly -l \<login\>
+
 ### Android
 Android Lollipop (API 21) or higher.
 

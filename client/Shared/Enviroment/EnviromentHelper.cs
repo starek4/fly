@@ -6,7 +6,7 @@ namespace Shared.Enviroment
 {
     public static class EnviromentHelper
     {
-        private static PlatformType GetPlatformType()
+        public static PlatformType GetPlatformType()
         {
             if (RuntimeInformation.FrameworkDescription.Contains("Mono"))
                 return PlatformType.Phone;
@@ -14,6 +14,8 @@ namespace Shared.Enviroment
                 return PlatformType.Windows;
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
                 return PlatformType.Linux;
+            if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
+                return PlatformType.Osx;
             return PlatformType.Unknown;
         }
 
@@ -26,6 +28,8 @@ namespace Shared.Enviroment
                     return new LinuxLogger();
                 case PlatformType.Windows:
                     return new WindowsLogger();
+                case PlatformType.Osx:
+                    return new LinuxLogger();
                 case PlatformType.Phone:
                     return null;
                 default:
