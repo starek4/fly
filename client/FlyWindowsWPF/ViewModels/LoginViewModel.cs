@@ -12,8 +12,8 @@ using FlyWindowsWPF.TrayIcon;
 using FlyWindowsWPF.ViewModels.Base;
 using FlyWindowsWPF.ViewModels.Commands;
 using Hardcodet.Wpf.TaskbarNotification;
-using Shared.Enviroment;
-using Shared.Logging;
+using Logger.Enviroment;
+using Logger.Logging;
 
 namespace FlyWindowsWPF.ViewModels
 {

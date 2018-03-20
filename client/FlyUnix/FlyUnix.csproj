@@ -3,17 +3,16 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp2.0</TargetFramework>
     <RuntimeIdentifiers>linux-x64</RuntimeIdentifiers>
-    <Version>1.1.0</Version>
+    <Version>2.0.0</Version>
     <Authors>Jan Stárek</Authors>
     <Company>Fly</Company>
     <Product>Fly client</Product>
-    <Description>Remotely shutdown your device...</Description>
+    <Description>Remotely control your device...</Description>
     <PackageProjectUrl>https://github.com/starek4/fly</PackageProjectUrl>
     <RepositoryUrl>https://github.com/starek4/fly</RepositoryUrl>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
-    <PackageReference Include="RichardSzalay.MockHttp" Version="3.2.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
     <PackageReference Include="System.IO" Version="4.3.0" />
     <PackageReference Include="System.IO.FileSystem" Version="4.3.0" />
     <PackageReference Include="System.Net.Http" Version="4.3.3" />
@@ -21,6 +20,5 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FlyApi\FlyApi.csproj" />
-    <ProjectReference Include="..\Shared\Shared.csproj" />
   </ItemGroup>
 </Project>

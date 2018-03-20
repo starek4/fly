@@ -1,6 +1,7 @@
 ﻿using System.Threading;
 using System.Threading.Tasks;
 using FlyApi;
+using FlyApi.Enums;
 using FlyWindowsWPF.PowerShell;
 using FlyWindowsWPF.Requests;
 using FlyWindowsWPF.TrayIcon;
@@ -12,12 +13,12 @@ namespace FlyWindowsWPF
     {
         private static async Task<bool> CheckShutdown(Client client, TrayController controller)
         {
-            return await RequestHandler.DoRequest(client.GetShutdownPending(DeviceIdentifierHelper.DeviceIdentifier), controller);
+            return await RequestHandler.DoRequest(client.GetAction(DeviceIdentifierHelper.DeviceIdentifier, ApiAction.Shutdown), controller);
         }
 
         private static async Task ClearShutdownState(Client client, TrayController controller)
         {
-            await RequestHandler.DoRequest(client.ClearShutdownPending(DeviceIdentifierHelper.DeviceIdentifier), controller);
+            await RequestHandler.DoRequest(client.ClearAction(DeviceIdentifierHelper.DeviceIdentifier, ApiAction.Shutdown), controller);
         }
 
         public static async void Loop(Client client, TrayController controller)

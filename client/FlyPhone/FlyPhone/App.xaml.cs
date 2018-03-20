@@ -2,20 +2,15 @@
 
 namespace FlyPhone
 {
-	public partial class App
+    // ReSharper disable once RedundantExtendsListEntry
+	public partial class App : Application
 	{
-        public App()
+		public App ()
 		{
 			InitializeComponent();
 
-            MainPage = new LoginPage();
-        }
-
-	    public static string Hostname()
-	    {
-	        IDevice device = DependencyService.Get<IDevice>();
-	        return device.GetIdentifier();
-        }
+			MainPage = new MainPage();
+		}
 
 		protected override void OnStart ()
 		{

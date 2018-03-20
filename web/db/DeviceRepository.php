@@ -1,18 +1,21 @@
 <?php
-require_once(dirname(__FILE__) . "/Db.php");
+    require_once(dirname(__FILE__) . "/Db.php");
+    require_once(dirname(__FILE__) . "/../api/Actions/ActionsMapper.php");
 
     class DeviceRepository{
         var $db;
+        var $actionsMapper;
 
         function __construct()
         {
             $this->db = new Db();
+            $this->actionsMapper = new ActionsMapper();
         }
 
-        public function AddDevice($login, $device_id, $device_name, $shutdownable)
+        public function AddDevice($login, $device_id, $device_name, $actionable)
         {
-            $query = "INSERT INTO `Devices` (`Id`, `Device_id`, `Name`, `User_login`, `Is_shutdownable`) VALUES (NULL,?,?,?,?)";
-            $this->db->Query($query, "sssi", array($device_id, $device_name, $login, $shutdownable));
+            $query = "INSERT INTO `Devices` (`Id`, `Device_id`, `Name`, `User_login`, `Is_actionable`) VALUES (NULL,?,?,?,?)";
+            $this->db->Query($query, "sssi", array($device_id, $device_name, $login, $actionable));
         }
 
         public function DelDevice($login, $device_id)
@@ -23,26 +26,8 @@ require_once(dirname(__FILE__) . "/Db.php");
 
         public function GetDevicesByLogin($login)
         {
-            $query = "SELECT `Device_id`,`Name`,`Is_shutdown_pending` as Status,`Last_active` FROM `Devices` WHERE `User_login` = ? AND `Is_shutdownable` = 1";
+            $query = "SELECT `Device_id`,`Name`,`Is_shutdown_pending`,`Is_restart_pending`,`Is_sleep_pending`,`Is_mute_pending` as Status,`Last_active` FROM `Devices` WHERE `User_login` = ? AND `Is_actionable` = 1";
             return $this->db->Select($query, "s", array($login));
-        }
-
-        public function GetShutdownPending($device_id)
-        {
-            $query = "SELECT `Is_shutdown_pending` FROM `Devices` WHERE `Device_id` = ?";
-            return $this->db->Select($query, "s", array($device_id));
-        }
-
-        public function SetShutdownPending($device_id)
-        {
-            $query = "UPDATE `Devices` SET `Is_shutdown_pending` = ? WHERE `Device_id` = ?";
-            $this->db->Query($query, "is", array(1, $device_id));
-        }
-
-        public function ClearShutdownPending($device_id)
-        {
-            $query = "UPDATE `Devices` SET `Is_shutdown_pending` = ? WHERE `Device_id` = ?";
-            $this->db->Query($query, "is", array(0, $device_id));
         }
 
         public function VerifyDeviceId($device_id)
@@ -72,6 +57,28 @@ require_once(dirname(__FILE__) . "/Db.php");
         public function ClearLoggedState($device_id)
         {
             $query = "UPDATE `Devices` SET `Is_logged` = ? WHERE `Device_id` = ?";
+            $this->db->Query($query, "is", array(0, $device_id));
+        }
+
+        /* Actions handlers */
+        public function GetActionPending($device_id, $action)
+        {
+            $action = $this->actionsMapper->GetDbActionName($action);
+            $query = "SELECT `" . $action . "` FROM `Devices` WHERE `Device_id` = ?";
+            return $this->db->Select($query, "s", array($device_id));
+        }
+
+        public function SetActionPending($device_id, $action)
+        {
+            $action = $this->actionsMapper->GetDbActionName($action);
+            $query = "UPDATE `Devices` SET `" . $action . "` = ? WHERE `Device_id` = ?";
+            $this->db->Query($query, "is", array(1, $device_id));
+        }
+
+        public function ClearActionPending($device_id, $action)
+        {
+            $action = $this->actionsMapper->GetDbActionName($action);
+            $query = "UPDATE `Devices` SET `" . $action . "` = ? WHERE `Device_id` = ?";
             $this->db->Query($query, "is", array(0, $device_id));
         }
     }

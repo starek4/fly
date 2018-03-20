@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Globalization;
-using Shared.Enviroment;
-using Shared.Logging;
+using Logger.Enviroment;
+using Logger.Logging;
 using Xunit;
 
 namespace UnitTests

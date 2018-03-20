@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
-using Shared.Enviroment;
-using Shared.Logging;
+using Logger.Enviroment;
+using Logger.Logging;
 
 namespace FlyApi
 {

@@ -61,6 +61,9 @@
                     </div>
                     <div class="cell">
                         <button onclick="SetShutdownState(this.name)" id="shutdown" name="<?php echo $device["Device_id"] ?>">Shutdown</button>
+                        <button onclick="SetRestartState(this.name)" id="restart" name="<?php echo $device["Device_id"] ?>">Restart</button>
+                        <button onclick="SetSleepState(this.name)" id="sleep" name="<?php echo $device["Device_id"] ?>">Sleep</button>
+                        <button onclick="SetMuteState(this.name)" id="mute" name="<?php echo $device["Device_id"] ?>">Mute</button>
                         <button onclick="DeleteDevice('<?php echo$_SESSION["login"] ?>', this.name);" id="deleteDevice" name="<?php echo $device["Device_id"] ?>">Delete device</button>
                     </div>
                 </div>
@@ -71,6 +74,4 @@
         </div>
         </div>
 
-        <!-- Button handlers -->
-        <script src="./js/shutdownButtonHandler.js"></script>
-        <script src="./js/deleteDeviceButtonHandler.js"></script>
+        <script src="./js/buttonHandlers.js"></script>

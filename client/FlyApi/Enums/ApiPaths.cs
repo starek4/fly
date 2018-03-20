@@ -3,15 +3,15 @@
     public enum ApiPaths
     {
         VerifyUserLogin,
-        ClearShutdownPending,
-        SetShutdownPending,
-        GetShutdownPending,
         AddDevice,
         VerifyDeviceId,
         GetDevices,
         DeleteDevice,
         ClearLoggedState,
         SetLoggedState,
-        GetLoggedState
+        GetLoggedState,
+        SetAction,
+        ClearAction,
+        GetAction
     }
 }

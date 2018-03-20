@@ -9,15 +9,15 @@ namespace FlyApi.Mappers
         {
             { ApiPaths.VerifyUserLogin, "verifyUserLogin.php" },
             { ApiPaths.AddDevice, "addDevice.php" },
-            { ApiPaths.ClearShutdownPending, "clearShutdownPending.php" },
             { ApiPaths.GetDevices, "getDevices.php" },
-            { ApiPaths.SetShutdownPending, "setShutdownPending.php" },
-            { ApiPaths.GetShutdownPending, "getShutdownPending.php" },
             { ApiPaths.VerifyDeviceId, "verifyDeviceId.php" },
             { ApiPaths.DeleteDevice, "deleteDevice.php" },
             { ApiPaths.ClearLoggedState, "clearLoggedState.php" },
             { ApiPaths.SetLoggedState, "setLoggedState.php" },
-            { ApiPaths.GetLoggedState, "getLoggedState.php" }
+            { ApiPaths.GetLoggedState, "getLoggedState.php" },
+            { ApiPaths.SetAction, "Actions/setAction.php" },
+            { ApiPaths.GetAction, "Actions/getAction.php" },
+            { ApiPaths.ClearAction, "Actions/clearAction.php" }
         };
 
         public static string GetPath(ApiPaths path)

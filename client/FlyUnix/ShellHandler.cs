@@ -1,6 +1,6 @@
 using System;
 using System.Diagnostics;
-using Shared.Enviroment;
+using Logger.Enviroment;
 
 namespace FlyUnix
 {

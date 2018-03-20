@@ -11,7 +11,8 @@ namespace FlyApi.Mappers
             { DataTypes.Password, "Password" },
             { DataTypes.DeviceId, "Device_id" },
             { DataTypes.Name, "Name" },
-            { DataTypes.Shutdownable, "Shutdownable" }
+            { DataTypes.Actionable, "Actionable" },
+            { DataTypes.Action, "Action" }
         };
 
         public static string GetPath(DataTypes path)

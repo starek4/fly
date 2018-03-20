@@ -6,6 +6,7 @@
         Login,
         Password,
         Name,
-        Shutdownable
+        Actionable,
+        Action
     }
 }

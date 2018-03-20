@@ -7,13 +7,11 @@ using System.Threading.Tasks;
 using FlyApi.Enums;
 using FlyApi.Exceptions;
 using FlyApi.Mappers;
-using FlyApi.Mock;
 using FlyApi.PostModels;
 using FlyApi.ResponseModels;
 using Newtonsoft.Json;
-using RichardSzalay.MockHttp;
-using Shared.Enviroment;
-using Shared.Logging;
+using Logger.Enviroment;
+using Logger.Logging;
 
 namespace FlyApi
 {
@@ -21,21 +19,7 @@ namespace FlyApi
     {
         private readonly ILogger _logger = EnviromentHelper.GetLogger();
         private readonly PostRequest _requestHandler = new PostRequest();
-        private readonly HttpClient _client;
-
-        public Client(bool mock = false)
-        {
-            if (mock)
-            {
-                var mockHttp = new MockHttpMessageHandler();
-                ApiResponses.FillRules(mockHttp);
-                _client = mockHttp.ToHttpClient();
-            }
-            else
-            {
-                _client = new HttpClient();
-            }
-        }
+        private readonly HttpClient _client = new HttpClient();
 
         public async Task<bool> VerifyUserLogin(string login, string password)
         {
@@ -58,32 +42,32 @@ namespace FlyApi
             return await VerifyUserLogin(login, new NetworkCredential(String.Empty, password).Password);
         }
 
-        public async Task ClearShutdownPending(string deviceId)
+        public async Task ClearAction(string deviceId, ApiAction action)
         {
-            var data = new ClearShutdownPendingPostData(deviceId).Data;
-            var apiPath = ApiPathMapper.GetPath(ApiPaths.ClearShutdownPending);
+            var data = new ClearActionPostData(deviceId, action).Data;
+            var apiPath = ApiPathMapper.GetPath(ApiPaths.ClearAction);
             var httpContent = await _requestHandler.DoRequest(_client, apiPath, data);
             BaseResponse response = Convert<BaseResponse>(httpContent);
             CheckResponse(response);
         }
 
-        public async Task SetShutdownPending(string deviceId)
+        public async Task SetAction(string deviceId, ApiAction action)
         {
-            var data = new SetShutdownPendingPostData(deviceId).Data;
-            var apiPath = ApiPathMapper.GetPath(ApiPaths.SetShutdownPending);
+            var data = new SetActionPostData(deviceId, action).Data;
+            var apiPath = ApiPathMapper.GetPath(ApiPaths.SetAction);
             var httpContent = await _requestHandler.DoRequest(_client, apiPath, data);
             BaseResponse response = Convert<BaseResponse>(httpContent);
             CheckResponse(response);
         }
 
-        public async Task<bool> GetShutdownPending(string deviceId)
+        public async Task<bool> GetAction(string deviceId, ApiAction action)
         {
-            var data = new GetShutdownPendingPostData(deviceId).Data;
-            var apiPath = ApiPathMapper.GetPath(ApiPaths.GetShutdownPending);
+            var data = new GetActionPostData(deviceId, action).Data;
+            var apiPath = ApiPathMapper.GetPath(ApiPaths.GetAction);
             var httpContent = await _requestHandler.DoRequest(_client, apiPath, data);
-            GetShutdownPendingResponse response = Convert<GetShutdownPendingResponse>(httpContent);
+            GetActionResponse response = Convert<GetActionResponse>(httpContent);
             CheckResponse(response);
-            if (response.Shutdown)
+            if (response.Action)
             {
                 _logger?.Info("Received shutdown message.");
                 return true;
@@ -123,9 +107,9 @@ namespace FlyApi
             return response;
         }
 
-        public async Task AddDevice(string login, string deviceId, string name, bool shutdownable)
+        public async Task AddDevice(string login, string deviceId, string name, bool actionable)
         {
-            var data = new AddDevicePostData(deviceId, login, name, shutdownable).Data;
+            var data = new AddDevicePostData(deviceId, login, name, actionable).Data;
             var apiPath = ApiPathMapper.GetPath(ApiPaths.AddDevice);
             var httpContent = await _requestHandler.DoRequest(_client, apiPath, data);
             BaseResponse response = Convert<BaseResponse>(httpContent);

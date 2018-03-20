@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using System.Threading;
 using FlyApi;
+using FlyApi.Enums;
 using FlyApi.ResponseModels;
 using FlyUnix.Cli;
 
@@ -41,7 +42,7 @@ namespace FlyUnix
                     RequestHandler.DoRequest(() => Client.SetLoggedState(_deviceId).Wait());
                 }
 
-                Console.WriteLine("Successfully verified. Fly client is now waiting for shutdown request...");
+                Console.WriteLine("Successfully verified. Fly client is now waiting for action request...");
 
                 bool isDeviceVerified = RequestHandler.DoRequest(Client.VerifyDeviceId(_deviceId));
 
@@ -52,10 +53,10 @@ namespace FlyUnix
 
                 while (true)
                 {
-                    bool isShutdownPending = RequestHandler.DoRequest(Client.GetShutdownPending(_deviceId));
+                    bool isShutdownPending = RequestHandler.DoRequest(Client.GetAction(_deviceId, ApiAction.Shutdown));
                     if (isShutdownPending)
                     {
-                        RequestHandler.DoRequest(() => Client.ClearShutdownPending(_deviceId).Wait());
+                        RequestHandler.DoRequest(() => Client.ClearAction(_deviceId, ApiAction.Shutdown).Wait());
                         ShellHandler.Shutdown();
                         return;
                     }
