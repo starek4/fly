@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>FlyPhone.Droid</RootNamespace>
     <AssemblyName>FlyPhone.Android</AssemblyName>
-    <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidResgenClass>Resource</AndroidResgenClass>
@@ -75,7 +75,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FlyPhone\FlyPhone.csproj">
-      <Project>{095EE2E5-A800-45E9-BFA6-833C220614D6}</Project>
+      <Project>{D5A23ADA-7537-41ED-BCBB-305C6EB309A0}</Project>
       <Name>FlyPhone</Name>
     </ProjectReference>
   </ItemGroup>
