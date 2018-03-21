@@ -60,6 +60,24 @@
             $this->db->Query($query, "is", array(0, $device_id));
         }
 
+        public function GetFavourite($device_id)
+        {
+            $query = "SELECT `Is_favourite`,`User_login` FROM `Devices` WHERE `Device_id` = ?";
+            return $this->db->Select($query, "s", array($device_id));
+        }
+
+        public function SetFavourite($device_id)
+        {
+            $query = "UPDATE `Devices` SET `Is_favourite` = ? WHERE `Device_id` = ?";
+            $this->db->Query($query, "is", array(1, $device_id));
+        }
+
+        public function ClearFavourite($device_id)
+        {
+            $query = "UPDATE `Devices` SET `Is_favourite` = ? WHERE `Device_id` = ?";
+            $this->db->Query($query, "is", array(0, $device_id));
+        }
+
         /* Actions handlers */
         public function GetActionPending($device_id, $action)
         {

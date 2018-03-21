@@ -151,6 +151,34 @@ namespace FlyApi
             CheckResponse(response);
         }
 
+        public async Task<bool> GetFavourite(string deviceId)
+        {
+            var data = new GetFavouritePostData(deviceId).Data;
+            var apiPath = ApiPathMapper.GetPath(ApiPaths.GetFavourite);
+            var httpContent = await _requestHandler.DoRequest(_client, apiPath, data);
+            GetFavouriteResponse response = Convert<GetFavouriteResponse>(httpContent);
+            CheckResponse(response);
+            return response.Favourite;
+        }
+
+        public async Task ClearFavourite(string deviceId)
+        {
+            var data = new ClearFavouritePostData(deviceId).Data;
+            var apiPath = ApiPathMapper.GetPath(ApiPaths.ClearFavourite);
+            var httpContent = await _requestHandler.DoRequest(_client, apiPath, data);
+            BaseResponse response = Convert<BaseResponse>(httpContent);
+            CheckResponse(response);
+        }
+
+        public async Task SetFavourite(string deviceId)
+        {
+            var data = new SetFavouritePostData(deviceId).Data;
+            var apiPath = ApiPathMapper.GetPath(ApiPaths.SetFavourite);
+            var httpContent = await _requestHandler.DoRequest(_client, apiPath, data);
+            BaseResponse response = Convert<BaseResponse>(httpContent);
+            CheckResponse(response);
+        }
+
         private void CheckResponse(BaseResponse response)
         {
             if (!response.Success)

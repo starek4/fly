@@ -17,7 +17,10 @@ namespace FlyApi.Mappers
             { ApiPaths.GetLoggedState, "getLoggedState.php" },
             { ApiPaths.SetAction, "Actions/setAction.php" },
             { ApiPaths.GetAction, "Actions/getAction.php" },
-            { ApiPaths.ClearAction, "Actions/clearAction.php" }
+            { ApiPaths.ClearAction, "Actions/clearAction.php" },
+            { ApiPaths.ClearFavourite, "clearFavourite.php" },
+            { ApiPaths.SetFavourite, "setFavourite.php" },
+            { ApiPaths.GetFavourite, "getFavourite.php" }
         };
 
         public static string GetPath(ApiPaths path)

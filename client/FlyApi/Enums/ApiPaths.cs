@@ -12,6 +12,9 @@
         GetLoggedState,
         SetAction,
         ClearAction,
-        GetAction
+        GetAction,
+        ClearFavourite,
+        SetFavourite,
+        GetFavourite
     }
 }
