@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2009
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlyUnix", "FlyUnix\FlyUnix.csproj", "{F6605AE6-3109-43CB-BE2C-2645A6384C2E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlyUnix", "FlyUnix\FlyUnix.csproj", "{F6605AE6-3109-43CB-BE2C-2645A6384C2E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlyWindowsWPF", "FlyWindowsWPF\FlyWindowsWPF.csproj", "{8F4F82E7-4438-4DFD-8161-5051C2CB5C58}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlyApi", "FlyApi\FlyApi.csproj", "{AB04D04D-2015-4A6A-BE49-3BEF6B775040}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlyApi", "FlyApi\FlyApi.csproj", "{AB04D04D-2015-4A6A-BE49-3BEF6B775040}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logger", "Logger\Logger.csproj", "{1C3FBB20-35A5-4E1B-A9C8-CC03AB0B1F19}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logger", "Logger\Logger.csproj", "{1C3FBB20-35A5-4E1B-A9C8-CC03AB0B1F19}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{91A759FB-57BA-4CF0-B0C0-00350866DD8F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTests", "UnitTests\UnitTests.csproj", "{91A759FB-57BA-4CF0-B0C0-00350866DD8F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlyPhone.Android", "FlyPhone\FlyPhone.Android\FlyPhone.Android.csproj", "{05BB8D71-7714-44B2-8C96-9D3A406E202D}"
 EndProject
@@ -19,7 +19,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlyPhone.iOS", "FlyPhone\Fl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlyPhone.UWP", "FlyPhone\FlyPhone.UWP\FlyPhone.UWP.csproj", "{BB78ACE1-E9A2-4694-B89F-2DC6285391FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlyPhone", "FlyPhone\FlyPhone\FlyPhone.csproj", "{D5A23ADA-7537-41ED-BCBB-305C6EB309A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlyPhone", "FlyPhone\FlyPhone\FlyPhone.csproj", "{D5A23ADA-7537-41ED-BCBB-305C6EB309A0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

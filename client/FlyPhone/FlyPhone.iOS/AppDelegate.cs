@@ -1,5 +1,7 @@
 ﻿using Foundation;
+using Plugin.Toasts;
 using UIKit;
+using Xamarin.Forms;
 
 namespace FlyPhone.iOS
 {
@@ -19,7 +21,13 @@ namespace FlyPhone.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
-            Xamarin.Forms.Forms.Init();
+            Forms.Init();
+
+            // Registering Toast package
+            DependencyService.Register<ToastNotification>();
+            ToastNotification.Init();
+
+
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);

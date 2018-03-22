@@ -2,8 +2,11 @@
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
+using Plugin.Toasts.UWP;
+using Xamarin.Forms;
+using Application = Windows.UI.Xaml.Application;
+using Frame = Windows.UI.Xaml.Controls.Frame;
 
 namespace FlyPhone.UWP
 {
@@ -43,7 +46,11 @@ namespace FlyPhone.UWP
 
                 rootFrame.NavigationFailed += OnNavigationFailed;
 
-                Xamarin.Forms.Forms.Init(e);
+                Forms.Init(e);
+
+                // Registering Toast package
+                DependencyService.Register<ToastNotification>();
+                ToastNotification.Init();
 
                 if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
                 {
