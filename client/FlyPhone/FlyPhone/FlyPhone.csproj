@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\FlyApi\FlyApi.csproj" />
+    <ProjectReference Include="..\..\FlyClientApi\FlyClientApi.csproj" />
   </ItemGroup>
 
   <ItemGroup>

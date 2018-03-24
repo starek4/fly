@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Net.Http;
 using System.Threading.Tasks;
-using FlyApi.Exceptions;
-using FlyApi.ResponseModels;
+using FlyClientApi.Exceptions;
 using FlyWindowsWPF.TrayIcon;
 
 namespace FlyWindowsWPF.Requests
@@ -57,34 +56,6 @@ namespace FlyWindowsWPF.Requests
                     ErrorHandler.DatabaseError();
                 }
                 return false;
-            }
-            trayController.MakeIconRed();
-            _isNetworkError = false;
-            return response;
-        }
-
-        public static async Task<GetLoggedStateResponse> DoRequest(Task<GetLoggedStateResponse> request, TrayController trayController)
-        {
-            GetLoggedStateResponse response;
-            try
-            {
-                response = await request;
-            }
-            catch (Exception exception)
-            {
-                if (exception is HttpRequestException)
-                {
-                    if (!_isNetworkError)
-                    {
-                        ErrorHandler.NetworkError(trayController);
-                        _isNetworkError = true;
-                    }
-                }
-                if (exception is DatabaseException)
-                {
-                    ErrorHandler.DatabaseError();
-                }
-                return null;
             }
             trayController.MakeIconRed();
             _isNetworkError = false;

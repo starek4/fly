@@ -19,6 +19,6 @@
     <PackageReference Include="System.Runtime.Serialization.Primitives" Version="4.3.0" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\FlyApi\FlyApi.csproj" />
+    <ProjectReference Include="..\FlyClientApi\FlyClientApi.csproj" />
   </ItemGroup>
 </Project>

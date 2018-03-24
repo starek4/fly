@@ -4,38 +4,38 @@
   <ItemGroup>
     <PublishFile Include="netfx.force.conflicts">
       <Visible>False</Visible>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="System.Net.Http">
       <Visible>False</Visible>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
   </ItemGroup>
   <Target Name="FixClickOnceDependencies" BeforeTargets="_DeploymentComputeClickOnceManifestInfo">
     <ItemGroup>
       <_noCopyRefs Include="@(ReferencePath)" Condition="'%(ReferencePath.Private)' == 'false'" />
-      <_noCopyRefsByFileName Include="@(_noCopyRefs-&gt;'%(FileName)')">
+      <_noCopyRefsByFileName Include="@(_noCopyRefs->'%(FileName)')">
         <OriginalItem>%(Identity)</OriginalItem>
       </_noCopyRefsByFileName>
-      <_libByFileName Include="@(ReferenceCopyLocalPaths-&gt;'%(FileName)')">
+      <_libByFileName Include="@(ReferenceCopyLocalPaths->'%(FileName)')">
         <OriginalItem>%(Identity)</OriginalItem>
       </_libByFileName>
       <_overlappingRefByFileName Include="@(_noCopyRefsByFileName)" Condition="'@(_noCopyRefsByFileName)' == '@(_libByFileName)' AND '%(Identity)' != ''" />
       <_overlappingLibByFileName Include="@(_libByFileName)" Condition="'@(_noCopyRefsByFileName)' == '@(_libByFileName)' AND '%(Identity)' != ''" />
-      <_overlappingRef Include="@(_overlappingRefByFileName-&gt;'%(OriginalItem)')" />
-      <_overlappingLib Include="@(_overlappingLibByFileName-&gt;'%(OriginalItem)')" />
+      <_overlappingRef Include="@(_overlappingRefByFileName->'%(OriginalItem)')" />
+      <_overlappingLib Include="@(_overlappingLibByFileName->'%(OriginalItem)')" />
     </ItemGroup>
     <ItemGroup Condition="'@(_overlappingRef)' != ''">
       <ReferencePath Remove="@(_overlappingRef)" />
@@ -117,10 +117,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Hardcodet.Wpf.TaskbarNotification, Version=1.0.5.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Hardcodet.NotifyIcon.Wpf.1.0.8\lib\net451\Hardcodet.Wpf.TaskbarNotification.dll</HintPath>
+      <HintPath>..\..\packages\Hardcodet.NotifyIcon.Wpf.1.0.8\lib\net451\Hardcodet.Wpf.TaskbarNotification.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="PresentationFramework.Aero" />
     <Reference Include="System" />
@@ -202,9 +202,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\FlyApi\FlyApi.csproj">
-      <Project>{ab04d04d-2015-4a6a-be49-3bef6b775040}</Project>
-      <Name>FlyApi</Name>
+    <ProjectReference Include="..\FlyClientApi\FlyClientApi.csproj">
+      <Project>{AB04D04D-2015-4A6A-BE49-3BEF6B775040}</Project>
+      <Name>FlyClientApi</Name>
     </ProjectReference>
     <ProjectReference Include="..\Logger\Logger.csproj">
       <Project>{1c3fbb20-35a5-4e1b-a9c8-cc03ab0b1f19}</Project>

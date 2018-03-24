@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Net.Http;
 using System.Threading.Tasks;
-using FlyApi.Exceptions;
-using FlyApi.ResponseModels;
+using FlyClientApi.Exceptions;
 
 namespace FlyUnix
 {
@@ -46,28 +45,6 @@ namespace FlyUnix
                     }
                     return false;
                 });
-            }
-            return response;
-        }
-
-        public static GetLoggedStateResponse DoRequest(Task<GetLoggedStateResponse> request)
-        {
-            GetLoggedStateResponse response;
-            try
-            {
-                response = request.Result;
-            }
-            catch (Exception exception)
-            {
-                if (exception is HttpRequestException)
-                {
-                    ApplicationKiller.NetworkError();
-                }
-                if (exception is DatabaseException)
-                {
-                    ApplicationKiller.DatabaseError();
-                }
-                return null;
             }
             return response;
         }

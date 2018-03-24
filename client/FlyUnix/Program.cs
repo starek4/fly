@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Threading;
-using FlyApi;
-using FlyApi.Enums;
-using FlyApi.ResponseModels;
+using FlyClientApi;
+using FlyClientApi.Enums;
 using FlyUnix.Cli;
 
 namespace FlyUnix
@@ -28,8 +27,8 @@ namespace FlyUnix
 
             if (Parser.Parse(args, ref _arguments))
             {
-                GetLoggedStateResponse logged = RequestHandler.DoRequest(Client.GetLoggedState(_deviceId));
-                if (!logged.Logged)
+                bool logged = RequestHandler.DoRequest(Client.GetLoggedState(_deviceId));
+                if (!logged)
                 {
                     _arguments.Password = PasswordGetter.GetPassword();
 
@@ -39,7 +38,6 @@ namespace FlyUnix
                         Console.WriteLine("Wrong credentials.");
                         return;
                     }
-                    RequestHandler.DoRequest(() => Client.SetLoggedState(_deviceId).Wait());
                 }
 
                 Console.WriteLine("Successfully verified. Fly client is now waiting for action request...");
@@ -49,18 +47,19 @@ namespace FlyUnix
                 if (!isDeviceVerified)
                 {
                     RequestHandler.DoRequest(() => Client.AddDevice(_arguments.Login, _deviceId, _deviceName, true).Wait());
+                    RequestHandler.DoRequest(() => Client.SetLoggedState(_deviceId, true).Wait());
                 }
 
                 while (true)
                 {
-                    bool isShutdownPending = RequestHandler.DoRequest(Client.GetAction(_deviceId, ApiAction.Shutdown));
+                    bool isShutdownPending = RequestHandler.DoRequest(Client.GetAction(_deviceId, Actions.Shutdown));
                     if (isShutdownPending)
                     {
-                        RequestHandler.DoRequest(() => Client.ClearAction(_deviceId, ApiAction.Shutdown).Wait());
+                        RequestHandler.DoRequest(() => Client.ClearAction(_deviceId, Actions.Shutdown).Wait());
                         ShellHandler.Shutdown();
                         return;
                     }
-                    Thread.Sleep(30 * 1000);
+                    Thread.Sleep(5 * 1000);
                 }
             }
             Console.WriteLine("Wrong arguments. Try it again: fly -l <login>");

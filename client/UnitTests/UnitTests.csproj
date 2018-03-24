@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\FlyApi\FlyApi.csproj" />
+    <ProjectReference Include="..\FlyClientApi\FlyClientApi.csproj" />
     <ProjectReference Include="..\FlyUnix\FlyUnix.csproj" />
     <ProjectReference Include="..\Logger\Logger.csproj" />
   </ItemGroup>

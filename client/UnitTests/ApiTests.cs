@@ -1,4 +1,4 @@
-﻿using FlyApi;
+﻿using FlyClientApi;
 using Xunit;
 
 namespace UnitTests
@@ -16,7 +16,7 @@ namespace UnitTests
 
         private async void DeleteDevice()
         {
-            await new Client().DeleteDevice(testUsername, testDeviceId);
+            await new Client().DeleteDevice(testDeviceId);
         }
 
         [Fact]

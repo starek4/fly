@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
-using FlyApi.Exceptions;
-using FlyApi.ResponseModels;
+using DatabaseController.Models;
+using FlyClientApi.Exceptions;
 
 namespace FlyPhone
 {
@@ -46,28 +46,6 @@ namespace FlyPhone
                     ExceptionHandler.DatabaseError();
                 }
                 return false;
-            }
-            return response;
-        }
-
-        public static async Task<GetLoggedStateResponse> DoRequest(Task<GetLoggedStateResponse> request)
-        {
-            GetLoggedStateResponse response;
-            try
-            {
-                response = await request;
-            }
-            catch (Exception exception)
-            {
-                if (exception is HttpRequestException)
-                {
-                    ExceptionHandler.NetworkError();
-                }
-                if (exception is DatabaseException)
-                {
-                    ExceptionHandler.DatabaseError();
-                }
-                return null;
             }
             return response;
         }

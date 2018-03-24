@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "FlyUnix": {
+      "commandName": "Project",
+      "commandLineArgs": "-l starek4"
+    }
+  }
+}

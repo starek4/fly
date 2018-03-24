@@ -4,8 +4,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using FlyApi;
-using FlyApi.ResponseModels;
+using FlyClientApi;
 using FlyWindowsWPF.PowerShell;
 using FlyWindowsWPF.Requests;
 using FlyWindowsWPF.TrayIcon;
@@ -51,7 +50,7 @@ namespace FlyWindowsWPF.ViewModels
 
         private async void LogoutAndExit()
         {
-            await _client.ClearLoggedState(DeviceIdentifierHelper.DeviceIdentifier);
+            await _client.SetLoggedState(DeviceIdentifierHelper.DeviceIdentifier, false);
             ExitApp();
         }
 
@@ -90,16 +89,16 @@ namespace FlyWindowsWPF.ViewModels
 
         private async void IntoTray()
         {
-            await RequestHandler.DoRequest(_client.SetLoggedState(DeviceIdentifierHelper.DeviceIdentifier), TrayController);
+            await RequestHandler.DoRequest(_client.SetLoggedState(DeviceIdentifierHelper.DeviceIdentifier, true), TrayController);
             Status = String.Empty;
             HideWindow();
-            new Thread(() => ClientLoop.Loop(_client, TrayController)).Start();
+            new Thread(() => ClientLoop.Loop(Login, _client, TrayController)).Start();
         }
 
         private async void IsDeviceLogged()
         {
-            GetLoggedStateResponse logged = await RequestHandler.DoRequest(_client.GetLoggedState(DeviceIdentifierHelper.DeviceIdentifier), TrayController);
-            if (logged.Logged)
+            bool logged = await RequestHandler.DoRequest(_client.GetLoggedState(DeviceIdentifierHelper.DeviceIdentifier), TrayController);
+            if (logged)
                 IntoTray();
             else
             {
