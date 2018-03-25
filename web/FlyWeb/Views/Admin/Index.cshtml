@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Device table";
+}
+
+<div class="wrapper">
+    <h1>No devices were found!</h1>
+</div>
+
+<div id="topBar">
+    <button asp-controller="User" asp-action="Index" class="btn btn-default" id="logoutButton" type="button"><i class="fa fa-sign-out"></i> Logout</button>
+</div>
+
+<div class="wrapper">
+    <div class="table">
+        <div class="row header green">
+            <div class="cell">Device name</div>
+            <div class="cell">State</div>
+            <div class="cell">Actions</div>
+        </div>
+
+        <div class="row">
+            <div class="cell">Device name</div>
+            <div class="cell">
+                <img width="20" src="images/red.png"/>
+            </div>
+            <div class="cell">
+                <button onclick="SetShutdownState(this.name)" id="shutdown" name="DeviceId">Shutdown</button>
+                <button onclick="SetRestartState(this.name)" id="restart" name="DeviceId">Restart</button>
+                <button onclick="SetSleepState(this.name)" id="sleep" name="DeviceId">Sleep</button>
+                <button onclick="SetMuteState(this.name)" id="mute" name="DeviceId">Mute</button>
+                <button onclick="DeleteDevice('test...', this.name);" id="deleteDevice" name="DeviceId">Delete device</button>
+            </div>
+        </div>
+    </div>
+</div>

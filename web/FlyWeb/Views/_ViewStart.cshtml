@@ -1,3 +1,12 @@
 ﻿@{
-    Layout = "_Layout";
+    var currentName = ViewContext.RouteData.Values["Controller"];
+    switch (currentName)
+    {
+        case "User":
+            Layout = "~/Views/Shared/_Layout.cshtml";
+            break;
+        default:
+            Layout = "~/Views/Shared/_AdminLayoutPage.cshtml";
+            break;
+    }
 }
