@@ -1,4 +1,6 @@
-﻿@{
+﻿@model UserViewModel
+
+@{
     ViewData["Title"] = "Login page";
 }
 
@@ -7,7 +9,7 @@
     <div class="panel panel-default">
         <div class="panel-body">
             <form method="POST">
-                STATUS
+                <div style="color: red">@Html.DisplayFor(model => model.Status)</div>
                 <div class="input-group login-userinput">
                     <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
                     <input id="txtUser" type="text" class="form-control" name="login" placeholder="Username">
@@ -19,7 +21,7 @@
                         <button class="btn btn-default" type="button"><i class="glyphicon glyphicon-eye-open"></i></button>
                     </span>
                 </div>
-                <button asp-controller="Admin" asp-action="Index" name="submit" class="btn btn-primary btn-block login-button" type="submit"><i class="fa fa-sign-in"></i> Login</button>
+                <button name="submit" class="btn btn-primary btn-block login-button" type="submit"><i class="fa fa-sign-in"></i> Login</button>
                 <div class="checkbox login-options">
                     <a asp-area="" asp-controller="User" asp-action="Registration" class="login-forgot">Register here</a>
                 </div>
@@ -29,34 +31,27 @@
 </div>
 
 <script>
-        window.onload = function()
-        {
+    window.onload = function () {
+        $("#showPassword").hide();
+    }
+
+    $("#txtPassword").on('change', function () {
+        if ($("#txtPassword").val()) {
+            $("#showPassword").show();
+        }
+        else {
             $("#showPassword").hide();
         }
+    });
 
-        $("#txtPassword").on('change',function()
-        {
-            if($("#txtPassword").val())
-            {
-                $("#showPassword").show();
-            }
-            else
-            {
-                $("#showPassword").hide();
-            }
-        });
-
-        $(".reveal").on('click',function()
-        {
-            var $pwd = $("#txtPassword");
-            if ($pwd.attr('type') === 'password')
-            {
-                $pwd.attr('type', 'text');
-            }
-            else
-            {
-                $pwd.attr('type', 'password');
-            }
-        });
+    $(".reveal").on('click', function () {
+        var $pwd = $("#txtPassword");
+        if ($pwd.attr('type') === 'password') {
+            $pwd.attr('type', 'text');
+        }
+        else {
+            $pwd.attr('type', 'password');
+        }
+    });
 </script>
 

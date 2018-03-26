@@ -176,6 +176,18 @@ namespace FlyClientApi
             await SetFavourite(deviceId, true);
         }
 
+        public async Task UpdateTimestamp(string deviceId)
+        {
+            Device device = await GetDevice(deviceId);
+            device.LastActive = DateTime.Now;
+
+            string data = JsonConvert.SerializeObject(new UpdateDevicePostModel { Device = device });
+            var apiPath = ApiPathMapper.GetPath(ApiPaths.UpdateDevice);
+            var httpContent = await _requestHandler.DoRequest(_client, apiPath, data);
+            BaseResponse response = Convert<BaseResponse>(httpContent);
+            CheckResponse(response);
+        }
+
         private void CheckResponse(BaseResponse response)
         {
             if (!response.Success)

@@ -6,6 +6,19 @@ namespace DatabaseController.Repositories
 {
     public class UserRepository
     {
+        public bool CheckIfUserExist(string login)
+        {
+            using (var context = new FlyDbContext())
+            {
+                foreach (var user in context.Users)
+                {
+                    if (user.Login == login)
+                        return true;
+                }
+                return false;
+            }
+        }
+
         private bool CheckIfUserExist(string login, FlyDbContext context)
         {
             foreach (var user in context.Users)

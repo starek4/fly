@@ -47,7 +47,7 @@ namespace DatabaseController.Repositories
         {
             using (var context = new FlyDbContext())
             {
-                return context.Users.First(x => x.Login == login).Devices;
+                return context.Users.Include(x => x.Devices).First(x => x.Login == login).Devices;
             }
         }
 

@@ -52,6 +52,7 @@ namespace FlyUnix
 
                 while (true)
                 {
+                    RequestHandler.DoRequest(() => Client.UpdateTimestamp(_deviceId).Wait());
                     bool isShutdownPending = RequestHandler.DoRequest(Client.GetAction(_deviceId, Actions.Shutdown));
                     if (isShutdownPending)
                     {
@@ -59,7 +60,7 @@ namespace FlyUnix
                         ShellHandler.Shutdown();
                         return;
                     }
-                    Thread.Sleep(5 * 1000);
+                    Thread.Sleep(15 * 1000);
                 }
             }
             Console.WriteLine("Wrong arguments. Try it again: fly -l <login>");

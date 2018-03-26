@@ -1,9 +1,8 @@
-function DeleteDevice(login, name)
+function DeleteDevice(name)
 {
-    $.post("./api/deleteDevice.php",
+    $.post("/Admin/Delete",
     {
-        Login: login,
-        Device_id: name
+        DeviceId: name
     },
     function(data, status)
     {
@@ -20,9 +19,9 @@ function DeleteDevice(login, name)
 
 function SetShutdownState(name)
 {
-    $.post("./api/Actions/setAction.php",
+    $.post("/Admin/Index",
     {
-        Device_id: name,
+        DeviceId: name,
         Action: "Shutdown"
     },
     function(data, status)
@@ -35,9 +34,9 @@ function SetShutdownState(name)
 
 function SetRestartState(name)
 {
-    $.post("./api/Actions/setAction.php",
+    $.post("/Admin/Index",
     {
-        Device_id: name,
+        DeviceId: name,
         Action: "Restart"
     },
     function(data, status)
@@ -49,9 +48,9 @@ function SetRestartState(name)
 
 function SetSleepState(name)
 {
-    $.post("./api/Actions/setAction.php",
+    $.post("/Admin/Index",
     {
-        Device_id: name,
+        DeviceId: name,
         Action: "Sleep"
     },
     function(data, status)
@@ -65,9 +64,9 @@ function SetSleepState(name)
 
 function SetMuteState(name)
 {
-    $.post("./api/Actions/setAction.php",
+    $.post("/Admin/Index",
     {
-        Device_id: name,
+        DeviceId: name,
         Action: "Mute"
     },
     function(data, status)
@@ -75,4 +74,9 @@ function SetMuteState(name)
         // TODO: Check return status...
     });
     alert("Device " + name + "has been muted");
+}
+
+function Logout()
+{
+    document.location = '/User/Logout';
 }

@@ -92,7 +92,7 @@ namespace FlyWindowsWPF.ViewModels
             await RequestHandler.DoRequest(_client.SetLoggedState(DeviceIdentifierHelper.DeviceIdentifier, true), TrayController);
             Status = String.Empty;
             HideWindow();
-            new Thread(() => ClientLoop.Loop(Login, _client, TrayController)).Start();
+            new Thread(() => ClientLoop.Loop(_client, TrayController)).Start();
         }
 
         private async void IsDeviceLogged()

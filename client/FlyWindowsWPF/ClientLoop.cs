@@ -21,10 +21,16 @@ namespace FlyWindowsWPF
             await RequestHandler.DoRequest(client.ClearAction(DeviceIdentifierHelper.DeviceIdentifier, Actions.Shutdown), controller);
         }
 
-        public static async void Loop(string login, Client client, TrayController controller)
+        private static async Task UpdateTimestamp(Client client, TrayController controller)
+        {
+            await RequestHandler.DoRequest(client.UpdateTimestamp(DeviceIdentifierHelper.DeviceIdentifier), controller);
+        }
+
+        public static async void Loop(Client client, TrayController controller)
         {
             while (true)
             {
+                await UpdateTimestamp(client, controller);
                 bool isShutdownPending = await CheckShutdown(client, controller);
                 if (isShutdownPending)
                 {
@@ -32,7 +38,8 @@ namespace FlyWindowsWPF
                     controller.MakeTooltip("Fly client", "Shutdown request registered.", BalloonIcon.None);
                     ShutdownPc.DoShutdownRequest();
                 }
-                Thread.Sleep(5 * 1000);
+                Thread.Sleep(15 * 1000);
+
             }
             // ReSharper disable once FunctionNeverReturns
         }
