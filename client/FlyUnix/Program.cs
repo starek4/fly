@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Threading;
+using DatabaseController.Models;
 using FlyClientApi;
-using FlyClientApi.Enums;
 using FlyUnix.Cli;
 
 namespace FlyUnix
@@ -53,14 +53,9 @@ namespace FlyUnix
                 while (true)
                 {
                     RequestHandler.DoRequest(() => Client.UpdateTimestamp(_deviceId).Wait());
-                    bool isShutdownPending = RequestHandler.DoRequest(Client.GetAction(_deviceId, Actions.Shutdown));
-                    if (isShutdownPending)
-                    {
-                        RequestHandler.DoRequest(() => Client.ClearAction(_deviceId, Actions.Shutdown).Wait());
-                        ShellHandler.Shutdown();
-                        return;
-                    }
-                    Thread.Sleep(15 * 1000);
+                    Device device = RequestHandler.DoRequest(Client.GetDevice(_deviceId));
+                    ActionHandler.DoActions(device, Client);
+                    Thread.Sleep(10 * 1000);
                 }
             }
             Console.WriteLine("Wrong arguments. Try it again: fly -l <login>");
