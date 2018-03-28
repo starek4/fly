@@ -142,7 +142,7 @@ namespace FlyClientApi
         public async Task DeleteDevice(string deviceId)
         {
             string data = JsonConvert.SerializeObject(new DeleteDevicePostModel { DeviceId = deviceId });
-            var apiPath = ApiPathMapper.GetPath(ApiPaths.AddDevice);
+            var apiPath = ApiPathMapper.GetPath(ApiPaths.DeleteDevice);
             var httpContent = await _requestHandler.DoRequest(_client, apiPath, data);
             BaseResponse response = Convert<BaseResponse>(httpContent);
             CheckResponse(response);
