@@ -1,9 +1,9 @@
-﻿using DatabaseController.Models;
-using FlyClientApi;
+﻿using FlyClientApi;
 using FlyClientApi.Enums;
 using FlyWindowsWPF.Requests;
 using FlyWindowsWPF.TrayIcon;
 using Hardcodet.Wpf.TaskbarNotification;
+using Models;
 
 namespace FlyWindowsWPF.Action
 {

@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using DatabaseController.Models;
+using Models;
 
 namespace FlyWeb.Models
 {

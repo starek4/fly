@@ -1,4 +1,4 @@
-﻿namespace FlyWebApi.PostModels
+﻿namespace Models.PostModels
 {
     public class VerifyUserPostModel
     {

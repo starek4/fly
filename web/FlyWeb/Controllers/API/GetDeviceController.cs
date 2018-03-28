@@ -1,9 +1,9 @@
 ﻿using System;
-using DatabaseController.Models;
 using DatabaseController.Repositories;
-using FlyWebApi.PostModels;
-using FlyWebApi.ResponseModels;
 using Microsoft.AspNetCore.Mvc;
+using Models;
+using Models.PostModels;
+using Models.ResponseModels;
 using Newtonsoft.Json;
 
 namespace FlyWeb.Controllers.API

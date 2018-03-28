@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
-using DatabaseController.Models;
 
-namespace FlyWebApi.ResponseModels
+namespace Models.ResponseModels
 {
     public class GetDevicesByLoginResponseModel : BaseResponse
     {

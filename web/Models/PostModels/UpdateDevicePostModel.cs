@@ -1,6 +1,4 @@
-﻿using DatabaseController.Models;
-
-namespace FlyWebApi.PostModels
+﻿namespace Models.PostModels
 {
     public class UpdateDevicePostModel
     {

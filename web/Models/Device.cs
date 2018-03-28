@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DatabaseController.Models
+namespace Models
 {
     public class Device
     {

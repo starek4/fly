@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
-using DatabaseController.Models;
 using DatabaseController.Repositories;
 using FlyClientApi.Enums;
 using FlyWeb.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Models;
 
 namespace FlyWeb.Controllers
 {

@@ -5,12 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Models\" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="2.0.1" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.4.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="2.0.1" />
-    <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.4.1" />
+    <ProjectReference Include="..\Models\Models.csproj" />
   </ItemGroup>
 
   <ItemGroup>

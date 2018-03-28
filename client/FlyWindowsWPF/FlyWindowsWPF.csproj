@@ -232,6 +232,10 @@
       <Project>{44709FF0-5D2F-4373-BE2D-C53476F47B1E}</Project>
       <Name>DatabaseController</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\web\Models\Models.csproj">
+      <Project>{bf890b32-8fb1-40f1-b2aa-af943fb8f5be}</Project>
+      <Name>Models</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FlyClientApi\FlyClientApi.csproj">
       <Project>{AB04D04D-2015-4A6A-BE49-3BEF6B775040}</Project>
       <Name>FlyClientApi</Name>

@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Net.Http;
 using System.Threading.Tasks;
-using DatabaseController.Models;
 using FlyClientApi.Exceptions;
 using FlyWindowsWPF.TrayIcon;
+using Models;
 
 namespace FlyWindowsWPF.Requests
 {

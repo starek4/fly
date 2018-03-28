@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Threading;
-using DatabaseController.Models;
 using FlyClientApi;
 using FlyUnix.Cli;
+using Models;
 
 namespace FlyUnix
 {

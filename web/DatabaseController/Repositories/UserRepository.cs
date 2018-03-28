@@ -1,6 +1,6 @@
 ﻿using System.Linq;
-using DatabaseController.Models;
 using Microsoft.EntityFrameworkCore;
+using Models;
 
 namespace DatabaseController.Repositories
 {

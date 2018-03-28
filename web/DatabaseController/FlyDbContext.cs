@@ -1,6 +1,6 @@
 ﻿using System.Configuration;
-using DatabaseController.Models;
 using Microsoft.EntityFrameworkCore;
+using Models;
 
 namespace DatabaseController
 {

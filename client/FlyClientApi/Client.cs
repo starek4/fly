@@ -4,15 +4,15 @@ using System.Net;
 using System.Net.Http;
 using System.Security;
 using System.Threading.Tasks;
-using DatabaseController.Models;
 using FlyClientApi.Mappers;
-using FlyWebApi.PostModels;
-using FlyWebApi.ResponseModels;
 using FlyClientApi.Enums;
 using FlyClientApi.Exceptions;
 using Newtonsoft.Json;
 using Logger.Enviroment;
 using Logger.Logging;
+using Models;
+using Models.PostModels;
+using Models.ResponseModels;
 
 namespace FlyClientApi
 {

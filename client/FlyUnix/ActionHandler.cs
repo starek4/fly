@@ -1,6 +1,6 @@
-﻿using DatabaseController.Models;
-using FlyClientApi;
+﻿using FlyClientApi;
 using FlyClientApi.Enums;
+using Models;
 
 namespace FlyUnix
 {

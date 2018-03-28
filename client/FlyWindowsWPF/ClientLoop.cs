@@ -1,10 +1,10 @@
 ﻿using System.Threading;
-using DatabaseController.Models;
 using FlyClientApi;
 using FlyWindowsWPF.Action;
 using FlyWindowsWPF.PowerShell;
 using FlyWindowsWPF.Requests;
 using FlyWindowsWPF.TrayIcon;
+using Models;
 
 namespace FlyWindowsWPF
 {

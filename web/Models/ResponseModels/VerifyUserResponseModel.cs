@@ -1,4 +1,4 @@
-﻿namespace FlyWebApi.ResponseModels
+﻿namespace Models.ResponseModels
 {
     public class VerifyUserResponseModel : BaseResponse
     {

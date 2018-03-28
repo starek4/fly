@@ -8,6 +8,6 @@ namespace FlyPhone
 		public MainPage()
 		{
 			InitializeComponent();
-        }
+		}
 	}
 }

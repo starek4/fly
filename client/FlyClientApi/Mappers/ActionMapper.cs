@@ -1,6 +1,6 @@
 ﻿using System;
-using DatabaseController.Models;
 using FlyClientApi.Enums;
+using Models;
 
 namespace FlyClientApi.Mappers
 {
