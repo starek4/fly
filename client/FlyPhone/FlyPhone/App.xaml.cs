@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using FlyPhone.Views;
+using Xamarin.Forms;
 
 namespace FlyPhone
 {
@@ -9,7 +10,7 @@ namespace FlyPhone
 		{
 			InitializeComponent();
 
-			MainPage = new MainPage();
+			MainPage = new LoginViewPage();
 		}
 
 		protected override void OnStart ()
