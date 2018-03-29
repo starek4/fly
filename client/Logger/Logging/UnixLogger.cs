@@ -6,7 +6,7 @@ using Logger.Logging.Exceptions;
 
 namespace Logger.Logging
 {
-    public class LinuxLogger : BaseLogger, ILogger
+    public class UnixLogger : BaseLogger, ILogger
     {
         private static readonly string LogFilePath = Path.Combine(Environment.GetEnvironmentVariable("HOME"), ".fly") + Path.DirectorySeparatorChar;
         private static readonly string FileName = "fly.log";

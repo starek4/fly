@@ -25,13 +25,13 @@ namespace Logger.Enviroment
             switch (type)
             {
                 case PlatformType.Linux:
-                    return new LinuxLogger();
+                    return new UnixLogger();
                 case PlatformType.Windows:
                     return new WindowsLogger();
                 case PlatformType.Osx:
-                    return new LinuxLogger();
+                    return new UnixLogger();
                 case PlatformType.Phone:
-                    return null;
+                    return new PhoneLogger();
                 default:
                     throw new NotImplementedException("This type of device has no implemented logger...");
             }
