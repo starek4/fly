@@ -70,6 +70,20 @@ namespace Tests.IntegrationTests
         }
 
         [Fact]
+        public async void GetAction()
+        {
+            Client client = new Client();
+
+            await client.AddDevice(TestUserDevice.User.Login, TestUserDevice.Device.DeviceId, TestUserDevice.Device.Name, false);
+
+            bool action = await client.GetAction(TestUserDevice.Device.DeviceId, Actions.Mute);
+
+            await client.DeleteDevice(TestUserDevice.Device.DeviceId);
+
+            Assert.False(action);
+        }
+
+        [Fact]
         public async void ClearAction()
         {
             Client client = new Client();
@@ -102,6 +116,64 @@ namespace Tests.IntegrationTests
             await client.DeleteDevice(TestUserDevice.Device.DeviceId);
 
             Assert.True(devices.Count == 1 && devices[0].DeviceId == TestUserDevice.Device.DeviceId);
+        }
+
+        [Fact]
+        public async void SetFavourite()
+        {
+            Client client = new Client();
+
+            await client.AddDevice(TestUserDevice.User.Login, TestUserDevice.Device.DeviceId, TestUserDevice.Device.Name, false);
+            await client.SetFavourite(TestUserDevice.Device.DeviceId);
+
+            Device device = await client.GetDevice(TestUserDevice.Device.DeviceId);
+
+            await client.DeleteDevice(TestUserDevice.Device.DeviceId);
+
+            Assert.True(device.IsFavourite);
+        }
+
+        [Fact]
+        public async void GetFavourite()
+        {
+            Client client = new Client();
+
+            await client.AddDevice(TestUserDevice.User.Login, TestUserDevice.Device.DeviceId, TestUserDevice.Device.Name, false);
+
+            bool favourite = await client.GetFavourite(TestUserDevice.Device.DeviceId);
+
+            await client.DeleteDevice(TestUserDevice.Device.DeviceId);
+
+            Assert.False(favourite);
+        }
+
+        [Fact]
+        public async void ClearFavourite()
+        {
+            Client client = new Client();
+
+            await client.AddDevice(TestUserDevice.User.Login, TestUserDevice.Device.DeviceId, TestUserDevice.Device.Name, false);
+            await client.SetFavourite(TestUserDevice.Device.DeviceId);
+            await client.ClearFavourite(TestUserDevice.Device.DeviceId);
+
+            Device device = await client.GetDevice(TestUserDevice.Device.DeviceId);
+
+            await client.DeleteDevice(TestUserDevice.Device.DeviceId);
+
+            Assert.False(device.IsFavourite);
+        }
+
+        [Fact]
+        public async void VerifyDeviceId()
+        {
+            Client client = new Client();
+
+            await client.AddDevice(TestUserDevice.User.Login, TestUserDevice.Device.DeviceId, TestUserDevice.Device.Name, false);
+            bool verified = await client.VerifyDeviceId(TestUserDevice.Device.DeviceId);
+
+            await client.DeleteDevice(TestUserDevice.Device.DeviceId);
+
+            Assert.True(verified);
         }
     }
 }
