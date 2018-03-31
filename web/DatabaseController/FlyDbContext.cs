@@ -1,5 +1,4 @@
-﻿using System.Configuration;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Models;
 
 namespace DatabaseController
@@ -12,7 +11,7 @@ namespace DatabaseController
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseMySql(ConfigurationManager.AppSettings["ConnectionString"]);
+            optionsBuilder.UseMySql(DbConnectionString.ConnectionString);
         }
     }
 }

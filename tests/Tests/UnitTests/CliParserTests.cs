@@ -2,7 +2,7 @@ using System;
 using FlyUnix.Cli;
 using Xunit;
 
-namespace UnitTests
+namespace Tests.UnitTests
 {
     // Right parameters: fly -l login
     public class CliParserTests

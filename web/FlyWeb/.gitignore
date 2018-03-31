@@ -7,9 +7,6 @@
 *.userosscache
 *.sln.docstates
 
-App.config
-
-
 *.vscode
 *.vscode/launch.json
 *.vscode/tasks.json

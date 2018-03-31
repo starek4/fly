@@ -7,16 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.6.2" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.6.0" />
     <PackageReference Include="xunit" Version="2.3.1" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.3.1" />
     <DotNetCliToolReference Include="dotnet-xunit" Version="2.3.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\FlyClientApi\FlyClientApi.csproj" />
-    <ProjectReference Include="..\FlyUnix\FlyUnix.csproj" />
-    <ProjectReference Include="..\Logger\Logger.csproj" />
+    <ProjectReference Include="..\..\client\FlyUnix\FlyUnix.csproj" />
+    <ProjectReference Include="..\..\web\DatabaseController\DatabaseController.csproj" />
   </ItemGroup>
 
 </Project>
