@@ -16,6 +16,14 @@ namespace Tests.IntegrationTests
         }
 
         [Fact]
+        public void CheckIfUserExist()
+        {
+            UserRepository userRepo = new UserRepository();
+            bool success = userRepo.CheckIfUserExist(TestUserDevice.User.Login);
+            Assert.True(success);
+        }
+
+        [Fact]
         public void DeleteAndAddTestUser()
         {
             UserRepository userRepo = new UserRepository();
@@ -24,6 +32,49 @@ namespace Tests.IntegrationTests
             bool success = userRepo.AddUser(TestUserDevice.User.Login, TestUserDevice.User.Password, TestUserDevice.User.Email);
             
             Assert.True(success);
+        }
+
+        [Fact]
+        public void VerifyUser()
+        {
+            UserRepository userRepo = new UserRepository();
+
+            bool success = userRepo.VerifyUser(TestUserDevice.User.Login, TestUserDevice.User.Password);
+
+            Assert.True(success);
+        }
+
+        [Fact]
+        public void VerifyUserWrongPassword()
+        {
+            UserRepository userRepo = new UserRepository();
+
+            bool success = userRepo.VerifyUser(TestUserDevice.User.Login, TestUserDevice.User.Password + "wrong");
+
+            Assert.False(success);
+        }
+
+        [Fact]
+        public void AddDeviceToNonExistingUser()
+        {
+            DeviceRepository deviceRepo = new DeviceRepository();
+
+            bool success = deviceRepo.AddDevice(TestUserDevice.User.Login + "wrong", TestUserDevice.Device.DeviceId, TestUserDevice.Device.Name, false);
+
+            Assert.False(success);
+        }
+
+        [Fact]
+        public void AddAlreadyExistingDevice()
+        {
+            DeviceRepository deviceRepo = new DeviceRepository();
+            deviceRepo.AddDevice(TestUserDevice.User.Login, TestUserDevice.Device.DeviceId, TestUserDevice.Device.Name, false);
+
+            bool success = deviceRepo.AddDevice(TestUserDevice.User.Login, TestUserDevice.Device.DeviceId, TestUserDevice.Device.Name, false);
+
+            deviceRepo.DeleteDevice(TestUserDevice.Device.DeviceId);
+
+            Assert.False(success);
         }
 
         [Fact]
@@ -37,6 +88,22 @@ namespace Tests.IntegrationTests
             deviceRepo.DeleteDevice(TestUserDevice.Device.DeviceId);
 
             Assert.True(devices.Count == 1 && devices[0].DeviceId == TestUserDevice.Device.DeviceId);
+        }
+
+        [Fact]
+        public void UpdateDevice()
+        {
+            DeviceRepository deviceRepo = new DeviceRepository();
+            deviceRepo.AddDevice(TestUserDevice.User.Login, TestUserDevice.Device.DeviceId, TestUserDevice.Device.Name, false);
+
+            Device device = deviceRepo.GetDevice(TestUserDevice.Device.DeviceId);
+            device.IsShutdownPending = true;
+            deviceRepo.UpdateDevice(device);
+            device = deviceRepo.GetDevice(TestUserDevice.Device.DeviceId);
+
+            deviceRepo.DeleteDevice(TestUserDevice.Device.DeviceId);
+
+            Assert.True(device.IsShutdownPending);
         }
     }
 }

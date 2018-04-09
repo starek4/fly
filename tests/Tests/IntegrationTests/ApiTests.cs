@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Security;
 using FlyClientApi;
 using FlyClientApi.Enums;
 using FlyClientApi.Exceptions;
@@ -107,6 +108,18 @@ namespace Tests.IntegrationTests
         }
 
         [Fact]
+        public async void VerifyUserSecuredPassword()
+        {
+            SecureString pass = new SecureString();
+            foreach (char c in TestUserDevice.User.Password)
+            {
+                pass.AppendChar(c);
+            }
+            bool verified = await new Client().VerifyUserLoginSecuredPassword(TestUserDevice.User.Login, pass);
+            Assert.True(verified);
+        }
+
+        [Fact]
         public async void GetUserDevices()
         {
             Client client = new Client();
@@ -161,6 +174,21 @@ namespace Tests.IntegrationTests
             await client.DeleteDevice(TestUserDevice.Device.DeviceId);
 
             Assert.False(device.IsFavourite);
+        }
+
+        [Fact]
+        public async void SetGetLoggedState()
+        {
+            Client client = new Client();
+
+            await client.AddDevice(TestUserDevice.User.Login, TestUserDevice.Device.DeviceId, TestUserDevice.Device.Name, false);
+            await client.SetLoggedState(TestUserDevice.Device.DeviceId, true);
+
+            bool loggedState = await client.GetLoggedState(TestUserDevice.Device.DeviceId);
+
+            await client.DeleteDevice(TestUserDevice.Device.DeviceId);
+
+            Assert.True(loggedState);
         }
 
         [Fact]
