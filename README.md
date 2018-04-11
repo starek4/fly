@@ -24,7 +24,7 @@ macOS Sierra and higher<br />
 **Run client as root**: sudo fly -l \<login\>
 
 ### Actionless clients
-Clients that evoke comands on actionable clients.
+Clients that evoke commands on actionable clients.
 
 #### Android
 Android Lollipop (API 21) or higher.
@@ -42,4 +42,4 @@ You can also evoke any command from [Fly website](https://fly.starekit.cz/).
 ![Fly clients](https://starekit.cz/git/fly.jpg)
 
 ## Fly architecture
-![Fly architecture](https://starekit.cz/git/fly_architecture.png)
+![Fly architecture](https://starekit.cz/git/fly_architecture_m.png)
