@@ -203,5 +203,33 @@ namespace Tests.IntegrationTests
 
             Assert.True(verified);
         }
+
+        [Fact]
+        public async void GetUsername()
+        {
+            Client client = new Client();
+
+            await client.AddDevice(TestUserDevice.User.Login, TestUserDevice.Device.DeviceId, TestUserDevice.Device.Name, false);
+
+            string username = await client.GetUsername(TestUserDevice.Device.DeviceId);
+
+            await client.DeleteDevice(TestUserDevice.Device.DeviceId);
+
+            Assert.True(username == TestUserDevice.User.Login);
+        }
+
+        [Fact]
+        public async void GetUsernameWrong()
+        {
+            Client client = new Client();
+
+            await client.AddDevice(TestUserDevice.User.Login, TestUserDevice.Device.DeviceId, TestUserDevice.Device.Name, false);
+
+            string username = await client.GetUsername(TestUserDevice.Device.DeviceId + "wrong");
+
+            await client.DeleteDevice(TestUserDevice.Device.DeviceId);
+
+            Assert.True(username == null);
+        }
     }
 }

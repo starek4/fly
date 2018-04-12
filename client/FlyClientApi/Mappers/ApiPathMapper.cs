@@ -14,6 +14,7 @@ namespace FlyClientApi.Mappers
             { ApiPaths.GetDevice, "GetDevice" },
             { ApiPaths.GetDevicesByLogin, "GetDevicesByLogin" },
             { ApiPaths.UpdateDevice, "UpdateDevice" },
+            { ApiPaths.GetUsername, "GetUsername" }
         };
 
         public static string GetPath(ApiPaths path)

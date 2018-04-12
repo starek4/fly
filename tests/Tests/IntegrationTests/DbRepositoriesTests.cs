@@ -105,5 +105,33 @@ namespace Tests.IntegrationTests
 
             Assert.True(device.IsShutdownPending);
         }
+
+        [Fact]
+        public void GetUsername()
+        {
+            DeviceRepository deviceRepo = new DeviceRepository();
+            UserRepository userRepo = new UserRepository();
+            deviceRepo.AddDevice(TestUserDevice.User.Login, TestUserDevice.Device.DeviceId, TestUserDevice.Device.Name, false);
+
+            User user = userRepo.GetUserByDeviceId(TestUserDevice.Device.DeviceId);
+
+            deviceRepo.DeleteDevice(TestUserDevice.Device.DeviceId);
+
+            Assert.True(user.Login == TestUserDevice.User.Login);
+        }
+
+        [Fact]
+        public void GetUsernameWrongId()
+        {
+            DeviceRepository deviceRepo = new DeviceRepository();
+            UserRepository userRepo = new UserRepository();
+            deviceRepo.AddDevice(TestUserDevice.User.Login, TestUserDevice.Device.DeviceId, TestUserDevice.Device.Name, false);
+
+            User user = userRepo.GetUserByDeviceId(TestUserDevice.Device.DeviceId + "wrong");
+
+            deviceRepo.DeleteDevice(TestUserDevice.Device.DeviceId);
+
+            Assert.True(user == null);
+        }
     }
 }

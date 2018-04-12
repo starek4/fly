@@ -8,6 +8,7 @@
         DeleteDevice,
         GetDevice,
         GetDevicesByLogin,
-        UpdateDevice
+        UpdateDevice,
+        GetUsername
     }
 }

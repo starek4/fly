@@ -53,6 +53,19 @@ namespace FlyClientApi
             return response.Device;
         }
 
+        public async Task<string> GetUsername(string deviceId)
+        {
+            if (!await VerifyDeviceId(deviceId))
+                return null;
+
+            string data = JsonConvert.SerializeObject(new GetUsernamePostModel { DeviceId = deviceId });
+            var apiPath = ApiPathMapper.GetPath(ApiPaths.GetUsername);
+            var httpContent = await _requestHandler.DoRequest(_client, apiPath, data);
+            GetUsernameResponseModel response = Convert<GetUsernameResponseModel>(httpContent);
+            CheckResponse(response);
+            return response.Username;
+        }
+
         public async Task<bool> VerifyDeviceId(string deviceId)
         {
             return await GetDevice(deviceId) != null;

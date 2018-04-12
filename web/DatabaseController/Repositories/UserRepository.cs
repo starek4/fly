@@ -65,5 +65,21 @@ namespace DatabaseController.Repositories
             }
             return false;
         }
+
+        public User GetUserByDeviceId(string deviceId)
+        {
+            using (var context = new FlyDbContext())
+            {
+                foreach (User user in context.Users.Include(x => x.Devices))
+                {
+                    foreach (Device device in user.Devices)
+                    {
+                        if (device.DeviceId == deviceId)
+                            return user;
+                    }
+                }
+            }
+            return null;
+        }
     }
 }
