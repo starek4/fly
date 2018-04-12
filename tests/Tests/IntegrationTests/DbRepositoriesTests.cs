@@ -87,7 +87,16 @@ namespace Tests.IntegrationTests
 
             deviceRepo.DeleteDevice(TestUserDevice.Device.DeviceId);
 
-            Assert.True(devices.Count == 1 && devices[0].DeviceId == TestUserDevice.Device.DeviceId);
+            foreach (Device device in devices)
+            {
+                if (device.DeviceId == TestUserDevice.Device.DeviceId)
+                {
+                    Assert.True(true);
+                    return;
+                }
+            }
+
+            Assert.True(false);
         }
 
         [Fact]

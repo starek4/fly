@@ -12,7 +12,7 @@ namespace DatabaseController
             byte[] buffer2;
             if (password == null)
             {
-                throw new ArgumentNullException("password");
+                return null;
             }
             using (Rfc2898DeriveBytes bytes = new Rfc2898DeriveBytes(password, 0x10, 0x3e8))
             {
