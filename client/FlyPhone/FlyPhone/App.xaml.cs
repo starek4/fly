@@ -13,7 +13,13 @@ namespace FlyPhone
 			MainPage = new LoginViewPage();
 		}
 
-		protected override void OnStart ()
+	    public static string Hostname()
+	    {
+	        IDevice device = DependencyService.Get<IDevice>();
+	        return device.GetIdentifier();
+	    }
+
+        protected override void OnStart ()
 		{
 			// Handle when your app starts
 		}

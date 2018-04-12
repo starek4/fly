@@ -2,11 +2,6 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FlyPhone.Views.LoginViewPage">
-
-	<Label Text="Welcome to Xamarin.Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
-
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"></RowDefinition>
@@ -20,7 +15,7 @@
             <Label Text="Password" />
             <Entry Text="{Binding Password}" IsPassword="True"></Entry>
         </StackLayout>
-        <Label Text="{Binding Status}" Grid.Row="1" />
+        <Label Text="{Binding Status}" Grid.Row="1" XAlign="Center" />
         <Button Text="Login" Grid.Row="2" Command="{Binding LoginButtonCommand}"></Button>
     </Grid>
 </ContentPage>

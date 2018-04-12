@@ -35,6 +35,7 @@ namespace FlyPhone.ViewModels
 
         private async void LogoutUser()
         {
+            await RequestHandler.DoRequest(Client.SetLoggedState(App.Hostname(), false));
             await _navigation.PopModalAsync();
         }
     }
