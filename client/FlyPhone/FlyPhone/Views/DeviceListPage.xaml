@@ -1,28 +1,33 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="FlyPhone.Views.DeviceListPage">
+             x:Class="FlyPhone.Views.DeviceListPage"
+             NavigationPage.HasNavigationBar="False" >
     <ContentPage.Content>
         <StackLayout>
-            <ListView ItemsSource="{Binding Devices}">
+            <ListView ItemsSource="{Binding Devices}" SelectedItem="{Binding SelectedItem, Mode=TwoWay}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <StackLayout BackgroundColor="#eee"
-                                         Orientation="Vertical">
-                                <StackLayout Orientation="Horizontal">
-                                    <Label Text="{Binding Name}"
-                                           TextColor="#f35e20" />
-                                </StackLayout>
-                            </StackLayout>
+                            <Grid Padding="10,0,10,0" VerticalOptions="Center">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="0" Text="{Binding Name}" />
+                                <Image Grid.Column="2" Source="green.png" HeightRequest="20" WidthRequest="20" IsVisible="{Binding IsActive}" />
+                                <Image Grid.Column="2" Source="red.png" HeightRequest="20" WidthRequest="20" IsVisible="{Binding IsNotActive}" />
+                                <Image Grid.Column="3" Source="green.png" HeightRequest="20" WidthRequest="20" IsVisible="{Binding IsFavorite}" />
+                                <Image Grid.Column="3" Source="shutdown.png" HeightRequest="20" WidthRequest="20" IsVisible="{Binding IsNotFavorite}" />
+                            </Grid>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-            
-            <ActivityIndicator IsRunning="{Binding IsBusy}" HorizontalOptions="Center" VerticalOptions="Center" />
 
-            <Button Text="Nav page" Command="{Binding ShowDeviceInfoCommand}" />
+            <ActivityIndicator IsRunning="{Binding IsBusy}" HorizontalOptions="Center" VerticalOptions="Center" />
             <Button Text="Logout" Command="{Binding LogoutButtonCommand}" />
         </StackLayout>
     </ContentPage.Content>

@@ -15,7 +15,7 @@
             <Label Text="Password" />
             <Entry Text="{Binding Password}" IsPassword="True"></Entry>
         </StackLayout>
-        <Label Text="{Binding Status}" Grid.Row="1" XAlign="Center" />
+        <Label Text="{Binding Status}" Grid.Row="1" HorizontalTextAlignment="Center" />
         <Button Text="Login" Grid.Row="2" Command="{Binding LoginButtonCommand}"></Button>
     </Grid>
 </ContentPage>

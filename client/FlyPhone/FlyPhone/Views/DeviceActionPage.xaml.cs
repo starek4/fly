@@ -6,10 +6,10 @@ namespace FlyPhone.Views
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class DeviceActionPage
 	{
-		public DeviceActionPage ()
+		public DeviceActionPage (string deviceId)
 		{
 			InitializeComponent ();
-		    BindingContext = new DeviceActionViewModel();
+		    BindingContext = new DeviceActionViewModel(deviceId);
 		}
 	}
 }

@@ -1,5 +1,4 @@
-﻿using FlyClientApi;
-using FlyPhone.Views;
+﻿using FlyPhone.Views;
 using Xamarin.Forms;
 
 namespace FlyPhone

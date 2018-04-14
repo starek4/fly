@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Threading;
-using FlyClientApi;
 using FlyPhone.Views;
 using Xamarin.Forms;
 

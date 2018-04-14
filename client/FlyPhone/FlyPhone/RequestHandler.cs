@@ -72,6 +72,28 @@ namespace FlyPhone
             return response;
         }
 
+        public static async Task<Device> DoRequest(Task<Device> request)
+        {
+            Device response;
+            try
+            {
+                response = await request;
+            }
+            catch (Exception exception)
+            {
+                if (exception is HttpRequestException)
+                {
+                    ExceptionHandler.NetworkError();
+                }
+                if (exception is DatabaseException)
+                {
+                    ExceptionHandler.DatabaseError();
+                }
+                return null;
+            }
+            return response;
+        }
+
         public static async Task<List<Device>> DoRequest(Task<List<Device>> request)
         {
             List<Device> response;

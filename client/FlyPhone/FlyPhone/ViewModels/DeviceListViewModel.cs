@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Threading.Tasks;
 using FlyPhone.Views;
 using Xamarin.Forms;
 using Device = Models.Device;
@@ -10,10 +10,26 @@ namespace FlyPhone.ViewModels
     public class DeviceListViewModel : BaseViewModel
     {
         private Command _logoutButtonCommand;
-        private Command _showDeviceInfoCommand;
         private readonly INavigation _navigation;
-        public ObservableCollection<Device> Devices { get; set; } = new ObservableCollection<Device>();
+        private DeviceCell _selectedItem;
+        public ObservableCollection<DeviceCell> Devices { get; } = new ObservableCollection<DeviceCell>();
 
+        public DeviceCell SelectedItem
+        {
+            get => _selectedItem;
+            set
+            {
+                _selectedItem = value;
+
+                if (_selectedItem == null)
+                    return;
+
+                ShowDeviceInfoPage(_selectedItem.DeviceId);
+
+                SelectedItem = null;
+                OnPropertyChanged(nameof(SelectedItem));
+            }
+        }
 
         private bool _isBusy;
         public bool IsBusy
@@ -44,7 +60,16 @@ namespace FlyPhone.ViewModels
 
             foreach (var device in devicesFromServer)
             {
-                Devices.Add(device);
+                if (device.IsActionable)
+                {
+                    Devices.Add(new DeviceCell
+                    {
+                        DeviceId = device.DeviceId,
+                        Name = device.Name,
+                        IsActive = DateTime.Now.Subtract(device.LastActive).TotalSeconds < 60,
+                        IsFavorite = device.IsFavourite
+                    });
+                }
             }
         }
 
@@ -56,17 +81,9 @@ namespace FlyPhone.ViewModels
             }
         }
 
-        public Command ShowDeviceInfoCommand
+        private async void ShowDeviceInfoPage(string deviceId)
         {
-            get
-            {
-                return _showDeviceInfoCommand ?? (_showDeviceInfoCommand = new Command(p => ShowDeviceInfoPage(), p => true));
-            }
-        }
-
-        private async void ShowDeviceInfoPage()
-        {
-            await _navigation.PushAsync(new DeviceActionPage());
+            await _navigation.PushAsync(new DeviceActionPage(deviceId));
         }
 
         private async void LogoutUser()
@@ -74,5 +91,16 @@ namespace FlyPhone.ViewModels
             await RequestHandler.DoRequest(Client.SetLoggedState(App.Hostname, false));
             await _navigation.PopModalAsync();
         }
+    }
+
+    public class DeviceCell
+    {
+        public string DeviceId;
+        public string Name { get; set; }
+        public bool IsActive { get; set; }
+        public bool IsFavorite { get; set; }
+
+        public bool IsNotActive => !IsActive;
+        public bool IsNotFavorite => !IsFavorite;
     }
 }

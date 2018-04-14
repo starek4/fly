@@ -4,9 +4,32 @@
              x:Class="FlyPhone.Views.DeviceActionPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Label Grid.Row="0" Grid.Column="0"  Text="Hostname" />
+                <Label Grid.Row="0" Grid.Column="1" Text="{Binding Name}" />
+                <Label Grid.Row="1" Grid.Column="0" Text="Status" />
+                <Label Grid.Row="1" Grid.Column="1" Text="{Binding Status}" />
+
+                <Button Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Text="Shutdown" Command="{Binding ShutdownButtonCommand}" />
+                <Button Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Text="Restart" Command="{Binding RestartButtonCommand}" />
+                <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Text="Sleep" Command="{Binding SleepButtonCommand}" />
+                <Button Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" Text="Mute audio" Command="{Binding MuteButtonCommand}" />
+            </Grid>
+            <ActivityIndicator IsRunning="{Binding IsBusy}" HorizontalOptions="Center" VerticalOptions="Center" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
