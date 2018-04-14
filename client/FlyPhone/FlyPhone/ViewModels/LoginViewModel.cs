@@ -23,7 +23,7 @@ namespace FlyPhone.ViewModels
         private async void TryToLoginUser()
         {
             Status = "Trying to log in";
-            if (!await RequestHandler.DoRequest(Client.GetLoggedState(App.Hostname())))
+            if (!await RequestHandler.DoRequest(Client.GetLoggedState(App.Hostname)))
                 ChangeLoginButtonState(true);
             else
                 Device.BeginInvokeOnMainThread(ShowUserDevices);
@@ -69,11 +69,11 @@ namespace FlyPhone.ViewModels
 
             // Check if device already exist
             Status = string.Empty;
-            if (!await RequestHandler.DoRequest(Client.VerifyDeviceId(App.Hostname())))
+            if (!await RequestHandler.DoRequest(Client.VerifyDeviceId(App.Hostname)))
             {
-                await RequestHandler.DoRequest(Client.AddDevice(Username, App.Hostname(), App.Hostname(), false));
+                await RequestHandler.DoRequest(Client.AddDevice(Username, App.Hostname, App.Hostname, false));
             }
-            await RequestHandler.DoRequest(Client.SetLoggedState(App.Hostname(), true));
+            await RequestHandler.DoRequest(Client.SetLoggedState(App.Hostname, true));
 
             ShowUserDevices();
         }

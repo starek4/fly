@@ -72,9 +72,9 @@ namespace FlyPhone
             return response;
         }
 
-        public static async Task<IEnumerable<Device>> DoRequest(Task<IEnumerable<Device>> request)
+        public static async Task<List<Device>> DoRequest(Task<List<Device>> request)
         {
-            IEnumerable<Device> response;
+            List<Device> response;
             try
             {
                 response = await request;

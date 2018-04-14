@@ -1,4 +1,5 @@
-﻿using FlyPhone.Views;
+﻿using FlyClientApi;
+using FlyPhone.Views;
 using Xamarin.Forms;
 
 namespace FlyPhone
@@ -6,6 +7,8 @@ namespace FlyPhone
     // ReSharper disable once RedundantExtendsListEntry
 	public partial class App : Application
 	{
+	    private static string _hostname;
+	    
 		public App ()
 		{
 			InitializeComponent();
@@ -13,11 +16,7 @@ namespace FlyPhone
 			MainPage = new LoginViewPage();
 		}
 
-	    public static string Hostname()
-	    {
-	        IDevice device = DependencyService.Get<IDevice>();
-	        return device.GetIdentifier();
-	    }
+	    public static string Hostname => _hostname ?? (_hostname = DependencyService.Get<IDevice>().GetIdentifier());
 
         protected override void OnStart ()
 		{
