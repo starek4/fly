@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FlyPhone.Views.DeviceListPage"
+             x:Name="DeviceListView"
              NavigationPage.HasNavigationBar="False" >
     <ContentPage.Content>
         <StackLayout>
@@ -19,8 +20,20 @@
                                 <Label Grid.Column="0" Text="{Binding Name}" />
                                 <Image Grid.Column="2" Source="green.png" HeightRequest="20" WidthRequest="20" IsVisible="{Binding IsActive}" />
                                 <Image Grid.Column="2" Source="red.png" HeightRequest="20" WidthRequest="20" IsVisible="{Binding IsNotActive}" />
-                                <Image Grid.Column="3" Source="green.png" HeightRequest="20" WidthRequest="20" IsVisible="{Binding IsFavorite}" />
-                                <Image Grid.Column="3" Source="shutdown.png" HeightRequest="20" WidthRequest="20" IsVisible="{Binding IsNotFavorite}" />
+
+                                <Image Grid.Column="3" Source="favourite.png" HeightRequest="30" WidthRequest="30" IsVisible="{Binding IsFavourite}">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_OnTapped" />
+                                        <TapGestureRecognizer Command="{Binding Source={x:Reference DeviceListView}, Path=BindingContext.ChangeFavouriteStateButtonCommand}" CommandParameter="{Binding DeviceId}"/>
+                                    </Image.GestureRecognizers>
+                                </Image>
+
+                                <Image Grid.Column="3" Source="not_favourite.png" HeightRequest="30" WidthRequest="30" IsVisible="{Binding IsNotFavourite}">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_OnTapped" />
+                                        <TapGestureRecognizer Command="{Binding Source={x:Reference DeviceListView}, Path=BindingContext.ChangeFavouriteStateButtonCommand}" CommandParameter="{Binding DeviceId}"/>
+                                    </Image.GestureRecognizers>
+                                </Image>
                             </Grid>
                         </ViewCell>
                     </DataTemplate>

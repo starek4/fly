@@ -11,10 +11,10 @@ namespace FlyPhone.ViewModels
         private Command _sleepButtonCommand;
         private Command _muteButtonCommand;
 
-        private bool _isEnableShutdownButton = false;
-        private bool _isEnableRestartButton = false;
-        private bool _isEnableSleepButton = false;
-        private bool _isEnableMuteButton = false;
+        private bool _isEnableShutdownButton;
+        private bool _isEnableRestartButton;
+        private bool _isEnableSleepButton;
+        private bool _isEnableMuteButton;
         private bool _isBusy;
 
         private Models.Device _device;
