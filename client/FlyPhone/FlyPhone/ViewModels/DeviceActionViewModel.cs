@@ -10,11 +10,16 @@ namespace FlyPhone.ViewModels
         private Command _restartButtonCommand;
         private Command _sleepButtonCommand;
         private Command _muteButtonCommand;
+
         private bool _isEnableShutdownButton = false;
         private bool _isEnableRestartButton = false;
         private bool _isEnableSleepButton = false;
         private bool _isEnableMuteButton = false;
+        private bool _isBusy;
+
         private Models.Device _device;
+        private string _status;
+        private string _name;
 
         public string Name
         {
@@ -25,7 +30,6 @@ namespace FlyPhone.ViewModels
                 OnPropertyChanged(nameof(Name));
             }
         }
-
         public string Status
         {
             get => _status;
@@ -35,21 +39,24 @@ namespace FlyPhone.ViewModels
                 OnPropertyChanged(nameof(Status));
             }
         }
+        public bool IsBusy
+        {
+            get => _isBusy;
+            set
+            {
+                _isBusy = value;
+                OnPropertyChanged(nameof(IsBusy));
+            }
+        }
 
         public DeviceActionViewModel(string deviceId)
         {
-            GetDevice(deviceId);
+            GetDeviceAndEditButtonsState(deviceId);
         }
 
-        private async void GetDevice(string deviceId)
+        private async void GetDeviceAndEditButtonsState(string deviceId)
         {
             _device = await RequestHandler.DoRequest(Client.GetDevice(deviceId));
-
-            _isEnableShutdownButton = !_device.IsShutdownPending;
-            _isEnableRestartButton = !_device.IsRestartPending;
-            _isEnableSleepButton = !_device.IsSleepPending;
-            _isEnableMuteButton = !_device.IsMutePending;
-
             Name = _device.Name;
             bool isActive = DateTime.Now.Subtract(_device.LastActive).TotalSeconds < 60;
             Status = isActive ? "Active" : "Inactive";
@@ -61,6 +68,13 @@ namespace FlyPhone.ViewModels
                 _isEnableSleepButton = false;
                 _isEnableMuteButton = false;
             }
+            else
+            {
+                _isEnableShutdownButton = !_device.IsShutdownPending;
+                _isEnableRestartButton = !_device.IsRestartPending;
+                _isEnableSleepButton = !_device.IsSleepPending;
+                _isEnableMuteButton = !_device.IsMutePending;
+            }
 
             ShutdownButtonCommand.ChangeCanExecute();
             RestartButtonCommand.ChangeCanExecute();
@@ -68,31 +82,9 @@ namespace FlyPhone.ViewModels
             MuteButtonCommand.ChangeCanExecute();
         }
 
-        private bool _isBusy;
-        private string _status;
-        private string _name;
-
-        public bool IsBusy
-        {
-            get => _isBusy;
-            set
-            {
-                _isBusy = value;
-                OnPropertyChanged(nameof(IsBusy));
-            }
-        }
-
         private void SetBusy(bool isBusy)
         {
             _isBusy = isBusy;
-        }
-
-        public Command ShutdownButtonCommand
-        {
-            get
-            {
-                return _shutdownButtonCommand ?? (_shutdownButtonCommand = new Command(p => Shutdown(), p => _isEnableShutdownButton));
-            }
         }
 
         private async void Shutdown()
@@ -115,6 +107,13 @@ namespace FlyPhone.ViewModels
             await RequestHandler.DoRequest(Client.SetAction(_device.DeviceId, Actions.Mute));
         }
 
+        public Command ShutdownButtonCommand
+        {
+            get
+            {
+                return _shutdownButtonCommand ?? (_shutdownButtonCommand = new Command(p => Shutdown(), p => _isEnableShutdownButton));
+            }
+        }
 
         public Command RestartButtonCommand
         {

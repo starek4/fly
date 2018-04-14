@@ -12,6 +12,7 @@ namespace FlyPhone.ViewModels
         private Command _logoutButtonCommand;
         private readonly INavigation _navigation;
         private DeviceCell _selectedItem;
+        private bool _isBusy;
         public ObservableCollection<DeviceCell> Devices { get; } = new ObservableCollection<DeviceCell>();
 
         public DeviceCell SelectedItem
@@ -30,8 +31,6 @@ namespace FlyPhone.ViewModels
                 OnPropertyChanged(nameof(SelectedItem));
             }
         }
-
-        private bool _isBusy;
         public bool IsBusy
         {
             get => _isBusy;
@@ -73,14 +72,6 @@ namespace FlyPhone.ViewModels
             }
         }
 
-        public Command LogoutButtonCommand
-        {
-            get
-            {
-                return _logoutButtonCommand ?? (_logoutButtonCommand = new Command(p => LogoutUser(), p => true));
-            }
-        }
-
         private async void ShowDeviceInfoPage(string deviceId)
         {
             await _navigation.PushAsync(new DeviceActionPage(deviceId));
@@ -91,16 +82,13 @@ namespace FlyPhone.ViewModels
             await RequestHandler.DoRequest(Client.SetLoggedState(App.Hostname, false));
             await _navigation.PopModalAsync();
         }
-    }
 
-    public class DeviceCell
-    {
-        public string DeviceId;
-        public string Name { get; set; }
-        public bool IsActive { get; set; }
-        public bool IsFavorite { get; set; }
-
-        public bool IsNotActive => !IsActive;
-        public bool IsNotFavorite => !IsFavorite;
+        public Command LogoutButtonCommand
+        {
+            get
+            {
+                return _logoutButtonCommand ?? (_logoutButtonCommand = new Command(p => LogoutUser(), p => true));
+            }
+        }
     }
 }

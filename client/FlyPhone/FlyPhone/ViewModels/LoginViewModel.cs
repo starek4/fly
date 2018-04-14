@@ -13,6 +13,16 @@ namespace FlyPhone.ViewModels
         private bool _isEnabledLoginButton;
         private Command _loginButtonCommand;
         private readonly INavigation _navigation;
+        public string Status
+        {
+            get => _status;
+            set
+            {
+                _status = value;
+                OnPropertyChanged(nameof(Status));
+            }
+        }
+
         public LoginViewModel(INavigation navigation)
         {
             _navigation = navigation;
@@ -27,23 +37,6 @@ namespace FlyPhone.ViewModels
             else
                 Device.BeginInvokeOnMainThread(ShowUserDevices);
             Status = String.Empty;
-        }
-
-        public string Status
-        {
-            get => _status;
-            set
-            {
-                _status = value;
-                OnPropertyChanged(nameof(Status));
-            }
-        }
-        public Command LoginButtonCommand
-        {
-            get
-            {
-                return _loginButtonCommand ?? (_loginButtonCommand = new Command(p => VerifyUserAndShowDevices(), p => _isEnabledLoginButton));
-            }
         }
 
         private void ChangeLoginButtonState(bool isEnabled)
@@ -82,6 +75,14 @@ namespace FlyPhone.ViewModels
             NavigationPage navPage = new NavigationPage(new DeviceListPage());
             await _navigation.PushModalAsync(navPage);
             ChangeLoginButtonState(true);
+        }
+
+        public Command LoginButtonCommand
+        {
+            get
+            {
+                return _loginButtonCommand ?? (_loginButtonCommand = new Command(p => VerifyUserAndShowDevices(), p => _isEnabledLoginButton));
+            }
         }
     }
 }
