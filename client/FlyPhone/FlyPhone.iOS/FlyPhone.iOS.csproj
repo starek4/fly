@@ -52,6 +52,7 @@
     <CodesignKey>iPhone Developer</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>none</DebugType>
@@ -135,5 +136,20 @@
       <Project>{D5A23ADA-7537-41ED-BCBB-305C6EB309A0}</Project>
       <Name>FlyPhone</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\favourite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\not_favourite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\shutdown.png" />
   </ItemGroup>
 </Project>

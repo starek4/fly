@@ -32,9 +32,6 @@ Android Lollipop (API 21) or higher.
 #### 2.2.2 iOS
 iOS 11.1 or higher.
 
-#### 2.2.3 Windows 10 (UWP)
-UWP build 16299 or higher.
-
 #### 2.2.4 WWW
 You can also evoke any command from [Fly website](https://fly.starekit.cz/).
 
