@@ -13,8 +13,7 @@ namespace FlyPhone.ViewModels
         private bool _isEnabledLoginButton;
         private Command _loginButtonCommand;
         private readonly INavigation _navigation;
-        private bool _isBusy = true;
-        private bool _loginVisibility = false;
+        public Toggle ToggleBlocks { get; set; } = new Toggle();
         public string Status
         {
             get => _status;
@@ -22,25 +21,6 @@ namespace FlyPhone.ViewModels
             {
                 _status = value;
                 OnPropertyChanged(nameof(Status));
-            }
-        }
-        public bool IsBusy
-        {
-            get => _isBusy;
-            set
-            {
-                _isBusy = value;
-                OnPropertyChanged(nameof(IsBusy));
-                OnPropertyChanged(nameof(LoginVisibility));
-            }
-        }
-        public bool LoginVisibility
-        {
-            get => !_isBusy;
-            set
-            {
-                _loginVisibility = value;
-                OnPropertyChanged(nameof(LoginVisibility));
             }
         }
 
@@ -53,11 +33,11 @@ namespace FlyPhone.ViewModels
         private async void TryToLoginUser()
         {
             Status = "Trying to log in";
-            IsBusy = true;
+            ToggleBlocks.ActivityIndicator = true;
             if (!await RequestHandler.DoRequest(Client.GetLoggedState(App.Hostname)))
             {
                 ChangeLoginButtonState(true);
-                IsBusy = false;
+                ToggleBlocks.ActivityIndicator = false;
                 Status = String.Empty;
             }
             else
@@ -78,18 +58,18 @@ namespace FlyPhone.ViewModels
         private async void VerifyUserAndShowDevices()
         {
             ChangeLoginButtonState(false);
-            IsBusy = true;
+            ToggleBlocks.ActivityIndicator = true;
             // Verify login
             if (!await RequestHandler.DoRequest(Client.VerifyUserLogin(Username, Password)))
             {
                 Status = "Wrong username or password";
-                IsBusy = false;
+                ToggleBlocks.ActivityIndicator = false;
                 ChangeLoginButtonState(true);
                 return;
             }
 
             // Check if device already exist
-            IsBusy = true;
+            ToggleBlocks.ActivityIndicator = true;
             Status = "Trying to login";
             if (!await RequestHandler.DoRequest(Client.VerifyDeviceId(App.Hostname)))
             {
@@ -105,7 +85,7 @@ namespace FlyPhone.ViewModels
             NavigationPage navPage = new NavigationPage(new DeviceListPage());
             await _navigation.PushModalAsync(navPage);
             ChangeLoginButtonState(true);
-            IsBusy = false;
+            ToggleBlocks.ActivityIndicator = false;
             Status = String.Empty;
         }
 

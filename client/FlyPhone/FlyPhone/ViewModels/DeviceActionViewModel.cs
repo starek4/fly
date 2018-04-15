@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using FlyClientApi.Enums;
 using Xamarin.Forms;
 
@@ -15,12 +16,14 @@ namespace FlyPhone.ViewModels
         private bool _isEnableRestartButton;
         private bool _isEnableSleepButton;
         private bool _isEnableMuteButton;
-        private bool _isBusy;
 
         private Models.Device _device;
+        private string _deviceStatus;
         private string _status;
         private string _name;
+        private readonly string _deviceId;
 
+        public Toggle ToggleBlocks { get; set; } = new Toggle();
         public string Name
         {
             get => _name;
@@ -30,6 +33,16 @@ namespace FlyPhone.ViewModels
                 OnPropertyChanged(nameof(Name));
             }
         }
+        public string DeviceStatus
+        {
+            get => _deviceStatus;
+            set
+            {
+                _deviceStatus = value;
+                OnPropertyChanged(nameof(DeviceStatus));
+            }
+        }
+
         public string Status
         {
             get => _status;
@@ -39,27 +52,21 @@ namespace FlyPhone.ViewModels
                 OnPropertyChanged(nameof(Status));
             }
         }
-        public bool IsBusy
-        {
-            get => _isBusy;
-            set
-            {
-                _isBusy = value;
-                OnPropertyChanged(nameof(IsBusy));
-            }
-        }
-
         public DeviceActionViewModel(string deviceId)
         {
-            GetDeviceAndEditButtonsState(deviceId);
+            _deviceId = deviceId;
+            new Thread(GetDeviceAndEditButtonsState).Start();
         }
 
-        private async void GetDeviceAndEditButtonsState(string deviceId)
+        private async void GetDeviceAndEditButtonsState()
         {
-            _device = await RequestHandler.DoRequest(Client.GetDevice(deviceId));
+            Status = "Updating displayed device";
+            ToggleBlocks.ActivityIndicator = true;
+
+            _device = await RequestHandler.DoRequest(Client.GetDevice(_deviceId));
             Name = _device.Name;
             bool isActive = DateTime.Now.Subtract(_device.LastActive).TotalSeconds < 60;
-            Status = isActive ? "Active" : "Inactive";
+            DeviceStatus = isActive ? "Active" : "Inactive";
 
             if (!isActive)
             {
@@ -80,11 +87,10 @@ namespace FlyPhone.ViewModels
             RestartButtonCommand.ChangeCanExecute();
             SleepButtonCommand.ChangeCanExecute();
             MuteButtonCommand.ChangeCanExecute();
-        }
 
-        private void SetBusy(bool isBusy)
-        {
-            _isBusy = isBusy;
+
+            Status = string.Empty;
+            ToggleBlocks.ActivityIndicator = false;
         }
 
         private async void Shutdown()

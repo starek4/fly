@@ -1,5 +1,6 @@
 ﻿using System.Collections.ObjectModel;
 using System.Linq;
+using System.Threading;
 using FlyPhone.Views;
 using Xamarin.Forms;
 
@@ -11,7 +12,8 @@ namespace FlyPhone.ViewModels
         private Command _changeFavouriteStateButtonCommand;
         private readonly INavigation _navigation;
         private DeviceCell _selectedItem;
-        private bool _isBusy;
+        private string _status;
+        public Toggle ToggleBlocks { get; set; } = new Toggle();
         public ObservableCollection<DeviceCell> Devices { get; } = new ObservableCollection<DeviceCell>();
 
         public DeviceCell SelectedItem
@@ -30,29 +32,27 @@ namespace FlyPhone.ViewModels
                 OnPropertyChanged(nameof(SelectedItem));
             }
         }
-        public bool IsBusy
+        public string Status
         {
-            get => _isBusy;
+            get => _status;
             set
             {
-                _isBusy = value;
-                OnPropertyChanged(nameof(IsBusy));
+                _status = value;
+                OnPropertyChanged(nameof(Status));
             }
         }
 
         public DeviceListViewModel(INavigation navigation)
         {
             _navigation = navigation;
-            DownloadDevices();
-        }
-
-        private void SetBusy(bool isBusy)
-        {
-            _isBusy = isBusy;
+            new Thread(DownloadDevices).Start();
         }
 
         private async void DownloadDevices()
         {
+            Status = "Updating devices list";
+            ToggleBlocks.ActivityIndicator = true;
+
             string username = await RequestHandler.DoRequest(Client.GetUsername(App.Hostname));
             var devicesFromServer = await RequestHandler.DoRequest(Client.GetDevices(username));
             var sortedDevicesFromServer = devicesFromServer.OrderBy(device => DeviceCellConvertor.IsActive(device.LastActive)).ThenBy(device => device.IsFavourite).Reverse();
@@ -63,6 +63,8 @@ namespace FlyPhone.ViewModels
                 if (device.IsActionable)
                     Devices.Add(DeviceCellConvertor.Convert(device));
 
+            Status = string.Empty;
+            ToggleBlocks.ActivityIndicator = false;
         }
 
         private async void ShowDeviceInfoPage(string deviceId)
@@ -94,7 +96,7 @@ namespace FlyPhone.ViewModels
             else
                 await RequestHandler.DoRequest(Client.SetFavourite(deviceId));
 
-            DownloadDevices();
+            new Thread(DownloadDevices).Start();
         }
     }
 }
