@@ -3,27 +3,27 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2009
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlyUnix", "client\FlyUnix\FlyUnix.csproj", "{F6605AE6-3109-43CB-BE2C-2645A6384C2E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlyUnix", "client\FlyUnix\FlyUnix.csproj", "{F6605AE6-3109-43CB-BE2C-2645A6384C2E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlyWindowsWPF", "client\FlyWindowsWPF\FlyWindowsWPF.csproj", "{8F4F82E7-4438-4DFD-8161-5051C2CB5C58}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlyClientApi", "client\FlyClientApi\FlyClientApi.csproj", "{AB04D04D-2015-4A6A-BE49-3BEF6B775040}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlyClientApi", "client\FlyClientApi\FlyClientApi.csproj", "{AB04D04D-2015-4A6A-BE49-3BEF6B775040}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logger", "client\Logger\Logger.csproj", "{1C3FBB20-35A5-4E1B-A9C8-CC03AB0B1F19}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logger", "client\Logger\Logger.csproj", "{1C3FBB20-35A5-4E1B-A9C8-CC03AB0B1F19}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlyPhone.Android", "client\FlyPhone\FlyPhone.Android\FlyPhone.Android.csproj", "{05BB8D71-7714-44B2-8C96-9D3A406E202D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlyPhone.iOS", "client\FlyPhone\FlyPhone.iOS\FlyPhone.iOS.csproj", "{45D65FE3-C971-4FB9-9842-B16140E106BB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlyPhone", "client\FlyPhone\FlyPhone\FlyPhone.csproj", "{D5A23ADA-7537-41ED-BCBB-305C6EB309A0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlyPhone", "client\FlyPhone\FlyPhone\FlyPhone.csproj", "{D5A23ADA-7537-41ED-BCBB-305C6EB309A0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DatabaseController", "web\DatabaseController\DatabaseController.csproj", "{44709FF0-5D2F-4373-BE2D-C53476F47B1E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseController", "web\DatabaseController\DatabaseController.csproj", "{44709FF0-5D2F-4373-BE2D-C53476F47B1E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlyWeb", "web\FlyWeb\FlyWeb.csproj", "{E6E61FFA-94B2-4330-A80D-05623221515A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlyWeb", "web\FlyWeb\FlyWeb.csproj", "{E6E61FFA-94B2-4330-A80D-05623221515A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Models", "web\Models\Models.csproj", "{BF890B32-8FB1-40F1-B2AA-AF943FB8F5BE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "web\Models\Models.csproj", "{BF890B32-8FB1-40F1-B2AA-AF943FB8F5BE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests", "tests\Tests\Tests.csproj", "{477656C4-5A73-443D-8BD8-A860B1831B16}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "tests\Tests\Tests.csproj", "{477656C4-5A73-443D-8BD8-A860B1831B16}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
