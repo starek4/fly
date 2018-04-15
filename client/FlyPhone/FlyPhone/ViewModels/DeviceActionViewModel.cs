@@ -83,11 +83,13 @@ namespace FlyPhone.ViewModels
                 _isEnableMuteButton = !_device.IsMutePending;
             }
 
-            ShutdownButtonCommand.ChangeCanExecute();
-            RestartButtonCommand.ChangeCanExecute();
-            SleepButtonCommand.ChangeCanExecute();
-            MuteButtonCommand.ChangeCanExecute();
-
+            Device.BeginInvokeOnMainThread(() =>
+            {
+                ShutdownButtonCommand.ChangeCanExecute();
+                RestartButtonCommand.ChangeCanExecute();
+                SleepButtonCommand.ChangeCanExecute();
+                MuteButtonCommand.ChangeCanExecute();
+            });
 
             Status = string.Empty;
             ToggleBlocks.ActivityIndicator = false;
