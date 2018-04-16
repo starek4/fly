@@ -1,7 +1,5 @@
-﻿using System;
-using FlyPhone.iOS;
-using Foundation;
-using Security;
+﻿using FlyPhone.iOS;
+using UIKit;
 
 [assembly: Xamarin.Forms.Dependency(typeof(IosDevice))]
 namespace FlyPhone.iOS
@@ -10,18 +8,7 @@ namespace FlyPhone.iOS
     {
         public string GetIdentifier()
         {
-            var query = new SecRecord(SecKind.GenericPassword);
-            query.Service = NSBundle.MainBundle.BundleIdentifier;
-            query.Account = "UniqueID";
-
-            NSData uniqueId = SecKeyChain.QueryAsData(query);
-            if (uniqueId == null)
-            {
-                query.ValueData = NSData.FromString(Guid.NewGuid().ToString());
-                SecKeyChain.Add(query);
-                return query.ValueData.ToString();
-            }
-            return uniqueId.ToString();
+            return UIDevice.CurrentDevice.IdentifierForVendor.AsString();
         }
     }
 }
