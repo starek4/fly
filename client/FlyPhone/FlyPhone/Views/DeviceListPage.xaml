@@ -2,8 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FlyPhone.Views.DeviceListPage"
-             x:Name="DeviceListView"
-             NavigationPage.HasNavigationBar="False" >
+             x:Name="DeviceListView">
     <ContentPage.Content>
         <Grid>
             <Grid.RowDefinitions>
