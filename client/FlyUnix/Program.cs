@@ -55,7 +55,7 @@ namespace FlyUnix
                     RequestHandler.DoRequest(() => Client.UpdateTimestamp(_deviceId).Wait());
                     Device device = RequestHandler.DoRequest(Client.GetDevice(_deviceId));
                     ActionHandler.DoActions(device, Client);
-                    Thread.Sleep(10 * 1000);
+                    Thread.Sleep(QueryTimer.TimeBetweenQuery * 1000);
                 }
             }
             Console.WriteLine("Wrong arguments. Try it again: fly -l <login>");

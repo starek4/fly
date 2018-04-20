@@ -17,7 +17,7 @@ namespace FlyWindowsWPF
                 await RequestHandler.DoRequest(client.UpdateTimestamp(DeviceIdentifierHelper.DeviceIdentifier), controller);
                 Device device = await RequestHandler.DoRequest(client.GetDevice(DeviceIdentifierHelper.DeviceIdentifier), controller);
                 ActionHandler.DoActions(device, controller, client);
-                Thread.Sleep(10 * 1000);
+                Thread.Sleep(QueryTimer.TimeBetweenQuery * 1000);
 
             }
             // ReSharper disable once FunctionNeverReturns
