@@ -26,16 +26,16 @@
   <Target Name="FixClickOnceDependencies" BeforeTargets="_DeploymentComputeClickOnceManifestInfo">
     <ItemGroup>
       <_noCopyRefs Include="@(ReferencePath)" Condition="'%(ReferencePath.Private)' == 'false'" />
-      <_noCopyRefsByFileName Include="@(_noCopyRefs-&gt;'%(FileName)')">
+      <_noCopyRefsByFileName Include="@(_noCopyRefs->'%(FileName)')">
         <OriginalItem>%(Identity)</OriginalItem>
       </_noCopyRefsByFileName>
-      <_libByFileName Include="@(ReferenceCopyLocalPaths-&gt;'%(FileName)')">
+      <_libByFileName Include="@(ReferenceCopyLocalPaths->'%(FileName)')">
         <OriginalItem>%(Identity)</OriginalItem>
       </_libByFileName>
       <_overlappingRefByFileName Include="@(_noCopyRefsByFileName)" Condition="'@(_noCopyRefsByFileName)' == '@(_libByFileName)' AND '%(Identity)' != ''" />
       <_overlappingLibByFileName Include="@(_libByFileName)" Condition="'@(_noCopyRefsByFileName)' == '@(_libByFileName)' AND '%(Identity)' != ''" />
-      <_overlappingRef Include="@(_overlappingRefByFileName-&gt;'%(OriginalItem)')" />
-      <_overlappingLib Include="@(_overlappingLibByFileName-&gt;'%(OriginalItem)')" />
+      <_overlappingRef Include="@(_overlappingRefByFileName->'%(OriginalItem)')" />
+      <_overlappingLib Include="@(_overlappingLibByFileName->'%(OriginalItem)')" />
     </ItemGroup>
     <ItemGroup Condition="'@(_overlappingRef)' != ''">
       <ReferencePath Remove="@(_overlappingRef)" />
@@ -74,7 +74,7 @@
     <SuiteName>Fly client</SuiteName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>5</ApplicationRevision>
+    <ApplicationRevision>6</ApplicationRevision>
     <ApplicationVersion>2.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>

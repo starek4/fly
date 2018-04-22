@@ -1,4 +1,5 @@
-﻿using System.Collections.ObjectModel;
+﻿using System;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading;
 using FlyPhone.Views;
@@ -73,7 +74,7 @@ namespace FlyPhone.ViewModels
                 return;
             }
 
-            Status = string.Empty;
+            Status = Devices.Count == 0 ? "No device found" : String.Empty;
             ToggleBlocks.ActivityIndicator = false;
         }
 
