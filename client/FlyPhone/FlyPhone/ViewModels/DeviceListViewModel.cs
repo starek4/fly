@@ -8,6 +8,7 @@ namespace FlyPhone.ViewModels
 {
     public class DeviceListViewModel : BaseViewModel
     {
+        private Command _refreshButtonCommand;
         private Command _logoutButtonCommand;
         private Command _changeFavouriteStateButtonCommand;
         private readonly INavigation _navigation;
@@ -53,15 +54,24 @@ namespace FlyPhone.ViewModels
             Status = "Updating devices list";
             ToggleBlocks.ActivityIndicator = true;
 
-            string username = await RequestHandler.DoRequest(Client.GetUsername(App.Hostname));
-            var devicesFromServer = await RequestHandler.DoRequest(Client.GetDevices(username));
-            var sortedDevicesFromServer = devicesFromServer.OrderBy(device => DeviceCellConvertor.IsActive(device.LastActive)).ThenBy(device => device.IsFavourite).Reverse();
+            try
+            {
+                string username = await RequestHandler.DoRequest(Client.GetUsername(App.Hostname));
+                var devicesFromServer = await RequestHandler.DoRequest(Client.GetDevices(username));
+                var sortedDevicesFromServer = devicesFromServer.OrderBy(device => DeviceCellConvertor.IsActive(device.LastActive)).ThenBy(device => device.IsFavourite).Reverse();
 
-            Devices.Clear();
+                Devices.Clear();
 
-            foreach (var device in sortedDevicesFromServer)
-                if (device.IsActionable)
-                    Devices.Add(DeviceCellConvertor.Convert(device));
+                foreach (var device in sortedDevicesFromServer)
+                    if (device.IsActionable)
+                        Devices.Add(DeviceCellConvertor.Convert(device));
+            }
+            catch (PhoneRequestException)
+            {
+                ToggleBlocks.ActivityIndicator = false;
+                Status = "Cannot get devices due to network error";
+                return;
+            }
 
             Status = string.Empty;
             ToggleBlocks.ActivityIndicator = false;
@@ -69,13 +79,27 @@ namespace FlyPhone.ViewModels
 
         private async void ShowDeviceInfoPage(string deviceId)
         {
+            Status = string.Empty;
             await _navigation.PushAsync(new DeviceActionPage(deviceId));
         }
 
         private async void LogoutUser()
         {
-            await RequestHandler.DoRequest(Client.SetLoggedState(App.Hostname, false));
+            try
+            {
+                await RequestHandler.DoRequest(Client.SetLoggedState(App.Hostname, false));
+            }
+            catch (PhoneRequestException)
+            {
+                Status = "Cannot logout user due to network error";
+                return;
+            }
             await _navigation.PopModalAsync();
+        }
+
+        private void RefreshDevices()
+        {
+            DownloadDevices();
         }
 
         public Command LogoutButtonCommand
@@ -86,17 +110,34 @@ namespace FlyPhone.ViewModels
             }
         }
 
+        public Command RefreshButtonCommand
+        {
+            get
+            {
+                return _refreshButtonCommand ?? (_refreshButtonCommand = new Command(p => RefreshDevices(), p => true));
+            }
+        }
+
         public Command ChangeFavouriteStateButtonCommand => _changeFavouriteStateButtonCommand ?? (_changeFavouriteStateButtonCommand = new Command<string>(ChangeFavouriteState));
 
         private async void ChangeFavouriteState(string deviceId)
         {
-            bool favourite = await RequestHandler.DoRequest(Client.GetFavourite(deviceId));
-            if (favourite)
-                await RequestHandler.DoRequest(Client.ClearFavourite(deviceId));
-            else
-                await RequestHandler.DoRequest(Client.SetFavourite(deviceId));
+            try
+            {
+                bool favourite = await RequestHandler.DoRequest(Client.GetFavourite(deviceId));
+                if (favourite)
+                    await RequestHandler.DoRequest(Client.ClearFavourite(deviceId));
+                else
+                    await RequestHandler.DoRequest(Client.SetFavourite(deviceId));
+            }
+            catch (PhoneRequestException)
+            {
+                Status = "Cannot change favourite state due to network error";
+                return;
+            }
 
             new Thread(DownloadDevices).Start();
+            Status = string.Empty;
         }
     }
 }

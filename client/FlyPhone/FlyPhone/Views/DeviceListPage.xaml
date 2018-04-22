@@ -11,6 +11,7 @@
                 <RowDefinition Height="Auto"></RowDefinition>
                 <RowDefinition Height="Auto"></RowDefinition>
                 <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
             </Grid.RowDefinitions>
             <ListView Grid.Row="0" ItemsSource="{Binding Devices}" SelectedItem="{Binding SelectedItem, Mode=TwoWay}" IsVisible="{Binding ToggleBlocks.OtherBlock}">
                 <ListView.ItemTemplate>
@@ -48,7 +49,8 @@
 
             <ActivityIndicator Grid.Row="0" Grid.RowSpan="2" IsRunning="{Binding ToggleBlocks.ActivityIndicator}" HorizontalOptions="Center" VerticalOptions="Center" IsVisible="{Binding ToggleBlocks.ActivityIndicator}" />
             <Label Grid.Row ="2"  Text="{Binding Status}" HorizontalTextAlignment="Center" />
-            <Button Grid.Row ="3" Text="Logout" Command="{Binding LogoutButtonCommand}" />
+            <Button Grid.Row ="3" Text="Refresh" Command="{Binding RefreshButtonCommand}" />
+            <Button Grid.Row ="4" Text="Logout" Command="{Binding LogoutButtonCommand}" />
         </Grid>
     </ContentPage.Content>
 </ContentPage>

@@ -25,6 +25,7 @@ namespace FlyPhone
                 {
                     ExceptionHandler.DatabaseError();
                 }
+                throw new PhoneRequestException();
             }
         }
 
@@ -45,7 +46,7 @@ namespace FlyPhone
                 {
                     ExceptionHandler.DatabaseError();
                 }
-                return false;
+                throw new PhoneRequestException();
             }
             return response;
         }
@@ -67,7 +68,7 @@ namespace FlyPhone
                 {
                     ExceptionHandler.DatabaseError();
                 }
-                return null;
+                throw new PhoneRequestException();
             }
             return response;
         }
@@ -89,7 +90,7 @@ namespace FlyPhone
                 {
                     ExceptionHandler.DatabaseError();
                 }
-                return null;
+                throw new PhoneRequestException();
             }
             return response;
         }
@@ -111,7 +112,7 @@ namespace FlyPhone
                 {
                     ExceptionHandler.DatabaseError();
                 }
-                return null;
+                throw new PhoneRequestException();
             }
             return response;
         }

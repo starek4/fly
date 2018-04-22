@@ -17,7 +17,6 @@ namespace FlyPhone.ViewModels
         private bool _isEnableSleepButton;
         private bool _isEnableMuteButton;
 
-        private Models.Device _device;
         private string _deviceStatus;
         private string _status;
         private string _name;
@@ -63,9 +62,19 @@ namespace FlyPhone.ViewModels
             Status = "Updating displayed device";
             ToggleBlocks.ActivityIndicator = true;
 
-            _device = await RequestHandler.DoRequest(Client.GetDevice(_deviceId));
-            Name = _device.Name;
-            bool isActive = DateTime.Now.Subtract(_device.LastActive).TotalSeconds < 60;
+            Models.Device device;
+            try
+            {
+                device = await RequestHandler.DoRequest(Client.GetDevice(_deviceId));
+            }
+            catch (PhoneRequestException)
+            {
+                Status = "Cannot get device info due to network error";
+                ToggleBlocks.ActivityIndicator = false;
+                return;
+            }
+            Name = device.Name;
+            bool isActive = DateTime.Now.Subtract(device.LastActive).TotalSeconds < 60;
             DeviceStatus = isActive ? "Active" : "Inactive";
 
             if (!isActive)
@@ -74,10 +83,10 @@ namespace FlyPhone.ViewModels
             }
             else
             {
-                _isEnableShutdownButton = !_device.IsShutdownPending;
-                _isEnableRestartButton = !_device.IsRestartPending;
-                _isEnableSleepButton = !_device.IsSleepPending;
-                _isEnableMuteButton = !_device.IsMutePending;
+                _isEnableShutdownButton = !device.IsShutdownPending;
+                _isEnableRestartButton = !device.IsRestartPending;
+                _isEnableSleepButton = !device.IsSleepPending;
+                _isEnableMuteButton = !device.IsMutePending;
 
                 Device.BeginInvokeOnMainThread(() =>
                 {
@@ -113,12 +122,23 @@ namespace FlyPhone.ViewModels
             EnableOrDisableAllButtons(false);
             ToggleBlocks.ActivityIndicator = true;
 
-            await RequestHandler.DoRequest(Client.SetAction(_deviceId, action));
-
-            EnableOrDisableAllButtons(true);
-            ToggleBlocks.ActivityIndicator = false;
+            try
+            {
+                await RequestHandler.DoRequest(Client.SetAction(_deviceId, action));
+            }
+            catch (Exception)
+            {
+                Status = "Cannot send request due to network error";
+                return;
+            }
+            finally
+            {
+                EnableOrDisableAllButtons(true);
+                ToggleBlocks.ActivityIndicator = false;
+            }
 
             DependencyService.Get<IMessage>().ShortAlert("Action request was successfully sent...");
+            Status = String.Empty;
         }
 
         public Command ShutdownButtonCommand

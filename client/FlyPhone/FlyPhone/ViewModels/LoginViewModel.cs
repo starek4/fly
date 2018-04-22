@@ -13,7 +13,7 @@ namespace FlyPhone.ViewModels
         private bool _isEnabledLoginButton;
         private Command _loginButtonCommand;
         private readonly INavigation _navigation;
-        public Toggle ToggleBlocks { get; set; } = new Toggle();
+        public Toggle ToggleBlocks { get; } = new Toggle();
         public string Status
         {
             get => _status;
@@ -34,16 +34,30 @@ namespace FlyPhone.ViewModels
         {
             Status = "Trying to log in";
             ToggleBlocks.ActivityIndicator = true;
-            if (!await RequestHandler.DoRequest(Client.GetLoggedState(App.Hostname)))
+
+            bool loggedState;
+            try
+            {
+                loggedState = await RequestHandler.DoRequest(Client.GetLoggedState(App.Hostname));
+            }
+            catch (PhoneRequestException)
             {
                 ChangeLoginButtonState(true);
                 ToggleBlocks.ActivityIndicator = false;
-                Status = String.Empty;
+                Status = "Network error";
+                return;
+            }
+
+            if (!loggedState)
+            {
+                ChangeLoginButtonState(true);
+                ToggleBlocks.ActivityIndicator = false;
             }
             else
             {
                 Device.BeginInvokeOnMainThread(ShowUserDevices);
             }
+            Status = String.Empty;
         }
 
         private void ChangeLoginButtonState(bool isEnabled)
@@ -57,26 +71,54 @@ namespace FlyPhone.ViewModels
 
         private async void VerifyUserAndShowDevices()
         {
+            Status = String.Empty;
             ChangeLoginButtonState(false);
             ToggleBlocks.ActivityIndicator = true;
+
             // Verify login
-            if (!await RequestHandler.DoRequest(Client.VerifyUserLogin(Username, Password)))
+            try
             {
-                Status = "Wrong username or password";
+                bool userVerified = await RequestHandler.DoRequest(Client.VerifyUserLogin(Username, Password));
+                if (!userVerified)
+                {
+                    Status = "Wrong username or password";
+                    return;
+                }
+            }
+            catch (PhoneRequestException)
+            {
+                Status = "Cannot verify user due to network error";
+                return;
+            }
+            finally
+            {
                 ToggleBlocks.ActivityIndicator = false;
                 ChangeLoginButtonState(true);
-                return;
             }
 
             // Check if device already exist
             ToggleBlocks.ActivityIndicator = true;
             Status = "Trying to login";
-            if (!await RequestHandler.DoRequest(Client.VerifyDeviceId(App.Hostname)))
+            try
             {
-                await RequestHandler.DoRequest(Client.AddDevice(Username, App.Hostname, App.Hostname, false));
+                bool deviceVerified = await RequestHandler.DoRequest(Client.VerifyDeviceId(App.Hostname));
+                if (!deviceVerified)
+                {
+                    await RequestHandler.DoRequest(Client.AddDevice(Username, App.Hostname, App.Hostname, false));
+                }
+
+                await RequestHandler.DoRequest(Client.SetLoggedState(App.Hostname, true));
             }
-            await RequestHandler.DoRequest(Client.SetLoggedState(App.Hostname, true));
-            
+            catch (PhoneRequestException)
+            {
+                Status = "Cannot verify device due to network error";
+                return;
+            }
+            finally
+            {
+                ToggleBlocks.ActivityIndicator = false;
+                ChangeLoginButtonState(true);
+            }
             ShowUserDevices();
         }
 

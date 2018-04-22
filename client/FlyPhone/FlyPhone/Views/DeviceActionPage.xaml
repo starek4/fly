@@ -17,6 +17,7 @@
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
 
                 <Label Grid.Row="0" Grid.Column="0"  Text="Hostname" />
@@ -28,9 +29,10 @@
                 <Button Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Text="Restart" Command="{Binding RestartButtonCommand}" />
                 <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Text="Sleep" Command="{Binding SleepButtonCommand}" />
                 <Button Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" Text="Mute audio" Command="{Binding MuteButtonCommand}" />
+
+                <Label Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding Status}" HorizontalTextAlignment="Center" />
             </Grid>
             <ActivityIndicator IsRunning="{Binding ToggleBlocks.ActivityIndicator}" HorizontalOptions="Center" VerticalOptions="Center" IsVisible="{Binding ToggleBlocks.ActivityIndicator}" />
-            <Label Text="{Binding Status}" HorizontalTextAlignment="Center" IsVisible="{Binding ToggleBlocks.ActivityIndicator}" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
