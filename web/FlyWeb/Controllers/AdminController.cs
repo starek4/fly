@@ -17,10 +17,17 @@ namespace FlyWeb.Controllers
         public IActionResult Index()
         {
             string login = HttpContext.Session.GetString(LoginSessionKey);
+            var devices = new List<Device>(_deviceRepository.GetDevicesByLogin(login));
+            List<Device> filteredDevices = new List<Device>();
+            foreach (var device in devices)
+            {
+                if (device.IsActionable)
+                    filteredDevices.Add(device);
+            }
             TableViewModel viewModel = new TableViewModel
             {
                 Login = login,
-                Devices = new List<Device>(_deviceRepository.GetDevicesByLogin(login))
+                Devices = filteredDevices
             };
             if (string.IsNullOrEmpty(HttpContext.Session.GetString(LoginSessionKey)))
                 return RedirectToAction("Index", "User");
