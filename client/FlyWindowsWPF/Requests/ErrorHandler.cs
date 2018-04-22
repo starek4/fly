@@ -23,5 +23,10 @@ namespace FlyWindowsWPF.Requests
         {
             KillApp("Error with database connection or query.");
         }
+
+        public static void DeletedDevice()
+        {
+            KillApp("Device was deleted. You must login again into fly application.");
+        }
     }
 }

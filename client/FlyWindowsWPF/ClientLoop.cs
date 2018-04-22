@@ -16,6 +16,8 @@ namespace FlyWindowsWPF
             {
                 await RequestHandler.DoRequest(client.UpdateTimestamp(DeviceIdentifierHelper.DeviceIdentifier), controller);
                 Device device = await RequestHandler.DoRequest(client.GetDevice(DeviceIdentifierHelper.DeviceIdentifier), controller);
+                if (device == null)
+                    ErrorHandler.DeletedDevice();
                 ActionHandler.DoActions(device, controller, client);
                 Thread.Sleep(QueryTimer.TimeBetweenQuery * 1000);
 
