@@ -70,10 +70,7 @@ namespace FlyPhone.ViewModels
 
             if (!isActive)
             {
-                _isEnableShutdownButton = false;
-                _isEnableRestartButton = false;
-                _isEnableSleepButton = false;
-                _isEnableMuteButton = false;
+                EnableOrDisableAllButtons(false);
             }
             else
             {
@@ -81,7 +78,26 @@ namespace FlyPhone.ViewModels
                 _isEnableRestartButton = !_device.IsRestartPending;
                 _isEnableSleepButton = !_device.IsSleepPending;
                 _isEnableMuteButton = !_device.IsMutePending;
+
+                Device.BeginInvokeOnMainThread(() =>
+                {
+                    ShutdownButtonCommand.ChangeCanExecute();
+                    RestartButtonCommand.ChangeCanExecute();
+                    SleepButtonCommand.ChangeCanExecute();
+                    MuteButtonCommand.ChangeCanExecute();
+                });
             }
+
+            Status = string.Empty;
+            ToggleBlocks.ActivityIndicator = false;
+        }
+
+        private void EnableOrDisableAllButtons(bool enableOrDisable)
+        {
+            _isEnableShutdownButton = enableOrDisable;
+            _isEnableRestartButton = enableOrDisable;
+            _isEnableSleepButton = enableOrDisable;
+            _isEnableMuteButton = enableOrDisable;
 
             Device.BeginInvokeOnMainThread(() =>
             {
@@ -90,36 +106,26 @@ namespace FlyPhone.ViewModels
                 SleepButtonCommand.ChangeCanExecute();
                 MuteButtonCommand.ChangeCanExecute();
             });
+        }
 
-            Status = string.Empty;
+        private async void DoAction(Actions action)
+        {
+            EnableOrDisableAllButtons(false);
+            ToggleBlocks.ActivityIndicator = true;
+
+            await RequestHandler.DoRequest(Client.SetAction(_deviceId, action));
+
+            EnableOrDisableAllButtons(true);
             ToggleBlocks.ActivityIndicator = false;
-        }
 
-        private async void Shutdown()
-        {
-            await RequestHandler.DoRequest(Client.SetAction(_device.DeviceId, Actions.Shutdown));
-        }
-
-        private async void Restart()
-        {
-            await RequestHandler.DoRequest(Client.SetAction(_device.DeviceId, Actions.Restart));
-        }
-
-        private async void Sleep()
-        {
-            await RequestHandler.DoRequest(Client.SetAction(_device.DeviceId, Actions.Sleep));
-        }
-
-        private async void Mute()
-        {
-            await RequestHandler.DoRequest(Client.SetAction(_device.DeviceId, Actions.Mute));
+            DependencyService.Get<IMessage>().ShortAlert("Action request was successfully sent...");
         }
 
         public Command ShutdownButtonCommand
         {
             get
             {
-                return _shutdownButtonCommand ?? (_shutdownButtonCommand = new Command(p => Shutdown(), p => _isEnableShutdownButton));
+                return _shutdownButtonCommand ?? (_shutdownButtonCommand = new Command(p => DoAction(Actions.Shutdown), p => _isEnableShutdownButton));
             }
         }
 
@@ -127,7 +133,7 @@ namespace FlyPhone.ViewModels
         {
             get
             {
-                return _restartButtonCommand ?? (_restartButtonCommand = new Command(p => Restart(), p => _isEnableRestartButton));
+                return _restartButtonCommand ?? (_restartButtonCommand = new Command(p => DoAction(Actions.Restart), p => _isEnableRestartButton));
             }
         }
 
@@ -135,7 +141,7 @@ namespace FlyPhone.ViewModels
         {
             get
             {
-                return _sleepButtonCommand ?? (_sleepButtonCommand = new Command(p => Sleep(), p => _isEnableSleepButton));
+                return _sleepButtonCommand ?? (_sleepButtonCommand = new Command(p => DoAction(Actions.Sleep), p => _isEnableSleepButton));
             }
         }
 
@@ -143,7 +149,7 @@ namespace FlyPhone.ViewModels
         {
             get
             {
-                return _muteButtonCommand ?? (_muteButtonCommand = new Command(p => Mute(), p => _isEnableMuteButton));
+                return _muteButtonCommand ?? (_muteButtonCommand = new Command(p => DoAction(Actions.Mute), p => _isEnableMuteButton));
             }
         }
     }

@@ -99,6 +99,7 @@
     <Compile Include="AppDelegate.cs" />
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
+    <Compile Include="MessageIos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="IosDevice.cs" />
   </ItemGroup>
