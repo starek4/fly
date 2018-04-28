@@ -1,5 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100);
-
 #topBar
 {
 	position:fixed;
@@ -19,7 +17,7 @@
 
 body
 {
-	font-family: "Helvetica Neue", Helvetica, Arial;
+    font-family: "Helvetica Neue", Helvetica, Arial;
 	font-size: 14px;
 	line-height: 20px;
 	font-weight: 400;
