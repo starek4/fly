@@ -17,12 +17,12 @@ namespace FlyPhone.ViewModels
         private bool _isEnableSleepButton;
         private bool _isEnableMuteButton;
 
-        private string _deviceStatus;
+        private bool _isDeviceActive;
         private string _status;
         private string _name;
         private readonly string _deviceId;
 
-        public Toggle ToggleBlocks { get; set; } = new Toggle();
+        public Toggle ToggleBlocks { get; } = new Toggle();
         public string Name
         {
             get => _name;
@@ -32,15 +32,21 @@ namespace FlyPhone.ViewModels
                 OnPropertyChanged(nameof(Name));
             }
         }
-        public string DeviceStatus
+
+        private bool IsDeviceActive
         {
-            get => _deviceStatus;
+            get => _isDeviceActive;
             set
             {
-                _deviceStatus = value;
-                OnPropertyChanged(nameof(DeviceStatus));
+                _isDeviceActive = value;
+                OnPropertyChanged(nameof(DeviceStatusText));
+                OnPropertyChanged(nameof(DeviceStatusColor));
             }
         }
+
+        public String DeviceStatusText => IsDeviceActive ? "Active" : "Inactive";
+
+        public Color DeviceStatusColor => IsDeviceActive ? Color.Green : Color.Red;
 
         public string Status
         {
@@ -74,10 +80,9 @@ namespace FlyPhone.ViewModels
                 return;
             }
             Name = device.Name;
-            bool isActive = DateTime.Now.Subtract(device.LastActive).TotalSeconds < 60;
-            DeviceStatus = isActive ? "Active" : "Inactive";
+            IsDeviceActive = DateTime.Now.Subtract(device.LastActive).TotalSeconds < 60;
 
-            if (!isActive)
+            if (!IsDeviceActive)
             {
                 EnableOrDisableAllButtons(false);
             }

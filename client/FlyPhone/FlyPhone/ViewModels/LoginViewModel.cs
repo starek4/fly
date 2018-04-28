@@ -62,9 +62,9 @@ namespace FlyPhone.ViewModels
 
         private void ChangeLoginButtonState(bool isEnabled)
         {
+            _isEnabledLoginButton = isEnabled;
             Device.BeginInvokeOnMainThread(() =>
             {
-                _isEnabledLoginButton = isEnabled;
                 LoginButtonCommand.ChangeCanExecute();
             });
         }
@@ -76,29 +76,27 @@ namespace FlyPhone.ViewModels
             ToggleBlocks.ActivityIndicator = true;
 
             // Verify login
+            Status = "Trying to login";
             try
             {
                 bool userVerified = await RequestHandler.DoRequest(Client.VerifyUserLogin(Username, Password));
                 if (!userVerified)
                 {
                     Status = "Wrong username or password";
+                    ChangeLoginButtonState(true);
+                    ToggleBlocks.ActivityIndicator = false;
                     return;
                 }
             }
             catch (PhoneRequestException)
             {
                 Status = "Cannot verify user due to network error";
-                return;
-            }
-            finally
-            {
-                ToggleBlocks.ActivityIndicator = false;
                 ChangeLoginButtonState(true);
+                ToggleBlocks.ActivityIndicator = false;
+                return;
             }
 
             // Check if device already exist
-            ToggleBlocks.ActivityIndicator = true;
-            Status = "Trying to login";
             try
             {
                 bool deviceVerified = await RequestHandler.DoRequest(Client.VerifyDeviceId(App.Hostname));
@@ -112,12 +110,9 @@ namespace FlyPhone.ViewModels
             catch (PhoneRequestException)
             {
                 Status = "Cannot verify device due to network error";
-                return;
-            }
-            finally
-            {
                 ToggleBlocks.ActivityIndicator = false;
                 ChangeLoginButtonState(true);
+                return;
             }
             ShowUserDevices();
         }

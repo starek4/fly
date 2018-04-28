@@ -2,6 +2,7 @@
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading;
+using System.Threading.Tasks;
 using FlyPhone.Views;
 using Xamarin.Forms;
 
@@ -9,13 +10,14 @@ namespace FlyPhone.ViewModels
 {
     public class DeviceListViewModel : BaseViewModel
     {
-        private Command _refreshButtonCommand;
+        private Command _refreshCommand;
         private Command _logoutButtonCommand;
         private Command _changeFavouriteStateButtonCommand;
         private readonly INavigation _navigation;
         private DeviceCell _selectedItem;
         private string _status;
-        public Toggle ToggleBlocks { get; set; } = new Toggle();
+        private bool _isRefreshing;
+        public Toggle ToggleBlocks { get; } = new Toggle();
         public ObservableCollection<DeviceCell> Devices { get; } = new ObservableCollection<DeviceCell>();
 
         public DeviceCell SelectedItem
@@ -44,28 +46,43 @@ namespace FlyPhone.ViewModels
             }
         }
 
+        public bool IsRefreshing
+        {
+            get => _isRefreshing;
+            set
+            {
+                _isRefreshing = value;
+                OnPropertyChanged(nameof(IsRefreshing));
+            }
+        }
+
         public DeviceListViewModel(INavigation navigation)
         {
             _navigation = navigation;
-            new Thread(DownloadDevices).Start();
+            new Thread(GetDevices).Start();
         }
 
-        private async void DownloadDevices()
+        private async Task DownloadDevices()
+        {
+            string username = await RequestHandler.DoRequest(Client.GetUsername(App.Hostname));
+            var devicesFromServer = await RequestHandler.DoRequest(Client.GetDevices(username));
+            var sortedDevicesFromServer = devicesFromServer.OrderBy(device => DeviceCellConvertor.IsActive(device.LastActive)).ThenBy(device => device.IsFavourite).Reverse();
+
+            Devices.Clear();
+
+            foreach (var device in sortedDevicesFromServer)
+                if (device.IsActionable)
+                    Devices.Add(DeviceCellConvertor.Convert(device));
+        }
+
+        private async void GetDevices()
         {
             Status = "Updating devices list";
             ToggleBlocks.ActivityIndicator = true;
 
             try
             {
-                string username = await RequestHandler.DoRequest(Client.GetUsername(App.Hostname));
-                var devicesFromServer = await RequestHandler.DoRequest(Client.GetDevices(username));
-                var sortedDevicesFromServer = devicesFromServer.OrderBy(device => DeviceCellConvertor.IsActive(device.LastActive)).ThenBy(device => device.IsFavourite).Reverse();
-
-                Devices.Clear();
-
-                foreach (var device in sortedDevicesFromServer)
-                    if (device.IsActionable)
-                        Devices.Add(DeviceCellConvertor.Convert(device));
+                await DownloadDevices();
             }
             catch (PhoneRequestException)
             {
@@ -98,9 +115,18 @@ namespace FlyPhone.ViewModels
             await _navigation.PopModalAsync();
         }
 
-        private void RefreshDevices()
+        private async void RefreshDevices()
         {
-            DownloadDevices();
+            IsRefreshing = true;
+            try
+            {
+                await DownloadDevices();
+            }
+            catch (PhoneRequestException)
+            {
+                Status = "Cannot get devices due to network error";
+            }
+            IsRefreshing = false;
         }
 
         public Command LogoutButtonCommand
@@ -111,11 +137,11 @@ namespace FlyPhone.ViewModels
             }
         }
 
-        public Command RefreshButtonCommand
+        public Command RefreshCommand
         {
             get
             {
-                return _refreshButtonCommand ?? (_refreshButtonCommand = new Command(p => RefreshDevices(), p => true));
+                return _refreshCommand ?? (_refreshCommand = new Command(p => RefreshDevices(), p => true));
             }
         }
 
@@ -137,7 +163,7 @@ namespace FlyPhone.ViewModels
                 return;
             }
 
-            new Thread(DownloadDevices).Start();
+            new Thread(GetDevices).Start();
             Status = string.Empty;
         }
     }
