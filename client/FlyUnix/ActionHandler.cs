@@ -1,4 +1,6 @@
-﻿using FlyClientApi;
+﻿using System;
+using System.Threading.Tasks;
+using FlyClientApi;
 using FlyClientApi.Enums;
 using Models;
 
@@ -16,18 +18,24 @@ namespace FlyUnix
             else if (device.IsRestartPending)
             {
                 RequestHandler.DoRequest(() => client.ClearAction(device.DeviceId, Actions.Restart).Wait());
-                // TODO: Implement
+                ShellHandler.Restart();
             }
             else if (device.IsSleepPending)
             {
                 RequestHandler.DoRequest(() => client.ClearAction(device.DeviceId, Actions.Sleep).Wait());
-                // TODO: Implement
+                ShellHandler.Sleep();
             }
             else if (device.IsMutePending)
             {
                 RequestHandler.DoRequest(() => client.ClearAction(device.DeviceId, Actions.Mute).Wait());
-                // TODO: Implement
+                ShellHandler.Mute();
             }
+        }
+
+        private static async Task DoActionAfterOneSecond(Action action)
+        {
+            await Task.Delay(1000);
+            action.Invoke();
         }
     }
 }

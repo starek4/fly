@@ -45,5 +45,51 @@ namespace FlyUnix
             else
                 throw new NotImplementedException("This system is not supported.");
         }
+
+        public static void Restart()
+        {
+            if (EnviromentHelper.GetPlatformType() == PlatformType.Linux)
+                ExecuteBashCommand("shutdown -r");
+            else if (EnviromentHelper.GetPlatformType() == PlatformType.Osx)
+                ExecuteBashCommand("sudo shutdown -r +1");
+            else
+                throw new NotImplementedException("This system is not supported.");
+        }
+
+        public static void Sleep()
+        {
+            if (EnviromentHelper.GetPlatformType() == PlatformType.Linux)
+            {
+                string result = ExecuteBashCommand("systemctl suspend");
+                if (result != String.Empty)
+                {
+                    string notImplementedMessage = "Sleep is not implemented on this platform.";
+                    EnviromentHelper.GetLogger().Info(notImplementedMessage);
+                    Console.WriteLine(notImplementedMessage);
+                }
+            }
+            else if (EnviromentHelper.GetPlatformType() == PlatformType.Osx)
+                ExecuteBashCommand("pmset sleepnow");
+            else
+                throw new NotImplementedException("This system is not supported.");
+        }
+
+        public static void Mute()
+        {
+            if (EnviromentHelper.GetPlatformType() == PlatformType.Linux)
+            {
+                string result = ExecuteBashCommand("amixer set Master toggle");
+                if (result != String.Empty)
+                {
+                    string notImplementedMessage = "Sleep is not implemented on this platform.";
+                    EnviromentHelper.GetLogger().Info(notImplementedMessage);
+                    Console.WriteLine(notImplementedMessage);
+                }
+            }
+            else if (EnviromentHelper.GetPlatformType() == PlatformType.Osx)
+                ExecuteBashCommand("osascript -e \'set volume output muted true\'");
+            else
+                throw new NotImplementedException("This system is not supported.");
+        }
     }
 }
