@@ -6,24 +6,24 @@ using Xamarin.Forms;
 
 namespace FlyPhone.Droid
 {
-	[Activity (Label = "FlyPhone", Icon = "@drawable/shutdown", Theme="@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-	public class MainActivity : Xamarin.Forms.Platform.Android.FormsAppCompatActivity
-	{
-		protected override void OnCreate (Bundle bundle)
-		{
-			TabLayoutResource = Resource.Layout.Tabbar;
-			ToolbarResource = Resource.Layout.Toolbar; 
+    [Activity(Label = "Fly client", Theme = "@style/MainTheme", ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    public class MainActivity : Xamarin.Forms.Platform.Android.FormsAppCompatActivity
+    {
+        protected override void OnCreate(Bundle bundle)
+        {
+            TabLayoutResource = Resource.Layout.Tabbar;
+            ToolbarResource = Resource.Layout.Toolbar;
 
-			base.OnCreate (bundle);
+            base.OnCreate(bundle);
 
-			Forms.Init (this, bundle);
+            Forms.Init(this, bundle);
 
-            // Register and init toast notification
-		    DependencyService.Register<ToastNotification>();
-		    ToastNotification.Init(this);
+            // Registering Toast package
+            DependencyService.Register<ToastNotification>();
+            ToastNotification.Init(this);
 
-            LoadApplication (new App());
-		}
-	}
+            LoadApplication(new App());
+        }
+    }
 }
 

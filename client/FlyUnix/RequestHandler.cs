@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Net.Http;
 using System.Threading.Tasks;
-using FlyApi.Exceptions;
-using FlyApi.ResponseModels;
+using FlyClientApi.Exceptions;
+using Models;
 
 namespace FlyUnix
 {
@@ -34,7 +34,7 @@ namespace FlyUnix
             {
                 exception.Handle(e =>
                 {
-                    if (e is HttpRequestException) // This we know how to handle.
+                    if (e is HttpRequestException)
                     {
                         ApplicationKiller.NetworkError();
                         return true;
@@ -49,25 +49,29 @@ namespace FlyUnix
             }
             return response;
         }
-
-        public static GetLoggedStateResponse DoRequest(Task<GetLoggedStateResponse> request)
+        public static Device DoRequest(Task<Device> request)
         {
-            GetLoggedStateResponse response;
+            Device response = null;
             try
             {
                 response = request.Result;
             }
-            catch (Exception exception)
+            catch (AggregateException exception)
             {
-                if (exception is HttpRequestException)
+                exception.Handle(e =>
                 {
-                    ApplicationKiller.NetworkError();
-                }
-                if (exception is DatabaseException)
-                {
-                    ApplicationKiller.DatabaseError();
-                }
-                return null;
+                    if (e is HttpRequestException)
+                    {
+                        ApplicationKiller.NetworkError();
+                        return true;
+                    }
+                    if (e is DatabaseException)
+                    {
+                        ApplicationKiller.DatabaseError();
+                        return true;
+                    }
+                    return false;
+                });
             }
             return response;
         }

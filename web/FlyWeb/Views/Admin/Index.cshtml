@@ -1,0 +1,56 @@
+﻿@model TableViewModel
+
+@{
+    ViewData["Title"] = "Device table";
+}
+
+<div id="topBar">
+    <button name="logout" class="btn btn-default" id="logoutButton" type="button" onclick="Logout()"><i class="fa fa-sign-out"></i> Logout</button>
+</div>
+
+@{
+    if (Model.Devices.Count == 0)
+    {
+        <div class="wrapper">
+            <h1>No devices were found!</h1>
+        </div>
+    }
+    else
+    {
+        <div class="wrapper">
+            <div class="table">
+                <div class="row header green">
+                    <div class="cell">Device name</div>
+                    <div class="cell">State</div>
+                    <div class="cell">Actions</div>
+                </div>
+                @foreach (var device in Model.Devices)
+                {
+                    <div class="row">
+                        <div class="cell">@device.Name</div>
+                        <div class="cell">
+                            @{
+                                if ((DateTime.Now - device.LastActive).TotalSeconds > 60)
+                                {
+                                    <img width="20" src="images/red.png"/>
+                                }
+                                else
+                                {
+                                    <img width="20" src="images/green.png"/>
+                                }
+                            }
+                        </div>
+                        <div class="cell">
+                            <button onclick="SetShutdownState(this.name)" id="shutdown" name="@device.DeviceId">Shutdown</button>
+                            <button onclick="SetRestartState(this.name)" id="restart" name="@device.DeviceId">Restart</button>
+                            <button onclick="SetSleepState(this.name)" id="sleep" name="@device.DeviceId">Sleep</button>
+                            <button onclick="SetMuteState(this.name)" id="mute" name="@device.DeviceId">Mute</button>
+                            <button onclick="DeleteDevice(this.name);" id="deleteDevice" name="@device.DeviceId">Delete device</button>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    }
+
+}

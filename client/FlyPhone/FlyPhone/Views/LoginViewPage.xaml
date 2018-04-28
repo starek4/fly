@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FlyPhone.Views.LoginViewPage">
+    <Grid Margin="15">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <StackLayout Margin="0, 50, 0, 0" Grid.Row="0" IsVisible="{Binding ToggleBlocks.OtherBlock}">
+            <Label FontAttributes="Bold" Text="Username" />
+            <Entry Text="{Binding Username}"></Entry>
+            <Label FontAttributes="Bold" Text="Password" />
+            <Entry Text="{Binding Password}" IsPassword="True"></Entry>
+        </StackLayout>
+
+        <Label Text="{Binding Status}" Grid.Row="2" HorizontalTextAlignment="Center" />
+        <Button Text="Login" Grid.Row="3" Command="{Binding LoginButtonCommand}"></Button>
+
+        <ActivityIndicator Grid.Row="0" Grid.RowSpan="4" IsRunning="{Binding ToggleBlocks.ActivityIndicator}" HorizontalOptions="Center" VerticalOptions="Center" IsVisible="{Binding ToggleBlocks.ActivityIndicator}" />
+    </Grid>
+</ContentPage>

@@ -1,0 +1,37 @@
+body
+{
+	padding-top: 250px;
+	background-color: #3399FF;
+}
+
+.login-form
+{
+	width:470px;
+}
+
+.login-title
+{
+    font-family: "Helvetica Neue", Helvetica, Arial;
+    text-align:center;
+    color: white;
+}
+
+.login-userinput
+{
+	margin-bottom: 10px;
+}
+
+.login-button
+{
+	margin-top:10px;
+}
+
+.login-options
+{
+	margin-bottom:0px;
+}
+
+.login-forgot
+{
+	float: left;
+}

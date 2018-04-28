@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
-using FlyApi.Exceptions;
-using FlyApi.ResponseModels;
+using FlyClientApi.Exceptions;
+using Models;
 
 namespace FlyPhone
 {
@@ -25,6 +25,7 @@ namespace FlyPhone
                 {
                     ExceptionHandler.DatabaseError();
                 }
+                throw new PhoneRequestException();
             }
         }
 
@@ -45,14 +46,14 @@ namespace FlyPhone
                 {
                     ExceptionHandler.DatabaseError();
                 }
-                return false;
+                throw new PhoneRequestException();
             }
             return response;
         }
 
-        public static async Task<GetLoggedStateResponse> DoRequest(Task<GetLoggedStateResponse> request)
+        public static async Task<string> DoRequest(Task<string> request)
         {
-            GetLoggedStateResponse response;
+            string response;
             try
             {
                 response = await request;
@@ -67,14 +68,14 @@ namespace FlyPhone
                 {
                     ExceptionHandler.DatabaseError();
                 }
-                return null;
+                throw new PhoneRequestException();
             }
             return response;
         }
 
-        public static async Task<IEnumerable<Device>> DoRequest(Task<IEnumerable<Device>> request)
+        public static async Task<Device> DoRequest(Task<Device> request)
         {
-            IEnumerable<Device> response;
+            Device response;
             try
             {
                 response = await request;
@@ -89,7 +90,29 @@ namespace FlyPhone
                 {
                     ExceptionHandler.DatabaseError();
                 }
-                return null;
+                throw new PhoneRequestException();
+            }
+            return response;
+        }
+
+        public static async Task<List<Device>> DoRequest(Task<List<Device>> request)
+        {
+            List<Device> response;
+            try
+            {
+                response = await request;
+            }
+            catch (Exception exception)
+            {
+                if (exception is HttpRequestException)
+                {
+                    ExceptionHandler.NetworkError();
+                }
+                if (exception is DatabaseException)
+                {
+                    ExceptionHandler.DatabaseError();
+                }
+                throw new PhoneRequestException();
             }
             return response;
         }

@@ -1,5 +1,5 @@
-﻿using Shared.Enviroment;
-using Shared.Logging;
+﻿using Logger.Enviroment;
+using Logger.Logging;
 
 namespace FlyUnix.Cli
 {

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FlyPhone.Views.DeviceActionPage">
+    <ContentPage.Content>
+        <Grid Margin="15, 15, 15, 0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <StackLayout Grid.Row="0" Orientation="Vertical">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" FontAttributes="Bold" Text="Hostname:" />
+                    <Label Grid.Column="1" Text="{Binding Name}" />
+                </Grid>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" MinimumWidthRequest="40" FontAttributes="Bold" Text="Status:" />
+                    <Label Grid.Column="1" Text="{Binding DeviceStatusText}" TextColor="{Binding DeviceStatusColor}" />
+                </Grid>
+            </StackLayout>
+
+            <StackLayout Grid.Row="2" Orientation="Vertical">
+                <Button Text="Shutdown" Command="{Binding ShutdownButtonCommand}" />
+                <Button Text="Restart" Command="{Binding RestartButtonCommand}" />
+                <Button Text="Sleep" Command="{Binding SleepButtonCommand}" />
+                <Button Text="Mute audio" Command="{Binding MuteButtonCommand}" />
+            </StackLayout>
+
+            <Label Grid.Row="3" Text="{Binding Status}" HorizontalTextAlignment="Center" />
+
+            <ActivityIndicator Grid.Row="0" Grid.RowSpan="4" IsRunning="{Binding ToggleBlocks.ActivityIndicator}" HorizontalOptions="Center" VerticalOptions="Center" IsVisible="{Binding ToggleBlocks.ActivityIndicator}" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

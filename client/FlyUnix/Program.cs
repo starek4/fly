@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Threading;
-using FlyApi;
-using FlyApi.ResponseModels;
+using FlyClientApi;
 using FlyUnix.Cli;
+using Models;
 
 namespace FlyUnix
 {
@@ -27,8 +27,8 @@ namespace FlyUnix
 
             if (Parser.Parse(args, ref _arguments))
             {
-                GetLoggedStateResponse logged = RequestHandler.DoRequest(Client.GetLoggedState(_deviceId));
-                if (!logged.Logged)
+                bool logged = RequestHandler.DoRequest(Client.GetLoggedState(_deviceId));
+                if (!logged)
                 {
                     _arguments.Password = PasswordGetter.GetPassword();
 
@@ -38,28 +38,24 @@ namespace FlyUnix
                         Console.WriteLine("Wrong credentials.");
                         return;
                     }
-                    RequestHandler.DoRequest(() => Client.SetLoggedState(_deviceId).Wait());
                 }
 
-                Console.WriteLine("Successfully verified. Fly client is now waiting for shutdown request...");
+                Console.WriteLine("Successfully verified. Fly client is now waiting for action request...");
 
                 bool isDeviceVerified = RequestHandler.DoRequest(Client.VerifyDeviceId(_deviceId));
 
                 if (!isDeviceVerified)
                 {
                     RequestHandler.DoRequest(() => Client.AddDevice(_arguments.Login, _deviceId, _deviceName, true).Wait());
+                    RequestHandler.DoRequest(() => Client.SetLoggedState(_deviceId, true).Wait());
                 }
 
                 while (true)
                 {
-                    bool isShutdownPending = RequestHandler.DoRequest(Client.GetShutdownPending(_deviceId));
-                    if (isShutdownPending)
-                    {
-                        RequestHandler.DoRequest(() => Client.ClearShutdownPending(_deviceId).Wait());
-                        ShellHandler.Shutdown();
-                        return;
-                    }
-                    Thread.Sleep(30 * 1000);
+                    RequestHandler.DoRequest(() => Client.UpdateTimestamp(_deviceId).Wait());
+                    Device device = RequestHandler.DoRequest(Client.GetDevice(_deviceId));
+                    ActionHandler.DoActions(device, Client);
+                    Thread.Sleep(QueryTimer.TimeBetweenQuery * 1000);
                 }
             }
             Console.WriteLine("Wrong arguments. Try it again: fly -l <login>");

@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Net.Http;
 using System.Threading.Tasks;
-using FlyApi.Exceptions;
-using FlyApi.ResponseModels;
+using FlyClientApi.Exceptions;
 using FlyWindowsWPF.TrayIcon;
+using Models;
 
 namespace FlyWindowsWPF.Requests
 {
@@ -63,9 +63,9 @@ namespace FlyWindowsWPF.Requests
             return response;
         }
 
-        public static async Task<GetLoggedStateResponse> DoRequest(Task<GetLoggedStateResponse> request, TrayController trayController)
+        public static async Task<Device> DoRequest(Task<Device> request, TrayController trayController)
         {
-            GetLoggedStateResponse response;
+            Device response;
             try
             {
                 response = await request;

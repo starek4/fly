@@ -26,8 +26,1516 @@ namespace FlyPhone.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::Plugin.Toasts.Resource.Animation.abc_fade_in = global::FlyPhone.Droid.Resource.Animation.abc_fade_in;
+			global::Plugin.Toasts.Resource.Animation.abc_fade_out = global::FlyPhone.Droid.Resource.Animation.abc_fade_out;
+			global::Plugin.Toasts.Resource.Animation.abc_grow_fade_in_from_bottom = global::FlyPhone.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
+			global::Plugin.Toasts.Resource.Animation.abc_popup_enter = global::FlyPhone.Droid.Resource.Animation.abc_popup_enter;
+			global::Plugin.Toasts.Resource.Animation.abc_popup_exit = global::FlyPhone.Droid.Resource.Animation.abc_popup_exit;
+			global::Plugin.Toasts.Resource.Animation.abc_shrink_fade_out_from_bottom = global::FlyPhone.Droid.Resource.Animation.abc_shrink_fade_out_from_bottom;
+			global::Plugin.Toasts.Resource.Animation.abc_slide_in_bottom = global::FlyPhone.Droid.Resource.Animation.abc_slide_in_bottom;
+			global::Plugin.Toasts.Resource.Animation.abc_slide_in_top = global::FlyPhone.Droid.Resource.Animation.abc_slide_in_top;
+			global::Plugin.Toasts.Resource.Animation.abc_slide_out_bottom = global::FlyPhone.Droid.Resource.Animation.abc_slide_out_bottom;
+			global::Plugin.Toasts.Resource.Animation.abc_slide_out_top = global::FlyPhone.Droid.Resource.Animation.abc_slide_out_top;
+			global::Plugin.Toasts.Resource.Animation.design_bottom_sheet_slide_in = global::FlyPhone.Droid.Resource.Animation.design_bottom_sheet_slide_in;
+			global::Plugin.Toasts.Resource.Animation.design_bottom_sheet_slide_out = global::FlyPhone.Droid.Resource.Animation.design_bottom_sheet_slide_out;
+			global::Plugin.Toasts.Resource.Animation.design_snackbar_in = global::FlyPhone.Droid.Resource.Animation.design_snackbar_in;
+			global::Plugin.Toasts.Resource.Animation.design_snackbar_out = global::FlyPhone.Droid.Resource.Animation.design_snackbar_out;
+			global::Plugin.Toasts.Resource.Attribute.actionBarDivider = global::FlyPhone.Droid.Resource.Attribute.actionBarDivider;
+			global::Plugin.Toasts.Resource.Attribute.actionBarItemBackground = global::FlyPhone.Droid.Resource.Attribute.actionBarItemBackground;
+			global::Plugin.Toasts.Resource.Attribute.actionBarPopupTheme = global::FlyPhone.Droid.Resource.Attribute.actionBarPopupTheme;
+			global::Plugin.Toasts.Resource.Attribute.actionBarSize = global::FlyPhone.Droid.Resource.Attribute.actionBarSize;
+			global::Plugin.Toasts.Resource.Attribute.actionBarSplitStyle = global::FlyPhone.Droid.Resource.Attribute.actionBarSplitStyle;
+			global::Plugin.Toasts.Resource.Attribute.actionBarStyle = global::FlyPhone.Droid.Resource.Attribute.actionBarStyle;
+			global::Plugin.Toasts.Resource.Attribute.actionBarTabBarStyle = global::FlyPhone.Droid.Resource.Attribute.actionBarTabBarStyle;
+			global::Plugin.Toasts.Resource.Attribute.actionBarTabStyle = global::FlyPhone.Droid.Resource.Attribute.actionBarTabStyle;
+			global::Plugin.Toasts.Resource.Attribute.actionBarTabTextStyle = global::FlyPhone.Droid.Resource.Attribute.actionBarTabTextStyle;
+			global::Plugin.Toasts.Resource.Attribute.actionBarTheme = global::FlyPhone.Droid.Resource.Attribute.actionBarTheme;
+			global::Plugin.Toasts.Resource.Attribute.actionBarWidgetTheme = global::FlyPhone.Droid.Resource.Attribute.actionBarWidgetTheme;
+			global::Plugin.Toasts.Resource.Attribute.actionButtonStyle = global::FlyPhone.Droid.Resource.Attribute.actionButtonStyle;
+			global::Plugin.Toasts.Resource.Attribute.actionDropDownStyle = global::FlyPhone.Droid.Resource.Attribute.actionDropDownStyle;
+			global::Plugin.Toasts.Resource.Attribute.actionLayout = global::FlyPhone.Droid.Resource.Attribute.actionLayout;
+			global::Plugin.Toasts.Resource.Attribute.actionMenuTextAppearance = global::FlyPhone.Droid.Resource.Attribute.actionMenuTextAppearance;
+			global::Plugin.Toasts.Resource.Attribute.actionMenuTextColor = global::FlyPhone.Droid.Resource.Attribute.actionMenuTextColor;
+			global::Plugin.Toasts.Resource.Attribute.actionModeBackground = global::FlyPhone.Droid.Resource.Attribute.actionModeBackground;
+			global::Plugin.Toasts.Resource.Attribute.actionModeCloseButtonStyle = global::FlyPhone.Droid.Resource.Attribute.actionModeCloseButtonStyle;
+			global::Plugin.Toasts.Resource.Attribute.actionModeCloseDrawable = global::FlyPhone.Droid.Resource.Attribute.actionModeCloseDrawable;
+			global::Plugin.Toasts.Resource.Attribute.actionModeCopyDrawable = global::FlyPhone.Droid.Resource.Attribute.actionModeCopyDrawable;
+			global::Plugin.Toasts.Resource.Attribute.actionModeCutDrawable = global::FlyPhone.Droid.Resource.Attribute.actionModeCutDrawable;
+			global::Plugin.Toasts.Resource.Attribute.actionModeFindDrawable = global::FlyPhone.Droid.Resource.Attribute.actionModeFindDrawable;
+			global::Plugin.Toasts.Resource.Attribute.actionModePasteDrawable = global::FlyPhone.Droid.Resource.Attribute.actionModePasteDrawable;
+			global::Plugin.Toasts.Resource.Attribute.actionModePopupWindowStyle = global::FlyPhone.Droid.Resource.Attribute.actionModePopupWindowStyle;
+			global::Plugin.Toasts.Resource.Attribute.actionModeSelectAllDrawable = global::FlyPhone.Droid.Resource.Attribute.actionModeSelectAllDrawable;
+			global::Plugin.Toasts.Resource.Attribute.actionModeShareDrawable = global::FlyPhone.Droid.Resource.Attribute.actionModeShareDrawable;
+			global::Plugin.Toasts.Resource.Attribute.actionModeSplitBackground = global::FlyPhone.Droid.Resource.Attribute.actionModeSplitBackground;
+			global::Plugin.Toasts.Resource.Attribute.actionModeStyle = global::FlyPhone.Droid.Resource.Attribute.actionModeStyle;
+			global::Plugin.Toasts.Resource.Attribute.actionModeWebSearchDrawable = global::FlyPhone.Droid.Resource.Attribute.actionModeWebSearchDrawable;
+			global::Plugin.Toasts.Resource.Attribute.actionOverflowButtonStyle = global::FlyPhone.Droid.Resource.Attribute.actionOverflowButtonStyle;
+			global::Plugin.Toasts.Resource.Attribute.actionOverflowMenuStyle = global::FlyPhone.Droid.Resource.Attribute.actionOverflowMenuStyle;
+			global::Plugin.Toasts.Resource.Attribute.actionProviderClass = global::FlyPhone.Droid.Resource.Attribute.actionProviderClass;
+			global::Plugin.Toasts.Resource.Attribute.actionViewClass = global::FlyPhone.Droid.Resource.Attribute.actionViewClass;
+			global::Plugin.Toasts.Resource.Attribute.activityChooserViewStyle = global::FlyPhone.Droid.Resource.Attribute.activityChooserViewStyle;
+			global::Plugin.Toasts.Resource.Attribute.alertDialogButtonGroupStyle = global::FlyPhone.Droid.Resource.Attribute.alertDialogButtonGroupStyle;
+			global::Plugin.Toasts.Resource.Attribute.alertDialogCenterButtons = global::FlyPhone.Droid.Resource.Attribute.alertDialogCenterButtons;
+			global::Plugin.Toasts.Resource.Attribute.alertDialogStyle = global::FlyPhone.Droid.Resource.Attribute.alertDialogStyle;
+			global::Plugin.Toasts.Resource.Attribute.alertDialogTheme = global::FlyPhone.Droid.Resource.Attribute.alertDialogTheme;
+			global::Plugin.Toasts.Resource.Attribute.allowStacking = global::FlyPhone.Droid.Resource.Attribute.allowStacking;
+			global::Plugin.Toasts.Resource.Attribute.arrowHeadLength = global::FlyPhone.Droid.Resource.Attribute.arrowHeadLength;
+			global::Plugin.Toasts.Resource.Attribute.arrowShaftLength = global::FlyPhone.Droid.Resource.Attribute.arrowShaftLength;
+			global::Plugin.Toasts.Resource.Attribute.autoCompleteTextViewStyle = global::FlyPhone.Droid.Resource.Attribute.autoCompleteTextViewStyle;
+			global::Plugin.Toasts.Resource.Attribute.background = global::FlyPhone.Droid.Resource.Attribute.background;
+			global::Plugin.Toasts.Resource.Attribute.backgroundSplit = global::FlyPhone.Droid.Resource.Attribute.backgroundSplit;
+			global::Plugin.Toasts.Resource.Attribute.backgroundStacked = global::FlyPhone.Droid.Resource.Attribute.backgroundStacked;
+			global::Plugin.Toasts.Resource.Attribute.backgroundTint = global::FlyPhone.Droid.Resource.Attribute.backgroundTint;
+			global::Plugin.Toasts.Resource.Attribute.backgroundTintMode = global::FlyPhone.Droid.Resource.Attribute.backgroundTintMode;
+			global::Plugin.Toasts.Resource.Attribute.barLength = global::FlyPhone.Droid.Resource.Attribute.barLength;
+			global::Plugin.Toasts.Resource.Attribute.behavior_hideable = global::FlyPhone.Droid.Resource.Attribute.behavior_hideable;
+			global::Plugin.Toasts.Resource.Attribute.behavior_overlapTop = global::FlyPhone.Droid.Resource.Attribute.behavior_overlapTop;
+			global::Plugin.Toasts.Resource.Attribute.behavior_peekHeight = global::FlyPhone.Droid.Resource.Attribute.behavior_peekHeight;
+			global::Plugin.Toasts.Resource.Attribute.borderWidth = global::FlyPhone.Droid.Resource.Attribute.borderWidth;
+			global::Plugin.Toasts.Resource.Attribute.borderlessButtonStyle = global::FlyPhone.Droid.Resource.Attribute.borderlessButtonStyle;
+			global::Plugin.Toasts.Resource.Attribute.bottomSheetDialogTheme = global::FlyPhone.Droid.Resource.Attribute.bottomSheetDialogTheme;
+			global::Plugin.Toasts.Resource.Attribute.bottomSheetStyle = global::FlyPhone.Droid.Resource.Attribute.bottomSheetStyle;
+			global::Plugin.Toasts.Resource.Attribute.buttonBarButtonStyle = global::FlyPhone.Droid.Resource.Attribute.buttonBarButtonStyle;
+			global::Plugin.Toasts.Resource.Attribute.buttonBarNegativeButtonStyle = global::FlyPhone.Droid.Resource.Attribute.buttonBarNegativeButtonStyle;
+			global::Plugin.Toasts.Resource.Attribute.buttonBarNeutralButtonStyle = global::FlyPhone.Droid.Resource.Attribute.buttonBarNeutralButtonStyle;
+			global::Plugin.Toasts.Resource.Attribute.buttonBarPositiveButtonStyle = global::FlyPhone.Droid.Resource.Attribute.buttonBarPositiveButtonStyle;
+			global::Plugin.Toasts.Resource.Attribute.buttonBarStyle = global::FlyPhone.Droid.Resource.Attribute.buttonBarStyle;
+			global::Plugin.Toasts.Resource.Attribute.buttonPanelSideLayout = global::FlyPhone.Droid.Resource.Attribute.buttonPanelSideLayout;
+			global::Plugin.Toasts.Resource.Attribute.buttonStyle = global::FlyPhone.Droid.Resource.Attribute.buttonStyle;
+			global::Plugin.Toasts.Resource.Attribute.buttonStyleSmall = global::FlyPhone.Droid.Resource.Attribute.buttonStyleSmall;
+			global::Plugin.Toasts.Resource.Attribute.buttonTint = global::FlyPhone.Droid.Resource.Attribute.buttonTint;
+			global::Plugin.Toasts.Resource.Attribute.buttonTintMode = global::FlyPhone.Droid.Resource.Attribute.buttonTintMode;
+			global::Plugin.Toasts.Resource.Attribute.checkboxStyle = global::FlyPhone.Droid.Resource.Attribute.checkboxStyle;
+			global::Plugin.Toasts.Resource.Attribute.checkedTextViewStyle = global::FlyPhone.Droid.Resource.Attribute.checkedTextViewStyle;
+			global::Plugin.Toasts.Resource.Attribute.closeIcon = global::FlyPhone.Droid.Resource.Attribute.closeIcon;
+			global::Plugin.Toasts.Resource.Attribute.closeItemLayout = global::FlyPhone.Droid.Resource.Attribute.closeItemLayout;
+			global::Plugin.Toasts.Resource.Attribute.collapseContentDescription = global::FlyPhone.Droid.Resource.Attribute.collapseContentDescription;
+			global::Plugin.Toasts.Resource.Attribute.collapseIcon = global::FlyPhone.Droid.Resource.Attribute.collapseIcon;
+			global::Plugin.Toasts.Resource.Attribute.collapsedTitleGravity = global::FlyPhone.Droid.Resource.Attribute.collapsedTitleGravity;
+			global::Plugin.Toasts.Resource.Attribute.collapsedTitleTextAppearance = global::FlyPhone.Droid.Resource.Attribute.collapsedTitleTextAppearance;
+			global::Plugin.Toasts.Resource.Attribute.color = global::FlyPhone.Droid.Resource.Attribute.color;
+			global::Plugin.Toasts.Resource.Attribute.colorAccent = global::FlyPhone.Droid.Resource.Attribute.colorAccent;
+			global::Plugin.Toasts.Resource.Attribute.colorButtonNormal = global::FlyPhone.Droid.Resource.Attribute.colorButtonNormal;
+			global::Plugin.Toasts.Resource.Attribute.colorControlActivated = global::FlyPhone.Droid.Resource.Attribute.colorControlActivated;
+			global::Plugin.Toasts.Resource.Attribute.colorControlHighlight = global::FlyPhone.Droid.Resource.Attribute.colorControlHighlight;
+			global::Plugin.Toasts.Resource.Attribute.colorControlNormal = global::FlyPhone.Droid.Resource.Attribute.colorControlNormal;
+			global::Plugin.Toasts.Resource.Attribute.colorPrimary = global::FlyPhone.Droid.Resource.Attribute.colorPrimary;
+			global::Plugin.Toasts.Resource.Attribute.colorPrimaryDark = global::FlyPhone.Droid.Resource.Attribute.colorPrimaryDark;
+			global::Plugin.Toasts.Resource.Attribute.colorSwitchThumbNormal = global::FlyPhone.Droid.Resource.Attribute.colorSwitchThumbNormal;
+			global::Plugin.Toasts.Resource.Attribute.commitIcon = global::FlyPhone.Droid.Resource.Attribute.commitIcon;
+			global::Plugin.Toasts.Resource.Attribute.contentInsetEnd = global::FlyPhone.Droid.Resource.Attribute.contentInsetEnd;
+			global::Plugin.Toasts.Resource.Attribute.contentInsetLeft = global::FlyPhone.Droid.Resource.Attribute.contentInsetLeft;
+			global::Plugin.Toasts.Resource.Attribute.contentInsetRight = global::FlyPhone.Droid.Resource.Attribute.contentInsetRight;
+			global::Plugin.Toasts.Resource.Attribute.contentInsetStart = global::FlyPhone.Droid.Resource.Attribute.contentInsetStart;
+			global::Plugin.Toasts.Resource.Attribute.contentScrim = global::FlyPhone.Droid.Resource.Attribute.contentScrim;
+			global::Plugin.Toasts.Resource.Attribute.controlBackground = global::FlyPhone.Droid.Resource.Attribute.controlBackground;
+			global::Plugin.Toasts.Resource.Attribute.counterEnabled = global::FlyPhone.Droid.Resource.Attribute.counterEnabled;
+			global::Plugin.Toasts.Resource.Attribute.counterMaxLength = global::FlyPhone.Droid.Resource.Attribute.counterMaxLength;
+			global::Plugin.Toasts.Resource.Attribute.counterOverflowTextAppearance = global::FlyPhone.Droid.Resource.Attribute.counterOverflowTextAppearance;
+			global::Plugin.Toasts.Resource.Attribute.counterTextAppearance = global::FlyPhone.Droid.Resource.Attribute.counterTextAppearance;
+			global::Plugin.Toasts.Resource.Attribute.customNavigationLayout = global::FlyPhone.Droid.Resource.Attribute.customNavigationLayout;
+			global::Plugin.Toasts.Resource.Attribute.defaultQueryHint = global::FlyPhone.Droid.Resource.Attribute.defaultQueryHint;
+			global::Plugin.Toasts.Resource.Attribute.dialogPreferredPadding = global::FlyPhone.Droid.Resource.Attribute.dialogPreferredPadding;
+			global::Plugin.Toasts.Resource.Attribute.dialogTheme = global::FlyPhone.Droid.Resource.Attribute.dialogTheme;
+			global::Plugin.Toasts.Resource.Attribute.displayOptions = global::FlyPhone.Droid.Resource.Attribute.displayOptions;
+			global::Plugin.Toasts.Resource.Attribute.divider = global::FlyPhone.Droid.Resource.Attribute.divider;
+			global::Plugin.Toasts.Resource.Attribute.dividerHorizontal = global::FlyPhone.Droid.Resource.Attribute.dividerHorizontal;
+			global::Plugin.Toasts.Resource.Attribute.dividerPadding = global::FlyPhone.Droid.Resource.Attribute.dividerPadding;
+			global::Plugin.Toasts.Resource.Attribute.dividerVertical = global::FlyPhone.Droid.Resource.Attribute.dividerVertical;
+			global::Plugin.Toasts.Resource.Attribute.drawableSize = global::FlyPhone.Droid.Resource.Attribute.drawableSize;
+			global::Plugin.Toasts.Resource.Attribute.drawerArrowStyle = global::FlyPhone.Droid.Resource.Attribute.drawerArrowStyle;
+			global::Plugin.Toasts.Resource.Attribute.dropDownListViewStyle = global::FlyPhone.Droid.Resource.Attribute.dropDownListViewStyle;
+			global::Plugin.Toasts.Resource.Attribute.dropdownListPreferredItemHeight = global::FlyPhone.Droid.Resource.Attribute.dropdownListPreferredItemHeight;
+			global::Plugin.Toasts.Resource.Attribute.editTextBackground = global::FlyPhone.Droid.Resource.Attribute.editTextBackground;
+			global::Plugin.Toasts.Resource.Attribute.editTextColor = global::FlyPhone.Droid.Resource.Attribute.editTextColor;
+			global::Plugin.Toasts.Resource.Attribute.editTextStyle = global::FlyPhone.Droid.Resource.Attribute.editTextStyle;
+			global::Plugin.Toasts.Resource.Attribute.elevation = global::FlyPhone.Droid.Resource.Attribute.elevation;
+			global::Plugin.Toasts.Resource.Attribute.errorEnabled = global::FlyPhone.Droid.Resource.Attribute.errorEnabled;
+			global::Plugin.Toasts.Resource.Attribute.errorTextAppearance = global::FlyPhone.Droid.Resource.Attribute.errorTextAppearance;
+			global::Plugin.Toasts.Resource.Attribute.expandActivityOverflowButtonDrawable = global::FlyPhone.Droid.Resource.Attribute.expandActivityOverflowButtonDrawable;
+			global::Plugin.Toasts.Resource.Attribute.expanded = global::FlyPhone.Droid.Resource.Attribute.expanded;
+			global::Plugin.Toasts.Resource.Attribute.expandedTitleGravity = global::FlyPhone.Droid.Resource.Attribute.expandedTitleGravity;
+			global::Plugin.Toasts.Resource.Attribute.expandedTitleMargin = global::FlyPhone.Droid.Resource.Attribute.expandedTitleMargin;
+			global::Plugin.Toasts.Resource.Attribute.expandedTitleMarginBottom = global::FlyPhone.Droid.Resource.Attribute.expandedTitleMarginBottom;
+			global::Plugin.Toasts.Resource.Attribute.expandedTitleMarginEnd = global::FlyPhone.Droid.Resource.Attribute.expandedTitleMarginEnd;
+			global::Plugin.Toasts.Resource.Attribute.expandedTitleMarginStart = global::FlyPhone.Droid.Resource.Attribute.expandedTitleMarginStart;
+			global::Plugin.Toasts.Resource.Attribute.expandedTitleMarginTop = global::FlyPhone.Droid.Resource.Attribute.expandedTitleMarginTop;
+			global::Plugin.Toasts.Resource.Attribute.expandedTitleTextAppearance = global::FlyPhone.Droid.Resource.Attribute.expandedTitleTextAppearance;
+			global::Plugin.Toasts.Resource.Attribute.fabSize = global::FlyPhone.Droid.Resource.Attribute.fabSize;
+			global::Plugin.Toasts.Resource.Attribute.foregroundInsidePadding = global::FlyPhone.Droid.Resource.Attribute.foregroundInsidePadding;
+			global::Plugin.Toasts.Resource.Attribute.gapBetweenBars = global::FlyPhone.Droid.Resource.Attribute.gapBetweenBars;
+			global::Plugin.Toasts.Resource.Attribute.goIcon = global::FlyPhone.Droid.Resource.Attribute.goIcon;
+			global::Plugin.Toasts.Resource.Attribute.headerLayout = global::FlyPhone.Droid.Resource.Attribute.headerLayout;
+			global::Plugin.Toasts.Resource.Attribute.height = global::FlyPhone.Droid.Resource.Attribute.height;
+			global::Plugin.Toasts.Resource.Attribute.hideOnContentScroll = global::FlyPhone.Droid.Resource.Attribute.hideOnContentScroll;
+			global::Plugin.Toasts.Resource.Attribute.hintAnimationEnabled = global::FlyPhone.Droid.Resource.Attribute.hintAnimationEnabled;
+			global::Plugin.Toasts.Resource.Attribute.hintEnabled = global::FlyPhone.Droid.Resource.Attribute.hintEnabled;
+			global::Plugin.Toasts.Resource.Attribute.hintTextAppearance = global::FlyPhone.Droid.Resource.Attribute.hintTextAppearance;
+			global::Plugin.Toasts.Resource.Attribute.homeAsUpIndicator = global::FlyPhone.Droid.Resource.Attribute.homeAsUpIndicator;
+			global::Plugin.Toasts.Resource.Attribute.homeLayout = global::FlyPhone.Droid.Resource.Attribute.homeLayout;
+			global::Plugin.Toasts.Resource.Attribute.icon = global::FlyPhone.Droid.Resource.Attribute.icon;
+			global::Plugin.Toasts.Resource.Attribute.iconifiedByDefault = global::FlyPhone.Droid.Resource.Attribute.iconifiedByDefault;
+			global::Plugin.Toasts.Resource.Attribute.imageButtonStyle = global::FlyPhone.Droid.Resource.Attribute.imageButtonStyle;
+			global::Plugin.Toasts.Resource.Attribute.indeterminateProgressStyle = global::FlyPhone.Droid.Resource.Attribute.indeterminateProgressStyle;
+			global::Plugin.Toasts.Resource.Attribute.initialActivityCount = global::FlyPhone.Droid.Resource.Attribute.initialActivityCount;
+			global::Plugin.Toasts.Resource.Attribute.insetForeground = global::FlyPhone.Droid.Resource.Attribute.insetForeground;
+			global::Plugin.Toasts.Resource.Attribute.isLightTheme = global::FlyPhone.Droid.Resource.Attribute.isLightTheme;
+			global::Plugin.Toasts.Resource.Attribute.itemBackground = global::FlyPhone.Droid.Resource.Attribute.itemBackground;
+			global::Plugin.Toasts.Resource.Attribute.itemIconTint = global::FlyPhone.Droid.Resource.Attribute.itemIconTint;
+			global::Plugin.Toasts.Resource.Attribute.itemPadding = global::FlyPhone.Droid.Resource.Attribute.itemPadding;
+			global::Plugin.Toasts.Resource.Attribute.itemTextAppearance = global::FlyPhone.Droid.Resource.Attribute.itemTextAppearance;
+			global::Plugin.Toasts.Resource.Attribute.itemTextColor = global::FlyPhone.Droid.Resource.Attribute.itemTextColor;
+			global::Plugin.Toasts.Resource.Attribute.keylines = global::FlyPhone.Droid.Resource.Attribute.keylines;
+			global::Plugin.Toasts.Resource.Attribute.layout = global::FlyPhone.Droid.Resource.Attribute.layout;
+			global::Plugin.Toasts.Resource.Attribute.layoutManager = global::FlyPhone.Droid.Resource.Attribute.layoutManager;
+			global::Plugin.Toasts.Resource.Attribute.layout_anchor = global::FlyPhone.Droid.Resource.Attribute.layout_anchor;
+			global::Plugin.Toasts.Resource.Attribute.layout_anchorGravity = global::FlyPhone.Droid.Resource.Attribute.layout_anchorGravity;
+			global::Plugin.Toasts.Resource.Attribute.layout_behavior = global::FlyPhone.Droid.Resource.Attribute.layout_behavior;
+			global::Plugin.Toasts.Resource.Attribute.layout_collapseMode = global::FlyPhone.Droid.Resource.Attribute.layout_collapseMode;
+			global::Plugin.Toasts.Resource.Attribute.layout_collapseParallaxMultiplier = global::FlyPhone.Droid.Resource.Attribute.layout_collapseParallaxMultiplier;
+			global::Plugin.Toasts.Resource.Attribute.layout_keyline = global::FlyPhone.Droid.Resource.Attribute.layout_keyline;
+			global::Plugin.Toasts.Resource.Attribute.layout_scrollFlags = global::FlyPhone.Droid.Resource.Attribute.layout_scrollFlags;
+			global::Plugin.Toasts.Resource.Attribute.layout_scrollInterpolator = global::FlyPhone.Droid.Resource.Attribute.layout_scrollInterpolator;
+			global::Plugin.Toasts.Resource.Attribute.listChoiceBackgroundIndicator = global::FlyPhone.Droid.Resource.Attribute.listChoiceBackgroundIndicator;
+			global::Plugin.Toasts.Resource.Attribute.listDividerAlertDialog = global::FlyPhone.Droid.Resource.Attribute.listDividerAlertDialog;
+			global::Plugin.Toasts.Resource.Attribute.listItemLayout = global::FlyPhone.Droid.Resource.Attribute.listItemLayout;
+			global::Plugin.Toasts.Resource.Attribute.listLayout = global::FlyPhone.Droid.Resource.Attribute.listLayout;
+			global::Plugin.Toasts.Resource.Attribute.listPopupWindowStyle = global::FlyPhone.Droid.Resource.Attribute.listPopupWindowStyle;
+			global::Plugin.Toasts.Resource.Attribute.listPreferredItemHeight = global::FlyPhone.Droid.Resource.Attribute.listPreferredItemHeight;
+			global::Plugin.Toasts.Resource.Attribute.listPreferredItemHeightLarge = global::FlyPhone.Droid.Resource.Attribute.listPreferredItemHeightLarge;
+			global::Plugin.Toasts.Resource.Attribute.listPreferredItemHeightSmall = global::FlyPhone.Droid.Resource.Attribute.listPreferredItemHeightSmall;
+			global::Plugin.Toasts.Resource.Attribute.listPreferredItemPaddingLeft = global::FlyPhone.Droid.Resource.Attribute.listPreferredItemPaddingLeft;
+			global::Plugin.Toasts.Resource.Attribute.listPreferredItemPaddingRight = global::FlyPhone.Droid.Resource.Attribute.listPreferredItemPaddingRight;
+			global::Plugin.Toasts.Resource.Attribute.logo = global::FlyPhone.Droid.Resource.Attribute.logo;
+			global::Plugin.Toasts.Resource.Attribute.logoDescription = global::FlyPhone.Droid.Resource.Attribute.logoDescription;
+			global::Plugin.Toasts.Resource.Attribute.maxActionInlineWidth = global::FlyPhone.Droid.Resource.Attribute.maxActionInlineWidth;
+			global::Plugin.Toasts.Resource.Attribute.maxButtonHeight = global::FlyPhone.Droid.Resource.Attribute.maxButtonHeight;
+			global::Plugin.Toasts.Resource.Attribute.measureWithLargestChild = global::FlyPhone.Droid.Resource.Attribute.measureWithLargestChild;
+			global::Plugin.Toasts.Resource.Attribute.menu = global::FlyPhone.Droid.Resource.Attribute.menu;
+			global::Plugin.Toasts.Resource.Attribute.multiChoiceItemLayout = global::FlyPhone.Droid.Resource.Attribute.multiChoiceItemLayout;
+			global::Plugin.Toasts.Resource.Attribute.navigationContentDescription = global::FlyPhone.Droid.Resource.Attribute.navigationContentDescription;
+			global::Plugin.Toasts.Resource.Attribute.navigationIcon = global::FlyPhone.Droid.Resource.Attribute.navigationIcon;
+			global::Plugin.Toasts.Resource.Attribute.navigationMode = global::FlyPhone.Droid.Resource.Attribute.navigationMode;
+			global::Plugin.Toasts.Resource.Attribute.overlapAnchor = global::FlyPhone.Droid.Resource.Attribute.overlapAnchor;
+			global::Plugin.Toasts.Resource.Attribute.paddingEnd = global::FlyPhone.Droid.Resource.Attribute.paddingEnd;
+			global::Plugin.Toasts.Resource.Attribute.paddingStart = global::FlyPhone.Droid.Resource.Attribute.paddingStart;
+			global::Plugin.Toasts.Resource.Attribute.panelBackground = global::FlyPhone.Droid.Resource.Attribute.panelBackground;
+			global::Plugin.Toasts.Resource.Attribute.panelMenuListTheme = global::FlyPhone.Droid.Resource.Attribute.panelMenuListTheme;
+			global::Plugin.Toasts.Resource.Attribute.panelMenuListWidth = global::FlyPhone.Droid.Resource.Attribute.panelMenuListWidth;
+			global::Plugin.Toasts.Resource.Attribute.popupMenuStyle = global::FlyPhone.Droid.Resource.Attribute.popupMenuStyle;
+			global::Plugin.Toasts.Resource.Attribute.popupTheme = global::FlyPhone.Droid.Resource.Attribute.popupTheme;
+			global::Plugin.Toasts.Resource.Attribute.popupWindowStyle = global::FlyPhone.Droid.Resource.Attribute.popupWindowStyle;
+			global::Plugin.Toasts.Resource.Attribute.preserveIconSpacing = global::FlyPhone.Droid.Resource.Attribute.preserveIconSpacing;
+			global::Plugin.Toasts.Resource.Attribute.pressedTranslationZ = global::FlyPhone.Droid.Resource.Attribute.pressedTranslationZ;
+			global::Plugin.Toasts.Resource.Attribute.progressBarPadding = global::FlyPhone.Droid.Resource.Attribute.progressBarPadding;
+			global::Plugin.Toasts.Resource.Attribute.progressBarStyle = global::FlyPhone.Droid.Resource.Attribute.progressBarStyle;
+			global::Plugin.Toasts.Resource.Attribute.queryBackground = global::FlyPhone.Droid.Resource.Attribute.queryBackground;
+			global::Plugin.Toasts.Resource.Attribute.queryHint = global::FlyPhone.Droid.Resource.Attribute.queryHint;
+			global::Plugin.Toasts.Resource.Attribute.radioButtonStyle = global::FlyPhone.Droid.Resource.Attribute.radioButtonStyle;
+			global::Plugin.Toasts.Resource.Attribute.ratingBarStyle = global::FlyPhone.Droid.Resource.Attribute.ratingBarStyle;
+			global::Plugin.Toasts.Resource.Attribute.ratingBarStyleIndicator = global::FlyPhone.Droid.Resource.Attribute.ratingBarStyleIndicator;
+			global::Plugin.Toasts.Resource.Attribute.ratingBarStyleSmall = global::FlyPhone.Droid.Resource.Attribute.ratingBarStyleSmall;
+			global::Plugin.Toasts.Resource.Attribute.reverseLayout = global::FlyPhone.Droid.Resource.Attribute.reverseLayout;
+			global::Plugin.Toasts.Resource.Attribute.rippleColor = global::FlyPhone.Droid.Resource.Attribute.rippleColor;
+			global::Plugin.Toasts.Resource.Attribute.searchHintIcon = global::FlyPhone.Droid.Resource.Attribute.searchHintIcon;
+			global::Plugin.Toasts.Resource.Attribute.searchIcon = global::FlyPhone.Droid.Resource.Attribute.searchIcon;
+			global::Plugin.Toasts.Resource.Attribute.searchViewStyle = global::FlyPhone.Droid.Resource.Attribute.searchViewStyle;
+			global::Plugin.Toasts.Resource.Attribute.seekBarStyle = global::FlyPhone.Droid.Resource.Attribute.seekBarStyle;
+			global::Plugin.Toasts.Resource.Attribute.selectableItemBackground = global::FlyPhone.Droid.Resource.Attribute.selectableItemBackground;
+			global::Plugin.Toasts.Resource.Attribute.selectableItemBackgroundBorderless = global::FlyPhone.Droid.Resource.Attribute.selectableItemBackgroundBorderless;
+			global::Plugin.Toasts.Resource.Attribute.showAsAction = global::FlyPhone.Droid.Resource.Attribute.showAsAction;
+			global::Plugin.Toasts.Resource.Attribute.showDividers = global::FlyPhone.Droid.Resource.Attribute.showDividers;
+			global::Plugin.Toasts.Resource.Attribute.showText = global::FlyPhone.Droid.Resource.Attribute.showText;
+			global::Plugin.Toasts.Resource.Attribute.singleChoiceItemLayout = global::FlyPhone.Droid.Resource.Attribute.singleChoiceItemLayout;
+			global::Plugin.Toasts.Resource.Attribute.spanCount = global::FlyPhone.Droid.Resource.Attribute.spanCount;
+			global::Plugin.Toasts.Resource.Attribute.spinBars = global::FlyPhone.Droid.Resource.Attribute.spinBars;
+			global::Plugin.Toasts.Resource.Attribute.spinnerDropDownItemStyle = global::FlyPhone.Droid.Resource.Attribute.spinnerDropDownItemStyle;
+			global::Plugin.Toasts.Resource.Attribute.spinnerStyle = global::FlyPhone.Droid.Resource.Attribute.spinnerStyle;
+			global::Plugin.Toasts.Resource.Attribute.splitTrack = global::FlyPhone.Droid.Resource.Attribute.splitTrack;
+			global::Plugin.Toasts.Resource.Attribute.srcCompat = global::FlyPhone.Droid.Resource.Attribute.srcCompat;
+			global::Plugin.Toasts.Resource.Attribute.stackFromEnd = global::FlyPhone.Droid.Resource.Attribute.stackFromEnd;
+			global::Plugin.Toasts.Resource.Attribute.state_above_anchor = global::FlyPhone.Droid.Resource.Attribute.state_above_anchor;
+			global::Plugin.Toasts.Resource.Attribute.statusBarBackground = global::FlyPhone.Droid.Resource.Attribute.statusBarBackground;
+			global::Plugin.Toasts.Resource.Attribute.statusBarScrim = global::FlyPhone.Droid.Resource.Attribute.statusBarScrim;
+			global::Plugin.Toasts.Resource.Attribute.submitBackground = global::FlyPhone.Droid.Resource.Attribute.submitBackground;
+			global::Plugin.Toasts.Resource.Attribute.subtitle = global::FlyPhone.Droid.Resource.Attribute.subtitle;
+			global::Plugin.Toasts.Resource.Attribute.subtitleTextAppearance = global::FlyPhone.Droid.Resource.Attribute.subtitleTextAppearance;
+			global::Plugin.Toasts.Resource.Attribute.subtitleTextColor = global::FlyPhone.Droid.Resource.Attribute.subtitleTextColor;
+			global::Plugin.Toasts.Resource.Attribute.subtitleTextStyle = global::FlyPhone.Droid.Resource.Attribute.subtitleTextStyle;
+			global::Plugin.Toasts.Resource.Attribute.suggestionRowLayout = global::FlyPhone.Droid.Resource.Attribute.suggestionRowLayout;
+			global::Plugin.Toasts.Resource.Attribute.switchMinWidth = global::FlyPhone.Droid.Resource.Attribute.switchMinWidth;
+			global::Plugin.Toasts.Resource.Attribute.switchPadding = global::FlyPhone.Droid.Resource.Attribute.switchPadding;
+			global::Plugin.Toasts.Resource.Attribute.switchStyle = global::FlyPhone.Droid.Resource.Attribute.switchStyle;
+			global::Plugin.Toasts.Resource.Attribute.switchTextAppearance = global::FlyPhone.Droid.Resource.Attribute.switchTextAppearance;
+			global::Plugin.Toasts.Resource.Attribute.tabBackground = global::FlyPhone.Droid.Resource.Attribute.tabBackground;
+			global::Plugin.Toasts.Resource.Attribute.tabContentStart = global::FlyPhone.Droid.Resource.Attribute.tabContentStart;
+			global::Plugin.Toasts.Resource.Attribute.tabGravity = global::FlyPhone.Droid.Resource.Attribute.tabGravity;
+			global::Plugin.Toasts.Resource.Attribute.tabIndicatorColor = global::FlyPhone.Droid.Resource.Attribute.tabIndicatorColor;
+			global::Plugin.Toasts.Resource.Attribute.tabIndicatorHeight = global::FlyPhone.Droid.Resource.Attribute.tabIndicatorHeight;
+			global::Plugin.Toasts.Resource.Attribute.tabMaxWidth = global::FlyPhone.Droid.Resource.Attribute.tabMaxWidth;
+			global::Plugin.Toasts.Resource.Attribute.tabMinWidth = global::FlyPhone.Droid.Resource.Attribute.tabMinWidth;
+			global::Plugin.Toasts.Resource.Attribute.tabMode = global::FlyPhone.Droid.Resource.Attribute.tabMode;
+			global::Plugin.Toasts.Resource.Attribute.tabPadding = global::FlyPhone.Droid.Resource.Attribute.tabPadding;
+			global::Plugin.Toasts.Resource.Attribute.tabPaddingBottom = global::FlyPhone.Droid.Resource.Attribute.tabPaddingBottom;
+			global::Plugin.Toasts.Resource.Attribute.tabPaddingEnd = global::FlyPhone.Droid.Resource.Attribute.tabPaddingEnd;
+			global::Plugin.Toasts.Resource.Attribute.tabPaddingStart = global::FlyPhone.Droid.Resource.Attribute.tabPaddingStart;
+			global::Plugin.Toasts.Resource.Attribute.tabPaddingTop = global::FlyPhone.Droid.Resource.Attribute.tabPaddingTop;
+			global::Plugin.Toasts.Resource.Attribute.tabSelectedTextColor = global::FlyPhone.Droid.Resource.Attribute.tabSelectedTextColor;
+			global::Plugin.Toasts.Resource.Attribute.tabTextAppearance = global::FlyPhone.Droid.Resource.Attribute.tabTextAppearance;
+			global::Plugin.Toasts.Resource.Attribute.tabTextColor = global::FlyPhone.Droid.Resource.Attribute.tabTextColor;
+			global::Plugin.Toasts.Resource.Attribute.textAllCaps = global::FlyPhone.Droid.Resource.Attribute.textAllCaps;
+			global::Plugin.Toasts.Resource.Attribute.textAppearanceLargePopupMenu = global::FlyPhone.Droid.Resource.Attribute.textAppearanceLargePopupMenu;
+			global::Plugin.Toasts.Resource.Attribute.textAppearanceListItem = global::FlyPhone.Droid.Resource.Attribute.textAppearanceListItem;
+			global::Plugin.Toasts.Resource.Attribute.textAppearanceListItemSmall = global::FlyPhone.Droid.Resource.Attribute.textAppearanceListItemSmall;
+			global::Plugin.Toasts.Resource.Attribute.textAppearanceSearchResultSubtitle = global::FlyPhone.Droid.Resource.Attribute.textAppearanceSearchResultSubtitle;
+			global::Plugin.Toasts.Resource.Attribute.textAppearanceSearchResultTitle = global::FlyPhone.Droid.Resource.Attribute.textAppearanceSearchResultTitle;
+			global::Plugin.Toasts.Resource.Attribute.textAppearanceSmallPopupMenu = global::FlyPhone.Droid.Resource.Attribute.textAppearanceSmallPopupMenu;
+			global::Plugin.Toasts.Resource.Attribute.textColorAlertDialogListItem = global::FlyPhone.Droid.Resource.Attribute.textColorAlertDialogListItem;
+			global::Plugin.Toasts.Resource.Attribute.textColorError = global::FlyPhone.Droid.Resource.Attribute.textColorError;
+			global::Plugin.Toasts.Resource.Attribute.textColorSearchUrl = global::FlyPhone.Droid.Resource.Attribute.textColorSearchUrl;
+			global::Plugin.Toasts.Resource.Attribute.theme = global::FlyPhone.Droid.Resource.Attribute.theme;
+			global::Plugin.Toasts.Resource.Attribute.thickness = global::FlyPhone.Droid.Resource.Attribute.thickness;
+			global::Plugin.Toasts.Resource.Attribute.thumbTextPadding = global::FlyPhone.Droid.Resource.Attribute.thumbTextPadding;
+			global::Plugin.Toasts.Resource.Attribute.title = global::FlyPhone.Droid.Resource.Attribute.title;
+			global::Plugin.Toasts.Resource.Attribute.titleEnabled = global::FlyPhone.Droid.Resource.Attribute.titleEnabled;
+			global::Plugin.Toasts.Resource.Attribute.titleMarginBottom = global::FlyPhone.Droid.Resource.Attribute.titleMarginBottom;
+			global::Plugin.Toasts.Resource.Attribute.titleMarginEnd = global::FlyPhone.Droid.Resource.Attribute.titleMarginEnd;
+			global::Plugin.Toasts.Resource.Attribute.titleMarginStart = global::FlyPhone.Droid.Resource.Attribute.titleMarginStart;
+			global::Plugin.Toasts.Resource.Attribute.titleMarginTop = global::FlyPhone.Droid.Resource.Attribute.titleMarginTop;
+			global::Plugin.Toasts.Resource.Attribute.titleMargins = global::FlyPhone.Droid.Resource.Attribute.titleMargins;
+			global::Plugin.Toasts.Resource.Attribute.titleTextAppearance = global::FlyPhone.Droid.Resource.Attribute.titleTextAppearance;
+			global::Plugin.Toasts.Resource.Attribute.titleTextColor = global::FlyPhone.Droid.Resource.Attribute.titleTextColor;
+			global::Plugin.Toasts.Resource.Attribute.titleTextStyle = global::FlyPhone.Droid.Resource.Attribute.titleTextStyle;
+			global::Plugin.Toasts.Resource.Attribute.toolbarId = global::FlyPhone.Droid.Resource.Attribute.toolbarId;
+			global::Plugin.Toasts.Resource.Attribute.toolbarNavigationButtonStyle = global::FlyPhone.Droid.Resource.Attribute.toolbarNavigationButtonStyle;
+			global::Plugin.Toasts.Resource.Attribute.toolbarStyle = global::FlyPhone.Droid.Resource.Attribute.toolbarStyle;
+			global::Plugin.Toasts.Resource.Attribute.track = global::FlyPhone.Droid.Resource.Attribute.track;
+			global::Plugin.Toasts.Resource.Attribute.useCompatPadding = global::FlyPhone.Droid.Resource.Attribute.useCompatPadding;
+			global::Plugin.Toasts.Resource.Attribute.voiceIcon = global::FlyPhone.Droid.Resource.Attribute.voiceIcon;
+			global::Plugin.Toasts.Resource.Attribute.windowActionBar = global::FlyPhone.Droid.Resource.Attribute.windowActionBar;
+			global::Plugin.Toasts.Resource.Attribute.windowActionBarOverlay = global::FlyPhone.Droid.Resource.Attribute.windowActionBarOverlay;
+			global::Plugin.Toasts.Resource.Attribute.windowActionModeOverlay = global::FlyPhone.Droid.Resource.Attribute.windowActionModeOverlay;
+			global::Plugin.Toasts.Resource.Attribute.windowFixedHeightMajor = global::FlyPhone.Droid.Resource.Attribute.windowFixedHeightMajor;
+			global::Plugin.Toasts.Resource.Attribute.windowFixedHeightMinor = global::FlyPhone.Droid.Resource.Attribute.windowFixedHeightMinor;
+			global::Plugin.Toasts.Resource.Attribute.windowFixedWidthMajor = global::FlyPhone.Droid.Resource.Attribute.windowFixedWidthMajor;
+			global::Plugin.Toasts.Resource.Attribute.windowFixedWidthMinor = global::FlyPhone.Droid.Resource.Attribute.windowFixedWidthMinor;
+			global::Plugin.Toasts.Resource.Attribute.windowMinWidthMajor = global::FlyPhone.Droid.Resource.Attribute.windowMinWidthMajor;
+			global::Plugin.Toasts.Resource.Attribute.windowMinWidthMinor = global::FlyPhone.Droid.Resource.Attribute.windowMinWidthMinor;
+			global::Plugin.Toasts.Resource.Attribute.windowNoTitle = global::FlyPhone.Droid.Resource.Attribute.windowNoTitle;
+			global::Plugin.Toasts.Resource.Boolean.abc_action_bar_embed_tabs = global::FlyPhone.Droid.Resource.Boolean.abc_action_bar_embed_tabs;
+			global::Plugin.Toasts.Resource.Boolean.abc_allow_stacked_button_bar = global::FlyPhone.Droid.Resource.Boolean.abc_allow_stacked_button_bar;
+			global::Plugin.Toasts.Resource.Boolean.abc_config_actionMenuItemAllCaps = global::FlyPhone.Droid.Resource.Boolean.abc_config_actionMenuItemAllCaps;
+			global::Plugin.Toasts.Resource.Boolean.abc_config_closeDialogWhenTouchOutside = global::FlyPhone.Droid.Resource.Boolean.abc_config_closeDialogWhenTouchOutside;
+			global::Plugin.Toasts.Resource.Boolean.abc_config_showMenuShortcutsWhenKeyboardPresent = global::FlyPhone.Droid.Resource.Boolean.abc_config_showMenuShortcutsWhenKeyboardPresent;
+			global::Plugin.Toasts.Resource.Color.abc_background_cache_hint_selector_material_dark = global::FlyPhone.Droid.Resource.Color.abc_background_cache_hint_selector_material_dark;
+			global::Plugin.Toasts.Resource.Color.abc_background_cache_hint_selector_material_light = global::FlyPhone.Droid.Resource.Color.abc_background_cache_hint_selector_material_light;
+			global::Plugin.Toasts.Resource.Color.abc_color_highlight_material = global::FlyPhone.Droid.Resource.Color.abc_color_highlight_material;
+			global::Plugin.Toasts.Resource.Color.abc_input_method_navigation_guard = global::FlyPhone.Droid.Resource.Color.abc_input_method_navigation_guard;
+			global::Plugin.Toasts.Resource.Color.abc_primary_text_disable_only_material_dark = global::FlyPhone.Droid.Resource.Color.abc_primary_text_disable_only_material_dark;
+			global::Plugin.Toasts.Resource.Color.abc_primary_text_disable_only_material_light = global::FlyPhone.Droid.Resource.Color.abc_primary_text_disable_only_material_light;
+			global::Plugin.Toasts.Resource.Color.abc_primary_text_material_dark = global::FlyPhone.Droid.Resource.Color.abc_primary_text_material_dark;
+			global::Plugin.Toasts.Resource.Color.abc_primary_text_material_light = global::FlyPhone.Droid.Resource.Color.abc_primary_text_material_light;
+			global::Plugin.Toasts.Resource.Color.abc_search_url_text = global::FlyPhone.Droid.Resource.Color.abc_search_url_text;
+			global::Plugin.Toasts.Resource.Color.abc_search_url_text_normal = global::FlyPhone.Droid.Resource.Color.abc_search_url_text_normal;
+			global::Plugin.Toasts.Resource.Color.abc_search_url_text_pressed = global::FlyPhone.Droid.Resource.Color.abc_search_url_text_pressed;
+			global::Plugin.Toasts.Resource.Color.abc_search_url_text_selected = global::FlyPhone.Droid.Resource.Color.abc_search_url_text_selected;
+			global::Plugin.Toasts.Resource.Color.abc_secondary_text_material_dark = global::FlyPhone.Droid.Resource.Color.abc_secondary_text_material_dark;
+			global::Plugin.Toasts.Resource.Color.abc_secondary_text_material_light = global::FlyPhone.Droid.Resource.Color.abc_secondary_text_material_light;
+			global::Plugin.Toasts.Resource.Color.accent_material_dark = global::FlyPhone.Droid.Resource.Color.accent_material_dark;
+			global::Plugin.Toasts.Resource.Color.accent_material_light = global::FlyPhone.Droid.Resource.Color.accent_material_light;
+			global::Plugin.Toasts.Resource.Color.background_floating_material_dark = global::FlyPhone.Droid.Resource.Color.background_floating_material_dark;
+			global::Plugin.Toasts.Resource.Color.background_floating_material_light = global::FlyPhone.Droid.Resource.Color.background_floating_material_light;
+			global::Plugin.Toasts.Resource.Color.background_material_dark = global::FlyPhone.Droid.Resource.Color.background_material_dark;
+			global::Plugin.Toasts.Resource.Color.background_material_light = global::FlyPhone.Droid.Resource.Color.background_material_light;
+			global::Plugin.Toasts.Resource.Color.bright_foreground_disabled_material_dark = global::FlyPhone.Droid.Resource.Color.bright_foreground_disabled_material_dark;
+			global::Plugin.Toasts.Resource.Color.bright_foreground_disabled_material_light = global::FlyPhone.Droid.Resource.Color.bright_foreground_disabled_material_light;
+			global::Plugin.Toasts.Resource.Color.bright_foreground_inverse_material_dark = global::FlyPhone.Droid.Resource.Color.bright_foreground_inverse_material_dark;
+			global::Plugin.Toasts.Resource.Color.bright_foreground_inverse_material_light = global::FlyPhone.Droid.Resource.Color.bright_foreground_inverse_material_light;
+			global::Plugin.Toasts.Resource.Color.bright_foreground_material_dark = global::FlyPhone.Droid.Resource.Color.bright_foreground_material_dark;
+			global::Plugin.Toasts.Resource.Color.bright_foreground_material_light = global::FlyPhone.Droid.Resource.Color.bright_foreground_material_light;
+			global::Plugin.Toasts.Resource.Color.button_material_dark = global::FlyPhone.Droid.Resource.Color.button_material_dark;
+			global::Plugin.Toasts.Resource.Color.button_material_light = global::FlyPhone.Droid.Resource.Color.button_material_light;
+			global::Plugin.Toasts.Resource.Color.design_fab_shadow_end_color = global::FlyPhone.Droid.Resource.Color.design_fab_shadow_end_color;
+			global::Plugin.Toasts.Resource.Color.design_fab_shadow_mid_color = global::FlyPhone.Droid.Resource.Color.design_fab_shadow_mid_color;
+			global::Plugin.Toasts.Resource.Color.design_fab_shadow_start_color = global::FlyPhone.Droid.Resource.Color.design_fab_shadow_start_color;
+			global::Plugin.Toasts.Resource.Color.design_fab_stroke_end_inner_color = global::FlyPhone.Droid.Resource.Color.design_fab_stroke_end_inner_color;
+			global::Plugin.Toasts.Resource.Color.design_fab_stroke_end_outer_color = global::FlyPhone.Droid.Resource.Color.design_fab_stroke_end_outer_color;
+			global::Plugin.Toasts.Resource.Color.design_fab_stroke_top_inner_color = global::FlyPhone.Droid.Resource.Color.design_fab_stroke_top_inner_color;
+			global::Plugin.Toasts.Resource.Color.design_fab_stroke_top_outer_color = global::FlyPhone.Droid.Resource.Color.design_fab_stroke_top_outer_color;
+			global::Plugin.Toasts.Resource.Color.design_snackbar_background_color = global::FlyPhone.Droid.Resource.Color.design_snackbar_background_color;
+			global::Plugin.Toasts.Resource.Color.dim_foreground_disabled_material_dark = global::FlyPhone.Droid.Resource.Color.dim_foreground_disabled_material_dark;
+			global::Plugin.Toasts.Resource.Color.dim_foreground_disabled_material_light = global::FlyPhone.Droid.Resource.Color.dim_foreground_disabled_material_light;
+			global::Plugin.Toasts.Resource.Color.dim_foreground_material_dark = global::FlyPhone.Droid.Resource.Color.dim_foreground_material_dark;
+			global::Plugin.Toasts.Resource.Color.dim_foreground_material_light = global::FlyPhone.Droid.Resource.Color.dim_foreground_material_light;
+			global::Plugin.Toasts.Resource.Color.foreground_material_dark = global::FlyPhone.Droid.Resource.Color.foreground_material_dark;
+			global::Plugin.Toasts.Resource.Color.foreground_material_light = global::FlyPhone.Droid.Resource.Color.foreground_material_light;
+			global::Plugin.Toasts.Resource.Color.highlighted_text_material_dark = global::FlyPhone.Droid.Resource.Color.highlighted_text_material_dark;
+			global::Plugin.Toasts.Resource.Color.highlighted_text_material_light = global::FlyPhone.Droid.Resource.Color.highlighted_text_material_light;
+			global::Plugin.Toasts.Resource.Color.material_blue_grey_800 = global::FlyPhone.Droid.Resource.Color.material_blue_grey_800;
+			global::Plugin.Toasts.Resource.Color.material_blue_grey_900 = global::FlyPhone.Droid.Resource.Color.material_blue_grey_900;
+			global::Plugin.Toasts.Resource.Color.material_blue_grey_950 = global::FlyPhone.Droid.Resource.Color.material_blue_grey_950;
+			global::Plugin.Toasts.Resource.Color.material_deep_teal_200 = global::FlyPhone.Droid.Resource.Color.material_deep_teal_200;
+			global::Plugin.Toasts.Resource.Color.material_deep_teal_500 = global::FlyPhone.Droid.Resource.Color.material_deep_teal_500;
+			global::Plugin.Toasts.Resource.Color.material_grey_100 = global::FlyPhone.Droid.Resource.Color.material_grey_100;
+			global::Plugin.Toasts.Resource.Color.material_grey_300 = global::FlyPhone.Droid.Resource.Color.material_grey_300;
+			global::Plugin.Toasts.Resource.Color.material_grey_50 = global::FlyPhone.Droid.Resource.Color.material_grey_50;
+			global::Plugin.Toasts.Resource.Color.material_grey_600 = global::FlyPhone.Droid.Resource.Color.material_grey_600;
+			global::Plugin.Toasts.Resource.Color.material_grey_800 = global::FlyPhone.Droid.Resource.Color.material_grey_800;
+			global::Plugin.Toasts.Resource.Color.material_grey_850 = global::FlyPhone.Droid.Resource.Color.material_grey_850;
+			global::Plugin.Toasts.Resource.Color.material_grey_900 = global::FlyPhone.Droid.Resource.Color.material_grey_900;
+			global::Plugin.Toasts.Resource.Color.primary_dark_material_dark = global::FlyPhone.Droid.Resource.Color.primary_dark_material_dark;
+			global::Plugin.Toasts.Resource.Color.primary_dark_material_light = global::FlyPhone.Droid.Resource.Color.primary_dark_material_light;
+			global::Plugin.Toasts.Resource.Color.primary_material_dark = global::FlyPhone.Droid.Resource.Color.primary_material_dark;
+			global::Plugin.Toasts.Resource.Color.primary_material_light = global::FlyPhone.Droid.Resource.Color.primary_material_light;
+			global::Plugin.Toasts.Resource.Color.primary_text_default_material_dark = global::FlyPhone.Droid.Resource.Color.primary_text_default_material_dark;
+			global::Plugin.Toasts.Resource.Color.primary_text_default_material_light = global::FlyPhone.Droid.Resource.Color.primary_text_default_material_light;
+			global::Plugin.Toasts.Resource.Color.primary_text_disabled_material_dark = global::FlyPhone.Droid.Resource.Color.primary_text_disabled_material_dark;
+			global::Plugin.Toasts.Resource.Color.primary_text_disabled_material_light = global::FlyPhone.Droid.Resource.Color.primary_text_disabled_material_light;
+			global::Plugin.Toasts.Resource.Color.ripple_material_dark = global::FlyPhone.Droid.Resource.Color.ripple_material_dark;
+			global::Plugin.Toasts.Resource.Color.ripple_material_light = global::FlyPhone.Droid.Resource.Color.ripple_material_light;
+			global::Plugin.Toasts.Resource.Color.secondary_text_default_material_dark = global::FlyPhone.Droid.Resource.Color.secondary_text_default_material_dark;
+			global::Plugin.Toasts.Resource.Color.secondary_text_default_material_light = global::FlyPhone.Droid.Resource.Color.secondary_text_default_material_light;
+			global::Plugin.Toasts.Resource.Color.secondary_text_disabled_material_dark = global::FlyPhone.Droid.Resource.Color.secondary_text_disabled_material_dark;
+			global::Plugin.Toasts.Resource.Color.secondary_text_disabled_material_light = global::FlyPhone.Droid.Resource.Color.secondary_text_disabled_material_light;
+			global::Plugin.Toasts.Resource.Color.switch_thumb_disabled_material_dark = global::FlyPhone.Droid.Resource.Color.switch_thumb_disabled_material_dark;
+			global::Plugin.Toasts.Resource.Color.switch_thumb_disabled_material_light = global::FlyPhone.Droid.Resource.Color.switch_thumb_disabled_material_light;
+			global::Plugin.Toasts.Resource.Color.switch_thumb_material_dark = global::FlyPhone.Droid.Resource.Color.switch_thumb_material_dark;
+			global::Plugin.Toasts.Resource.Color.switch_thumb_material_light = global::FlyPhone.Droid.Resource.Color.switch_thumb_material_light;
+			global::Plugin.Toasts.Resource.Color.switch_thumb_normal_material_dark = global::FlyPhone.Droid.Resource.Color.switch_thumb_normal_material_dark;
+			global::Plugin.Toasts.Resource.Color.switch_thumb_normal_material_light = global::FlyPhone.Droid.Resource.Color.switch_thumb_normal_material_light;
+			global::Plugin.Toasts.Resource.Dimension.abc_action_bar_content_inset_material = global::FlyPhone.Droid.Resource.Dimension.abc_action_bar_content_inset_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_action_bar_default_height_material = global::FlyPhone.Droid.Resource.Dimension.abc_action_bar_default_height_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_action_bar_default_padding_end_material = global::FlyPhone.Droid.Resource.Dimension.abc_action_bar_default_padding_end_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_action_bar_default_padding_start_material = global::FlyPhone.Droid.Resource.Dimension.abc_action_bar_default_padding_start_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_action_bar_icon_vertical_padding_material = global::FlyPhone.Droid.Resource.Dimension.abc_action_bar_icon_vertical_padding_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_action_bar_overflow_padding_end_material = global::FlyPhone.Droid.Resource.Dimension.abc_action_bar_overflow_padding_end_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_action_bar_overflow_padding_start_material = global::FlyPhone.Droid.Resource.Dimension.abc_action_bar_overflow_padding_start_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_action_bar_progress_bar_size = global::FlyPhone.Droid.Resource.Dimension.abc_action_bar_progress_bar_size;
+			global::Plugin.Toasts.Resource.Dimension.abc_action_bar_stacked_max_height = global::FlyPhone.Droid.Resource.Dimension.abc_action_bar_stacked_max_height;
+			global::Plugin.Toasts.Resource.Dimension.abc_action_bar_stacked_tab_max_width = global::FlyPhone.Droid.Resource.Dimension.abc_action_bar_stacked_tab_max_width;
+			global::Plugin.Toasts.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material = global::FlyPhone.Droid.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_action_bar_subtitle_top_margin_material = global::FlyPhone.Droid.Resource.Dimension.abc_action_bar_subtitle_top_margin_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_action_button_min_height_material = global::FlyPhone.Droid.Resource.Dimension.abc_action_button_min_height_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_action_button_min_width_material = global::FlyPhone.Droid.Resource.Dimension.abc_action_button_min_width_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_action_button_min_width_overflow_material = global::FlyPhone.Droid.Resource.Dimension.abc_action_button_min_width_overflow_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_alert_dialog_button_bar_height = global::FlyPhone.Droid.Resource.Dimension.abc_alert_dialog_button_bar_height;
+			global::Plugin.Toasts.Resource.Dimension.abc_button_inset_horizontal_material = global::FlyPhone.Droid.Resource.Dimension.abc_button_inset_horizontal_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_button_inset_vertical_material = global::FlyPhone.Droid.Resource.Dimension.abc_button_inset_vertical_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_button_padding_horizontal_material = global::FlyPhone.Droid.Resource.Dimension.abc_button_padding_horizontal_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_button_padding_vertical_material = global::FlyPhone.Droid.Resource.Dimension.abc_button_padding_vertical_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_config_prefDialogWidth = global::FlyPhone.Droid.Resource.Dimension.abc_config_prefDialogWidth;
+			global::Plugin.Toasts.Resource.Dimension.abc_control_corner_material = global::FlyPhone.Droid.Resource.Dimension.abc_control_corner_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_control_inset_material = global::FlyPhone.Droid.Resource.Dimension.abc_control_inset_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_control_padding_material = global::FlyPhone.Droid.Resource.Dimension.abc_control_padding_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_dialog_fixed_height_major = global::FlyPhone.Droid.Resource.Dimension.abc_dialog_fixed_height_major;
+			global::Plugin.Toasts.Resource.Dimension.abc_dialog_fixed_height_minor = global::FlyPhone.Droid.Resource.Dimension.abc_dialog_fixed_height_minor;
+			global::Plugin.Toasts.Resource.Dimension.abc_dialog_fixed_width_major = global::FlyPhone.Droid.Resource.Dimension.abc_dialog_fixed_width_major;
+			global::Plugin.Toasts.Resource.Dimension.abc_dialog_fixed_width_minor = global::FlyPhone.Droid.Resource.Dimension.abc_dialog_fixed_width_minor;
+			global::Plugin.Toasts.Resource.Dimension.abc_dialog_min_width_major = global::FlyPhone.Droid.Resource.Dimension.abc_dialog_min_width_major;
+			global::Plugin.Toasts.Resource.Dimension.abc_dialog_min_width_minor = global::FlyPhone.Droid.Resource.Dimension.abc_dialog_min_width_minor;
+			global::Plugin.Toasts.Resource.Dimension.abc_dialog_padding_material = global::FlyPhone.Droid.Resource.Dimension.abc_dialog_padding_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_dialog_padding_top_material = global::FlyPhone.Droid.Resource.Dimension.abc_dialog_padding_top_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_disabled_alpha_material_dark = global::FlyPhone.Droid.Resource.Dimension.abc_disabled_alpha_material_dark;
+			global::Plugin.Toasts.Resource.Dimension.abc_disabled_alpha_material_light = global::FlyPhone.Droid.Resource.Dimension.abc_disabled_alpha_material_light;
+			global::Plugin.Toasts.Resource.Dimension.abc_dropdownitem_icon_width = global::FlyPhone.Droid.Resource.Dimension.abc_dropdownitem_icon_width;
+			global::Plugin.Toasts.Resource.Dimension.abc_dropdownitem_text_padding_left = global::FlyPhone.Droid.Resource.Dimension.abc_dropdownitem_text_padding_left;
+			global::Plugin.Toasts.Resource.Dimension.abc_dropdownitem_text_padding_right = global::FlyPhone.Droid.Resource.Dimension.abc_dropdownitem_text_padding_right;
+			global::Plugin.Toasts.Resource.Dimension.abc_edit_text_inset_bottom_material = global::FlyPhone.Droid.Resource.Dimension.abc_edit_text_inset_bottom_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_edit_text_inset_horizontal_material = global::FlyPhone.Droid.Resource.Dimension.abc_edit_text_inset_horizontal_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_edit_text_inset_top_material = global::FlyPhone.Droid.Resource.Dimension.abc_edit_text_inset_top_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_floating_window_z = global::FlyPhone.Droid.Resource.Dimension.abc_floating_window_z;
+			global::Plugin.Toasts.Resource.Dimension.abc_list_item_padding_horizontal_material = global::FlyPhone.Droid.Resource.Dimension.abc_list_item_padding_horizontal_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_panel_menu_list_width = global::FlyPhone.Droid.Resource.Dimension.abc_panel_menu_list_width;
+			global::Plugin.Toasts.Resource.Dimension.abc_search_view_preferred_width = global::FlyPhone.Droid.Resource.Dimension.abc_search_view_preferred_width;
+			global::Plugin.Toasts.Resource.Dimension.abc_seekbar_track_background_height_material = global::FlyPhone.Droid.Resource.Dimension.abc_seekbar_track_background_height_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_seekbar_track_progress_height_material = global::FlyPhone.Droid.Resource.Dimension.abc_seekbar_track_progress_height_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_select_dialog_padding_start_material = global::FlyPhone.Droid.Resource.Dimension.abc_select_dialog_padding_start_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_switch_padding = global::FlyPhone.Droid.Resource.Dimension.abc_switch_padding;
+			global::Plugin.Toasts.Resource.Dimension.abc_text_size_body_1_material = global::FlyPhone.Droid.Resource.Dimension.abc_text_size_body_1_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_text_size_body_2_material = global::FlyPhone.Droid.Resource.Dimension.abc_text_size_body_2_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_text_size_button_material = global::FlyPhone.Droid.Resource.Dimension.abc_text_size_button_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_text_size_caption_material = global::FlyPhone.Droid.Resource.Dimension.abc_text_size_caption_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_text_size_display_1_material = global::FlyPhone.Droid.Resource.Dimension.abc_text_size_display_1_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_text_size_display_2_material = global::FlyPhone.Droid.Resource.Dimension.abc_text_size_display_2_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_text_size_display_3_material = global::FlyPhone.Droid.Resource.Dimension.abc_text_size_display_3_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_text_size_display_4_material = global::FlyPhone.Droid.Resource.Dimension.abc_text_size_display_4_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_text_size_headline_material = global::FlyPhone.Droid.Resource.Dimension.abc_text_size_headline_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_text_size_large_material = global::FlyPhone.Droid.Resource.Dimension.abc_text_size_large_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_text_size_medium_material = global::FlyPhone.Droid.Resource.Dimension.abc_text_size_medium_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_text_size_menu_material = global::FlyPhone.Droid.Resource.Dimension.abc_text_size_menu_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_text_size_small_material = global::FlyPhone.Droid.Resource.Dimension.abc_text_size_small_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_text_size_subhead_material = global::FlyPhone.Droid.Resource.Dimension.abc_text_size_subhead_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_text_size_subtitle_material_toolbar = global::FlyPhone.Droid.Resource.Dimension.abc_text_size_subtitle_material_toolbar;
+			global::Plugin.Toasts.Resource.Dimension.abc_text_size_title_material = global::FlyPhone.Droid.Resource.Dimension.abc_text_size_title_material;
+			global::Plugin.Toasts.Resource.Dimension.abc_text_size_title_material_toolbar = global::FlyPhone.Droid.Resource.Dimension.abc_text_size_title_material_toolbar;
+			global::Plugin.Toasts.Resource.Dimension.design_appbar_elevation = global::FlyPhone.Droid.Resource.Dimension.design_appbar_elevation;
+			global::Plugin.Toasts.Resource.Dimension.design_bottom_sheet_modal_elevation = global::FlyPhone.Droid.Resource.Dimension.design_bottom_sheet_modal_elevation;
+			global::Plugin.Toasts.Resource.Dimension.design_fab_border_width = global::FlyPhone.Droid.Resource.Dimension.design_fab_border_width;
+			global::Plugin.Toasts.Resource.Dimension.design_fab_elevation = global::FlyPhone.Droid.Resource.Dimension.design_fab_elevation;
+			global::Plugin.Toasts.Resource.Dimension.design_fab_image_size = global::FlyPhone.Droid.Resource.Dimension.design_fab_image_size;
+			global::Plugin.Toasts.Resource.Dimension.design_fab_size_mini = global::FlyPhone.Droid.Resource.Dimension.design_fab_size_mini;
+			global::Plugin.Toasts.Resource.Dimension.design_fab_size_normal = global::FlyPhone.Droid.Resource.Dimension.design_fab_size_normal;
+			global::Plugin.Toasts.Resource.Dimension.design_fab_translation_z_pressed = global::FlyPhone.Droid.Resource.Dimension.design_fab_translation_z_pressed;
+			global::Plugin.Toasts.Resource.Dimension.design_navigation_elevation = global::FlyPhone.Droid.Resource.Dimension.design_navigation_elevation;
+			global::Plugin.Toasts.Resource.Dimension.design_navigation_icon_padding = global::FlyPhone.Droid.Resource.Dimension.design_navigation_icon_padding;
+			global::Plugin.Toasts.Resource.Dimension.design_navigation_icon_size = global::FlyPhone.Droid.Resource.Dimension.design_navigation_icon_size;
+			global::Plugin.Toasts.Resource.Dimension.design_navigation_max_width = global::FlyPhone.Droid.Resource.Dimension.design_navigation_max_width;
+			global::Plugin.Toasts.Resource.Dimension.design_navigation_padding_bottom = global::FlyPhone.Droid.Resource.Dimension.design_navigation_padding_bottom;
+			global::Plugin.Toasts.Resource.Dimension.design_navigation_separator_vertical_padding = global::FlyPhone.Droid.Resource.Dimension.design_navigation_separator_vertical_padding;
+			global::Plugin.Toasts.Resource.Dimension.design_snackbar_action_inline_max_width = global::FlyPhone.Droid.Resource.Dimension.design_snackbar_action_inline_max_width;
+			global::Plugin.Toasts.Resource.Dimension.design_snackbar_background_corner_radius = global::FlyPhone.Droid.Resource.Dimension.design_snackbar_background_corner_radius;
+			global::Plugin.Toasts.Resource.Dimension.design_snackbar_elevation = global::FlyPhone.Droid.Resource.Dimension.design_snackbar_elevation;
+			global::Plugin.Toasts.Resource.Dimension.design_snackbar_extra_spacing_horizontal = global::FlyPhone.Droid.Resource.Dimension.design_snackbar_extra_spacing_horizontal;
+			global::Plugin.Toasts.Resource.Dimension.design_snackbar_max_width = global::FlyPhone.Droid.Resource.Dimension.design_snackbar_max_width;
+			global::Plugin.Toasts.Resource.Dimension.design_snackbar_min_width = global::FlyPhone.Droid.Resource.Dimension.design_snackbar_min_width;
+			global::Plugin.Toasts.Resource.Dimension.design_snackbar_padding_horizontal = global::FlyPhone.Droid.Resource.Dimension.design_snackbar_padding_horizontal;
+			global::Plugin.Toasts.Resource.Dimension.design_snackbar_padding_vertical = global::FlyPhone.Droid.Resource.Dimension.design_snackbar_padding_vertical;
+			global::Plugin.Toasts.Resource.Dimension.design_snackbar_padding_vertical_2lines = global::FlyPhone.Droid.Resource.Dimension.design_snackbar_padding_vertical_2lines;
+			global::Plugin.Toasts.Resource.Dimension.design_snackbar_text_size = global::FlyPhone.Droid.Resource.Dimension.design_snackbar_text_size;
+			global::Plugin.Toasts.Resource.Dimension.design_tab_max_width = global::FlyPhone.Droid.Resource.Dimension.design_tab_max_width;
+			global::Plugin.Toasts.Resource.Dimension.design_tab_scrollable_min_width = global::FlyPhone.Droid.Resource.Dimension.design_tab_scrollable_min_width;
+			global::Plugin.Toasts.Resource.Dimension.design_tab_text_size = global::FlyPhone.Droid.Resource.Dimension.design_tab_text_size;
+			global::Plugin.Toasts.Resource.Dimension.design_tab_text_size_2line = global::FlyPhone.Droid.Resource.Dimension.design_tab_text_size_2line;
+			global::Plugin.Toasts.Resource.Dimension.disabled_alpha_material_dark = global::FlyPhone.Droid.Resource.Dimension.disabled_alpha_material_dark;
+			global::Plugin.Toasts.Resource.Dimension.disabled_alpha_material_light = global::FlyPhone.Droid.Resource.Dimension.disabled_alpha_material_light;
+			global::Plugin.Toasts.Resource.Dimension.highlight_alpha_material_colored = global::FlyPhone.Droid.Resource.Dimension.highlight_alpha_material_colored;
+			global::Plugin.Toasts.Resource.Dimension.highlight_alpha_material_dark = global::FlyPhone.Droid.Resource.Dimension.highlight_alpha_material_dark;
+			global::Plugin.Toasts.Resource.Dimension.highlight_alpha_material_light = global::FlyPhone.Droid.Resource.Dimension.highlight_alpha_material_light;
+			global::Plugin.Toasts.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame = global::FlyPhone.Droid.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame;
+			global::Plugin.Toasts.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity = global::FlyPhone.Droid.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity;
+			global::Plugin.Toasts.Resource.Dimension.item_touch_helper_swipe_escape_velocity = global::FlyPhone.Droid.Resource.Dimension.item_touch_helper_swipe_escape_velocity;
+			global::Plugin.Toasts.Resource.Dimension.notification_large_icon_height = global::FlyPhone.Droid.Resource.Dimension.notification_large_icon_height;
+			global::Plugin.Toasts.Resource.Dimension.notification_large_icon_width = global::FlyPhone.Droid.Resource.Dimension.notification_large_icon_width;
+			global::Plugin.Toasts.Resource.Dimension.notification_subtext_size = global::FlyPhone.Droid.Resource.Dimension.notification_subtext_size;
+			global::Plugin.Toasts.Resource.Drawable.abc_ab_share_pack_mtrl_alpha = global::FlyPhone.Droid.Resource.Drawable.abc_ab_share_pack_mtrl_alpha;
+			global::Plugin.Toasts.Resource.Drawable.abc_action_bar_item_background_material = global::FlyPhone.Droid.Resource.Drawable.abc_action_bar_item_background_material;
+			global::Plugin.Toasts.Resource.Drawable.abc_btn_borderless_material = global::FlyPhone.Droid.Resource.Drawable.abc_btn_borderless_material;
+			global::Plugin.Toasts.Resource.Drawable.abc_btn_check_material = global::FlyPhone.Droid.Resource.Drawable.abc_btn_check_material;
+			global::Plugin.Toasts.Resource.Drawable.abc_btn_check_to_on_mtrl_000 = global::FlyPhone.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_000;
+			global::Plugin.Toasts.Resource.Drawable.abc_btn_check_to_on_mtrl_015 = global::FlyPhone.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_015;
+			global::Plugin.Toasts.Resource.Drawable.abc_btn_colored_material = global::FlyPhone.Droid.Resource.Drawable.abc_btn_colored_material;
+			global::Plugin.Toasts.Resource.Drawable.abc_btn_default_mtrl_shape = global::FlyPhone.Droid.Resource.Drawable.abc_btn_default_mtrl_shape;
+			global::Plugin.Toasts.Resource.Drawable.abc_btn_radio_material = global::FlyPhone.Droid.Resource.Drawable.abc_btn_radio_material;
+			global::Plugin.Toasts.Resource.Drawable.abc_btn_radio_to_on_mtrl_000 = global::FlyPhone.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_000;
+			global::Plugin.Toasts.Resource.Drawable.abc_btn_radio_to_on_mtrl_015 = global::FlyPhone.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_015;
+			global::Plugin.Toasts.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001 = global::FlyPhone.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001;
+			global::Plugin.Toasts.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012 = global::FlyPhone.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012;
+			global::Plugin.Toasts.Resource.Drawable.abc_cab_background_internal_bg = global::FlyPhone.Droid.Resource.Drawable.abc_cab_background_internal_bg;
+			global::Plugin.Toasts.Resource.Drawable.abc_cab_background_top_material = global::FlyPhone.Droid.Resource.Drawable.abc_cab_background_top_material;
+			global::Plugin.Toasts.Resource.Drawable.abc_cab_background_top_mtrl_alpha = global::FlyPhone.Droid.Resource.Drawable.abc_cab_background_top_mtrl_alpha;
+			global::Plugin.Toasts.Resource.Drawable.abc_control_background_material = global::FlyPhone.Droid.Resource.Drawable.abc_control_background_material;
+			global::Plugin.Toasts.Resource.Drawable.abc_edit_text_material = global::FlyPhone.Droid.Resource.Drawable.abc_edit_text_material;
+			global::Plugin.Toasts.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha = global::FlyPhone.Droid.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha;
+			global::Plugin.Toasts.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha = global::FlyPhone.Droid.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha;
+			global::Plugin.Toasts.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha = global::FlyPhone.Droid.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha;
+			global::Plugin.Toasts.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha = global::FlyPhone.Droid.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha;
+			global::Plugin.Toasts.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha = global::FlyPhone.Droid.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha;
+			global::Plugin.Toasts.Resource.Drawable.abc_ic_menu_share_mtrl_alpha = global::FlyPhone.Droid.Resource.Drawable.abc_ic_menu_share_mtrl_alpha;
+			global::Plugin.Toasts.Resource.Drawable.abc_ic_star_black_16dp = global::FlyPhone.Droid.Resource.Drawable.abc_ic_star_black_16dp;
+			global::Plugin.Toasts.Resource.Drawable.abc_ic_star_black_36dp = global::FlyPhone.Droid.Resource.Drawable.abc_ic_star_black_36dp;
+			global::Plugin.Toasts.Resource.Drawable.abc_ic_star_half_black_16dp = global::FlyPhone.Droid.Resource.Drawable.abc_ic_star_half_black_16dp;
+			global::Plugin.Toasts.Resource.Drawable.abc_ic_star_half_black_36dp = global::FlyPhone.Droid.Resource.Drawable.abc_ic_star_half_black_36dp;
+			global::Plugin.Toasts.Resource.Drawable.abc_item_background_holo_dark = global::FlyPhone.Droid.Resource.Drawable.abc_item_background_holo_dark;
+			global::Plugin.Toasts.Resource.Drawable.abc_item_background_holo_light = global::FlyPhone.Droid.Resource.Drawable.abc_item_background_holo_light;
+			global::Plugin.Toasts.Resource.Drawable.abc_list_divider_mtrl_alpha = global::FlyPhone.Droid.Resource.Drawable.abc_list_divider_mtrl_alpha;
+			global::Plugin.Toasts.Resource.Drawable.abc_list_focused_holo = global::FlyPhone.Droid.Resource.Drawable.abc_list_focused_holo;
+			global::Plugin.Toasts.Resource.Drawable.abc_list_longpressed_holo = global::FlyPhone.Droid.Resource.Drawable.abc_list_longpressed_holo;
+			global::Plugin.Toasts.Resource.Drawable.abc_list_pressed_holo_dark = global::FlyPhone.Droid.Resource.Drawable.abc_list_pressed_holo_dark;
+			global::Plugin.Toasts.Resource.Drawable.abc_list_pressed_holo_light = global::FlyPhone.Droid.Resource.Drawable.abc_list_pressed_holo_light;
+			global::Plugin.Toasts.Resource.Drawable.abc_list_selector_background_transition_holo_dark = global::FlyPhone.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_dark;
+			global::Plugin.Toasts.Resource.Drawable.abc_list_selector_background_transition_holo_light = global::FlyPhone.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_light;
+			global::Plugin.Toasts.Resource.Drawable.abc_list_selector_disabled_holo_dark = global::FlyPhone.Droid.Resource.Drawable.abc_list_selector_disabled_holo_dark;
+			global::Plugin.Toasts.Resource.Drawable.abc_list_selector_disabled_holo_light = global::FlyPhone.Droid.Resource.Drawable.abc_list_selector_disabled_holo_light;
+			global::Plugin.Toasts.Resource.Drawable.abc_list_selector_holo_dark = global::FlyPhone.Droid.Resource.Drawable.abc_list_selector_holo_dark;
+			global::Plugin.Toasts.Resource.Drawable.abc_list_selector_holo_light = global::FlyPhone.Droid.Resource.Drawable.abc_list_selector_holo_light;
+			global::Plugin.Toasts.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult = global::FlyPhone.Droid.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult;
+			global::Plugin.Toasts.Resource.Drawable.abc_popup_background_mtrl_mult = global::FlyPhone.Droid.Resource.Drawable.abc_popup_background_mtrl_mult;
+			global::Plugin.Toasts.Resource.Drawable.abc_ratingbar_indicator_material = global::FlyPhone.Droid.Resource.Drawable.abc_ratingbar_indicator_material;
+			global::Plugin.Toasts.Resource.Drawable.abc_ratingbar_small_material = global::FlyPhone.Droid.Resource.Drawable.abc_ratingbar_small_material;
+			global::Plugin.Toasts.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha = global::FlyPhone.Droid.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha;
+			global::Plugin.Toasts.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000 = global::FlyPhone.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000;
+			global::Plugin.Toasts.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005 = global::FlyPhone.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005;
+			global::Plugin.Toasts.Resource.Drawable.abc_scrubber_primary_mtrl_alpha = global::FlyPhone.Droid.Resource.Drawable.abc_scrubber_primary_mtrl_alpha;
+			global::Plugin.Toasts.Resource.Drawable.abc_scrubber_track_mtrl_alpha = global::FlyPhone.Droid.Resource.Drawable.abc_scrubber_track_mtrl_alpha;
+			global::Plugin.Toasts.Resource.Drawable.abc_seekbar_thumb_material = global::FlyPhone.Droid.Resource.Drawable.abc_seekbar_thumb_material;
+			global::Plugin.Toasts.Resource.Drawable.abc_seekbar_track_material = global::FlyPhone.Droid.Resource.Drawable.abc_seekbar_track_material;
+			global::Plugin.Toasts.Resource.Drawable.abc_spinner_mtrl_am_alpha = global::FlyPhone.Droid.Resource.Drawable.abc_spinner_mtrl_am_alpha;
+			global::Plugin.Toasts.Resource.Drawable.abc_spinner_textfield_background_material = global::FlyPhone.Droid.Resource.Drawable.abc_spinner_textfield_background_material;
+			global::Plugin.Toasts.Resource.Drawable.abc_switch_thumb_material = global::FlyPhone.Droid.Resource.Drawable.abc_switch_thumb_material;
+			global::Plugin.Toasts.Resource.Drawable.abc_switch_track_mtrl_alpha = global::FlyPhone.Droid.Resource.Drawable.abc_switch_track_mtrl_alpha;
+			global::Plugin.Toasts.Resource.Drawable.abc_tab_indicator_material = global::FlyPhone.Droid.Resource.Drawable.abc_tab_indicator_material;
+			global::Plugin.Toasts.Resource.Drawable.abc_tab_indicator_mtrl_alpha = global::FlyPhone.Droid.Resource.Drawable.abc_tab_indicator_mtrl_alpha;
+			global::Plugin.Toasts.Resource.Drawable.abc_text_cursor_material = global::FlyPhone.Droid.Resource.Drawable.abc_text_cursor_material;
+			global::Plugin.Toasts.Resource.Drawable.abc_textfield_activated_mtrl_alpha = global::FlyPhone.Droid.Resource.Drawable.abc_textfield_activated_mtrl_alpha;
+			global::Plugin.Toasts.Resource.Drawable.abc_textfield_default_mtrl_alpha = global::FlyPhone.Droid.Resource.Drawable.abc_textfield_default_mtrl_alpha;
+			global::Plugin.Toasts.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha = global::FlyPhone.Droid.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha;
+			global::Plugin.Toasts.Resource.Drawable.abc_textfield_search_default_mtrl_alpha = global::FlyPhone.Droid.Resource.Drawable.abc_textfield_search_default_mtrl_alpha;
+			global::Plugin.Toasts.Resource.Drawable.abc_textfield_search_material = global::FlyPhone.Droid.Resource.Drawable.abc_textfield_search_material;
+			global::Plugin.Toasts.Resource.Drawable.design_fab_background = global::FlyPhone.Droid.Resource.Drawable.design_fab_background;
+			global::Plugin.Toasts.Resource.Drawable.design_snackbar_background = global::FlyPhone.Droid.Resource.Drawable.design_snackbar_background;
+			global::Plugin.Toasts.Resource.Drawable.notification_template_icon_bg = global::FlyPhone.Droid.Resource.Drawable.notification_template_icon_bg;
+			global::Plugin.Toasts.Resource.Id.action0 = global::FlyPhone.Droid.Resource.Id.action0;
+			global::Plugin.Toasts.Resource.Id.action_bar = global::FlyPhone.Droid.Resource.Id.action_bar;
+			global::Plugin.Toasts.Resource.Id.action_bar_activity_content = global::FlyPhone.Droid.Resource.Id.action_bar_activity_content;
+			global::Plugin.Toasts.Resource.Id.action_bar_container = global::FlyPhone.Droid.Resource.Id.action_bar_container;
+			global::Plugin.Toasts.Resource.Id.action_bar_root = global::FlyPhone.Droid.Resource.Id.action_bar_root;
+			global::Plugin.Toasts.Resource.Id.action_bar_spinner = global::FlyPhone.Droid.Resource.Id.action_bar_spinner;
+			global::Plugin.Toasts.Resource.Id.action_bar_subtitle = global::FlyPhone.Droid.Resource.Id.action_bar_subtitle;
+			global::Plugin.Toasts.Resource.Id.action_bar_title = global::FlyPhone.Droid.Resource.Id.action_bar_title;
+			global::Plugin.Toasts.Resource.Id.action_context_bar = global::FlyPhone.Droid.Resource.Id.action_context_bar;
+			global::Plugin.Toasts.Resource.Id.action_divider = global::FlyPhone.Droid.Resource.Id.action_divider;
+			global::Plugin.Toasts.Resource.Id.action_menu_divider = global::FlyPhone.Droid.Resource.Id.action_menu_divider;
+			global::Plugin.Toasts.Resource.Id.action_menu_presenter = global::FlyPhone.Droid.Resource.Id.action_menu_presenter;
+			global::Plugin.Toasts.Resource.Id.action_mode_bar = global::FlyPhone.Droid.Resource.Id.action_mode_bar;
+			global::Plugin.Toasts.Resource.Id.action_mode_bar_stub = global::FlyPhone.Droid.Resource.Id.action_mode_bar_stub;
+			global::Plugin.Toasts.Resource.Id.action_mode_close_button = global::FlyPhone.Droid.Resource.Id.action_mode_close_button;
+			global::Plugin.Toasts.Resource.Id.activity_chooser_view_content = global::FlyPhone.Droid.Resource.Id.activity_chooser_view_content;
+			global::Plugin.Toasts.Resource.Id.alertTitle = global::FlyPhone.Droid.Resource.Id.alertTitle;
+			global::Plugin.Toasts.Resource.Id.always = global::FlyPhone.Droid.Resource.Id.always;
+			global::Plugin.Toasts.Resource.Id.beginning = global::FlyPhone.Droid.Resource.Id.beginning;
+			global::Plugin.Toasts.Resource.Id.bottom = global::FlyPhone.Droid.Resource.Id.bottom;
+			global::Plugin.Toasts.Resource.Id.buttonPanel = global::FlyPhone.Droid.Resource.Id.buttonPanel;
+			global::Plugin.Toasts.Resource.Id.cancel_action = global::FlyPhone.Droid.Resource.Id.cancel_action;
+			global::Plugin.Toasts.Resource.Id.center = global::FlyPhone.Droid.Resource.Id.center;
+			global::Plugin.Toasts.Resource.Id.center_horizontal = global::FlyPhone.Droid.Resource.Id.center_horizontal;
+			global::Plugin.Toasts.Resource.Id.center_vertical = global::FlyPhone.Droid.Resource.Id.center_vertical;
+			global::Plugin.Toasts.Resource.Id.checkbox = global::FlyPhone.Droid.Resource.Id.checkbox;
+			global::Plugin.Toasts.Resource.Id.chronometer = global::FlyPhone.Droid.Resource.Id.chronometer;
+			global::Plugin.Toasts.Resource.Id.clip_horizontal = global::FlyPhone.Droid.Resource.Id.clip_horizontal;
+			global::Plugin.Toasts.Resource.Id.clip_vertical = global::FlyPhone.Droid.Resource.Id.clip_vertical;
+			global::Plugin.Toasts.Resource.Id.collapseActionView = global::FlyPhone.Droid.Resource.Id.collapseActionView;
+			global::Plugin.Toasts.Resource.Id.contentPanel = global::FlyPhone.Droid.Resource.Id.contentPanel;
+			global::Plugin.Toasts.Resource.Id.custom = global::FlyPhone.Droid.Resource.Id.custom;
+			global::Plugin.Toasts.Resource.Id.customPanel = global::FlyPhone.Droid.Resource.Id.customPanel;
+			global::Plugin.Toasts.Resource.Id.decor_content_parent = global::FlyPhone.Droid.Resource.Id.decor_content_parent;
+			global::Plugin.Toasts.Resource.Id.default_activity_button = global::FlyPhone.Droid.Resource.Id.default_activity_button;
+			global::Plugin.Toasts.Resource.Id.design_bottom_sheet = global::FlyPhone.Droid.Resource.Id.design_bottom_sheet;
+			global::Plugin.Toasts.Resource.Id.design_menu_item_action_area = global::FlyPhone.Droid.Resource.Id.design_menu_item_action_area;
+			global::Plugin.Toasts.Resource.Id.design_menu_item_action_area_stub = global::FlyPhone.Droid.Resource.Id.design_menu_item_action_area_stub;
+			global::Plugin.Toasts.Resource.Id.design_menu_item_text = global::FlyPhone.Droid.Resource.Id.design_menu_item_text;
+			global::Plugin.Toasts.Resource.Id.design_navigation_view = global::FlyPhone.Droid.Resource.Id.design_navigation_view;
+			global::Plugin.Toasts.Resource.Id.disableHome = global::FlyPhone.Droid.Resource.Id.disableHome;
+			global::Plugin.Toasts.Resource.Id.edit_query = global::FlyPhone.Droid.Resource.Id.edit_query;
+			global::Plugin.Toasts.Resource.Id.end = global::FlyPhone.Droid.Resource.Id.end;
+			global::Plugin.Toasts.Resource.Id.end_padder = global::FlyPhone.Droid.Resource.Id.end_padder;
+			global::Plugin.Toasts.Resource.Id.enterAlways = global::FlyPhone.Droid.Resource.Id.enterAlways;
+			global::Plugin.Toasts.Resource.Id.enterAlwaysCollapsed = global::FlyPhone.Droid.Resource.Id.enterAlwaysCollapsed;
+			global::Plugin.Toasts.Resource.Id.exitUntilCollapsed = global::FlyPhone.Droid.Resource.Id.exitUntilCollapsed;
+			global::Plugin.Toasts.Resource.Id.expand_activities_button = global::FlyPhone.Droid.Resource.Id.expand_activities_button;
+			global::Plugin.Toasts.Resource.Id.expanded_menu = global::FlyPhone.Droid.Resource.Id.expanded_menu;
+			global::Plugin.Toasts.Resource.Id.fill = global::FlyPhone.Droid.Resource.Id.fill;
+			global::Plugin.Toasts.Resource.Id.fill_horizontal = global::FlyPhone.Droid.Resource.Id.fill_horizontal;
+			global::Plugin.Toasts.Resource.Id.fill_vertical = global::FlyPhone.Droid.Resource.Id.fill_vertical;
+			global::Plugin.Toasts.Resource.Id.@fixed = global::FlyPhone.Droid.Resource.Id.@fixed;
+			global::Plugin.Toasts.Resource.Id.home = global::FlyPhone.Droid.Resource.Id.home;
+			global::Plugin.Toasts.Resource.Id.homeAsUp = global::FlyPhone.Droid.Resource.Id.homeAsUp;
+			global::Plugin.Toasts.Resource.Id.icon = global::FlyPhone.Droid.Resource.Id.icon;
+			global::Plugin.Toasts.Resource.Id.ifRoom = global::FlyPhone.Droid.Resource.Id.ifRoom;
+			global::Plugin.Toasts.Resource.Id.image = global::FlyPhone.Droid.Resource.Id.image;
+			global::Plugin.Toasts.Resource.Id.info = global::FlyPhone.Droid.Resource.Id.info;
+			global::Plugin.Toasts.Resource.Id.item_touch_helper_previous_elevation = global::FlyPhone.Droid.Resource.Id.item_touch_helper_previous_elevation;
+			global::Plugin.Toasts.Resource.Id.left = global::FlyPhone.Droid.Resource.Id.left;
+			global::Plugin.Toasts.Resource.Id.line1 = global::FlyPhone.Droid.Resource.Id.line1;
+			global::Plugin.Toasts.Resource.Id.line3 = global::FlyPhone.Droid.Resource.Id.line3;
+			global::Plugin.Toasts.Resource.Id.listMode = global::FlyPhone.Droid.Resource.Id.listMode;
+			global::Plugin.Toasts.Resource.Id.list_item = global::FlyPhone.Droid.Resource.Id.list_item;
+			global::Plugin.Toasts.Resource.Id.media_actions = global::FlyPhone.Droid.Resource.Id.media_actions;
+			global::Plugin.Toasts.Resource.Id.middle = global::FlyPhone.Droid.Resource.Id.middle;
+			global::Plugin.Toasts.Resource.Id.mini = global::FlyPhone.Droid.Resource.Id.mini;
+			global::Plugin.Toasts.Resource.Id.multiply = global::FlyPhone.Droid.Resource.Id.multiply;
+			global::Plugin.Toasts.Resource.Id.navigation_header_container = global::FlyPhone.Droid.Resource.Id.navigation_header_container;
+			global::Plugin.Toasts.Resource.Id.never = global::FlyPhone.Droid.Resource.Id.never;
+			global::Plugin.Toasts.Resource.Id.none = global::FlyPhone.Droid.Resource.Id.none;
+			global::Plugin.Toasts.Resource.Id.normal = global::FlyPhone.Droid.Resource.Id.normal;
+			global::Plugin.Toasts.Resource.Id.parallax = global::FlyPhone.Droid.Resource.Id.parallax;
+			global::Plugin.Toasts.Resource.Id.parentPanel = global::FlyPhone.Droid.Resource.Id.parentPanel;
+			global::Plugin.Toasts.Resource.Id.pin = global::FlyPhone.Droid.Resource.Id.pin;
+			global::Plugin.Toasts.Resource.Id.progress_circular = global::FlyPhone.Droid.Resource.Id.progress_circular;
+			global::Plugin.Toasts.Resource.Id.progress_horizontal = global::FlyPhone.Droid.Resource.Id.progress_horizontal;
+			global::Plugin.Toasts.Resource.Id.radio = global::FlyPhone.Droid.Resource.Id.radio;
+			global::Plugin.Toasts.Resource.Id.right = global::FlyPhone.Droid.Resource.Id.right;
+			global::Plugin.Toasts.Resource.Id.screen = global::FlyPhone.Droid.Resource.Id.screen;
+			global::Plugin.Toasts.Resource.Id.scroll = global::FlyPhone.Droid.Resource.Id.scroll;
+			global::Plugin.Toasts.Resource.Id.scrollIndicatorDown = global::FlyPhone.Droid.Resource.Id.scrollIndicatorDown;
+			global::Plugin.Toasts.Resource.Id.scrollIndicatorUp = global::FlyPhone.Droid.Resource.Id.scrollIndicatorUp;
+			global::Plugin.Toasts.Resource.Id.scrollView = global::FlyPhone.Droid.Resource.Id.scrollView;
+			global::Plugin.Toasts.Resource.Id.scrollable = global::FlyPhone.Droid.Resource.Id.scrollable;
+			global::Plugin.Toasts.Resource.Id.search_badge = global::FlyPhone.Droid.Resource.Id.search_badge;
+			global::Plugin.Toasts.Resource.Id.search_bar = global::FlyPhone.Droid.Resource.Id.search_bar;
+			global::Plugin.Toasts.Resource.Id.search_button = global::FlyPhone.Droid.Resource.Id.search_button;
+			global::Plugin.Toasts.Resource.Id.search_close_btn = global::FlyPhone.Droid.Resource.Id.search_close_btn;
+			global::Plugin.Toasts.Resource.Id.search_edit_frame = global::FlyPhone.Droid.Resource.Id.search_edit_frame;
+			global::Plugin.Toasts.Resource.Id.search_go_btn = global::FlyPhone.Droid.Resource.Id.search_go_btn;
+			global::Plugin.Toasts.Resource.Id.search_mag_icon = global::FlyPhone.Droid.Resource.Id.search_mag_icon;
+			global::Plugin.Toasts.Resource.Id.search_plate = global::FlyPhone.Droid.Resource.Id.search_plate;
+			global::Plugin.Toasts.Resource.Id.search_src_text = global::FlyPhone.Droid.Resource.Id.search_src_text;
+			global::Plugin.Toasts.Resource.Id.search_voice_btn = global::FlyPhone.Droid.Resource.Id.search_voice_btn;
+			global::Plugin.Toasts.Resource.Id.select_dialog_listview = global::FlyPhone.Droid.Resource.Id.select_dialog_listview;
+			global::Plugin.Toasts.Resource.Id.shortcut = global::FlyPhone.Droid.Resource.Id.shortcut;
+			global::Plugin.Toasts.Resource.Id.showCustom = global::FlyPhone.Droid.Resource.Id.showCustom;
+			global::Plugin.Toasts.Resource.Id.showHome = global::FlyPhone.Droid.Resource.Id.showHome;
+			global::Plugin.Toasts.Resource.Id.showTitle = global::FlyPhone.Droid.Resource.Id.showTitle;
+			global::Plugin.Toasts.Resource.Id.snackbar_action = global::FlyPhone.Droid.Resource.Id.snackbar_action;
+			global::Plugin.Toasts.Resource.Id.snackbar_text = global::FlyPhone.Droid.Resource.Id.snackbar_text;
+			global::Plugin.Toasts.Resource.Id.snap = global::FlyPhone.Droid.Resource.Id.snap;
+			global::Plugin.Toasts.Resource.Id.spacer = global::FlyPhone.Droid.Resource.Id.spacer;
+			global::Plugin.Toasts.Resource.Id.split_action_bar = global::FlyPhone.Droid.Resource.Id.split_action_bar;
+			global::Plugin.Toasts.Resource.Id.src_atop = global::FlyPhone.Droid.Resource.Id.src_atop;
+			global::Plugin.Toasts.Resource.Id.src_in = global::FlyPhone.Droid.Resource.Id.src_in;
+			global::Plugin.Toasts.Resource.Id.src_over = global::FlyPhone.Droid.Resource.Id.src_over;
+			global::Plugin.Toasts.Resource.Id.start = global::FlyPhone.Droid.Resource.Id.start;
+			global::Plugin.Toasts.Resource.Id.status_bar_latest_event_content = global::FlyPhone.Droid.Resource.Id.status_bar_latest_event_content;
+			global::Plugin.Toasts.Resource.Id.submit_area = global::FlyPhone.Droid.Resource.Id.submit_area;
+			global::Plugin.Toasts.Resource.Id.tabMode = global::FlyPhone.Droid.Resource.Id.tabMode;
+			global::Plugin.Toasts.Resource.Id.text = global::FlyPhone.Droid.Resource.Id.text;
+			global::Plugin.Toasts.Resource.Id.text2 = global::FlyPhone.Droid.Resource.Id.text2;
+			global::Plugin.Toasts.Resource.Id.textSpacerNoButtons = global::FlyPhone.Droid.Resource.Id.textSpacerNoButtons;
+			global::Plugin.Toasts.Resource.Id.time = global::FlyPhone.Droid.Resource.Id.time;
+			global::Plugin.Toasts.Resource.Id.title = global::FlyPhone.Droid.Resource.Id.title;
+			global::Plugin.Toasts.Resource.Id.title_template = global::FlyPhone.Droid.Resource.Id.title_template;
+			global::Plugin.Toasts.Resource.Id.top = global::FlyPhone.Droid.Resource.Id.top;
+			global::Plugin.Toasts.Resource.Id.topPanel = global::FlyPhone.Droid.Resource.Id.topPanel;
+			global::Plugin.Toasts.Resource.Id.touch_outside = global::FlyPhone.Droid.Resource.Id.touch_outside;
+			global::Plugin.Toasts.Resource.Id.up = global::FlyPhone.Droid.Resource.Id.up;
+			global::Plugin.Toasts.Resource.Id.useLogo = global::FlyPhone.Droid.Resource.Id.useLogo;
+			global::Plugin.Toasts.Resource.Id.view_offset_helper = global::FlyPhone.Droid.Resource.Id.view_offset_helper;
+			global::Plugin.Toasts.Resource.Id.withText = global::FlyPhone.Droid.Resource.Id.withText;
+			global::Plugin.Toasts.Resource.Id.wrap_content = global::FlyPhone.Droid.Resource.Id.wrap_content;
+			global::Plugin.Toasts.Resource.Integer.abc_config_activityDefaultDur = global::FlyPhone.Droid.Resource.Integer.abc_config_activityDefaultDur;
+			global::Plugin.Toasts.Resource.Integer.abc_config_activityShortDur = global::FlyPhone.Droid.Resource.Integer.abc_config_activityShortDur;
+			global::Plugin.Toasts.Resource.Integer.bottom_sheet_slide_duration = global::FlyPhone.Droid.Resource.Integer.bottom_sheet_slide_duration;
+			global::Plugin.Toasts.Resource.Integer.cancel_button_image_alpha = global::FlyPhone.Droid.Resource.Integer.cancel_button_image_alpha;
+			global::Plugin.Toasts.Resource.Integer.design_snackbar_text_max_lines = global::FlyPhone.Droid.Resource.Integer.design_snackbar_text_max_lines;
+			global::Plugin.Toasts.Resource.Integer.status_bar_notification_info_maxnum = global::FlyPhone.Droid.Resource.Integer.status_bar_notification_info_maxnum;
+			global::Plugin.Toasts.Resource.Layout.abc_action_bar_title_item = global::FlyPhone.Droid.Resource.Layout.abc_action_bar_title_item;
+			global::Plugin.Toasts.Resource.Layout.abc_action_bar_up_container = global::FlyPhone.Droid.Resource.Layout.abc_action_bar_up_container;
+			global::Plugin.Toasts.Resource.Layout.abc_action_menu_item_layout = global::FlyPhone.Droid.Resource.Layout.abc_action_menu_item_layout;
+			global::Plugin.Toasts.Resource.Layout.abc_action_menu_layout = global::FlyPhone.Droid.Resource.Layout.abc_action_menu_layout;
+			global::Plugin.Toasts.Resource.Layout.abc_action_mode_bar = global::FlyPhone.Droid.Resource.Layout.abc_action_mode_bar;
+			global::Plugin.Toasts.Resource.Layout.abc_action_mode_close_item_material = global::FlyPhone.Droid.Resource.Layout.abc_action_mode_close_item_material;
+			global::Plugin.Toasts.Resource.Layout.abc_activity_chooser_view = global::FlyPhone.Droid.Resource.Layout.abc_activity_chooser_view;
+			global::Plugin.Toasts.Resource.Layout.abc_activity_chooser_view_list_item = global::FlyPhone.Droid.Resource.Layout.abc_activity_chooser_view_list_item;
+			global::Plugin.Toasts.Resource.Layout.abc_alert_dialog_button_bar_material = global::FlyPhone.Droid.Resource.Layout.abc_alert_dialog_button_bar_material;
+			global::Plugin.Toasts.Resource.Layout.abc_alert_dialog_material = global::FlyPhone.Droid.Resource.Layout.abc_alert_dialog_material;
+			global::Plugin.Toasts.Resource.Layout.abc_dialog_title_material = global::FlyPhone.Droid.Resource.Layout.abc_dialog_title_material;
+			global::Plugin.Toasts.Resource.Layout.abc_expanded_menu_layout = global::FlyPhone.Droid.Resource.Layout.abc_expanded_menu_layout;
+			global::Plugin.Toasts.Resource.Layout.abc_list_menu_item_checkbox = global::FlyPhone.Droid.Resource.Layout.abc_list_menu_item_checkbox;
+			global::Plugin.Toasts.Resource.Layout.abc_list_menu_item_icon = global::FlyPhone.Droid.Resource.Layout.abc_list_menu_item_icon;
+			global::Plugin.Toasts.Resource.Layout.abc_list_menu_item_layout = global::FlyPhone.Droid.Resource.Layout.abc_list_menu_item_layout;
+			global::Plugin.Toasts.Resource.Layout.abc_list_menu_item_radio = global::FlyPhone.Droid.Resource.Layout.abc_list_menu_item_radio;
+			global::Plugin.Toasts.Resource.Layout.abc_popup_menu_item_layout = global::FlyPhone.Droid.Resource.Layout.abc_popup_menu_item_layout;
+			global::Plugin.Toasts.Resource.Layout.abc_screen_content_include = global::FlyPhone.Droid.Resource.Layout.abc_screen_content_include;
+			global::Plugin.Toasts.Resource.Layout.abc_screen_simple = global::FlyPhone.Droid.Resource.Layout.abc_screen_simple;
+			global::Plugin.Toasts.Resource.Layout.abc_screen_simple_overlay_action_mode = global::FlyPhone.Droid.Resource.Layout.abc_screen_simple_overlay_action_mode;
+			global::Plugin.Toasts.Resource.Layout.abc_screen_toolbar = global::FlyPhone.Droid.Resource.Layout.abc_screen_toolbar;
+			global::Plugin.Toasts.Resource.Layout.abc_search_dropdown_item_icons_2line = global::FlyPhone.Droid.Resource.Layout.abc_search_dropdown_item_icons_2line;
+			global::Plugin.Toasts.Resource.Layout.abc_search_view = global::FlyPhone.Droid.Resource.Layout.abc_search_view;
+			global::Plugin.Toasts.Resource.Layout.abc_select_dialog_material = global::FlyPhone.Droid.Resource.Layout.abc_select_dialog_material;
+			global::Plugin.Toasts.Resource.Layout.design_bottom_sheet_dialog = global::FlyPhone.Droid.Resource.Layout.design_bottom_sheet_dialog;
+			global::Plugin.Toasts.Resource.Layout.design_layout_snackbar = global::FlyPhone.Droid.Resource.Layout.design_layout_snackbar;
+			global::Plugin.Toasts.Resource.Layout.design_layout_snackbar_include = global::FlyPhone.Droid.Resource.Layout.design_layout_snackbar_include;
+			global::Plugin.Toasts.Resource.Layout.design_layout_tab_icon = global::FlyPhone.Droid.Resource.Layout.design_layout_tab_icon;
+			global::Plugin.Toasts.Resource.Layout.design_layout_tab_text = global::FlyPhone.Droid.Resource.Layout.design_layout_tab_text;
+			global::Plugin.Toasts.Resource.Layout.design_menu_item_action_area = global::FlyPhone.Droid.Resource.Layout.design_menu_item_action_area;
+			global::Plugin.Toasts.Resource.Layout.design_navigation_item = global::FlyPhone.Droid.Resource.Layout.design_navigation_item;
+			global::Plugin.Toasts.Resource.Layout.design_navigation_item_header = global::FlyPhone.Droid.Resource.Layout.design_navigation_item_header;
+			global::Plugin.Toasts.Resource.Layout.design_navigation_item_separator = global::FlyPhone.Droid.Resource.Layout.design_navigation_item_separator;
+			global::Plugin.Toasts.Resource.Layout.design_navigation_item_subheader = global::FlyPhone.Droid.Resource.Layout.design_navigation_item_subheader;
+			global::Plugin.Toasts.Resource.Layout.design_navigation_menu = global::FlyPhone.Droid.Resource.Layout.design_navigation_menu;
+			global::Plugin.Toasts.Resource.Layout.design_navigation_menu_item = global::FlyPhone.Droid.Resource.Layout.design_navigation_menu_item;
+			global::Plugin.Toasts.Resource.Layout.notification_media_action = global::FlyPhone.Droid.Resource.Layout.notification_media_action;
+			global::Plugin.Toasts.Resource.Layout.notification_media_cancel_action = global::FlyPhone.Droid.Resource.Layout.notification_media_cancel_action;
+			global::Plugin.Toasts.Resource.Layout.notification_template_big_media = global::FlyPhone.Droid.Resource.Layout.notification_template_big_media;
+			global::Plugin.Toasts.Resource.Layout.notification_template_big_media_narrow = global::FlyPhone.Droid.Resource.Layout.notification_template_big_media_narrow;
+			global::Plugin.Toasts.Resource.Layout.notification_template_media = global::FlyPhone.Droid.Resource.Layout.notification_template_media;
+			global::Plugin.Toasts.Resource.Layout.notification_template_part_chronometer = global::FlyPhone.Droid.Resource.Layout.notification_template_part_chronometer;
+			global::Plugin.Toasts.Resource.Layout.notification_template_part_time = global::FlyPhone.Droid.Resource.Layout.notification_template_part_time;
+			global::Plugin.Toasts.Resource.Layout.select_dialog_item_material = global::FlyPhone.Droid.Resource.Layout.select_dialog_item_material;
+			global::Plugin.Toasts.Resource.Layout.select_dialog_multichoice_material = global::FlyPhone.Droid.Resource.Layout.select_dialog_multichoice_material;
+			global::Plugin.Toasts.Resource.Layout.select_dialog_singlechoice_material = global::FlyPhone.Droid.Resource.Layout.select_dialog_singlechoice_material;
+			global::Plugin.Toasts.Resource.Layout.support_simple_spinner_dropdown_item = global::FlyPhone.Droid.Resource.Layout.support_simple_spinner_dropdown_item;
 			global::Plugin.Toasts.Resource.String.ApplicationName = global::FlyPhone.Droid.Resource.String.ApplicationName;
 			global::Plugin.Toasts.Resource.String.Hello = global::FlyPhone.Droid.Resource.String.Hello;
+			global::Plugin.Toasts.Resource.String.abc_action_bar_home_description = global::FlyPhone.Droid.Resource.String.abc_action_bar_home_description;
+			global::Plugin.Toasts.Resource.String.abc_action_bar_up_description = global::FlyPhone.Droid.Resource.String.abc_action_bar_up_description;
+			global::Plugin.Toasts.Resource.String.abc_action_menu_overflow_description = global::FlyPhone.Droid.Resource.String.abc_action_menu_overflow_description;
+			global::Plugin.Toasts.Resource.String.abc_action_mode_done = global::FlyPhone.Droid.Resource.String.abc_action_mode_done;
+			global::Plugin.Toasts.Resource.String.abc_activity_chooser_view_see_all = global::FlyPhone.Droid.Resource.String.abc_activity_chooser_view_see_all;
+			global::Plugin.Toasts.Resource.String.abc_activitychooserview_choose_application = global::FlyPhone.Droid.Resource.String.abc_activitychooserview_choose_application;
+			global::Plugin.Toasts.Resource.String.abc_capital_off = global::FlyPhone.Droid.Resource.String.abc_capital_off;
+			global::Plugin.Toasts.Resource.String.abc_capital_on = global::FlyPhone.Droid.Resource.String.abc_capital_on;
+			global::Plugin.Toasts.Resource.String.abc_search_hint = global::FlyPhone.Droid.Resource.String.abc_search_hint;
+			global::Plugin.Toasts.Resource.String.abc_searchview_description_clear = global::FlyPhone.Droid.Resource.String.abc_searchview_description_clear;
+			global::Plugin.Toasts.Resource.String.abc_searchview_description_query = global::FlyPhone.Droid.Resource.String.abc_searchview_description_query;
+			global::Plugin.Toasts.Resource.String.abc_searchview_description_search = global::FlyPhone.Droid.Resource.String.abc_searchview_description_search;
+			global::Plugin.Toasts.Resource.String.abc_searchview_description_submit = global::FlyPhone.Droid.Resource.String.abc_searchview_description_submit;
+			global::Plugin.Toasts.Resource.String.abc_searchview_description_voice = global::FlyPhone.Droid.Resource.String.abc_searchview_description_voice;
+			global::Plugin.Toasts.Resource.String.abc_shareactionprovider_share_with = global::FlyPhone.Droid.Resource.String.abc_shareactionprovider_share_with;
+			global::Plugin.Toasts.Resource.String.abc_shareactionprovider_share_with_application = global::FlyPhone.Droid.Resource.String.abc_shareactionprovider_share_with_application;
+			global::Plugin.Toasts.Resource.String.abc_toolbar_collapse_description = global::FlyPhone.Droid.Resource.String.abc_toolbar_collapse_description;
+			global::Plugin.Toasts.Resource.String.appbar_scrolling_view_behavior = global::FlyPhone.Droid.Resource.String.appbar_scrolling_view_behavior;
+			global::Plugin.Toasts.Resource.String.bottom_sheet_behavior = global::FlyPhone.Droid.Resource.String.bottom_sheet_behavior;
+			global::Plugin.Toasts.Resource.String.character_counter_pattern = global::FlyPhone.Droid.Resource.String.character_counter_pattern;
+			global::Plugin.Toasts.Resource.String.status_bar_notification_info_overflow = global::FlyPhone.Droid.Resource.String.status_bar_notification_info_overflow;
+			global::Plugin.Toasts.Resource.Style.AlertDialog_AppCompat = global::FlyPhone.Droid.Resource.Style.AlertDialog_AppCompat;
+			global::Plugin.Toasts.Resource.Style.AlertDialog_AppCompat_Light = global::FlyPhone.Droid.Resource.Style.AlertDialog_AppCompat_Light;
+			global::Plugin.Toasts.Resource.Style.Animation_AppCompat_Dialog = global::FlyPhone.Droid.Resource.Style.Animation_AppCompat_Dialog;
+			global::Plugin.Toasts.Resource.Style.Animation_AppCompat_DropDownUp = global::FlyPhone.Droid.Resource.Style.Animation_AppCompat_DropDownUp;
+			global::Plugin.Toasts.Resource.Style.Animation_Design_BottomSheetDialog = global::FlyPhone.Droid.Resource.Style.Animation_Design_BottomSheetDialog;
+			global::Plugin.Toasts.Resource.Style.Base_AlertDialog_AppCompat = global::FlyPhone.Droid.Resource.Style.Base_AlertDialog_AppCompat;
+			global::Plugin.Toasts.Resource.Style.Base_AlertDialog_AppCompat_Light = global::FlyPhone.Droid.Resource.Style.Base_AlertDialog_AppCompat_Light;
+			global::Plugin.Toasts.Resource.Style.Base_Animation_AppCompat_Dialog = global::FlyPhone.Droid.Resource.Style.Base_Animation_AppCompat_Dialog;
+			global::Plugin.Toasts.Resource.Style.Base_Animation_AppCompat_DropDownUp = global::FlyPhone.Droid.Resource.Style.Base_Animation_AppCompat_DropDownUp;
+			global::Plugin.Toasts.Resource.Style.Base_DialogWindowTitle_AppCompat = global::FlyPhone.Droid.Resource.Style.Base_DialogWindowTitle_AppCompat;
+			global::Plugin.Toasts.Resource.Style.Base_DialogWindowTitleBackground_AppCompat = global::FlyPhone.Droid.Resource.Style.Base_DialogWindowTitleBackground_AppCompat;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat = global::FlyPhone.Droid.Resource.Style.Base_TextAppearance_AppCompat;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Body1 = global::FlyPhone.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body1;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Body2 = global::FlyPhone.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body2;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Button = global::FlyPhone.Droid.Resource.Style.Base_TextAppearance_AppCompat_Button;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Caption = global::FlyPhone.Droid.Resource.Style.Base_TextAppearance_AppCompat_Caption;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Display1 = global::FlyPhone.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display1;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Display2 = global::FlyPhone.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display2;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Display3 = global::FlyPhone.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display3;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Display4 = global::FlyPhone.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display4;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Headline = global::FlyPhone.Droid.Resource.Style.Base_TextAppearance_AppCompat_Headline;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Inverse = global::FlyPhone.Droid.Resource.Style.Base_TextAppearance_AppCompat_Inverse;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Large = global::FlyPhone.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse = global::FlyPhone.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::FlyPhone.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::FlyPhone.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Medium = global::FlyPhone.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse = global::FlyPhone.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Menu = global::FlyPhone.Droid.Resource.Style.Base_TextAppearance_AppCompat_Menu;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_SearchResult = global::FlyPhone.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle = global::FlyPhone.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title = global::FlyPhone.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Small = global::FlyPhone.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse = global::FlyPhone.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Subhead = global::FlyPhone.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse = global::FlyPhone.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Title = global::FlyPhone.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse = global::FlyPhone.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu = global::FlyPhone.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::FlyPhone.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::FlyPhone.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title = global::FlyPhone.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::FlyPhone.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::FlyPhone.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title = global::FlyPhone.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button = global::FlyPhone.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse = global::FlyPhone.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem = global::FlyPhone.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large = global::FlyPhone.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small = global::FlyPhone.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch = global::FlyPhone.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::FlyPhone.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::FlyPhone.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::FlyPhone.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::Plugin.Toasts.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title = global::FlyPhone.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::Plugin.Toasts.Resource.Style.Base_Theme_AppCompat = global::FlyPhone.Droid.Resource.Style.Base_Theme_AppCompat;
+			global::Plugin.Toasts.Resource.Style.Base_Theme_AppCompat_CompactMenu = global::FlyPhone.Droid.Resource.Style.Base_Theme_AppCompat_CompactMenu;
+			global::Plugin.Toasts.Resource.Style.Base_Theme_AppCompat_Dialog = global::FlyPhone.Droid.Resource.Style.Base_Theme_AppCompat_Dialog;
+			global::Plugin.Toasts.Resource.Style.Base_Theme_AppCompat_Dialog_Alert = global::FlyPhone.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_Alert;
+			global::Plugin.Toasts.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize = global::FlyPhone.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize;
+			global::Plugin.Toasts.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth = global::FlyPhone.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth;
+			global::Plugin.Toasts.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge = global::FlyPhone.Droid.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge;
+			global::Plugin.Toasts.Resource.Style.Base_Theme_AppCompat_Light = global::FlyPhone.Droid.Resource.Style.Base_Theme_AppCompat_Light;
+			global::Plugin.Toasts.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar = global::FlyPhone.Droid.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar;
+			global::Plugin.Toasts.Resource.Style.Base_Theme_AppCompat_Light_Dialog = global::FlyPhone.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog;
+			global::Plugin.Toasts.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert = global::FlyPhone.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert;
+			global::Plugin.Toasts.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize = global::FlyPhone.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize;
+			global::Plugin.Toasts.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth = global::FlyPhone.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth;
+			global::Plugin.Toasts.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge = global::FlyPhone.Droid.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge;
+			global::Plugin.Toasts.Resource.Style.Base_ThemeOverlay_AppCompat = global::FlyPhone.Droid.Resource.Style.Base_ThemeOverlay_AppCompat;
+			global::Plugin.Toasts.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar = global::FlyPhone.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar;
+			global::Plugin.Toasts.Resource.Style.Base_ThemeOverlay_AppCompat_Dark = global::FlyPhone.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark;
+			global::Plugin.Toasts.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar = global::FlyPhone.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::Plugin.Toasts.Resource.Style.Base_ThemeOverlay_AppCompat_Light = global::FlyPhone.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Light;
+			global::Plugin.Toasts.Resource.Style.Base_V11_Theme_AppCompat_Dialog = global::FlyPhone.Droid.Resource.Style.Base_V11_Theme_AppCompat_Dialog;
+			global::Plugin.Toasts.Resource.Style.Base_V11_Theme_AppCompat_Light_Dialog = global::FlyPhone.Droid.Resource.Style.Base_V11_Theme_AppCompat_Light_Dialog;
+			global::Plugin.Toasts.Resource.Style.Base_V12_Widget_AppCompat_AutoCompleteTextView = global::FlyPhone.Droid.Resource.Style.Base_V12_Widget_AppCompat_AutoCompleteTextView;
+			global::Plugin.Toasts.Resource.Style.Base_V12_Widget_AppCompat_EditText = global::FlyPhone.Droid.Resource.Style.Base_V12_Widget_AppCompat_EditText;
+			global::Plugin.Toasts.Resource.Style.Base_V21_Theme_AppCompat = global::FlyPhone.Droid.Resource.Style.Base_V21_Theme_AppCompat;
+			global::Plugin.Toasts.Resource.Style.Base_V21_Theme_AppCompat_Dialog = global::FlyPhone.Droid.Resource.Style.Base_V21_Theme_AppCompat_Dialog;
+			global::Plugin.Toasts.Resource.Style.Base_V21_Theme_AppCompat_Light = global::FlyPhone.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light;
+			global::Plugin.Toasts.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog = global::FlyPhone.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog;
+			global::Plugin.Toasts.Resource.Style.Base_V22_Theme_AppCompat = global::FlyPhone.Droid.Resource.Style.Base_V22_Theme_AppCompat;
+			global::Plugin.Toasts.Resource.Style.Base_V22_Theme_AppCompat_Light = global::FlyPhone.Droid.Resource.Style.Base_V22_Theme_AppCompat_Light;
+			global::Plugin.Toasts.Resource.Style.Base_V23_Theme_AppCompat = global::FlyPhone.Droid.Resource.Style.Base_V23_Theme_AppCompat;
+			global::Plugin.Toasts.Resource.Style.Base_V23_Theme_AppCompat_Light = global::FlyPhone.Droid.Resource.Style.Base_V23_Theme_AppCompat_Light;
+			global::Plugin.Toasts.Resource.Style.Base_V7_Theme_AppCompat = global::FlyPhone.Droid.Resource.Style.Base_V7_Theme_AppCompat;
+			global::Plugin.Toasts.Resource.Style.Base_V7_Theme_AppCompat_Dialog = global::FlyPhone.Droid.Resource.Style.Base_V7_Theme_AppCompat_Dialog;
+			global::Plugin.Toasts.Resource.Style.Base_V7_Theme_AppCompat_Light = global::FlyPhone.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light;
+			global::Plugin.Toasts.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog = global::FlyPhone.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog;
+			global::Plugin.Toasts.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView = global::FlyPhone.Droid.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView;
+			global::Plugin.Toasts.Resource.Style.Base_V7_Widget_AppCompat_EditText = global::FlyPhone.Droid.Resource.Style.Base_V7_Widget_AppCompat_EditText;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_ActionBar = global::FlyPhone.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid = global::FlyPhone.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar = global::FlyPhone.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText = global::FlyPhone.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView = global::FlyPhone.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_ActionButton = global::FlyPhone.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode = global::FlyPhone.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow = global::FlyPhone.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_ActionMode = global::FlyPhone.Droid.Resource.Style.Base_Widget_AppCompat_ActionMode;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_ActivityChooserView = global::FlyPhone.Droid.Resource.Style.Base_Widget_AppCompat_ActivityChooserView;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView = global::FlyPhone.Droid.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_Button = global::FlyPhone.Droid.Resource.Style.Base_Widget_AppCompat_Button;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_Button_Borderless = global::FlyPhone.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored = global::FlyPhone.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog = global::FlyPhone.Droid.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_Button_Colored = global::FlyPhone.Droid.Resource.Style.Base_Widget_AppCompat_Button_Colored;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_Button_Small = global::FlyPhone.Droid.Resource.Style.Base_Widget_AppCompat_Button_Small;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_ButtonBar = global::FlyPhone.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog = global::FlyPhone.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox = global::FlyPhone.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton = global::FlyPhone.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch = global::FlyPhone.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle = global::FlyPhone.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common = global::FlyPhone.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner = global::FlyPhone.Droid.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_EditText = global::FlyPhone.Droid.Resource.Style.Base_Widget_AppCompat_EditText;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_ImageButton = global::FlyPhone.Droid.Resource.Style.Base_Widget_AppCompat_ImageButton;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_Light_ActionBar = global::FlyPhone.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid = global::FlyPhone.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar = global::FlyPhone.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText = global::FlyPhone.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::FlyPhone.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView = global::FlyPhone.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu = global::FlyPhone.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow = global::FlyPhone.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_ListPopupWindow = global::FlyPhone.Droid.Resource.Style.Base_Widget_AppCompat_ListPopupWindow;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_ListView = global::FlyPhone.Droid.Resource.Style.Base_Widget_AppCompat_ListView;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_ListView_DropDown = global::FlyPhone.Droid.Resource.Style.Base_Widget_AppCompat_ListView_DropDown;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_ListView_Menu = global::FlyPhone.Droid.Resource.Style.Base_Widget_AppCompat_ListView_Menu;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_PopupMenu = global::FlyPhone.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow = global::FlyPhone.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_PopupWindow = global::FlyPhone.Droid.Resource.Style.Base_Widget_AppCompat_PopupWindow;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_ProgressBar = global::FlyPhone.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal = global::FlyPhone.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_RatingBar = global::FlyPhone.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator = global::FlyPhone.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_RatingBar_Small = global::FlyPhone.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Small;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_SearchView = global::FlyPhone.Droid.Resource.Style.Base_Widget_AppCompat_SearchView;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar = global::FlyPhone.Droid.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_SeekBar = global::FlyPhone.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_Spinner = global::FlyPhone.Droid.Resource.Style.Base_Widget_AppCompat_Spinner;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined = global::FlyPhone.Droid.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem = global::FlyPhone.Droid.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_Toolbar = global::FlyPhone.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation = global::FlyPhone.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation;
+			global::Plugin.Toasts.Resource.Style.Base_Widget_Design_TabLayout = global::FlyPhone.Droid.Resource.Style.Base_Widget_Design_TabLayout;
+			global::Plugin.Toasts.Resource.Style.Platform_AppCompat = global::FlyPhone.Droid.Resource.Style.Platform_AppCompat;
+			global::Plugin.Toasts.Resource.Style.Platform_AppCompat_Light = global::FlyPhone.Droid.Resource.Style.Platform_AppCompat_Light;
+			global::Plugin.Toasts.Resource.Style.Platform_ThemeOverlay_AppCompat = global::FlyPhone.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat;
+			global::Plugin.Toasts.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark = global::FlyPhone.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark;
+			global::Plugin.Toasts.Resource.Style.Platform_ThemeOverlay_AppCompat_Light = global::FlyPhone.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Light;
+			global::Plugin.Toasts.Resource.Style.Platform_V11_AppCompat = global::FlyPhone.Droid.Resource.Style.Platform_V11_AppCompat;
+			global::Plugin.Toasts.Resource.Style.Platform_V11_AppCompat_Light = global::FlyPhone.Droid.Resource.Style.Platform_V11_AppCompat_Light;
+			global::Plugin.Toasts.Resource.Style.Platform_V14_AppCompat = global::FlyPhone.Droid.Resource.Style.Platform_V14_AppCompat;
+			global::Plugin.Toasts.Resource.Style.Platform_V14_AppCompat_Light = global::FlyPhone.Droid.Resource.Style.Platform_V14_AppCompat_Light;
+			global::Plugin.Toasts.Resource.Style.Platform_Widget_AppCompat_Spinner = global::FlyPhone.Droid.Resource.Style.Platform_Widget_AppCompat_Spinner;
+			global::Plugin.Toasts.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat = global::FlyPhone.Droid.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat;
+			global::Plugin.Toasts.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem = global::FlyPhone.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem;
+			global::Plugin.Toasts.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon = global::FlyPhone.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon;
+			global::Plugin.Toasts.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem = global::FlyPhone.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem;
+			global::Plugin.Toasts.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup = global::FlyPhone.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup;
+			global::Plugin.Toasts.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text = global::FlyPhone.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text;
+			global::Plugin.Toasts.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown = global::FlyPhone.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown;
+			global::Plugin.Toasts.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1 = global::FlyPhone.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1;
+			global::Plugin.Toasts.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2 = global::FlyPhone.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2;
+			global::Plugin.Toasts.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query = global::FlyPhone.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query;
+			global::Plugin.Toasts.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text = global::FlyPhone.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text;
+			global::Plugin.Toasts.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon = global::FlyPhone.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon;
+			global::Plugin.Toasts.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton = global::FlyPhone.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton;
+			global::Plugin.Toasts.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = global::FlyPhone.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat = global::FlyPhone.Droid.Resource.Style.TextAppearance_AppCompat;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Body1 = global::FlyPhone.Droid.Resource.Style.TextAppearance_AppCompat_Body1;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Body2 = global::FlyPhone.Droid.Resource.Style.TextAppearance_AppCompat_Body2;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Button = global::FlyPhone.Droid.Resource.Style.TextAppearance_AppCompat_Button;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Caption = global::FlyPhone.Droid.Resource.Style.TextAppearance_AppCompat_Caption;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Display1 = global::FlyPhone.Droid.Resource.Style.TextAppearance_AppCompat_Display1;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Display2 = global::FlyPhone.Droid.Resource.Style.TextAppearance_AppCompat_Display2;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Display3 = global::FlyPhone.Droid.Resource.Style.TextAppearance_AppCompat_Display3;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Display4 = global::FlyPhone.Droid.Resource.Style.TextAppearance_AppCompat_Display4;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Headline = global::FlyPhone.Droid.Resource.Style.TextAppearance_AppCompat_Headline;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Inverse = global::FlyPhone.Droid.Resource.Style.TextAppearance_AppCompat_Inverse;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Large = global::FlyPhone.Droid.Resource.Style.TextAppearance_AppCompat_Large;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Large_Inverse = global::FlyPhone.Droid.Resource.Style.TextAppearance_AppCompat_Large_Inverse;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle = global::FlyPhone.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title = global::FlyPhone.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::FlyPhone.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::FlyPhone.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Medium = global::FlyPhone.Droid.Resource.Style.TextAppearance_AppCompat_Medium;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Medium_Inverse = global::FlyPhone.Droid.Resource.Style.TextAppearance_AppCompat_Medium_Inverse;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Menu = global::FlyPhone.Droid.Resource.Style.TextAppearance_AppCompat_Menu;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle = global::FlyPhone.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_SearchResult_Title = global::FlyPhone.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Title;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Small = global::FlyPhone.Droid.Resource.Style.TextAppearance_AppCompat_Small;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Small_Inverse = global::FlyPhone.Droid.Resource.Style.TextAppearance_AppCompat_Small_Inverse;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Subhead = global::FlyPhone.Droid.Resource.Style.TextAppearance_AppCompat_Subhead;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse = global::FlyPhone.Droid.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Title = global::FlyPhone.Droid.Resource.Style.TextAppearance_AppCompat_Title;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Title_Inverse = global::FlyPhone.Droid.Resource.Style.TextAppearance_AppCompat_Title_Inverse;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu = global::FlyPhone.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::FlyPhone.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::FlyPhone.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title = global::FlyPhone.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::FlyPhone.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::FlyPhone.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = global::FlyPhone.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title = global::FlyPhone.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = global::FlyPhone.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Widget_Button = global::FlyPhone.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse = global::FlyPhone.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem = global::FlyPhone.Droid.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large = global::FlyPhone.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small = global::FlyPhone.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Widget_Switch = global::FlyPhone.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Switch;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::FlyPhone.Droid.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded = global::FlyPhone.Droid.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_Design_Counter = global::FlyPhone.Droid.Resource.Style.TextAppearance_Design_Counter;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_Design_Counter_Overflow = global::FlyPhone.Droid.Resource.Style.TextAppearance_Design_Counter_Overflow;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_Design_Error = global::FlyPhone.Droid.Resource.Style.TextAppearance_Design_Error;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_Design_Hint = global::FlyPhone.Droid.Resource.Style.TextAppearance_Design_Hint;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_Design_Snackbar_Message = global::FlyPhone.Droid.Resource.Style.TextAppearance_Design_Snackbar_Message;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_Design_Tab = global::FlyPhone.Droid.Resource.Style.TextAppearance_Design_Tab;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::FlyPhone.Droid.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::FlyPhone.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::Plugin.Toasts.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title = global::FlyPhone.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::Plugin.Toasts.Resource.Style.Theme_AppCompat = global::FlyPhone.Droid.Resource.Style.Theme_AppCompat;
+			global::Plugin.Toasts.Resource.Style.Theme_AppCompat_CompactMenu = global::FlyPhone.Droid.Resource.Style.Theme_AppCompat_CompactMenu;
+			global::Plugin.Toasts.Resource.Style.Theme_AppCompat_DayNight = global::FlyPhone.Droid.Resource.Style.Theme_AppCompat_DayNight;
+			global::Plugin.Toasts.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar = global::FlyPhone.Droid.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar;
+			global::Plugin.Toasts.Resource.Style.Theme_AppCompat_DayNight_Dialog = global::FlyPhone.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog;
+			global::Plugin.Toasts.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert = global::FlyPhone.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert;
+			global::Plugin.Toasts.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth = global::FlyPhone.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth;
+			global::Plugin.Toasts.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge = global::FlyPhone.Droid.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge;
+			global::Plugin.Toasts.Resource.Style.Theme_AppCompat_DayNight_NoActionBar = global::FlyPhone.Droid.Resource.Style.Theme_AppCompat_DayNight_NoActionBar;
+			global::Plugin.Toasts.Resource.Style.Theme_AppCompat_Dialog = global::FlyPhone.Droid.Resource.Style.Theme_AppCompat_Dialog;
+			global::Plugin.Toasts.Resource.Style.Theme_AppCompat_Dialog_Alert = global::FlyPhone.Droid.Resource.Style.Theme_AppCompat_Dialog_Alert;
+			global::Plugin.Toasts.Resource.Style.Theme_AppCompat_Dialog_MinWidth = global::FlyPhone.Droid.Resource.Style.Theme_AppCompat_Dialog_MinWidth;
+			global::Plugin.Toasts.Resource.Style.Theme_AppCompat_DialogWhenLarge = global::FlyPhone.Droid.Resource.Style.Theme_AppCompat_DialogWhenLarge;
+			global::Plugin.Toasts.Resource.Style.Theme_AppCompat_Light = global::FlyPhone.Droid.Resource.Style.Theme_AppCompat_Light;
+			global::Plugin.Toasts.Resource.Style.Theme_AppCompat_Light_DarkActionBar = global::FlyPhone.Droid.Resource.Style.Theme_AppCompat_Light_DarkActionBar;
+			global::Plugin.Toasts.Resource.Style.Theme_AppCompat_Light_Dialog = global::FlyPhone.Droid.Resource.Style.Theme_AppCompat_Light_Dialog;
+			global::Plugin.Toasts.Resource.Style.Theme_AppCompat_Light_Dialog_Alert = global::FlyPhone.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_Alert;
+			global::Plugin.Toasts.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth = global::FlyPhone.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth;
+			global::Plugin.Toasts.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge = global::FlyPhone.Droid.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge;
+			global::Plugin.Toasts.Resource.Style.Theme_AppCompat_Light_NoActionBar = global::FlyPhone.Droid.Resource.Style.Theme_AppCompat_Light_NoActionBar;
+			global::Plugin.Toasts.Resource.Style.Theme_AppCompat_NoActionBar = global::FlyPhone.Droid.Resource.Style.Theme_AppCompat_NoActionBar;
+			global::Plugin.Toasts.Resource.Style.Theme_Design = global::FlyPhone.Droid.Resource.Style.Theme_Design;
+			global::Plugin.Toasts.Resource.Style.Theme_Design_BottomSheetDialog = global::FlyPhone.Droid.Resource.Style.Theme_Design_BottomSheetDialog;
+			global::Plugin.Toasts.Resource.Style.Theme_Design_Light = global::FlyPhone.Droid.Resource.Style.Theme_Design_Light;
+			global::Plugin.Toasts.Resource.Style.Theme_Design_Light_BottomSheetDialog = global::FlyPhone.Droid.Resource.Style.Theme_Design_Light_BottomSheetDialog;
+			global::Plugin.Toasts.Resource.Style.Theme_Design_Light_NoActionBar = global::FlyPhone.Droid.Resource.Style.Theme_Design_Light_NoActionBar;
+			global::Plugin.Toasts.Resource.Style.Theme_Design_NoActionBar = global::FlyPhone.Droid.Resource.Style.Theme_Design_NoActionBar;
+			global::Plugin.Toasts.Resource.Style.ThemeOverlay_AppCompat = global::FlyPhone.Droid.Resource.Style.ThemeOverlay_AppCompat;
+			global::Plugin.Toasts.Resource.Style.ThemeOverlay_AppCompat_ActionBar = global::FlyPhone.Droid.Resource.Style.ThemeOverlay_AppCompat_ActionBar;
+			global::Plugin.Toasts.Resource.Style.ThemeOverlay_AppCompat_Dark = global::FlyPhone.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark;
+			global::Plugin.Toasts.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar = global::FlyPhone.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::Plugin.Toasts.Resource.Style.ThemeOverlay_AppCompat_Light = global::FlyPhone.Droid.Resource.Style.ThemeOverlay_AppCompat_Light;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_ActionBar = global::FlyPhone.Droid.Resource.Style.Widget_AppCompat_ActionBar;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_ActionBar_Solid = global::FlyPhone.Droid.Resource.Style.Widget_AppCompat_ActionBar_Solid;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_ActionBar_TabBar = global::FlyPhone.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabBar;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_ActionBar_TabText = global::FlyPhone.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabText;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_ActionBar_TabView = global::FlyPhone.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabView;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_ActionButton = global::FlyPhone.Droid.Resource.Style.Widget_AppCompat_ActionButton;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_ActionButton_CloseMode = global::FlyPhone.Droid.Resource.Style.Widget_AppCompat_ActionButton_CloseMode;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_ActionButton_Overflow = global::FlyPhone.Droid.Resource.Style.Widget_AppCompat_ActionButton_Overflow;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_ActionMode = global::FlyPhone.Droid.Resource.Style.Widget_AppCompat_ActionMode;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_ActivityChooserView = global::FlyPhone.Droid.Resource.Style.Widget_AppCompat_ActivityChooserView;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_AutoCompleteTextView = global::FlyPhone.Droid.Resource.Style.Widget_AppCompat_AutoCompleteTextView;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_Button = global::FlyPhone.Droid.Resource.Style.Widget_AppCompat_Button;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_Button_Borderless = global::FlyPhone.Droid.Resource.Style.Widget_AppCompat_Button_Borderless;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_Button_Borderless_Colored = global::FlyPhone.Droid.Resource.Style.Widget_AppCompat_Button_Borderless_Colored;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog = global::FlyPhone.Droid.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_Button_Colored = global::FlyPhone.Droid.Resource.Style.Widget_AppCompat_Button_Colored;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_Button_Small = global::FlyPhone.Droid.Resource.Style.Widget_AppCompat_Button_Small;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_ButtonBar = global::FlyPhone.Droid.Resource.Style.Widget_AppCompat_ButtonBar;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog = global::FlyPhone.Droid.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox = global::FlyPhone.Droid.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton = global::FlyPhone.Droid.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_CompoundButton_Switch = global::FlyPhone.Droid.Resource.Style.Widget_AppCompat_CompoundButton_Switch;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_DrawerArrowToggle = global::FlyPhone.Droid.Resource.Style.Widget_AppCompat_DrawerArrowToggle;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_DropDownItem_Spinner = global::FlyPhone.Droid.Resource.Style.Widget_AppCompat_DropDownItem_Spinner;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_EditText = global::FlyPhone.Droid.Resource.Style.Widget_AppCompat_EditText;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_ImageButton = global::FlyPhone.Droid.Resource.Style.Widget_AppCompat_ImageButton;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_Light_ActionBar = global::FlyPhone.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid = global::FlyPhone.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse = global::FlyPhone.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar = global::FlyPhone.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse = global::FlyPhone.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText = global::FlyPhone.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::FlyPhone.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView = global::FlyPhone.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse = global::FlyPhone.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_Light_ActionButton = global::FlyPhone.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode = global::FlyPhone.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow = global::FlyPhone.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse = global::FlyPhone.Droid.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_Light_ActivityChooserView = global::FlyPhone.Droid.Resource.Style.Widget_AppCompat_Light_ActivityChooserView;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView = global::FlyPhone.Droid.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner = global::FlyPhone.Droid.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_Light_ListPopupWindow = global::FlyPhone.Droid.Resource.Style.Widget_AppCompat_Light_ListPopupWindow;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_Light_ListView_DropDown = global::FlyPhone.Droid.Resource.Style.Widget_AppCompat_Light_ListView_DropDown;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_Light_PopupMenu = global::FlyPhone.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow = global::FlyPhone.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_Light_SearchView = global::FlyPhone.Droid.Resource.Style.Widget_AppCompat_Light_SearchView;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar = global::FlyPhone.Droid.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_ListPopupWindow = global::FlyPhone.Droid.Resource.Style.Widget_AppCompat_ListPopupWindow;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_ListView = global::FlyPhone.Droid.Resource.Style.Widget_AppCompat_ListView;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_ListView_DropDown = global::FlyPhone.Droid.Resource.Style.Widget_AppCompat_ListView_DropDown;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_ListView_Menu = global::FlyPhone.Droid.Resource.Style.Widget_AppCompat_ListView_Menu;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_PopupMenu = global::FlyPhone.Droid.Resource.Style.Widget_AppCompat_PopupMenu;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_PopupMenu_Overflow = global::FlyPhone.Droid.Resource.Style.Widget_AppCompat_PopupMenu_Overflow;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_PopupWindow = global::FlyPhone.Droid.Resource.Style.Widget_AppCompat_PopupWindow;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_ProgressBar = global::FlyPhone.Droid.Resource.Style.Widget_AppCompat_ProgressBar;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal = global::FlyPhone.Droid.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_RatingBar = global::FlyPhone.Droid.Resource.Style.Widget_AppCompat_RatingBar;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_RatingBar_Indicator = global::FlyPhone.Droid.Resource.Style.Widget_AppCompat_RatingBar_Indicator;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_RatingBar_Small = global::FlyPhone.Droid.Resource.Style.Widget_AppCompat_RatingBar_Small;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_SearchView = global::FlyPhone.Droid.Resource.Style.Widget_AppCompat_SearchView;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_SearchView_ActionBar = global::FlyPhone.Droid.Resource.Style.Widget_AppCompat_SearchView_ActionBar;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_SeekBar = global::FlyPhone.Droid.Resource.Style.Widget_AppCompat_SeekBar;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_Spinner = global::FlyPhone.Droid.Resource.Style.Widget_AppCompat_Spinner;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_Spinner_DropDown = global::FlyPhone.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar = global::FlyPhone.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_Spinner_Underlined = global::FlyPhone.Droid.Resource.Style.Widget_AppCompat_Spinner_Underlined;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_TextView_SpinnerItem = global::FlyPhone.Droid.Resource.Style.Widget_AppCompat_TextView_SpinnerItem;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_Toolbar = global::FlyPhone.Droid.Resource.Style.Widget_AppCompat_Toolbar;
+			global::Plugin.Toasts.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation = global::FlyPhone.Droid.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation;
+			global::Plugin.Toasts.Resource.Style.Widget_Design_AppBarLayout = global::FlyPhone.Droid.Resource.Style.Widget_Design_AppBarLayout;
+			global::Plugin.Toasts.Resource.Style.Widget_Design_BottomSheet_Modal = global::FlyPhone.Droid.Resource.Style.Widget_Design_BottomSheet_Modal;
+			global::Plugin.Toasts.Resource.Style.Widget_Design_CollapsingToolbar = global::FlyPhone.Droid.Resource.Style.Widget_Design_CollapsingToolbar;
+			global::Plugin.Toasts.Resource.Style.Widget_Design_CoordinatorLayout = global::FlyPhone.Droid.Resource.Style.Widget_Design_CoordinatorLayout;
+			global::Plugin.Toasts.Resource.Style.Widget_Design_FloatingActionButton = global::FlyPhone.Droid.Resource.Style.Widget_Design_FloatingActionButton;
+			global::Plugin.Toasts.Resource.Style.Widget_Design_NavigationView = global::FlyPhone.Droid.Resource.Style.Widget_Design_NavigationView;
+			global::Plugin.Toasts.Resource.Style.Widget_Design_ScrimInsetsFrameLayout = global::FlyPhone.Droid.Resource.Style.Widget_Design_ScrimInsetsFrameLayout;
+			global::Plugin.Toasts.Resource.Style.Widget_Design_Snackbar = global::FlyPhone.Droid.Resource.Style.Widget_Design_Snackbar;
+			global::Plugin.Toasts.Resource.Style.Widget_Design_TabLayout = global::FlyPhone.Droid.Resource.Style.Widget_Design_TabLayout;
+			global::Plugin.Toasts.Resource.Style.Widget_Design_TextInputLayout = global::FlyPhone.Droid.Resource.Style.Widget_Design_TextInputLayout;
+			global::Plugin.Toasts.Resource.Styleable.ActionBar = global::FlyPhone.Droid.Resource.Styleable.ActionBar;
+			global::Plugin.Toasts.Resource.Styleable.ActionBar_background = global::FlyPhone.Droid.Resource.Styleable.ActionBar_background;
+			global::Plugin.Toasts.Resource.Styleable.ActionBar_backgroundSplit = global::FlyPhone.Droid.Resource.Styleable.ActionBar_backgroundSplit;
+			global::Plugin.Toasts.Resource.Styleable.ActionBar_backgroundStacked = global::FlyPhone.Droid.Resource.Styleable.ActionBar_backgroundStacked;
+			global::Plugin.Toasts.Resource.Styleable.ActionBar_contentInsetEnd = global::FlyPhone.Droid.Resource.Styleable.ActionBar_contentInsetEnd;
+			global::Plugin.Toasts.Resource.Styleable.ActionBar_contentInsetLeft = global::FlyPhone.Droid.Resource.Styleable.ActionBar_contentInsetLeft;
+			global::Plugin.Toasts.Resource.Styleable.ActionBar_contentInsetRight = global::FlyPhone.Droid.Resource.Styleable.ActionBar_contentInsetRight;
+			global::Plugin.Toasts.Resource.Styleable.ActionBar_contentInsetStart = global::FlyPhone.Droid.Resource.Styleable.ActionBar_contentInsetStart;
+			global::Plugin.Toasts.Resource.Styleable.ActionBar_customNavigationLayout = global::FlyPhone.Droid.Resource.Styleable.ActionBar_customNavigationLayout;
+			global::Plugin.Toasts.Resource.Styleable.ActionBar_displayOptions = global::FlyPhone.Droid.Resource.Styleable.ActionBar_displayOptions;
+			global::Plugin.Toasts.Resource.Styleable.ActionBar_divider = global::FlyPhone.Droid.Resource.Styleable.ActionBar_divider;
+			global::Plugin.Toasts.Resource.Styleable.ActionBar_elevation = global::FlyPhone.Droid.Resource.Styleable.ActionBar_elevation;
+			global::Plugin.Toasts.Resource.Styleable.ActionBar_height = global::FlyPhone.Droid.Resource.Styleable.ActionBar_height;
+			global::Plugin.Toasts.Resource.Styleable.ActionBar_hideOnContentScroll = global::FlyPhone.Droid.Resource.Styleable.ActionBar_hideOnContentScroll;
+			global::Plugin.Toasts.Resource.Styleable.ActionBar_homeAsUpIndicator = global::FlyPhone.Droid.Resource.Styleable.ActionBar_homeAsUpIndicator;
+			global::Plugin.Toasts.Resource.Styleable.ActionBar_homeLayout = global::FlyPhone.Droid.Resource.Styleable.ActionBar_homeLayout;
+			global::Plugin.Toasts.Resource.Styleable.ActionBar_icon = global::FlyPhone.Droid.Resource.Styleable.ActionBar_icon;
+			global::Plugin.Toasts.Resource.Styleable.ActionBar_indeterminateProgressStyle = global::FlyPhone.Droid.Resource.Styleable.ActionBar_indeterminateProgressStyle;
+			global::Plugin.Toasts.Resource.Styleable.ActionBar_itemPadding = global::FlyPhone.Droid.Resource.Styleable.ActionBar_itemPadding;
+			global::Plugin.Toasts.Resource.Styleable.ActionBar_logo = global::FlyPhone.Droid.Resource.Styleable.ActionBar_logo;
+			global::Plugin.Toasts.Resource.Styleable.ActionBar_navigationMode = global::FlyPhone.Droid.Resource.Styleable.ActionBar_navigationMode;
+			global::Plugin.Toasts.Resource.Styleable.ActionBar_popupTheme = global::FlyPhone.Droid.Resource.Styleable.ActionBar_popupTheme;
+			global::Plugin.Toasts.Resource.Styleable.ActionBar_progressBarPadding = global::FlyPhone.Droid.Resource.Styleable.ActionBar_progressBarPadding;
+			global::Plugin.Toasts.Resource.Styleable.ActionBar_progressBarStyle = global::FlyPhone.Droid.Resource.Styleable.ActionBar_progressBarStyle;
+			global::Plugin.Toasts.Resource.Styleable.ActionBar_subtitle = global::FlyPhone.Droid.Resource.Styleable.ActionBar_subtitle;
+			global::Plugin.Toasts.Resource.Styleable.ActionBar_subtitleTextStyle = global::FlyPhone.Droid.Resource.Styleable.ActionBar_subtitleTextStyle;
+			global::Plugin.Toasts.Resource.Styleable.ActionBar_title = global::FlyPhone.Droid.Resource.Styleable.ActionBar_title;
+			global::Plugin.Toasts.Resource.Styleable.ActionBar_titleTextStyle = global::FlyPhone.Droid.Resource.Styleable.ActionBar_titleTextStyle;
+			global::Plugin.Toasts.Resource.Styleable.ActionBarLayout = global::FlyPhone.Droid.Resource.Styleable.ActionBarLayout;
+			global::Plugin.Toasts.Resource.Styleable.ActionBarLayout_android_layout_gravity = global::FlyPhone.Droid.Resource.Styleable.ActionBarLayout_android_layout_gravity;
+			global::Plugin.Toasts.Resource.Styleable.ActionMenuItemView = global::FlyPhone.Droid.Resource.Styleable.ActionMenuItemView;
+			global::Plugin.Toasts.Resource.Styleable.ActionMenuItemView_android_minWidth = global::FlyPhone.Droid.Resource.Styleable.ActionMenuItemView_android_minWidth;
+			global::Plugin.Toasts.Resource.Styleable.ActionMenuView = global::FlyPhone.Droid.Resource.Styleable.ActionMenuView;
+			global::Plugin.Toasts.Resource.Styleable.ActionMode = global::FlyPhone.Droid.Resource.Styleable.ActionMode;
+			global::Plugin.Toasts.Resource.Styleable.ActionMode_background = global::FlyPhone.Droid.Resource.Styleable.ActionMode_background;
+			global::Plugin.Toasts.Resource.Styleable.ActionMode_backgroundSplit = global::FlyPhone.Droid.Resource.Styleable.ActionMode_backgroundSplit;
+			global::Plugin.Toasts.Resource.Styleable.ActionMode_closeItemLayout = global::FlyPhone.Droid.Resource.Styleable.ActionMode_closeItemLayout;
+			global::Plugin.Toasts.Resource.Styleable.ActionMode_height = global::FlyPhone.Droid.Resource.Styleable.ActionMode_height;
+			global::Plugin.Toasts.Resource.Styleable.ActionMode_subtitleTextStyle = global::FlyPhone.Droid.Resource.Styleable.ActionMode_subtitleTextStyle;
+			global::Plugin.Toasts.Resource.Styleable.ActionMode_titleTextStyle = global::FlyPhone.Droid.Resource.Styleable.ActionMode_titleTextStyle;
+			global::Plugin.Toasts.Resource.Styleable.ActivityChooserView = global::FlyPhone.Droid.Resource.Styleable.ActivityChooserView;
+			global::Plugin.Toasts.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable = global::FlyPhone.Droid.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable;
+			global::Plugin.Toasts.Resource.Styleable.ActivityChooserView_initialActivityCount = global::FlyPhone.Droid.Resource.Styleable.ActivityChooserView_initialActivityCount;
+			global::Plugin.Toasts.Resource.Styleable.AlertDialog = global::FlyPhone.Droid.Resource.Styleable.AlertDialog;
+			global::Plugin.Toasts.Resource.Styleable.AlertDialog_android_layout = global::FlyPhone.Droid.Resource.Styleable.AlertDialog_android_layout;
+			global::Plugin.Toasts.Resource.Styleable.AlertDialog_buttonPanelSideLayout = global::FlyPhone.Droid.Resource.Styleable.AlertDialog_buttonPanelSideLayout;
+			global::Plugin.Toasts.Resource.Styleable.AlertDialog_listItemLayout = global::FlyPhone.Droid.Resource.Styleable.AlertDialog_listItemLayout;
+			global::Plugin.Toasts.Resource.Styleable.AlertDialog_listLayout = global::FlyPhone.Droid.Resource.Styleable.AlertDialog_listLayout;
+			global::Plugin.Toasts.Resource.Styleable.AlertDialog_multiChoiceItemLayout = global::FlyPhone.Droid.Resource.Styleable.AlertDialog_multiChoiceItemLayout;
+			global::Plugin.Toasts.Resource.Styleable.AlertDialog_singleChoiceItemLayout = global::FlyPhone.Droid.Resource.Styleable.AlertDialog_singleChoiceItemLayout;
+			global::Plugin.Toasts.Resource.Styleable.AppBarLayout = global::FlyPhone.Droid.Resource.Styleable.AppBarLayout;
+			global::Plugin.Toasts.Resource.Styleable.AppBarLayout_android_background = global::FlyPhone.Droid.Resource.Styleable.AppBarLayout_android_background;
+			global::Plugin.Toasts.Resource.Styleable.AppBarLayout_elevation = global::FlyPhone.Droid.Resource.Styleable.AppBarLayout_elevation;
+			global::Plugin.Toasts.Resource.Styleable.AppBarLayout_expanded = global::FlyPhone.Droid.Resource.Styleable.AppBarLayout_expanded;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatImageView = global::FlyPhone.Droid.Resource.Styleable.AppCompatImageView;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatImageView_android_src = global::FlyPhone.Droid.Resource.Styleable.AppCompatImageView_android_src;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatImageView_srcCompat = global::FlyPhone.Droid.Resource.Styleable.AppCompatImageView_srcCompat;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTextView = global::FlyPhone.Droid.Resource.Styleable.AppCompatTextView;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTextView_android_textAppearance = global::FlyPhone.Droid.Resource.Styleable.AppCompatTextView_android_textAppearance;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTextView_textAllCaps = global::FlyPhone.Droid.Resource.Styleable.AppCompatTextView_textAllCaps;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_actionBarDivider = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_actionBarDivider;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_actionBarItemBackground = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_actionBarItemBackground;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_actionBarPopupTheme = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_actionBarPopupTheme;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_actionBarSize = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_actionBarSize;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_actionBarSplitStyle = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_actionBarSplitStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_actionBarStyle = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_actionBarStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_actionBarTabStyle = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_actionBarTabStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_actionBarTheme = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_actionBarTheme;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_actionButtonStyle = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_actionButtonStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_actionDropDownStyle = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_actionDropDownStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_actionMenuTextColor = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextColor;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_actionModeBackground = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_actionModeBackground;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_actionModeCutDrawable = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_actionModeCutDrawable;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_actionModeFindDrawable = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_actionModeFindDrawable;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_actionModePasteDrawable = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_actionModePasteDrawable;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_actionModeShareDrawable = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_actionModeShareDrawable;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_actionModeSplitBackground = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_actionModeSplitBackground;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_actionModeStyle = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_actionModeStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_activityChooserViewStyle = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_activityChooserViewStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_alertDialogStyle = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_alertDialogStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_alertDialogTheme = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_alertDialogTheme;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_android_windowIsFloating = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_android_windowIsFloating;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_borderlessButtonStyle = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_borderlessButtonStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_buttonBarStyle = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_buttonBarStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_buttonStyle = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_buttonStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_buttonStyleSmall = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_buttonStyleSmall;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_checkboxStyle = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_checkboxStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_checkedTextViewStyle = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_checkedTextViewStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_colorAccent = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_colorAccent;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_colorButtonNormal = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_colorButtonNormal;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_colorControlActivated = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_colorControlActivated;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_colorControlHighlight = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_colorControlHighlight;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_colorControlNormal = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_colorControlNormal;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_colorPrimary = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_colorPrimary;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_colorPrimaryDark = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_colorPrimaryDark;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_controlBackground = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_controlBackground;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_dialogPreferredPadding = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_dialogPreferredPadding;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_dialogTheme = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_dialogTheme;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_dividerHorizontal = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_dividerHorizontal;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_dividerVertical = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_dividerVertical;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_dropDownListViewStyle = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_dropDownListViewStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_editTextBackground = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_editTextBackground;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_editTextColor = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_editTextColor;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_editTextStyle = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_editTextStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_homeAsUpIndicator = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_homeAsUpIndicator;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_imageButtonStyle = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_imageButtonStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_listDividerAlertDialog = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_listDividerAlertDialog;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_listPopupWindowStyle = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_listPopupWindowStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_listPreferredItemHeight = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeight;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_panelBackground = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_panelBackground;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_panelMenuListTheme = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_panelMenuListTheme;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_panelMenuListWidth = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_panelMenuListWidth;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_popupMenuStyle = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_popupMenuStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_popupWindowStyle = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_popupWindowStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_radioButtonStyle = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_radioButtonStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_ratingBarStyle = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_searchViewStyle = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_searchViewStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_seekBarStyle = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_seekBarStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_selectableItemBackground = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackground;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_spinnerStyle = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_spinnerStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_switchStyle = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_switchStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_textAppearanceListItem = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItem;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_textColorSearchUrl = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_textColorSearchUrl;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_toolbarStyle = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_toolbarStyle;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_windowActionBar = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_windowActionBar;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_windowActionBarOverlay = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_windowActionBarOverlay;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_windowActionModeOverlay = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_windowActionModeOverlay;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_windowMinWidthMajor = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMajor;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_windowMinWidthMinor = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMinor;
+			global::Plugin.Toasts.Resource.Styleable.AppCompatTheme_windowNoTitle = global::FlyPhone.Droid.Resource.Styleable.AppCompatTheme_windowNoTitle;
+			global::Plugin.Toasts.Resource.Styleable.ButtonBarLayout = global::FlyPhone.Droid.Resource.Styleable.ButtonBarLayout;
+			global::Plugin.Toasts.Resource.Styleable.ButtonBarLayout_allowStacking = global::FlyPhone.Droid.Resource.Styleable.ButtonBarLayout_allowStacking;
+			global::Plugin.Toasts.Resource.Styleable.CollapsingToolbarLayout = global::FlyPhone.Droid.Resource.Styleable.CollapsingToolbarLayout;
+			global::Plugin.Toasts.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity = global::FlyPhone.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity;
+			global::Plugin.Toasts.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance = global::FlyPhone.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance;
+			global::Plugin.Toasts.Resource.Styleable.CollapsingToolbarLayout_contentScrim = global::FlyPhone.Droid.Resource.Styleable.CollapsingToolbarLayout_contentScrim;
+			global::Plugin.Toasts.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity = global::FlyPhone.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity;
+			global::Plugin.Toasts.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin = global::FlyPhone.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin;
+			global::Plugin.Toasts.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom = global::FlyPhone.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom;
+			global::Plugin.Toasts.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd = global::FlyPhone.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd;
+			global::Plugin.Toasts.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart = global::FlyPhone.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart;
+			global::Plugin.Toasts.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop = global::FlyPhone.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop;
+			global::Plugin.Toasts.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance = global::FlyPhone.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance;
+			global::Plugin.Toasts.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim = global::FlyPhone.Droid.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim;
+			global::Plugin.Toasts.Resource.Styleable.CollapsingToolbarLayout_title = global::FlyPhone.Droid.Resource.Styleable.CollapsingToolbarLayout_title;
+			global::Plugin.Toasts.Resource.Styleable.CollapsingToolbarLayout_titleEnabled = global::FlyPhone.Droid.Resource.Styleable.CollapsingToolbarLayout_titleEnabled;
+			global::Plugin.Toasts.Resource.Styleable.CollapsingToolbarLayout_toolbarId = global::FlyPhone.Droid.Resource.Styleable.CollapsingToolbarLayout_toolbarId;
+			global::Plugin.Toasts.Resource.Styleable.CompoundButton = global::FlyPhone.Droid.Resource.Styleable.CompoundButton;
+			global::Plugin.Toasts.Resource.Styleable.CompoundButton_android_button = global::FlyPhone.Droid.Resource.Styleable.CompoundButton_android_button;
+			global::Plugin.Toasts.Resource.Styleable.CompoundButton_buttonTint = global::FlyPhone.Droid.Resource.Styleable.CompoundButton_buttonTint;
+			global::Plugin.Toasts.Resource.Styleable.CompoundButton_buttonTintMode = global::FlyPhone.Droid.Resource.Styleable.CompoundButton_buttonTintMode;
+			global::Plugin.Toasts.Resource.Styleable.CoordinatorLayout = global::FlyPhone.Droid.Resource.Styleable.CoordinatorLayout;
+			global::Plugin.Toasts.Resource.Styleable.CoordinatorLayout_keylines = global::FlyPhone.Droid.Resource.Styleable.CoordinatorLayout_keylines;
+			global::Plugin.Toasts.Resource.Styleable.CoordinatorLayout_statusBarBackground = global::FlyPhone.Droid.Resource.Styleable.CoordinatorLayout_statusBarBackground;
+			global::Plugin.Toasts.Resource.Styleable.DesignTheme = global::FlyPhone.Droid.Resource.Styleable.DesignTheme;
+			global::Plugin.Toasts.Resource.Styleable.DesignTheme_bottomSheetDialogTheme = global::FlyPhone.Droid.Resource.Styleable.DesignTheme_bottomSheetDialogTheme;
+			global::Plugin.Toasts.Resource.Styleable.DesignTheme_bottomSheetStyle = global::FlyPhone.Droid.Resource.Styleable.DesignTheme_bottomSheetStyle;
+			global::Plugin.Toasts.Resource.Styleable.DesignTheme_textColorError = global::FlyPhone.Droid.Resource.Styleable.DesignTheme_textColorError;
+			global::Plugin.Toasts.Resource.Styleable.DrawerArrowToggle = global::FlyPhone.Droid.Resource.Styleable.DrawerArrowToggle;
+			global::Plugin.Toasts.Resource.Styleable.DrawerArrowToggle_arrowHeadLength = global::FlyPhone.Droid.Resource.Styleable.DrawerArrowToggle_arrowHeadLength;
+			global::Plugin.Toasts.Resource.Styleable.DrawerArrowToggle_arrowShaftLength = global::FlyPhone.Droid.Resource.Styleable.DrawerArrowToggle_arrowShaftLength;
+			global::Plugin.Toasts.Resource.Styleable.DrawerArrowToggle_barLength = global::FlyPhone.Droid.Resource.Styleable.DrawerArrowToggle_barLength;
+			global::Plugin.Toasts.Resource.Styleable.DrawerArrowToggle_color = global::FlyPhone.Droid.Resource.Styleable.DrawerArrowToggle_color;
+			global::Plugin.Toasts.Resource.Styleable.DrawerArrowToggle_drawableSize = global::FlyPhone.Droid.Resource.Styleable.DrawerArrowToggle_drawableSize;
+			global::Plugin.Toasts.Resource.Styleable.DrawerArrowToggle_gapBetweenBars = global::FlyPhone.Droid.Resource.Styleable.DrawerArrowToggle_gapBetweenBars;
+			global::Plugin.Toasts.Resource.Styleable.DrawerArrowToggle_spinBars = global::FlyPhone.Droid.Resource.Styleable.DrawerArrowToggle_spinBars;
+			global::Plugin.Toasts.Resource.Styleable.DrawerArrowToggle_thickness = global::FlyPhone.Droid.Resource.Styleable.DrawerArrowToggle_thickness;
+			global::Plugin.Toasts.Resource.Styleable.FloatingActionButton = global::FlyPhone.Droid.Resource.Styleable.FloatingActionButton;
+			global::Plugin.Toasts.Resource.Styleable.FloatingActionButton_backgroundTint = global::FlyPhone.Droid.Resource.Styleable.FloatingActionButton_backgroundTint;
+			global::Plugin.Toasts.Resource.Styleable.FloatingActionButton_backgroundTintMode = global::FlyPhone.Droid.Resource.Styleable.FloatingActionButton_backgroundTintMode;
+			global::Plugin.Toasts.Resource.Styleable.FloatingActionButton_borderWidth = global::FlyPhone.Droid.Resource.Styleable.FloatingActionButton_borderWidth;
+			global::Plugin.Toasts.Resource.Styleable.FloatingActionButton_elevation = global::FlyPhone.Droid.Resource.Styleable.FloatingActionButton_elevation;
+			global::Plugin.Toasts.Resource.Styleable.FloatingActionButton_fabSize = global::FlyPhone.Droid.Resource.Styleable.FloatingActionButton_fabSize;
+			global::Plugin.Toasts.Resource.Styleable.FloatingActionButton_pressedTranslationZ = global::FlyPhone.Droid.Resource.Styleable.FloatingActionButton_pressedTranslationZ;
+			global::Plugin.Toasts.Resource.Styleable.FloatingActionButton_rippleColor = global::FlyPhone.Droid.Resource.Styleable.FloatingActionButton_rippleColor;
+			global::Plugin.Toasts.Resource.Styleable.FloatingActionButton_useCompatPadding = global::FlyPhone.Droid.Resource.Styleable.FloatingActionButton_useCompatPadding;
+			global::Plugin.Toasts.Resource.Styleable.ForegroundLinearLayout = global::FlyPhone.Droid.Resource.Styleable.ForegroundLinearLayout;
+			global::Plugin.Toasts.Resource.Styleable.ForegroundLinearLayout_android_foreground = global::FlyPhone.Droid.Resource.Styleable.ForegroundLinearLayout_android_foreground;
+			global::Plugin.Toasts.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity = global::FlyPhone.Droid.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity;
+			global::Plugin.Toasts.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding = global::FlyPhone.Droid.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding;
+			global::Plugin.Toasts.Resource.Styleable.LinearLayoutCompat = global::FlyPhone.Droid.Resource.Styleable.LinearLayoutCompat;
+			global::Plugin.Toasts.Resource.Styleable.LinearLayoutCompat_android_baselineAligned = global::FlyPhone.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAligned;
+			global::Plugin.Toasts.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex = global::FlyPhone.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex;
+			global::Plugin.Toasts.Resource.Styleable.LinearLayoutCompat_android_gravity = global::FlyPhone.Droid.Resource.Styleable.LinearLayoutCompat_android_gravity;
+			global::Plugin.Toasts.Resource.Styleable.LinearLayoutCompat_android_orientation = global::FlyPhone.Droid.Resource.Styleable.LinearLayoutCompat_android_orientation;
+			global::Plugin.Toasts.Resource.Styleable.LinearLayoutCompat_android_weightSum = global::FlyPhone.Droid.Resource.Styleable.LinearLayoutCompat_android_weightSum;
+			global::Plugin.Toasts.Resource.Styleable.LinearLayoutCompat_divider = global::FlyPhone.Droid.Resource.Styleable.LinearLayoutCompat_divider;
+			global::Plugin.Toasts.Resource.Styleable.LinearLayoutCompat_dividerPadding = global::FlyPhone.Droid.Resource.Styleable.LinearLayoutCompat_dividerPadding;
+			global::Plugin.Toasts.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild = global::FlyPhone.Droid.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild;
+			global::Plugin.Toasts.Resource.Styleable.LinearLayoutCompat_showDividers = global::FlyPhone.Droid.Resource.Styleable.LinearLayoutCompat_showDividers;
+			global::Plugin.Toasts.Resource.Styleable.LinearLayoutCompat_Layout = global::FlyPhone.Droid.Resource.Styleable.LinearLayoutCompat_Layout;
+			global::Plugin.Toasts.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity = global::FlyPhone.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity;
+			global::Plugin.Toasts.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height = global::FlyPhone.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height;
+			global::Plugin.Toasts.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight = global::FlyPhone.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight;
+			global::Plugin.Toasts.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width = global::FlyPhone.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width;
+			global::Plugin.Toasts.Resource.Styleable.ListPopupWindow = global::FlyPhone.Droid.Resource.Styleable.ListPopupWindow;
+			global::Plugin.Toasts.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset = global::FlyPhone.Droid.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset;
+			global::Plugin.Toasts.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset = global::FlyPhone.Droid.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset;
+			global::Plugin.Toasts.Resource.Styleable.MenuGroup = global::FlyPhone.Droid.Resource.Styleable.MenuGroup;
+			global::Plugin.Toasts.Resource.Styleable.MenuGroup_android_checkableBehavior = global::FlyPhone.Droid.Resource.Styleable.MenuGroup_android_checkableBehavior;
+			global::Plugin.Toasts.Resource.Styleable.MenuGroup_android_enabled = global::FlyPhone.Droid.Resource.Styleable.MenuGroup_android_enabled;
+			global::Plugin.Toasts.Resource.Styleable.MenuGroup_android_id = global::FlyPhone.Droid.Resource.Styleable.MenuGroup_android_id;
+			global::Plugin.Toasts.Resource.Styleable.MenuGroup_android_menuCategory = global::FlyPhone.Droid.Resource.Styleable.MenuGroup_android_menuCategory;
+			global::Plugin.Toasts.Resource.Styleable.MenuGroup_android_orderInCategory = global::FlyPhone.Droid.Resource.Styleable.MenuGroup_android_orderInCategory;
+			global::Plugin.Toasts.Resource.Styleable.MenuGroup_android_visible = global::FlyPhone.Droid.Resource.Styleable.MenuGroup_android_visible;
+			global::Plugin.Toasts.Resource.Styleable.MenuItem = global::FlyPhone.Droid.Resource.Styleable.MenuItem;
+			global::Plugin.Toasts.Resource.Styleable.MenuItem_actionLayout = global::FlyPhone.Droid.Resource.Styleable.MenuItem_actionLayout;
+			global::Plugin.Toasts.Resource.Styleable.MenuItem_actionProviderClass = global::FlyPhone.Droid.Resource.Styleable.MenuItem_actionProviderClass;
+			global::Plugin.Toasts.Resource.Styleable.MenuItem_actionViewClass = global::FlyPhone.Droid.Resource.Styleable.MenuItem_actionViewClass;
+			global::Plugin.Toasts.Resource.Styleable.MenuItem_android_alphabeticShortcut = global::FlyPhone.Droid.Resource.Styleable.MenuItem_android_alphabeticShortcut;
+			global::Plugin.Toasts.Resource.Styleable.MenuItem_android_checkable = global::FlyPhone.Droid.Resource.Styleable.MenuItem_android_checkable;
+			global::Plugin.Toasts.Resource.Styleable.MenuItem_android_checked = global::FlyPhone.Droid.Resource.Styleable.MenuItem_android_checked;
+			global::Plugin.Toasts.Resource.Styleable.MenuItem_android_enabled = global::FlyPhone.Droid.Resource.Styleable.MenuItem_android_enabled;
+			global::Plugin.Toasts.Resource.Styleable.MenuItem_android_icon = global::FlyPhone.Droid.Resource.Styleable.MenuItem_android_icon;
+			global::Plugin.Toasts.Resource.Styleable.MenuItem_android_id = global::FlyPhone.Droid.Resource.Styleable.MenuItem_android_id;
+			global::Plugin.Toasts.Resource.Styleable.MenuItem_android_menuCategory = global::FlyPhone.Droid.Resource.Styleable.MenuItem_android_menuCategory;
+			global::Plugin.Toasts.Resource.Styleable.MenuItem_android_numericShortcut = global::FlyPhone.Droid.Resource.Styleable.MenuItem_android_numericShortcut;
+			global::Plugin.Toasts.Resource.Styleable.MenuItem_android_onClick = global::FlyPhone.Droid.Resource.Styleable.MenuItem_android_onClick;
+			global::Plugin.Toasts.Resource.Styleable.MenuItem_android_orderInCategory = global::FlyPhone.Droid.Resource.Styleable.MenuItem_android_orderInCategory;
+			global::Plugin.Toasts.Resource.Styleable.MenuItem_android_title = global::FlyPhone.Droid.Resource.Styleable.MenuItem_android_title;
+			global::Plugin.Toasts.Resource.Styleable.MenuItem_android_titleCondensed = global::FlyPhone.Droid.Resource.Styleable.MenuItem_android_titleCondensed;
+			global::Plugin.Toasts.Resource.Styleable.MenuItem_android_visible = global::FlyPhone.Droid.Resource.Styleable.MenuItem_android_visible;
+			global::Plugin.Toasts.Resource.Styleable.MenuItem_showAsAction = global::FlyPhone.Droid.Resource.Styleable.MenuItem_showAsAction;
+			global::Plugin.Toasts.Resource.Styleable.MenuView = global::FlyPhone.Droid.Resource.Styleable.MenuView;
+			global::Plugin.Toasts.Resource.Styleable.MenuView_android_headerBackground = global::FlyPhone.Droid.Resource.Styleable.MenuView_android_headerBackground;
+			global::Plugin.Toasts.Resource.Styleable.MenuView_android_horizontalDivider = global::FlyPhone.Droid.Resource.Styleable.MenuView_android_horizontalDivider;
+			global::Plugin.Toasts.Resource.Styleable.MenuView_android_itemBackground = global::FlyPhone.Droid.Resource.Styleable.MenuView_android_itemBackground;
+			global::Plugin.Toasts.Resource.Styleable.MenuView_android_itemIconDisabledAlpha = global::FlyPhone.Droid.Resource.Styleable.MenuView_android_itemIconDisabledAlpha;
+			global::Plugin.Toasts.Resource.Styleable.MenuView_android_itemTextAppearance = global::FlyPhone.Droid.Resource.Styleable.MenuView_android_itemTextAppearance;
+			global::Plugin.Toasts.Resource.Styleable.MenuView_android_verticalDivider = global::FlyPhone.Droid.Resource.Styleable.MenuView_android_verticalDivider;
+			global::Plugin.Toasts.Resource.Styleable.MenuView_android_windowAnimationStyle = global::FlyPhone.Droid.Resource.Styleable.MenuView_android_windowAnimationStyle;
+			global::Plugin.Toasts.Resource.Styleable.MenuView_preserveIconSpacing = global::FlyPhone.Droid.Resource.Styleable.MenuView_preserveIconSpacing;
+			global::Plugin.Toasts.Resource.Styleable.NavigationView = global::FlyPhone.Droid.Resource.Styleable.NavigationView;
+			global::Plugin.Toasts.Resource.Styleable.NavigationView_android_background = global::FlyPhone.Droid.Resource.Styleable.NavigationView_android_background;
+			global::Plugin.Toasts.Resource.Styleable.NavigationView_android_fitsSystemWindows = global::FlyPhone.Droid.Resource.Styleable.NavigationView_android_fitsSystemWindows;
+			global::Plugin.Toasts.Resource.Styleable.NavigationView_android_maxWidth = global::FlyPhone.Droid.Resource.Styleable.NavigationView_android_maxWidth;
+			global::Plugin.Toasts.Resource.Styleable.NavigationView_elevation = global::FlyPhone.Droid.Resource.Styleable.NavigationView_elevation;
+			global::Plugin.Toasts.Resource.Styleable.NavigationView_headerLayout = global::FlyPhone.Droid.Resource.Styleable.NavigationView_headerLayout;
+			global::Plugin.Toasts.Resource.Styleable.NavigationView_itemBackground = global::FlyPhone.Droid.Resource.Styleable.NavigationView_itemBackground;
+			global::Plugin.Toasts.Resource.Styleable.NavigationView_itemIconTint = global::FlyPhone.Droid.Resource.Styleable.NavigationView_itemIconTint;
+			global::Plugin.Toasts.Resource.Styleable.NavigationView_itemTextAppearance = global::FlyPhone.Droid.Resource.Styleable.NavigationView_itemTextAppearance;
+			global::Plugin.Toasts.Resource.Styleable.NavigationView_itemTextColor = global::FlyPhone.Droid.Resource.Styleable.NavigationView_itemTextColor;
+			global::Plugin.Toasts.Resource.Styleable.NavigationView_menu = global::FlyPhone.Droid.Resource.Styleable.NavigationView_menu;
+			global::Plugin.Toasts.Resource.Styleable.PopupWindow = global::FlyPhone.Droid.Resource.Styleable.PopupWindow;
+			global::Plugin.Toasts.Resource.Styleable.PopupWindow_android_popupBackground = global::FlyPhone.Droid.Resource.Styleable.PopupWindow_android_popupBackground;
+			global::Plugin.Toasts.Resource.Styleable.PopupWindow_overlapAnchor = global::FlyPhone.Droid.Resource.Styleable.PopupWindow_overlapAnchor;
+			global::Plugin.Toasts.Resource.Styleable.PopupWindowBackgroundState = global::FlyPhone.Droid.Resource.Styleable.PopupWindowBackgroundState;
+			global::Plugin.Toasts.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor = global::FlyPhone.Droid.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor;
+			global::Plugin.Toasts.Resource.Styleable.RecyclerView = global::FlyPhone.Droid.Resource.Styleable.RecyclerView;
+			global::Plugin.Toasts.Resource.Styleable.RecyclerView_android_orientation = global::FlyPhone.Droid.Resource.Styleable.RecyclerView_android_orientation;
+			global::Plugin.Toasts.Resource.Styleable.RecyclerView_layoutManager = global::FlyPhone.Droid.Resource.Styleable.RecyclerView_layoutManager;
+			global::Plugin.Toasts.Resource.Styleable.RecyclerView_reverseLayout = global::FlyPhone.Droid.Resource.Styleable.RecyclerView_reverseLayout;
+			global::Plugin.Toasts.Resource.Styleable.RecyclerView_spanCount = global::FlyPhone.Droid.Resource.Styleable.RecyclerView_spanCount;
+			global::Plugin.Toasts.Resource.Styleable.RecyclerView_stackFromEnd = global::FlyPhone.Droid.Resource.Styleable.RecyclerView_stackFromEnd;
+			global::Plugin.Toasts.Resource.Styleable.ScrimInsetsFrameLayout = global::FlyPhone.Droid.Resource.Styleable.ScrimInsetsFrameLayout;
+			global::Plugin.Toasts.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground = global::FlyPhone.Droid.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground;
+			global::Plugin.Toasts.Resource.Styleable.SearchView = global::FlyPhone.Droid.Resource.Styleable.SearchView;
+			global::Plugin.Toasts.Resource.Styleable.SearchView_android_focusable = global::FlyPhone.Droid.Resource.Styleable.SearchView_android_focusable;
+			global::Plugin.Toasts.Resource.Styleable.SearchView_android_imeOptions = global::FlyPhone.Droid.Resource.Styleable.SearchView_android_imeOptions;
+			global::Plugin.Toasts.Resource.Styleable.SearchView_android_inputType = global::FlyPhone.Droid.Resource.Styleable.SearchView_android_inputType;
+			global::Plugin.Toasts.Resource.Styleable.SearchView_android_maxWidth = global::FlyPhone.Droid.Resource.Styleable.SearchView_android_maxWidth;
+			global::Plugin.Toasts.Resource.Styleable.SearchView_closeIcon = global::FlyPhone.Droid.Resource.Styleable.SearchView_closeIcon;
+			global::Plugin.Toasts.Resource.Styleable.SearchView_commitIcon = global::FlyPhone.Droid.Resource.Styleable.SearchView_commitIcon;
+			global::Plugin.Toasts.Resource.Styleable.SearchView_defaultQueryHint = global::FlyPhone.Droid.Resource.Styleable.SearchView_defaultQueryHint;
+			global::Plugin.Toasts.Resource.Styleable.SearchView_goIcon = global::FlyPhone.Droid.Resource.Styleable.SearchView_goIcon;
+			global::Plugin.Toasts.Resource.Styleable.SearchView_iconifiedByDefault = global::FlyPhone.Droid.Resource.Styleable.SearchView_iconifiedByDefault;
+			global::Plugin.Toasts.Resource.Styleable.SearchView_layout = global::FlyPhone.Droid.Resource.Styleable.SearchView_layout;
+			global::Plugin.Toasts.Resource.Styleable.SearchView_queryBackground = global::FlyPhone.Droid.Resource.Styleable.SearchView_queryBackground;
+			global::Plugin.Toasts.Resource.Styleable.SearchView_queryHint = global::FlyPhone.Droid.Resource.Styleable.SearchView_queryHint;
+			global::Plugin.Toasts.Resource.Styleable.SearchView_searchHintIcon = global::FlyPhone.Droid.Resource.Styleable.SearchView_searchHintIcon;
+			global::Plugin.Toasts.Resource.Styleable.SearchView_searchIcon = global::FlyPhone.Droid.Resource.Styleable.SearchView_searchIcon;
+			global::Plugin.Toasts.Resource.Styleable.SearchView_submitBackground = global::FlyPhone.Droid.Resource.Styleable.SearchView_submitBackground;
+			global::Plugin.Toasts.Resource.Styleable.SearchView_suggestionRowLayout = global::FlyPhone.Droid.Resource.Styleable.SearchView_suggestionRowLayout;
+			global::Plugin.Toasts.Resource.Styleable.SearchView_voiceIcon = global::FlyPhone.Droid.Resource.Styleable.SearchView_voiceIcon;
+			global::Plugin.Toasts.Resource.Styleable.SnackbarLayout = global::FlyPhone.Droid.Resource.Styleable.SnackbarLayout;
+			global::Plugin.Toasts.Resource.Styleable.SnackbarLayout_android_maxWidth = global::FlyPhone.Droid.Resource.Styleable.SnackbarLayout_android_maxWidth;
+			global::Plugin.Toasts.Resource.Styleable.SnackbarLayout_elevation = global::FlyPhone.Droid.Resource.Styleable.SnackbarLayout_elevation;
+			global::Plugin.Toasts.Resource.Styleable.SnackbarLayout_maxActionInlineWidth = global::FlyPhone.Droid.Resource.Styleable.SnackbarLayout_maxActionInlineWidth;
+			global::Plugin.Toasts.Resource.Styleable.Spinner = global::FlyPhone.Droid.Resource.Styleable.Spinner;
+			global::Plugin.Toasts.Resource.Styleable.Spinner_android_dropDownWidth = global::FlyPhone.Droid.Resource.Styleable.Spinner_android_dropDownWidth;
+			global::Plugin.Toasts.Resource.Styleable.Spinner_android_entries = global::FlyPhone.Droid.Resource.Styleable.Spinner_android_entries;
+			global::Plugin.Toasts.Resource.Styleable.Spinner_android_popupBackground = global::FlyPhone.Droid.Resource.Styleable.Spinner_android_popupBackground;
+			global::Plugin.Toasts.Resource.Styleable.Spinner_android_prompt = global::FlyPhone.Droid.Resource.Styleable.Spinner_android_prompt;
+			global::Plugin.Toasts.Resource.Styleable.Spinner_popupTheme = global::FlyPhone.Droid.Resource.Styleable.Spinner_popupTheme;
+			global::Plugin.Toasts.Resource.Styleable.SwitchCompat = global::FlyPhone.Droid.Resource.Styleable.SwitchCompat;
+			global::Plugin.Toasts.Resource.Styleable.SwitchCompat_android_textOff = global::FlyPhone.Droid.Resource.Styleable.SwitchCompat_android_textOff;
+			global::Plugin.Toasts.Resource.Styleable.SwitchCompat_android_textOn = global::FlyPhone.Droid.Resource.Styleable.SwitchCompat_android_textOn;
+			global::Plugin.Toasts.Resource.Styleable.SwitchCompat_android_thumb = global::FlyPhone.Droid.Resource.Styleable.SwitchCompat_android_thumb;
+			global::Plugin.Toasts.Resource.Styleable.SwitchCompat_showText = global::FlyPhone.Droid.Resource.Styleable.SwitchCompat_showText;
+			global::Plugin.Toasts.Resource.Styleable.SwitchCompat_splitTrack = global::FlyPhone.Droid.Resource.Styleable.SwitchCompat_splitTrack;
+			global::Plugin.Toasts.Resource.Styleable.SwitchCompat_switchMinWidth = global::FlyPhone.Droid.Resource.Styleable.SwitchCompat_switchMinWidth;
+			global::Plugin.Toasts.Resource.Styleable.SwitchCompat_switchPadding = global::FlyPhone.Droid.Resource.Styleable.SwitchCompat_switchPadding;
+			global::Plugin.Toasts.Resource.Styleable.SwitchCompat_switchTextAppearance = global::FlyPhone.Droid.Resource.Styleable.SwitchCompat_switchTextAppearance;
+			global::Plugin.Toasts.Resource.Styleable.SwitchCompat_thumbTextPadding = global::FlyPhone.Droid.Resource.Styleable.SwitchCompat_thumbTextPadding;
+			global::Plugin.Toasts.Resource.Styleable.SwitchCompat_track = global::FlyPhone.Droid.Resource.Styleable.SwitchCompat_track;
+			global::Plugin.Toasts.Resource.Styleable.TabItem = global::FlyPhone.Droid.Resource.Styleable.TabItem;
+			global::Plugin.Toasts.Resource.Styleable.TabItem_android_icon = global::FlyPhone.Droid.Resource.Styleable.TabItem_android_icon;
+			global::Plugin.Toasts.Resource.Styleable.TabItem_android_layout = global::FlyPhone.Droid.Resource.Styleable.TabItem_android_layout;
+			global::Plugin.Toasts.Resource.Styleable.TabItem_android_text = global::FlyPhone.Droid.Resource.Styleable.TabItem_android_text;
+			global::Plugin.Toasts.Resource.Styleable.TabLayout = global::FlyPhone.Droid.Resource.Styleable.TabLayout;
+			global::Plugin.Toasts.Resource.Styleable.TabLayout_tabBackground = global::FlyPhone.Droid.Resource.Styleable.TabLayout_tabBackground;
+			global::Plugin.Toasts.Resource.Styleable.TabLayout_tabContentStart = global::FlyPhone.Droid.Resource.Styleable.TabLayout_tabContentStart;
+			global::Plugin.Toasts.Resource.Styleable.TabLayout_tabGravity = global::FlyPhone.Droid.Resource.Styleable.TabLayout_tabGravity;
+			global::Plugin.Toasts.Resource.Styleable.TabLayout_tabIndicatorColor = global::FlyPhone.Droid.Resource.Styleable.TabLayout_tabIndicatorColor;
+			global::Plugin.Toasts.Resource.Styleable.TabLayout_tabIndicatorHeight = global::FlyPhone.Droid.Resource.Styleable.TabLayout_tabIndicatorHeight;
+			global::Plugin.Toasts.Resource.Styleable.TabLayout_tabMaxWidth = global::FlyPhone.Droid.Resource.Styleable.TabLayout_tabMaxWidth;
+			global::Plugin.Toasts.Resource.Styleable.TabLayout_tabMinWidth = global::FlyPhone.Droid.Resource.Styleable.TabLayout_tabMinWidth;
+			global::Plugin.Toasts.Resource.Styleable.TabLayout_tabMode = global::FlyPhone.Droid.Resource.Styleable.TabLayout_tabMode;
+			global::Plugin.Toasts.Resource.Styleable.TabLayout_tabPadding = global::FlyPhone.Droid.Resource.Styleable.TabLayout_tabPadding;
+			global::Plugin.Toasts.Resource.Styleable.TabLayout_tabPaddingBottom = global::FlyPhone.Droid.Resource.Styleable.TabLayout_tabPaddingBottom;
+			global::Plugin.Toasts.Resource.Styleable.TabLayout_tabPaddingEnd = global::FlyPhone.Droid.Resource.Styleable.TabLayout_tabPaddingEnd;
+			global::Plugin.Toasts.Resource.Styleable.TabLayout_tabPaddingStart = global::FlyPhone.Droid.Resource.Styleable.TabLayout_tabPaddingStart;
+			global::Plugin.Toasts.Resource.Styleable.TabLayout_tabPaddingTop = global::FlyPhone.Droid.Resource.Styleable.TabLayout_tabPaddingTop;
+			global::Plugin.Toasts.Resource.Styleable.TabLayout_tabSelectedTextColor = global::FlyPhone.Droid.Resource.Styleable.TabLayout_tabSelectedTextColor;
+			global::Plugin.Toasts.Resource.Styleable.TabLayout_tabTextAppearance = global::FlyPhone.Droid.Resource.Styleable.TabLayout_tabTextAppearance;
+			global::Plugin.Toasts.Resource.Styleable.TabLayout_tabTextColor = global::FlyPhone.Droid.Resource.Styleable.TabLayout_tabTextColor;
+			global::Plugin.Toasts.Resource.Styleable.TextAppearance = global::FlyPhone.Droid.Resource.Styleable.TextAppearance;
+			global::Plugin.Toasts.Resource.Styleable.TextAppearance_android_shadowColor = global::FlyPhone.Droid.Resource.Styleable.TextAppearance_android_shadowColor;
+			global::Plugin.Toasts.Resource.Styleable.TextAppearance_android_shadowDx = global::FlyPhone.Droid.Resource.Styleable.TextAppearance_android_shadowDx;
+			global::Plugin.Toasts.Resource.Styleable.TextAppearance_android_shadowDy = global::FlyPhone.Droid.Resource.Styleable.TextAppearance_android_shadowDy;
+			global::Plugin.Toasts.Resource.Styleable.TextAppearance_android_shadowRadius = global::FlyPhone.Droid.Resource.Styleable.TextAppearance_android_shadowRadius;
+			global::Plugin.Toasts.Resource.Styleable.TextAppearance_android_textColor = global::FlyPhone.Droid.Resource.Styleable.TextAppearance_android_textColor;
+			global::Plugin.Toasts.Resource.Styleable.TextAppearance_android_textSize = global::FlyPhone.Droid.Resource.Styleable.TextAppearance_android_textSize;
+			global::Plugin.Toasts.Resource.Styleable.TextAppearance_android_textStyle = global::FlyPhone.Droid.Resource.Styleable.TextAppearance_android_textStyle;
+			global::Plugin.Toasts.Resource.Styleable.TextAppearance_android_typeface = global::FlyPhone.Droid.Resource.Styleable.TextAppearance_android_typeface;
+			global::Plugin.Toasts.Resource.Styleable.TextAppearance_textAllCaps = global::FlyPhone.Droid.Resource.Styleable.TextAppearance_textAllCaps;
+			global::Plugin.Toasts.Resource.Styleable.TextInputLayout = global::FlyPhone.Droid.Resource.Styleable.TextInputLayout;
+			global::Plugin.Toasts.Resource.Styleable.TextInputLayout_android_hint = global::FlyPhone.Droid.Resource.Styleable.TextInputLayout_android_hint;
+			global::Plugin.Toasts.Resource.Styleable.TextInputLayout_android_textColorHint = global::FlyPhone.Droid.Resource.Styleable.TextInputLayout_android_textColorHint;
+			global::Plugin.Toasts.Resource.Styleable.TextInputLayout_counterEnabled = global::FlyPhone.Droid.Resource.Styleable.TextInputLayout_counterEnabled;
+			global::Plugin.Toasts.Resource.Styleable.TextInputLayout_counterMaxLength = global::FlyPhone.Droid.Resource.Styleable.TextInputLayout_counterMaxLength;
+			global::Plugin.Toasts.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance = global::FlyPhone.Droid.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance;
+			global::Plugin.Toasts.Resource.Styleable.TextInputLayout_counterTextAppearance = global::FlyPhone.Droid.Resource.Styleable.TextInputLayout_counterTextAppearance;
+			global::Plugin.Toasts.Resource.Styleable.TextInputLayout_errorEnabled = global::FlyPhone.Droid.Resource.Styleable.TextInputLayout_errorEnabled;
+			global::Plugin.Toasts.Resource.Styleable.TextInputLayout_errorTextAppearance = global::FlyPhone.Droid.Resource.Styleable.TextInputLayout_errorTextAppearance;
+			global::Plugin.Toasts.Resource.Styleable.TextInputLayout_hintAnimationEnabled = global::FlyPhone.Droid.Resource.Styleable.TextInputLayout_hintAnimationEnabled;
+			global::Plugin.Toasts.Resource.Styleable.TextInputLayout_hintEnabled = global::FlyPhone.Droid.Resource.Styleable.TextInputLayout_hintEnabled;
+			global::Plugin.Toasts.Resource.Styleable.TextInputLayout_hintTextAppearance = global::FlyPhone.Droid.Resource.Styleable.TextInputLayout_hintTextAppearance;
+			global::Plugin.Toasts.Resource.Styleable.Toolbar = global::FlyPhone.Droid.Resource.Styleable.Toolbar;
+			global::Plugin.Toasts.Resource.Styleable.Toolbar_android_gravity = global::FlyPhone.Droid.Resource.Styleable.Toolbar_android_gravity;
+			global::Plugin.Toasts.Resource.Styleable.Toolbar_android_minHeight = global::FlyPhone.Droid.Resource.Styleable.Toolbar_android_minHeight;
+			global::Plugin.Toasts.Resource.Styleable.Toolbar_collapseContentDescription = global::FlyPhone.Droid.Resource.Styleable.Toolbar_collapseContentDescription;
+			global::Plugin.Toasts.Resource.Styleable.Toolbar_collapseIcon = global::FlyPhone.Droid.Resource.Styleable.Toolbar_collapseIcon;
+			global::Plugin.Toasts.Resource.Styleable.Toolbar_contentInsetEnd = global::FlyPhone.Droid.Resource.Styleable.Toolbar_contentInsetEnd;
+			global::Plugin.Toasts.Resource.Styleable.Toolbar_contentInsetLeft = global::FlyPhone.Droid.Resource.Styleable.Toolbar_contentInsetLeft;
+			global::Plugin.Toasts.Resource.Styleable.Toolbar_contentInsetRight = global::FlyPhone.Droid.Resource.Styleable.Toolbar_contentInsetRight;
+			global::Plugin.Toasts.Resource.Styleable.Toolbar_contentInsetStart = global::FlyPhone.Droid.Resource.Styleable.Toolbar_contentInsetStart;
+			global::Plugin.Toasts.Resource.Styleable.Toolbar_logo = global::FlyPhone.Droid.Resource.Styleable.Toolbar_logo;
+			global::Plugin.Toasts.Resource.Styleable.Toolbar_logoDescription = global::FlyPhone.Droid.Resource.Styleable.Toolbar_logoDescription;
+			global::Plugin.Toasts.Resource.Styleable.Toolbar_maxButtonHeight = global::FlyPhone.Droid.Resource.Styleable.Toolbar_maxButtonHeight;
+			global::Plugin.Toasts.Resource.Styleable.Toolbar_navigationContentDescription = global::FlyPhone.Droid.Resource.Styleable.Toolbar_navigationContentDescription;
+			global::Plugin.Toasts.Resource.Styleable.Toolbar_navigationIcon = global::FlyPhone.Droid.Resource.Styleable.Toolbar_navigationIcon;
+			global::Plugin.Toasts.Resource.Styleable.Toolbar_popupTheme = global::FlyPhone.Droid.Resource.Styleable.Toolbar_popupTheme;
+			global::Plugin.Toasts.Resource.Styleable.Toolbar_subtitle = global::FlyPhone.Droid.Resource.Styleable.Toolbar_subtitle;
+			global::Plugin.Toasts.Resource.Styleable.Toolbar_subtitleTextAppearance = global::FlyPhone.Droid.Resource.Styleable.Toolbar_subtitleTextAppearance;
+			global::Plugin.Toasts.Resource.Styleable.Toolbar_subtitleTextColor = global::FlyPhone.Droid.Resource.Styleable.Toolbar_subtitleTextColor;
+			global::Plugin.Toasts.Resource.Styleable.Toolbar_title = global::FlyPhone.Droid.Resource.Styleable.Toolbar_title;
+			global::Plugin.Toasts.Resource.Styleable.Toolbar_titleMarginBottom = global::FlyPhone.Droid.Resource.Styleable.Toolbar_titleMarginBottom;
+			global::Plugin.Toasts.Resource.Styleable.Toolbar_titleMarginEnd = global::FlyPhone.Droid.Resource.Styleable.Toolbar_titleMarginEnd;
+			global::Plugin.Toasts.Resource.Styleable.Toolbar_titleMarginStart = global::FlyPhone.Droid.Resource.Styleable.Toolbar_titleMarginStart;
+			global::Plugin.Toasts.Resource.Styleable.Toolbar_titleMarginTop = global::FlyPhone.Droid.Resource.Styleable.Toolbar_titleMarginTop;
+			global::Plugin.Toasts.Resource.Styleable.Toolbar_titleMargins = global::FlyPhone.Droid.Resource.Styleable.Toolbar_titleMargins;
+			global::Plugin.Toasts.Resource.Styleable.Toolbar_titleTextAppearance = global::FlyPhone.Droid.Resource.Styleable.Toolbar_titleTextAppearance;
+			global::Plugin.Toasts.Resource.Styleable.Toolbar_titleTextColor = global::FlyPhone.Droid.Resource.Styleable.Toolbar_titleTextColor;
+			global::Plugin.Toasts.Resource.Styleable.View = global::FlyPhone.Droid.Resource.Styleable.View;
+			global::Plugin.Toasts.Resource.Styleable.View_android_focusable = global::FlyPhone.Droid.Resource.Styleable.View_android_focusable;
+			global::Plugin.Toasts.Resource.Styleable.View_android_theme = global::FlyPhone.Droid.Resource.Styleable.View_android_theme;
+			global::Plugin.Toasts.Resource.Styleable.View_paddingEnd = global::FlyPhone.Droid.Resource.Styleable.View_paddingEnd;
+			global::Plugin.Toasts.Resource.Styleable.View_paddingStart = global::FlyPhone.Droid.Resource.Styleable.View_paddingStart;
+			global::Plugin.Toasts.Resource.Styleable.View_theme = global::FlyPhone.Droid.Resource.Styleable.View_theme;
+			global::Plugin.Toasts.Resource.Styleable.ViewBackgroundHelper = global::FlyPhone.Droid.Resource.Styleable.ViewBackgroundHelper;
+			global::Plugin.Toasts.Resource.Styleable.ViewBackgroundHelper_android_background = global::FlyPhone.Droid.Resource.Styleable.ViewBackgroundHelper_android_background;
+			global::Plugin.Toasts.Resource.Styleable.ViewBackgroundHelper_backgroundTint = global::FlyPhone.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTint;
+			global::Plugin.Toasts.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode = global::FlyPhone.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode;
+			global::Plugin.Toasts.Resource.Styleable.ViewStubCompat = global::FlyPhone.Droid.Resource.Styleable.ViewStubCompat;
+			global::Plugin.Toasts.Resource.Styleable.ViewStubCompat_android_id = global::FlyPhone.Droid.Resource.Styleable.ViewStubCompat_android_id;
+			global::Plugin.Toasts.Resource.Styleable.ViewStubCompat_android_inflatedId = global::FlyPhone.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId;
+			global::Plugin.Toasts.Resource.Styleable.ViewStubCompat_android_layout = global::FlyPhone.Droid.Resource.Styleable.ViewStubCompat_android_layout;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::FlyPhone.Droid.Resource.Attribute.actionBarSize;
 		}
 		
@@ -2332,26 +3840,26 @@ namespace FlyPhone.Droid
 			// aapt resource value: 0x7f020053
 			public const int avd_hide_password = 2130837587;
 			
-			// aapt resource value: 0x7f020132
-			public const int avd_hide_password_1 = 2130837810;
+			// aapt resource value: 0x7f020135
+			public const int avd_hide_password_1 = 2130837813;
 			
-			// aapt resource value: 0x7f020133
-			public const int avd_hide_password_2 = 2130837811;
+			// aapt resource value: 0x7f020136
+			public const int avd_hide_password_2 = 2130837814;
 			
-			// aapt resource value: 0x7f020134
-			public const int avd_hide_password_3 = 2130837812;
+			// aapt resource value: 0x7f020137
+			public const int avd_hide_password_3 = 2130837815;
 			
 			// aapt resource value: 0x7f020054
 			public const int avd_show_password = 2130837588;
 			
-			// aapt resource value: 0x7f020135
-			public const int avd_show_password_1 = 2130837813;
+			// aapt resource value: 0x7f020138
+			public const int avd_show_password_1 = 2130837816;
 			
-			// aapt resource value: 0x7f020136
-			public const int avd_show_password_2 = 2130837814;
+			// aapt resource value: 0x7f020139
+			public const int avd_show_password_2 = 2130837817;
 			
-			// aapt resource value: 0x7f020137
-			public const int avd_show_password_3 = 2130837815;
+			// aapt resource value: 0x7f02013a
+			public const int avd_show_password_3 = 2130837818;
 			
 			// aapt resource value: 0x7f020055
 			public const int design_bottom_navigation_item_background = 2130837589;
@@ -2372,649 +3880,658 @@ namespace FlyPhone.Droid
 			public const int design_snackbar_background = 2130837594;
 			
 			// aapt resource value: 0x7f02005b
-			public const int green = 2130837595;
+			public const int favourite = 2130837595;
 			
 			// aapt resource value: 0x7f02005c
-			public const int ic_audiotrack_dark = 2130837596;
+			public const int green = 2130837596;
 			
 			// aapt resource value: 0x7f02005d
-			public const int ic_audiotrack_light = 2130837597;
+			public const int ic_audiotrack_dark = 2130837597;
 			
 			// aapt resource value: 0x7f02005e
-			public const int ic_dialog_close_dark = 2130837598;
+			public const int ic_audiotrack_light = 2130837598;
 			
 			// aapt resource value: 0x7f02005f
-			public const int ic_dialog_close_light = 2130837599;
+			public const int ic_dialog_close_dark = 2130837599;
 			
 			// aapt resource value: 0x7f020060
-			public const int ic_group_collapse_00 = 2130837600;
+			public const int ic_dialog_close_light = 2130837600;
 			
 			// aapt resource value: 0x7f020061
-			public const int ic_group_collapse_01 = 2130837601;
+			public const int ic_group_collapse_00 = 2130837601;
 			
 			// aapt resource value: 0x7f020062
-			public const int ic_group_collapse_02 = 2130837602;
+			public const int ic_group_collapse_01 = 2130837602;
 			
 			// aapt resource value: 0x7f020063
-			public const int ic_group_collapse_03 = 2130837603;
+			public const int ic_group_collapse_02 = 2130837603;
 			
 			// aapt resource value: 0x7f020064
-			public const int ic_group_collapse_04 = 2130837604;
+			public const int ic_group_collapse_03 = 2130837604;
 			
 			// aapt resource value: 0x7f020065
-			public const int ic_group_collapse_05 = 2130837605;
+			public const int ic_group_collapse_04 = 2130837605;
 			
 			// aapt resource value: 0x7f020066
-			public const int ic_group_collapse_06 = 2130837606;
+			public const int ic_group_collapse_05 = 2130837606;
 			
 			// aapt resource value: 0x7f020067
-			public const int ic_group_collapse_07 = 2130837607;
+			public const int ic_group_collapse_06 = 2130837607;
 			
 			// aapt resource value: 0x7f020068
-			public const int ic_group_collapse_08 = 2130837608;
+			public const int ic_group_collapse_07 = 2130837608;
 			
 			// aapt resource value: 0x7f020069
-			public const int ic_group_collapse_09 = 2130837609;
+			public const int ic_group_collapse_08 = 2130837609;
 			
 			// aapt resource value: 0x7f02006a
-			public const int ic_group_collapse_10 = 2130837610;
+			public const int ic_group_collapse_09 = 2130837610;
 			
 			// aapt resource value: 0x7f02006b
-			public const int ic_group_collapse_11 = 2130837611;
+			public const int ic_group_collapse_10 = 2130837611;
 			
 			// aapt resource value: 0x7f02006c
-			public const int ic_group_collapse_12 = 2130837612;
+			public const int ic_group_collapse_11 = 2130837612;
 			
 			// aapt resource value: 0x7f02006d
-			public const int ic_group_collapse_13 = 2130837613;
+			public const int ic_group_collapse_12 = 2130837613;
 			
 			// aapt resource value: 0x7f02006e
-			public const int ic_group_collapse_14 = 2130837614;
+			public const int ic_group_collapse_13 = 2130837614;
 			
 			// aapt resource value: 0x7f02006f
-			public const int ic_group_collapse_15 = 2130837615;
+			public const int ic_group_collapse_14 = 2130837615;
 			
 			// aapt resource value: 0x7f020070
-			public const int ic_group_expand_00 = 2130837616;
+			public const int ic_group_collapse_15 = 2130837616;
 			
 			// aapt resource value: 0x7f020071
-			public const int ic_group_expand_01 = 2130837617;
+			public const int ic_group_expand_00 = 2130837617;
 			
 			// aapt resource value: 0x7f020072
-			public const int ic_group_expand_02 = 2130837618;
+			public const int ic_group_expand_01 = 2130837618;
 			
 			// aapt resource value: 0x7f020073
-			public const int ic_group_expand_03 = 2130837619;
+			public const int ic_group_expand_02 = 2130837619;
 			
 			// aapt resource value: 0x7f020074
-			public const int ic_group_expand_04 = 2130837620;
+			public const int ic_group_expand_03 = 2130837620;
 			
 			// aapt resource value: 0x7f020075
-			public const int ic_group_expand_05 = 2130837621;
+			public const int ic_group_expand_04 = 2130837621;
 			
 			// aapt resource value: 0x7f020076
-			public const int ic_group_expand_06 = 2130837622;
+			public const int ic_group_expand_05 = 2130837622;
 			
 			// aapt resource value: 0x7f020077
-			public const int ic_group_expand_07 = 2130837623;
+			public const int ic_group_expand_06 = 2130837623;
 			
 			// aapt resource value: 0x7f020078
-			public const int ic_group_expand_08 = 2130837624;
+			public const int ic_group_expand_07 = 2130837624;
 			
 			// aapt resource value: 0x7f020079
-			public const int ic_group_expand_09 = 2130837625;
+			public const int ic_group_expand_08 = 2130837625;
 			
 			// aapt resource value: 0x7f02007a
-			public const int ic_group_expand_10 = 2130837626;
+			public const int ic_group_expand_09 = 2130837626;
 			
 			// aapt resource value: 0x7f02007b
-			public const int ic_group_expand_11 = 2130837627;
+			public const int ic_group_expand_10 = 2130837627;
 			
 			// aapt resource value: 0x7f02007c
-			public const int ic_group_expand_12 = 2130837628;
+			public const int ic_group_expand_11 = 2130837628;
 			
 			// aapt resource value: 0x7f02007d
-			public const int ic_group_expand_13 = 2130837629;
+			public const int ic_group_expand_12 = 2130837629;
 			
 			// aapt resource value: 0x7f02007e
-			public const int ic_group_expand_14 = 2130837630;
+			public const int ic_group_expand_13 = 2130837630;
 			
 			// aapt resource value: 0x7f02007f
-			public const int ic_group_expand_15 = 2130837631;
+			public const int ic_group_expand_14 = 2130837631;
 			
 			// aapt resource value: 0x7f020080
-			public const int ic_media_pause_dark = 2130837632;
+			public const int ic_group_expand_15 = 2130837632;
 			
 			// aapt resource value: 0x7f020081
-			public const int ic_media_pause_light = 2130837633;
+			public const int ic_media_pause_dark = 2130837633;
 			
 			// aapt resource value: 0x7f020082
-			public const int ic_media_play_dark = 2130837634;
+			public const int ic_media_pause_light = 2130837634;
 			
 			// aapt resource value: 0x7f020083
-			public const int ic_media_play_light = 2130837635;
+			public const int ic_media_play_dark = 2130837635;
 			
 			// aapt resource value: 0x7f020084
-			public const int ic_media_stop_dark = 2130837636;
+			public const int ic_media_play_light = 2130837636;
 			
 			// aapt resource value: 0x7f020085
-			public const int ic_media_stop_light = 2130837637;
+			public const int ic_media_stop_dark = 2130837637;
 			
 			// aapt resource value: 0x7f020086
-			public const int ic_mr_button_connected_00_dark = 2130837638;
+			public const int ic_media_stop_light = 2130837638;
 			
 			// aapt resource value: 0x7f020087
-			public const int ic_mr_button_connected_00_light = 2130837639;
+			public const int ic_mr_button_connected_00_dark = 2130837639;
 			
 			// aapt resource value: 0x7f020088
-			public const int ic_mr_button_connected_01_dark = 2130837640;
+			public const int ic_mr_button_connected_00_light = 2130837640;
 			
 			// aapt resource value: 0x7f020089
-			public const int ic_mr_button_connected_01_light = 2130837641;
+			public const int ic_mr_button_connected_01_dark = 2130837641;
 			
 			// aapt resource value: 0x7f02008a
-			public const int ic_mr_button_connected_02_dark = 2130837642;
+			public const int ic_mr_button_connected_01_light = 2130837642;
 			
 			// aapt resource value: 0x7f02008b
-			public const int ic_mr_button_connected_02_light = 2130837643;
+			public const int ic_mr_button_connected_02_dark = 2130837643;
 			
 			// aapt resource value: 0x7f02008c
-			public const int ic_mr_button_connected_03_dark = 2130837644;
+			public const int ic_mr_button_connected_02_light = 2130837644;
 			
 			// aapt resource value: 0x7f02008d
-			public const int ic_mr_button_connected_03_light = 2130837645;
+			public const int ic_mr_button_connected_03_dark = 2130837645;
 			
 			// aapt resource value: 0x7f02008e
-			public const int ic_mr_button_connected_04_dark = 2130837646;
+			public const int ic_mr_button_connected_03_light = 2130837646;
 			
 			// aapt resource value: 0x7f02008f
-			public const int ic_mr_button_connected_04_light = 2130837647;
+			public const int ic_mr_button_connected_04_dark = 2130837647;
 			
 			// aapt resource value: 0x7f020090
-			public const int ic_mr_button_connected_05_dark = 2130837648;
+			public const int ic_mr_button_connected_04_light = 2130837648;
 			
 			// aapt resource value: 0x7f020091
-			public const int ic_mr_button_connected_05_light = 2130837649;
+			public const int ic_mr_button_connected_05_dark = 2130837649;
 			
 			// aapt resource value: 0x7f020092
-			public const int ic_mr_button_connected_06_dark = 2130837650;
+			public const int ic_mr_button_connected_05_light = 2130837650;
 			
 			// aapt resource value: 0x7f020093
-			public const int ic_mr_button_connected_06_light = 2130837651;
+			public const int ic_mr_button_connected_06_dark = 2130837651;
 			
 			// aapt resource value: 0x7f020094
-			public const int ic_mr_button_connected_07_dark = 2130837652;
+			public const int ic_mr_button_connected_06_light = 2130837652;
 			
 			// aapt resource value: 0x7f020095
-			public const int ic_mr_button_connected_07_light = 2130837653;
+			public const int ic_mr_button_connected_07_dark = 2130837653;
 			
 			// aapt resource value: 0x7f020096
-			public const int ic_mr_button_connected_08_dark = 2130837654;
+			public const int ic_mr_button_connected_07_light = 2130837654;
 			
 			// aapt resource value: 0x7f020097
-			public const int ic_mr_button_connected_08_light = 2130837655;
+			public const int ic_mr_button_connected_08_dark = 2130837655;
 			
 			// aapt resource value: 0x7f020098
-			public const int ic_mr_button_connected_09_dark = 2130837656;
+			public const int ic_mr_button_connected_08_light = 2130837656;
 			
 			// aapt resource value: 0x7f020099
-			public const int ic_mr_button_connected_09_light = 2130837657;
+			public const int ic_mr_button_connected_09_dark = 2130837657;
 			
 			// aapt resource value: 0x7f02009a
-			public const int ic_mr_button_connected_10_dark = 2130837658;
+			public const int ic_mr_button_connected_09_light = 2130837658;
 			
 			// aapt resource value: 0x7f02009b
-			public const int ic_mr_button_connected_10_light = 2130837659;
+			public const int ic_mr_button_connected_10_dark = 2130837659;
 			
 			// aapt resource value: 0x7f02009c
-			public const int ic_mr_button_connected_11_dark = 2130837660;
+			public const int ic_mr_button_connected_10_light = 2130837660;
 			
 			// aapt resource value: 0x7f02009d
-			public const int ic_mr_button_connected_11_light = 2130837661;
+			public const int ic_mr_button_connected_11_dark = 2130837661;
 			
 			// aapt resource value: 0x7f02009e
-			public const int ic_mr_button_connected_12_dark = 2130837662;
+			public const int ic_mr_button_connected_11_light = 2130837662;
 			
 			// aapt resource value: 0x7f02009f
-			public const int ic_mr_button_connected_12_light = 2130837663;
+			public const int ic_mr_button_connected_12_dark = 2130837663;
 			
 			// aapt resource value: 0x7f0200a0
-			public const int ic_mr_button_connected_13_dark = 2130837664;
+			public const int ic_mr_button_connected_12_light = 2130837664;
 			
 			// aapt resource value: 0x7f0200a1
-			public const int ic_mr_button_connected_13_light = 2130837665;
+			public const int ic_mr_button_connected_13_dark = 2130837665;
 			
 			// aapt resource value: 0x7f0200a2
-			public const int ic_mr_button_connected_14_dark = 2130837666;
+			public const int ic_mr_button_connected_13_light = 2130837666;
 			
 			// aapt resource value: 0x7f0200a3
-			public const int ic_mr_button_connected_14_light = 2130837667;
+			public const int ic_mr_button_connected_14_dark = 2130837667;
 			
 			// aapt resource value: 0x7f0200a4
-			public const int ic_mr_button_connected_15_dark = 2130837668;
+			public const int ic_mr_button_connected_14_light = 2130837668;
 			
 			// aapt resource value: 0x7f0200a5
-			public const int ic_mr_button_connected_15_light = 2130837669;
+			public const int ic_mr_button_connected_15_dark = 2130837669;
 			
 			// aapt resource value: 0x7f0200a6
-			public const int ic_mr_button_connected_16_dark = 2130837670;
+			public const int ic_mr_button_connected_15_light = 2130837670;
 			
 			// aapt resource value: 0x7f0200a7
-			public const int ic_mr_button_connected_16_light = 2130837671;
+			public const int ic_mr_button_connected_16_dark = 2130837671;
 			
 			// aapt resource value: 0x7f0200a8
-			public const int ic_mr_button_connected_17_dark = 2130837672;
+			public const int ic_mr_button_connected_16_light = 2130837672;
 			
 			// aapt resource value: 0x7f0200a9
-			public const int ic_mr_button_connected_17_light = 2130837673;
+			public const int ic_mr_button_connected_17_dark = 2130837673;
 			
 			// aapt resource value: 0x7f0200aa
-			public const int ic_mr_button_connected_18_dark = 2130837674;
+			public const int ic_mr_button_connected_17_light = 2130837674;
 			
 			// aapt resource value: 0x7f0200ab
-			public const int ic_mr_button_connected_18_light = 2130837675;
+			public const int ic_mr_button_connected_18_dark = 2130837675;
 			
 			// aapt resource value: 0x7f0200ac
-			public const int ic_mr_button_connected_19_dark = 2130837676;
+			public const int ic_mr_button_connected_18_light = 2130837676;
 			
 			// aapt resource value: 0x7f0200ad
-			public const int ic_mr_button_connected_19_light = 2130837677;
+			public const int ic_mr_button_connected_19_dark = 2130837677;
 			
 			// aapt resource value: 0x7f0200ae
-			public const int ic_mr_button_connected_20_dark = 2130837678;
+			public const int ic_mr_button_connected_19_light = 2130837678;
 			
 			// aapt resource value: 0x7f0200af
-			public const int ic_mr_button_connected_20_light = 2130837679;
+			public const int ic_mr_button_connected_20_dark = 2130837679;
 			
 			// aapt resource value: 0x7f0200b0
-			public const int ic_mr_button_connected_21_dark = 2130837680;
+			public const int ic_mr_button_connected_20_light = 2130837680;
 			
 			// aapt resource value: 0x7f0200b1
-			public const int ic_mr_button_connected_21_light = 2130837681;
+			public const int ic_mr_button_connected_21_dark = 2130837681;
 			
 			// aapt resource value: 0x7f0200b2
-			public const int ic_mr_button_connected_22_dark = 2130837682;
+			public const int ic_mr_button_connected_21_light = 2130837682;
 			
 			// aapt resource value: 0x7f0200b3
-			public const int ic_mr_button_connected_22_light = 2130837683;
+			public const int ic_mr_button_connected_22_dark = 2130837683;
 			
 			// aapt resource value: 0x7f0200b4
-			public const int ic_mr_button_connected_23_dark = 2130837684;
+			public const int ic_mr_button_connected_22_light = 2130837684;
 			
 			// aapt resource value: 0x7f0200b5
-			public const int ic_mr_button_connected_23_light = 2130837685;
+			public const int ic_mr_button_connected_23_dark = 2130837685;
 			
 			// aapt resource value: 0x7f0200b6
-			public const int ic_mr_button_connected_24_dark = 2130837686;
+			public const int ic_mr_button_connected_23_light = 2130837686;
 			
 			// aapt resource value: 0x7f0200b7
-			public const int ic_mr_button_connected_24_light = 2130837687;
+			public const int ic_mr_button_connected_24_dark = 2130837687;
 			
 			// aapt resource value: 0x7f0200b8
-			public const int ic_mr_button_connected_25_dark = 2130837688;
+			public const int ic_mr_button_connected_24_light = 2130837688;
 			
 			// aapt resource value: 0x7f0200b9
-			public const int ic_mr_button_connected_25_light = 2130837689;
+			public const int ic_mr_button_connected_25_dark = 2130837689;
 			
 			// aapt resource value: 0x7f0200ba
-			public const int ic_mr_button_connected_26_dark = 2130837690;
+			public const int ic_mr_button_connected_25_light = 2130837690;
 			
 			// aapt resource value: 0x7f0200bb
-			public const int ic_mr_button_connected_26_light = 2130837691;
+			public const int ic_mr_button_connected_26_dark = 2130837691;
 			
 			// aapt resource value: 0x7f0200bc
-			public const int ic_mr_button_connected_27_dark = 2130837692;
+			public const int ic_mr_button_connected_26_light = 2130837692;
 			
 			// aapt resource value: 0x7f0200bd
-			public const int ic_mr_button_connected_27_light = 2130837693;
+			public const int ic_mr_button_connected_27_dark = 2130837693;
 			
 			// aapt resource value: 0x7f0200be
-			public const int ic_mr_button_connected_28_dark = 2130837694;
+			public const int ic_mr_button_connected_27_light = 2130837694;
 			
 			// aapt resource value: 0x7f0200bf
-			public const int ic_mr_button_connected_28_light = 2130837695;
+			public const int ic_mr_button_connected_28_dark = 2130837695;
 			
 			// aapt resource value: 0x7f0200c0
-			public const int ic_mr_button_connected_29_dark = 2130837696;
+			public const int ic_mr_button_connected_28_light = 2130837696;
 			
 			// aapt resource value: 0x7f0200c1
-			public const int ic_mr_button_connected_29_light = 2130837697;
+			public const int ic_mr_button_connected_29_dark = 2130837697;
 			
 			// aapt resource value: 0x7f0200c2
-			public const int ic_mr_button_connected_30_dark = 2130837698;
+			public const int ic_mr_button_connected_29_light = 2130837698;
 			
 			// aapt resource value: 0x7f0200c3
-			public const int ic_mr_button_connected_30_light = 2130837699;
+			public const int ic_mr_button_connected_30_dark = 2130837699;
 			
 			// aapt resource value: 0x7f0200c4
-			public const int ic_mr_button_connecting_00_dark = 2130837700;
+			public const int ic_mr_button_connected_30_light = 2130837700;
 			
 			// aapt resource value: 0x7f0200c5
-			public const int ic_mr_button_connecting_00_light = 2130837701;
+			public const int ic_mr_button_connecting_00_dark = 2130837701;
 			
 			// aapt resource value: 0x7f0200c6
-			public const int ic_mr_button_connecting_01_dark = 2130837702;
+			public const int ic_mr_button_connecting_00_light = 2130837702;
 			
 			// aapt resource value: 0x7f0200c7
-			public const int ic_mr_button_connecting_01_light = 2130837703;
+			public const int ic_mr_button_connecting_01_dark = 2130837703;
 			
 			// aapt resource value: 0x7f0200c8
-			public const int ic_mr_button_connecting_02_dark = 2130837704;
+			public const int ic_mr_button_connecting_01_light = 2130837704;
 			
 			// aapt resource value: 0x7f0200c9
-			public const int ic_mr_button_connecting_02_light = 2130837705;
+			public const int ic_mr_button_connecting_02_dark = 2130837705;
 			
 			// aapt resource value: 0x7f0200ca
-			public const int ic_mr_button_connecting_03_dark = 2130837706;
+			public const int ic_mr_button_connecting_02_light = 2130837706;
 			
 			// aapt resource value: 0x7f0200cb
-			public const int ic_mr_button_connecting_03_light = 2130837707;
+			public const int ic_mr_button_connecting_03_dark = 2130837707;
 			
 			// aapt resource value: 0x7f0200cc
-			public const int ic_mr_button_connecting_04_dark = 2130837708;
+			public const int ic_mr_button_connecting_03_light = 2130837708;
 			
 			// aapt resource value: 0x7f0200cd
-			public const int ic_mr_button_connecting_04_light = 2130837709;
+			public const int ic_mr_button_connecting_04_dark = 2130837709;
 			
 			// aapt resource value: 0x7f0200ce
-			public const int ic_mr_button_connecting_05_dark = 2130837710;
+			public const int ic_mr_button_connecting_04_light = 2130837710;
 			
 			// aapt resource value: 0x7f0200cf
-			public const int ic_mr_button_connecting_05_light = 2130837711;
+			public const int ic_mr_button_connecting_05_dark = 2130837711;
 			
 			// aapt resource value: 0x7f0200d0
-			public const int ic_mr_button_connecting_06_dark = 2130837712;
+			public const int ic_mr_button_connecting_05_light = 2130837712;
 			
 			// aapt resource value: 0x7f0200d1
-			public const int ic_mr_button_connecting_06_light = 2130837713;
+			public const int ic_mr_button_connecting_06_dark = 2130837713;
 			
 			// aapt resource value: 0x7f0200d2
-			public const int ic_mr_button_connecting_07_dark = 2130837714;
+			public const int ic_mr_button_connecting_06_light = 2130837714;
 			
 			// aapt resource value: 0x7f0200d3
-			public const int ic_mr_button_connecting_07_light = 2130837715;
+			public const int ic_mr_button_connecting_07_dark = 2130837715;
 			
 			// aapt resource value: 0x7f0200d4
-			public const int ic_mr_button_connecting_08_dark = 2130837716;
+			public const int ic_mr_button_connecting_07_light = 2130837716;
 			
 			// aapt resource value: 0x7f0200d5
-			public const int ic_mr_button_connecting_08_light = 2130837717;
+			public const int ic_mr_button_connecting_08_dark = 2130837717;
 			
 			// aapt resource value: 0x7f0200d6
-			public const int ic_mr_button_connecting_09_dark = 2130837718;
+			public const int ic_mr_button_connecting_08_light = 2130837718;
 			
 			// aapt resource value: 0x7f0200d7
-			public const int ic_mr_button_connecting_09_light = 2130837719;
+			public const int ic_mr_button_connecting_09_dark = 2130837719;
 			
 			// aapt resource value: 0x7f0200d8
-			public const int ic_mr_button_connecting_10_dark = 2130837720;
+			public const int ic_mr_button_connecting_09_light = 2130837720;
 			
 			// aapt resource value: 0x7f0200d9
-			public const int ic_mr_button_connecting_10_light = 2130837721;
+			public const int ic_mr_button_connecting_10_dark = 2130837721;
 			
 			// aapt resource value: 0x7f0200da
-			public const int ic_mr_button_connecting_11_dark = 2130837722;
+			public const int ic_mr_button_connecting_10_light = 2130837722;
 			
 			// aapt resource value: 0x7f0200db
-			public const int ic_mr_button_connecting_11_light = 2130837723;
+			public const int ic_mr_button_connecting_11_dark = 2130837723;
 			
 			// aapt resource value: 0x7f0200dc
-			public const int ic_mr_button_connecting_12_dark = 2130837724;
+			public const int ic_mr_button_connecting_11_light = 2130837724;
 			
 			// aapt resource value: 0x7f0200dd
-			public const int ic_mr_button_connecting_12_light = 2130837725;
+			public const int ic_mr_button_connecting_12_dark = 2130837725;
 			
 			// aapt resource value: 0x7f0200de
-			public const int ic_mr_button_connecting_13_dark = 2130837726;
+			public const int ic_mr_button_connecting_12_light = 2130837726;
 			
 			// aapt resource value: 0x7f0200df
-			public const int ic_mr_button_connecting_13_light = 2130837727;
+			public const int ic_mr_button_connecting_13_dark = 2130837727;
 			
 			// aapt resource value: 0x7f0200e0
-			public const int ic_mr_button_connecting_14_dark = 2130837728;
+			public const int ic_mr_button_connecting_13_light = 2130837728;
 			
 			// aapt resource value: 0x7f0200e1
-			public const int ic_mr_button_connecting_14_light = 2130837729;
+			public const int ic_mr_button_connecting_14_dark = 2130837729;
 			
 			// aapt resource value: 0x7f0200e2
-			public const int ic_mr_button_connecting_15_dark = 2130837730;
+			public const int ic_mr_button_connecting_14_light = 2130837730;
 			
 			// aapt resource value: 0x7f0200e3
-			public const int ic_mr_button_connecting_15_light = 2130837731;
+			public const int ic_mr_button_connecting_15_dark = 2130837731;
 			
 			// aapt resource value: 0x7f0200e4
-			public const int ic_mr_button_connecting_16_dark = 2130837732;
+			public const int ic_mr_button_connecting_15_light = 2130837732;
 			
 			// aapt resource value: 0x7f0200e5
-			public const int ic_mr_button_connecting_16_light = 2130837733;
+			public const int ic_mr_button_connecting_16_dark = 2130837733;
 			
 			// aapt resource value: 0x7f0200e6
-			public const int ic_mr_button_connecting_17_dark = 2130837734;
+			public const int ic_mr_button_connecting_16_light = 2130837734;
 			
 			// aapt resource value: 0x7f0200e7
-			public const int ic_mr_button_connecting_17_light = 2130837735;
+			public const int ic_mr_button_connecting_17_dark = 2130837735;
 			
 			// aapt resource value: 0x7f0200e8
-			public const int ic_mr_button_connecting_18_dark = 2130837736;
+			public const int ic_mr_button_connecting_17_light = 2130837736;
 			
 			// aapt resource value: 0x7f0200e9
-			public const int ic_mr_button_connecting_18_light = 2130837737;
+			public const int ic_mr_button_connecting_18_dark = 2130837737;
 			
 			// aapt resource value: 0x7f0200ea
-			public const int ic_mr_button_connecting_19_dark = 2130837738;
+			public const int ic_mr_button_connecting_18_light = 2130837738;
 			
 			// aapt resource value: 0x7f0200eb
-			public const int ic_mr_button_connecting_19_light = 2130837739;
+			public const int ic_mr_button_connecting_19_dark = 2130837739;
 			
 			// aapt resource value: 0x7f0200ec
-			public const int ic_mr_button_connecting_20_dark = 2130837740;
+			public const int ic_mr_button_connecting_19_light = 2130837740;
 			
 			// aapt resource value: 0x7f0200ed
-			public const int ic_mr_button_connecting_20_light = 2130837741;
+			public const int ic_mr_button_connecting_20_dark = 2130837741;
 			
 			// aapt resource value: 0x7f0200ee
-			public const int ic_mr_button_connecting_21_dark = 2130837742;
+			public const int ic_mr_button_connecting_20_light = 2130837742;
 			
 			// aapt resource value: 0x7f0200ef
-			public const int ic_mr_button_connecting_21_light = 2130837743;
+			public const int ic_mr_button_connecting_21_dark = 2130837743;
 			
 			// aapt resource value: 0x7f0200f0
-			public const int ic_mr_button_connecting_22_dark = 2130837744;
+			public const int ic_mr_button_connecting_21_light = 2130837744;
 			
 			// aapt resource value: 0x7f0200f1
-			public const int ic_mr_button_connecting_22_light = 2130837745;
+			public const int ic_mr_button_connecting_22_dark = 2130837745;
 			
 			// aapt resource value: 0x7f0200f2
-			public const int ic_mr_button_connecting_23_dark = 2130837746;
+			public const int ic_mr_button_connecting_22_light = 2130837746;
 			
 			// aapt resource value: 0x7f0200f3
-			public const int ic_mr_button_connecting_23_light = 2130837747;
+			public const int ic_mr_button_connecting_23_dark = 2130837747;
 			
 			// aapt resource value: 0x7f0200f4
-			public const int ic_mr_button_connecting_24_dark = 2130837748;
+			public const int ic_mr_button_connecting_23_light = 2130837748;
 			
 			// aapt resource value: 0x7f0200f5
-			public const int ic_mr_button_connecting_24_light = 2130837749;
+			public const int ic_mr_button_connecting_24_dark = 2130837749;
 			
 			// aapt resource value: 0x7f0200f6
-			public const int ic_mr_button_connecting_25_dark = 2130837750;
+			public const int ic_mr_button_connecting_24_light = 2130837750;
 			
 			// aapt resource value: 0x7f0200f7
-			public const int ic_mr_button_connecting_25_light = 2130837751;
+			public const int ic_mr_button_connecting_25_dark = 2130837751;
 			
 			// aapt resource value: 0x7f0200f8
-			public const int ic_mr_button_connecting_26_dark = 2130837752;
+			public const int ic_mr_button_connecting_25_light = 2130837752;
 			
 			// aapt resource value: 0x7f0200f9
-			public const int ic_mr_button_connecting_26_light = 2130837753;
+			public const int ic_mr_button_connecting_26_dark = 2130837753;
 			
 			// aapt resource value: 0x7f0200fa
-			public const int ic_mr_button_connecting_27_dark = 2130837754;
+			public const int ic_mr_button_connecting_26_light = 2130837754;
 			
 			// aapt resource value: 0x7f0200fb
-			public const int ic_mr_button_connecting_27_light = 2130837755;
+			public const int ic_mr_button_connecting_27_dark = 2130837755;
 			
 			// aapt resource value: 0x7f0200fc
-			public const int ic_mr_button_connecting_28_dark = 2130837756;
+			public const int ic_mr_button_connecting_27_light = 2130837756;
 			
 			// aapt resource value: 0x7f0200fd
-			public const int ic_mr_button_connecting_28_light = 2130837757;
+			public const int ic_mr_button_connecting_28_dark = 2130837757;
 			
 			// aapt resource value: 0x7f0200fe
-			public const int ic_mr_button_connecting_29_dark = 2130837758;
+			public const int ic_mr_button_connecting_28_light = 2130837758;
 			
 			// aapt resource value: 0x7f0200ff
-			public const int ic_mr_button_connecting_29_light = 2130837759;
+			public const int ic_mr_button_connecting_29_dark = 2130837759;
 			
 			// aapt resource value: 0x7f020100
-			public const int ic_mr_button_connecting_30_dark = 2130837760;
+			public const int ic_mr_button_connecting_29_light = 2130837760;
 			
 			// aapt resource value: 0x7f020101
-			public const int ic_mr_button_connecting_30_light = 2130837761;
+			public const int ic_mr_button_connecting_30_dark = 2130837761;
 			
 			// aapt resource value: 0x7f020102
-			public const int ic_mr_button_disabled_dark = 2130837762;
+			public const int ic_mr_button_connecting_30_light = 2130837762;
 			
 			// aapt resource value: 0x7f020103
-			public const int ic_mr_button_disabled_light = 2130837763;
+			public const int ic_mr_button_disabled_dark = 2130837763;
 			
 			// aapt resource value: 0x7f020104
-			public const int ic_mr_button_disconnected_dark = 2130837764;
+			public const int ic_mr_button_disabled_light = 2130837764;
 			
 			// aapt resource value: 0x7f020105
-			public const int ic_mr_button_disconnected_light = 2130837765;
+			public const int ic_mr_button_disconnected_dark = 2130837765;
 			
 			// aapt resource value: 0x7f020106
-			public const int ic_mr_button_grey = 2130837766;
+			public const int ic_mr_button_disconnected_light = 2130837766;
 			
 			// aapt resource value: 0x7f020107
-			public const int ic_vol_type_speaker_dark = 2130837767;
+			public const int ic_mr_button_grey = 2130837767;
 			
 			// aapt resource value: 0x7f020108
-			public const int ic_vol_type_speaker_group_dark = 2130837768;
+			public const int ic_vol_type_speaker_dark = 2130837768;
 			
 			// aapt resource value: 0x7f020109
-			public const int ic_vol_type_speaker_group_light = 2130837769;
+			public const int ic_vol_type_speaker_group_dark = 2130837769;
 			
 			// aapt resource value: 0x7f02010a
-			public const int ic_vol_type_speaker_light = 2130837770;
+			public const int ic_vol_type_speaker_group_light = 2130837770;
 			
 			// aapt resource value: 0x7f02010b
-			public const int ic_vol_type_tv_dark = 2130837771;
+			public const int ic_vol_type_speaker_light = 2130837771;
 			
 			// aapt resource value: 0x7f02010c
-			public const int ic_vol_type_tv_light = 2130837772;
+			public const int ic_vol_type_tv_dark = 2130837772;
 			
 			// aapt resource value: 0x7f02010d
-			public const int mr_button_connected_dark = 2130837773;
+			public const int ic_vol_type_tv_light = 2130837773;
 			
 			// aapt resource value: 0x7f02010e
-			public const int mr_button_connected_light = 2130837774;
+			public const int mr_button_connected_dark = 2130837774;
 			
 			// aapt resource value: 0x7f02010f
-			public const int mr_button_connecting_dark = 2130837775;
+			public const int mr_button_connected_light = 2130837775;
 			
 			// aapt resource value: 0x7f020110
-			public const int mr_button_connecting_light = 2130837776;
+			public const int mr_button_connecting_dark = 2130837776;
 			
 			// aapt resource value: 0x7f020111
-			public const int mr_button_dark = 2130837777;
+			public const int mr_button_connecting_light = 2130837777;
 			
 			// aapt resource value: 0x7f020112
-			public const int mr_button_light = 2130837778;
+			public const int mr_button_dark = 2130837778;
 			
 			// aapt resource value: 0x7f020113
-			public const int mr_dialog_close_dark = 2130837779;
+			public const int mr_button_light = 2130837779;
 			
 			// aapt resource value: 0x7f020114
-			public const int mr_dialog_close_light = 2130837780;
+			public const int mr_dialog_close_dark = 2130837780;
 			
 			// aapt resource value: 0x7f020115
-			public const int mr_dialog_material_background_dark = 2130837781;
+			public const int mr_dialog_close_light = 2130837781;
 			
 			// aapt resource value: 0x7f020116
-			public const int mr_dialog_material_background_light = 2130837782;
+			public const int mr_dialog_material_background_dark = 2130837782;
 			
 			// aapt resource value: 0x7f020117
-			public const int mr_group_collapse = 2130837783;
+			public const int mr_dialog_material_background_light = 2130837783;
 			
 			// aapt resource value: 0x7f020118
-			public const int mr_group_expand = 2130837784;
+			public const int mr_group_collapse = 2130837784;
 			
 			// aapt resource value: 0x7f020119
-			public const int mr_media_pause_dark = 2130837785;
+			public const int mr_group_expand = 2130837785;
 			
 			// aapt resource value: 0x7f02011a
-			public const int mr_media_pause_light = 2130837786;
+			public const int mr_media_pause_dark = 2130837786;
 			
 			// aapt resource value: 0x7f02011b
-			public const int mr_media_play_dark = 2130837787;
+			public const int mr_media_pause_light = 2130837787;
 			
 			// aapt resource value: 0x7f02011c
-			public const int mr_media_play_light = 2130837788;
+			public const int mr_media_play_dark = 2130837788;
 			
 			// aapt resource value: 0x7f02011d
-			public const int mr_media_stop_dark = 2130837789;
+			public const int mr_media_play_light = 2130837789;
 			
 			// aapt resource value: 0x7f02011e
-			public const int mr_media_stop_light = 2130837790;
+			public const int mr_media_stop_dark = 2130837790;
 			
 			// aapt resource value: 0x7f02011f
-			public const int mr_vol_type_audiotrack_dark = 2130837791;
+			public const int mr_media_stop_light = 2130837791;
 			
 			// aapt resource value: 0x7f020120
-			public const int mr_vol_type_audiotrack_light = 2130837792;
+			public const int mr_vol_type_audiotrack_dark = 2130837792;
 			
 			// aapt resource value: 0x7f020121
-			public const int navigation_empty_icon = 2130837793;
+			public const int mr_vol_type_audiotrack_light = 2130837793;
 			
 			// aapt resource value: 0x7f020122
-			public const int notification_action_background = 2130837794;
+			public const int navigation_empty_icon = 2130837794;
 			
 			// aapt resource value: 0x7f020123
-			public const int notification_bg = 2130837795;
+			public const int not_favourite = 2130837795;
 			
 			// aapt resource value: 0x7f020124
-			public const int notification_bg_low = 2130837796;
+			public const int notification_action_background = 2130837796;
 			
 			// aapt resource value: 0x7f020125
-			public const int notification_bg_low_normal = 2130837797;
+			public const int notification_bg = 2130837797;
 			
 			// aapt resource value: 0x7f020126
-			public const int notification_bg_low_pressed = 2130837798;
+			public const int notification_bg_low = 2130837798;
 			
 			// aapt resource value: 0x7f020127
-			public const int notification_bg_normal = 2130837799;
+			public const int notification_bg_low_normal = 2130837799;
 			
 			// aapt resource value: 0x7f020128
-			public const int notification_bg_normal_pressed = 2130837800;
+			public const int notification_bg_low_pressed = 2130837800;
 			
 			// aapt resource value: 0x7f020129
-			public const int notification_icon_background = 2130837801;
-			
-			// aapt resource value: 0x7f020130
-			public const int notification_template_icon_bg = 2130837808;
-			
-			// aapt resource value: 0x7f020131
-			public const int notification_template_icon_low_bg = 2130837809;
+			public const int notification_bg_normal = 2130837801;
 			
 			// aapt resource value: 0x7f02012a
-			public const int notification_tile_bg = 2130837802;
+			public const int notification_bg_normal_pressed = 2130837802;
 			
 			// aapt resource value: 0x7f02012b
-			public const int notify_panel_notification_icon_bg = 2130837803;
+			public const int notification_icon_background = 2130837803;
+			
+			// aapt resource value: 0x7f020133
+			public const int notification_template_icon_bg = 2130837811;
+			
+			// aapt resource value: 0x7f020134
+			public const int notification_template_icon_low_bg = 2130837812;
 			
 			// aapt resource value: 0x7f02012c
-			public const int red = 2130837804;
+			public const int notification_tile_bg = 2130837804;
 			
 			// aapt resource value: 0x7f02012d
-			public const int shutdown = 2130837805;
+			public const int notify_panel_notification_icon_bg = 2130837805;
 			
 			// aapt resource value: 0x7f02012e
-			public const int tooltip_frame_dark = 2130837806;
+			public const int red = 2130837806;
 			
 			// aapt resource value: 0x7f02012f
-			public const int tooltip_frame_light = 2130837807;
+			public const int shutdown = 2130837807;
+			
+			// aapt resource value: 0x7f020130
+			public const int splash = 2130837808;
+			
+			// aapt resource value: 0x7f020131
+			public const int tooltip_frame_dark = 2130837809;
+			
+			// aapt resource value: 0x7f020132
+			public const int tooltip_frame_light = 2130837810;
 			
 			static Drawable()
 			{
@@ -3029,59 +4546,59 @@ namespace FlyPhone.Droid
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f080031
-			public const int ALT = 2131230769;
-			
 			// aapt resource value: 0x7f080032
-			public const int CTRL = 2131230770;
+			public const int ALT = 2131230770;
 			
 			// aapt resource value: 0x7f080033
-			public const int FUNCTION = 2131230771;
+			public const int CTRL = 2131230771;
 			
 			// aapt resource value: 0x7f080034
-			public const int META = 2131230772;
+			public const int FUNCTION = 2131230772;
 			
 			// aapt resource value: 0x7f080035
-			public const int SHIFT = 2131230773;
+			public const int META = 2131230773;
 			
 			// aapt resource value: 0x7f080036
-			public const int SYM = 2131230774;
+			public const int SHIFT = 2131230774;
 			
-			// aapt resource value: 0x7f0800b5
-			public const int action0 = 2131230901;
+			// aapt resource value: 0x7f080037
+			public const int SYM = 2131230775;
 			
-			// aapt resource value: 0x7f08007b
-			public const int action_bar = 2131230843;
+			// aapt resource value: 0x7f0800b6
+			public const int action0 = 2131230902;
+			
+			// aapt resource value: 0x7f08007c
+			public const int action_bar = 2131230844;
 			
 			// aapt resource value: 0x7f080001
 			public const int action_bar_activity_content = 2131230721;
 			
-			// aapt resource value: 0x7f08007a
-			public const int action_bar_container = 2131230842;
+			// aapt resource value: 0x7f08007b
+			public const int action_bar_container = 2131230843;
 			
-			// aapt resource value: 0x7f080076
-			public const int action_bar_root = 2131230838;
+			// aapt resource value: 0x7f080077
+			public const int action_bar_root = 2131230839;
 			
 			// aapt resource value: 0x7f080002
 			public const int action_bar_spinner = 2131230722;
 			
+			// aapt resource value: 0x7f08005b
+			public const int action_bar_subtitle = 2131230811;
+			
 			// aapt resource value: 0x7f08005a
-			public const int action_bar_subtitle = 2131230810;
-			
-			// aapt resource value: 0x7f080059
-			public const int action_bar_title = 2131230809;
-			
-			// aapt resource value: 0x7f0800b2
-			public const int action_container = 2131230898;
-			
-			// aapt resource value: 0x7f08007c
-			public const int action_context_bar = 2131230844;
-			
-			// aapt resource value: 0x7f0800b9
-			public const int action_divider = 2131230905;
+			public const int action_bar_title = 2131230810;
 			
 			// aapt resource value: 0x7f0800b3
-			public const int action_image = 2131230899;
+			public const int action_container = 2131230899;
+			
+			// aapt resource value: 0x7f08007d
+			public const int action_context_bar = 2131230845;
+			
+			// aapt resource value: 0x7f0800ba
+			public const int action_divider = 2131230906;
+			
+			// aapt resource value: 0x7f0800b4
+			public const int action_image = 2131230900;
 			
 			// aapt resource value: 0x7f080003
 			public const int action_menu_divider = 2131230723;
@@ -3089,158 +4606,158 @@ namespace FlyPhone.Droid
 			// aapt resource value: 0x7f080004
 			public const int action_menu_presenter = 2131230724;
 			
+			// aapt resource value: 0x7f080079
+			public const int action_mode_bar = 2131230841;
+			
 			// aapt resource value: 0x7f080078
-			public const int action_mode_bar = 2131230840;
-			
-			// aapt resource value: 0x7f080077
-			public const int action_mode_bar_stub = 2131230839;
-			
-			// aapt resource value: 0x7f08005b
-			public const int action_mode_close_button = 2131230811;
-			
-			// aapt resource value: 0x7f0800b4
-			public const int action_text = 2131230900;
-			
-			// aapt resource value: 0x7f0800c2
-			public const int actions = 2131230914;
+			public const int action_mode_bar_stub = 2131230840;
 			
 			// aapt resource value: 0x7f08005c
-			public const int activity_chooser_view_content = 2131230812;
+			public const int action_mode_close_button = 2131230812;
 			
-			// aapt resource value: 0x7f08002b
-			public const int add = 2131230763;
+			// aapt resource value: 0x7f0800b5
+			public const int action_text = 2131230901;
 			
-			// aapt resource value: 0x7f08006f
-			public const int alertTitle = 2131230831;
-			
-			// aapt resource value: 0x7f080051
-			public const int all = 2131230801;
-			
-			// aapt resource value: 0x7f080037
-			public const int always = 2131230775;
-			
-			// aapt resource value: 0x7f080055
-			public const int async = 2131230805;
-			
-			// aapt resource value: 0x7f080043
-			public const int auto = 2131230787;
-			
-			// aapt resource value: 0x7f08002e
-			public const int beginning = 2131230766;
-			
-			// aapt resource value: 0x7f080056
-			public const int blocking = 2131230806;
-			
-			// aapt resource value: 0x7f08003c
-			public const int bottom = 2131230780;
-			
-			// aapt resource value: 0x7f080062
-			public const int buttonPanel = 2131230818;
-			
-			// aapt resource value: 0x7f0800b6
-			public const int cancel_action = 2131230902;
-			
-			// aapt resource value: 0x7f080044
-			public const int center = 2131230788;
-			
-			// aapt resource value: 0x7f080045
-			public const int center_horizontal = 2131230789;
-			
-			// aapt resource value: 0x7f080046
-			public const int center_vertical = 2131230790;
-			
-			// aapt resource value: 0x7f080072
-			public const int checkbox = 2131230834;
-			
-			// aapt resource value: 0x7f0800be
-			public const int chronometer = 2131230910;
-			
-			// aapt resource value: 0x7f08004d
-			public const int clip_horizontal = 2131230797;
-			
-			// aapt resource value: 0x7f08004e
-			public const int clip_vertical = 2131230798;
-			
-			// aapt resource value: 0x7f080038
-			public const int collapseActionView = 2131230776;
-			
-			// aapt resource value: 0x7f08008c
-			public const int container = 2131230860;
-			
-			// aapt resource value: 0x7f080065
-			public const int contentPanel = 2131230821;
-			
-			// aapt resource value: 0x7f08008d
-			public const int coordinator = 2131230861;
-			
-			// aapt resource value: 0x7f08006c
-			public const int custom = 2131230828;
-			
-			// aapt resource value: 0x7f08006b
-			public const int customPanel = 2131230827;
-			
-			// aapt resource value: 0x7f080079
-			public const int decor_content_parent = 2131230841;
-			
-			// aapt resource value: 0x7f08005f
-			public const int default_activity_button = 2131230815;
-			
-			// aapt resource value: 0x7f08008f
-			public const int design_bottom_sheet = 2131230863;
-			
-			// aapt resource value: 0x7f080096
-			public const int design_menu_item_action_area = 2131230870;
-			
-			// aapt resource value: 0x7f080095
-			public const int design_menu_item_action_area_stub = 2131230869;
-			
-			// aapt resource value: 0x7f080094
-			public const int design_menu_item_text = 2131230868;
-			
-			// aapt resource value: 0x7f080093
-			public const int design_navigation_view = 2131230867;
-			
-			// aapt resource value: 0x7f08001f
-			public const int disableHome = 2131230751;
-			
-			// aapt resource value: 0x7f08007d
-			public const int edit_query = 2131230845;
-			
-			// aapt resource value: 0x7f08002f
-			public const int end = 2131230767;
-			
-			// aapt resource value: 0x7f0800c4
-			public const int end_padder = 2131230916;
-			
-			// aapt resource value: 0x7f08003e
-			public const int enterAlways = 2131230782;
-			
-			// aapt resource value: 0x7f08003f
-			public const int enterAlwaysCollapsed = 2131230783;
-			
-			// aapt resource value: 0x7f080040
-			public const int exitUntilCollapsed = 2131230784;
+			// aapt resource value: 0x7f0800c3
+			public const int actions = 2131230915;
 			
 			// aapt resource value: 0x7f08005d
-			public const int expand_activities_button = 2131230813;
+			public const int activity_chooser_view_content = 2131230813;
 			
-			// aapt resource value: 0x7f080071
-			public const int expanded_menu = 2131230833;
+			// aapt resource value: 0x7f080027
+			public const int add = 2131230759;
 			
-			// aapt resource value: 0x7f08004f
-			public const int fill = 2131230799;
+			// aapt resource value: 0x7f080070
+			public const int alertTitle = 2131230832;
 			
-			// aapt resource value: 0x7f080050
-			public const int fill_horizontal = 2131230800;
+			// aapt resource value: 0x7f080052
+			public const int all = 2131230802;
 			
-			// aapt resource value: 0x7f080047
-			public const int fill_vertical = 2131230791;
+			// aapt resource value: 0x7f080038
+			public const int always = 2131230776;
 			
-			// aapt resource value: 0x7f080053
-			public const int @fixed = 2131230803;
+			// aapt resource value: 0x7f080056
+			public const int async = 2131230806;
+			
+			// aapt resource value: 0x7f080044
+			public const int auto = 2131230788;
+			
+			// aapt resource value: 0x7f08002f
+			public const int beginning = 2131230767;
 			
 			// aapt resource value: 0x7f080057
-			public const int forever = 2131230807;
+			public const int blocking = 2131230807;
+			
+			// aapt resource value: 0x7f08003d
+			public const int bottom = 2131230781;
+			
+			// aapt resource value: 0x7f080063
+			public const int buttonPanel = 2131230819;
+			
+			// aapt resource value: 0x7f0800b7
+			public const int cancel_action = 2131230903;
+			
+			// aapt resource value: 0x7f080045
+			public const int center = 2131230789;
+			
+			// aapt resource value: 0x7f080046
+			public const int center_horizontal = 2131230790;
+			
+			// aapt resource value: 0x7f080047
+			public const int center_vertical = 2131230791;
+			
+			// aapt resource value: 0x7f080073
+			public const int checkbox = 2131230835;
+			
+			// aapt resource value: 0x7f0800bf
+			public const int chronometer = 2131230911;
+			
+			// aapt resource value: 0x7f08004e
+			public const int clip_horizontal = 2131230798;
+			
+			// aapt resource value: 0x7f08004f
+			public const int clip_vertical = 2131230799;
+			
+			// aapt resource value: 0x7f080039
+			public const int collapseActionView = 2131230777;
+			
+			// aapt resource value: 0x7f08008d
+			public const int container = 2131230861;
+			
+			// aapt resource value: 0x7f080066
+			public const int contentPanel = 2131230822;
+			
+			// aapt resource value: 0x7f08008e
+			public const int coordinator = 2131230862;
+			
+			// aapt resource value: 0x7f08006d
+			public const int custom = 2131230829;
+			
+			// aapt resource value: 0x7f08006c
+			public const int customPanel = 2131230828;
+			
+			// aapt resource value: 0x7f08007a
+			public const int decor_content_parent = 2131230842;
+			
+			// aapt resource value: 0x7f080060
+			public const int default_activity_button = 2131230816;
+			
+			// aapt resource value: 0x7f080090
+			public const int design_bottom_sheet = 2131230864;
+			
+			// aapt resource value: 0x7f080097
+			public const int design_menu_item_action_area = 2131230871;
+			
+			// aapt resource value: 0x7f080096
+			public const int design_menu_item_action_area_stub = 2131230870;
+			
+			// aapt resource value: 0x7f080095
+			public const int design_menu_item_text = 2131230869;
+			
+			// aapt resource value: 0x7f080094
+			public const int design_navigation_view = 2131230868;
+			
+			// aapt resource value: 0x7f080020
+			public const int disableHome = 2131230752;
+			
+			// aapt resource value: 0x7f08007e
+			public const int edit_query = 2131230846;
+			
+			// aapt resource value: 0x7f080030
+			public const int end = 2131230768;
+			
+			// aapt resource value: 0x7f0800c5
+			public const int end_padder = 2131230917;
+			
+			// aapt resource value: 0x7f08003f
+			public const int enterAlways = 2131230783;
+			
+			// aapt resource value: 0x7f080040
+			public const int enterAlwaysCollapsed = 2131230784;
+			
+			// aapt resource value: 0x7f080041
+			public const int exitUntilCollapsed = 2131230785;
+			
+			// aapt resource value: 0x7f08005e
+			public const int expand_activities_button = 2131230814;
+			
+			// aapt resource value: 0x7f080072
+			public const int expanded_menu = 2131230834;
+			
+			// aapt resource value: 0x7f080050
+			public const int fill = 2131230800;
+			
+			// aapt resource value: 0x7f080051
+			public const int fill_horizontal = 2131230801;
+			
+			// aapt resource value: 0x7f080048
+			public const int fill_vertical = 2131230792;
+			
+			// aapt resource value: 0x7f080054
+			public const int @fixed = 2131230804;
+			
+			// aapt resource value: 0x7f080058
+			public const int forever = 2131230808;
 			
 			// aapt resource value: 0x7f08000a
 			public const int ghost_view = 2131230730;
@@ -3248,35 +4765,35 @@ namespace FlyPhone.Droid
 			// aapt resource value: 0x7f080005
 			public const int home = 2131230725;
 			
-			// aapt resource value: 0x7f080020
-			public const int homeAsUp = 2131230752;
+			// aapt resource value: 0x7f080021
+			public const int homeAsUp = 2131230753;
 			
-			// aapt resource value: 0x7f080061
-			public const int icon = 2131230817;
+			// aapt resource value: 0x7f080062
+			public const int icon = 2131230818;
 			
-			// aapt resource value: 0x7f0800c3
-			public const int icon_group = 2131230915;
+			// aapt resource value: 0x7f0800c4
+			public const int icon_group = 2131230916;
 			
-			// aapt resource value: 0x7f080039
-			public const int ifRoom = 2131230777;
+			// aapt resource value: 0x7f08003a
+			public const int ifRoom = 2131230778;
 			
-			// aapt resource value: 0x7f08005e
-			public const int image = 2131230814;
+			// aapt resource value: 0x7f08005f
+			public const int image = 2131230815;
 			
-			// aapt resource value: 0x7f0800bf
-			public const int info = 2131230911;
+			// aapt resource value: 0x7f0800c0
+			public const int info = 2131230912;
 			
-			// aapt resource value: 0x7f080058
-			public const int italic = 2131230808;
+			// aapt resource value: 0x7f080059
+			public const int italic = 2131230809;
 			
 			// aapt resource value: 0x7f080000
 			public const int item_touch_helper_previous_elevation = 2131230720;
 			
-			// aapt resource value: 0x7f08008b
-			public const int largeLabel = 2131230859;
+			// aapt resource value: 0x7f08008c
+			public const int largeLabel = 2131230860;
 			
-			// aapt resource value: 0x7f080048
-			public const int left = 2131230792;
+			// aapt resource value: 0x7f080049
+			public const int left = 2131230793;
 			
 			// aapt resource value: 0x7f080017
 			public const int line1 = 2131230743;
@@ -3284,137 +4801,137 @@ namespace FlyPhone.Droid
 			// aapt resource value: 0x7f080018
 			public const int line3 = 2131230744;
 			
-			// aapt resource value: 0x7f08001c
-			public const int listMode = 2131230748;
+			// aapt resource value: 0x7f08001d
+			public const int listMode = 2131230749;
 			
-			// aapt resource value: 0x7f080060
-			public const int list_item = 2131230816;
+			// aapt resource value: 0x7f080061
+			public const int list_item = 2131230817;
 			
-			// aapt resource value: 0x7f0800c9
-			public const int masked = 2131230921;
+			// aapt resource value: 0x7f0800ca
+			public const int masked = 2131230922;
 			
-			// aapt resource value: 0x7f0800b8
-			public const int media_actions = 2131230904;
+			// aapt resource value: 0x7f0800b9
+			public const int media_actions = 2131230905;
 			
-			// aapt resource value: 0x7f0800c7
-			public const int message = 2131230919;
+			// aapt resource value: 0x7f0800c8
+			public const int message = 2131230920;
 			
-			// aapt resource value: 0x7f080030
-			public const int middle = 2131230768;
+			// aapt resource value: 0x7f080031
+			public const int middle = 2131230769;
 			
-			// aapt resource value: 0x7f080052
-			public const int mini = 2131230802;
-			
-			// aapt resource value: 0x7f0800a4
-			public const int mr_art = 2131230884;
-			
-			// aapt resource value: 0x7f080099
-			public const int mr_chooser_list = 2131230873;
-			
-			// aapt resource value: 0x7f08009c
-			public const int mr_chooser_route_desc = 2131230876;
-			
-			// aapt resource value: 0x7f08009a
-			public const int mr_chooser_route_icon = 2131230874;
-			
-			// aapt resource value: 0x7f08009b
-			public const int mr_chooser_route_name = 2131230875;
-			
-			// aapt resource value: 0x7f080098
-			public const int mr_chooser_title = 2131230872;
-			
-			// aapt resource value: 0x7f0800a1
-			public const int mr_close = 2131230881;
-			
-			// aapt resource value: 0x7f0800a7
-			public const int mr_control_divider = 2131230887;
-			
-			// aapt resource value: 0x7f0800ad
-			public const int mr_control_playback_ctrl = 2131230893;
-			
-			// aapt resource value: 0x7f0800b0
-			public const int mr_control_subtitle = 2131230896;
-			
-			// aapt resource value: 0x7f0800af
-			public const int mr_control_title = 2131230895;
-			
-			// aapt resource value: 0x7f0800ae
-			public const int mr_control_title_container = 2131230894;
-			
-			// aapt resource value: 0x7f0800a2
-			public const int mr_custom_control = 2131230882;
-			
-			// aapt resource value: 0x7f0800a3
-			public const int mr_default_control = 2131230883;
-			
-			// aapt resource value: 0x7f08009e
-			public const int mr_dialog_area = 2131230878;
-			
-			// aapt resource value: 0x7f08009d
-			public const int mr_expandable_area = 2131230877;
-			
-			// aapt resource value: 0x7f0800b1
-			public const int mr_group_expand_collapse = 2131230897;
+			// aapt resource value: 0x7f080053
+			public const int mini = 2131230803;
 			
 			// aapt resource value: 0x7f0800a5
-			public const int mr_media_main_control = 2131230885;
+			public const int mr_art = 2131230885;
 			
-			// aapt resource value: 0x7f0800a0
-			public const int mr_name = 2131230880;
+			// aapt resource value: 0x7f08009a
+			public const int mr_chooser_list = 2131230874;
 			
-			// aapt resource value: 0x7f0800a6
-			public const int mr_playback_control = 2131230886;
+			// aapt resource value: 0x7f08009d
+			public const int mr_chooser_route_desc = 2131230877;
 			
-			// aapt resource value: 0x7f08009f
-			public const int mr_title_bar = 2131230879;
+			// aapt resource value: 0x7f08009b
+			public const int mr_chooser_route_icon = 2131230875;
+			
+			// aapt resource value: 0x7f08009c
+			public const int mr_chooser_route_name = 2131230876;
+			
+			// aapt resource value: 0x7f080099
+			public const int mr_chooser_title = 2131230873;
+			
+			// aapt resource value: 0x7f0800a2
+			public const int mr_close = 2131230882;
 			
 			// aapt resource value: 0x7f0800a8
-			public const int mr_volume_control = 2131230888;
+			public const int mr_control_divider = 2131230888;
+			
+			// aapt resource value: 0x7f0800ae
+			public const int mr_control_playback_ctrl = 2131230894;
+			
+			// aapt resource value: 0x7f0800b1
+			public const int mr_control_subtitle = 2131230897;
+			
+			// aapt resource value: 0x7f0800b0
+			public const int mr_control_title = 2131230896;
+			
+			// aapt resource value: 0x7f0800af
+			public const int mr_control_title_container = 2131230895;
+			
+			// aapt resource value: 0x7f0800a3
+			public const int mr_custom_control = 2131230883;
+			
+			// aapt resource value: 0x7f0800a4
+			public const int mr_default_control = 2131230884;
+			
+			// aapt resource value: 0x7f08009f
+			public const int mr_dialog_area = 2131230879;
+			
+			// aapt resource value: 0x7f08009e
+			public const int mr_expandable_area = 2131230878;
+			
+			// aapt resource value: 0x7f0800b2
+			public const int mr_group_expand_collapse = 2131230898;
+			
+			// aapt resource value: 0x7f0800a6
+			public const int mr_media_main_control = 2131230886;
+			
+			// aapt resource value: 0x7f0800a1
+			public const int mr_name = 2131230881;
+			
+			// aapt resource value: 0x7f0800a7
+			public const int mr_playback_control = 2131230887;
+			
+			// aapt resource value: 0x7f0800a0
+			public const int mr_title_bar = 2131230880;
 			
 			// aapt resource value: 0x7f0800a9
-			public const int mr_volume_group_list = 2131230889;
+			public const int mr_volume_control = 2131230889;
 			
-			// aapt resource value: 0x7f0800ab
-			public const int mr_volume_item_icon = 2131230891;
+			// aapt resource value: 0x7f0800aa
+			public const int mr_volume_group_list = 2131230890;
 			
 			// aapt resource value: 0x7f0800ac
-			public const int mr_volume_slider = 2131230892;
+			public const int mr_volume_item_icon = 2131230892;
 			
-			// aapt resource value: 0x7f080026
-			public const int multiply = 2131230758;
+			// aapt resource value: 0x7f0800ad
+			public const int mr_volume_slider = 2131230893;
 			
-			// aapt resource value: 0x7f080092
-			public const int navigation_header_container = 2131230866;
+			// aapt resource value: 0x7f080028
+			public const int multiply = 2131230760;
 			
-			// aapt resource value: 0x7f08003a
-			public const int never = 2131230778;
+			// aapt resource value: 0x7f080093
+			public const int navigation_header_container = 2131230867;
 			
-			// aapt resource value: 0x7f080021
-			public const int none = 2131230753;
+			// aapt resource value: 0x7f08003b
+			public const int never = 2131230779;
 			
-			// aapt resource value: 0x7f08001d
-			public const int normal = 2131230749;
+			// aapt resource value: 0x7f080022
+			public const int none = 2131230754;
 			
-			// aapt resource value: 0x7f0800c1
-			public const int notification_background = 2131230913;
+			// aapt resource value: 0x7f08001e
+			public const int normal = 2131230750;
+			
+			// aapt resource value: 0x7f0800c2
+			public const int notification_background = 2131230914;
+			
+			// aapt resource value: 0x7f0800bc
+			public const int notification_main_column = 2131230908;
 			
 			// aapt resource value: 0x7f0800bb
-			public const int notification_main_column = 2131230907;
+			public const int notification_main_column_container = 2131230907;
 			
-			// aapt resource value: 0x7f0800ba
-			public const int notification_main_column_container = 2131230906;
+			// aapt resource value: 0x7f08004c
+			public const int parallax = 2131230796;
 			
-			// aapt resource value: 0x7f08004b
-			public const int parallax = 2131230795;
-			
-			// aapt resource value: 0x7f080064
-			public const int parentPanel = 2131230820;
+			// aapt resource value: 0x7f080065
+			public const int parentPanel = 2131230821;
 			
 			// aapt resource value: 0x7f08000b
 			public const int parent_matrix = 2131230731;
 			
-			// aapt resource value: 0x7f08004c
-			public const int pin = 2131230796;
+			// aapt resource value: 0x7f08004d
+			public const int pin = 2131230797;
 			
 			// aapt resource value: 0x7f080006
 			public const int progress_circular = 2131230726;
@@ -3422,17 +4939,17 @@ namespace FlyPhone.Droid
 			// aapt resource value: 0x7f080007
 			public const int progress_horizontal = 2131230727;
 			
-			// aapt resource value: 0x7f080074
-			public const int radio = 2131230836;
+			// aapt resource value: 0x7f080075
+			public const int radio = 2131230837;
 			
-			// aapt resource value: 0x7f080049
-			public const int right = 2131230793;
+			// aapt resource value: 0x7f08004a
+			public const int right = 2131230794;
 			
-			// aapt resource value: 0x7f0800c0
-			public const int right_icon = 2131230912;
+			// aapt resource value: 0x7f0800c1
+			public const int right_icon = 2131230913;
 			
-			// aapt resource value: 0x7f0800bc
-			public const int right_side = 2131230908;
+			// aapt resource value: 0x7f0800bd
+			public const int right_side = 2131230909;
 			
 			// aapt resource value: 0x7f08000c
 			public const int save_image_matrix = 2131230732;
@@ -3443,128 +4960,131 @@ namespace FlyPhone.Droid
 			// aapt resource value: 0x7f08000e
 			public const int save_scale_type = 2131230734;
 			
-			// aapt resource value: 0x7f080027
-			public const int screen = 2131230759;
-			
-			// aapt resource value: 0x7f080041
-			public const int scroll = 2131230785;
-			
-			// aapt resource value: 0x7f08006a
-			public const int scrollIndicatorDown = 2131230826;
-			
-			// aapt resource value: 0x7f080066
-			public const int scrollIndicatorUp = 2131230822;
-			
-			// aapt resource value: 0x7f080067
-			public const int scrollView = 2131230823;
-			
-			// aapt resource value: 0x7f080054
-			public const int scrollable = 2131230804;
-			
-			// aapt resource value: 0x7f08007f
-			public const int search_badge = 2131230847;
-			
-			// aapt resource value: 0x7f08007e
-			public const int search_bar = 2131230846;
-			
-			// aapt resource value: 0x7f080080
-			public const int search_button = 2131230848;
-			
-			// aapt resource value: 0x7f080085
-			public const int search_close_btn = 2131230853;
-			
-			// aapt resource value: 0x7f080081
-			public const int search_edit_frame = 2131230849;
-			
-			// aapt resource value: 0x7f080087
-			public const int search_go_btn = 2131230855;
-			
-			// aapt resource value: 0x7f080082
-			public const int search_mag_icon = 2131230850;
-			
-			// aapt resource value: 0x7f080083
-			public const int search_plate = 2131230851;
-			
-			// aapt resource value: 0x7f080084
-			public const int search_src_text = 2131230852;
-			
-			// aapt resource value: 0x7f080088
-			public const int search_voice_btn = 2131230856;
-			
-			// aapt resource value: 0x7f080089
-			public const int select_dialog_listview = 2131230857;
-			
-			// aapt resource value: 0x7f080073
-			public const int shortcut = 2131230835;
-			
-			// aapt resource value: 0x7f080022
-			public const int showCustom = 2131230754;
-			
-			// aapt resource value: 0x7f080023
-			public const int showHome = 2131230755;
-			
-			// aapt resource value: 0x7f080024
-			public const int showTitle = 2131230756;
-			
-			// aapt resource value: 0x7f0800c5
-			public const int sliding_tabs = 2131230917;
-			
-			// aapt resource value: 0x7f08008a
-			public const int smallLabel = 2131230858;
-			
-			// aapt resource value: 0x7f080091
-			public const int snackbar_action = 2131230865;
-			
-			// aapt resource value: 0x7f080090
-			public const int snackbar_text = 2131230864;
+			// aapt resource value: 0x7f080029
+			public const int screen = 2131230761;
 			
 			// aapt resource value: 0x7f080042
-			public const int snap = 2131230786;
+			public const int scroll = 2131230786;
 			
-			// aapt resource value: 0x7f080063
-			public const int spacer = 2131230819;
+			// aapt resource value: 0x7f08006b
+			public const int scrollIndicatorDown = 2131230827;
+			
+			// aapt resource value: 0x7f080067
+			public const int scrollIndicatorUp = 2131230823;
+			
+			// aapt resource value: 0x7f080068
+			public const int scrollView = 2131230824;
+			
+			// aapt resource value: 0x7f080055
+			public const int scrollable = 2131230805;
+			
+			// aapt resource value: 0x7f080080
+			public const int search_badge = 2131230848;
+			
+			// aapt resource value: 0x7f08007f
+			public const int search_bar = 2131230847;
+			
+			// aapt resource value: 0x7f080081
+			public const int search_button = 2131230849;
+			
+			// aapt resource value: 0x7f080086
+			public const int search_close_btn = 2131230854;
+			
+			// aapt resource value: 0x7f080082
+			public const int search_edit_frame = 2131230850;
+			
+			// aapt resource value: 0x7f080088
+			public const int search_go_btn = 2131230856;
+			
+			// aapt resource value: 0x7f080083
+			public const int search_mag_icon = 2131230851;
+			
+			// aapt resource value: 0x7f080084
+			public const int search_plate = 2131230852;
+			
+			// aapt resource value: 0x7f080085
+			public const int search_src_text = 2131230853;
+			
+			// aapt resource value: 0x7f080089
+			public const int search_voice_btn = 2131230857;
+			
+			// aapt resource value: 0x7f08008a
+			public const int select_dialog_listview = 2131230858;
+			
+			// aapt resource value: 0x7f080074
+			public const int shortcut = 2131230836;
+			
+			// aapt resource value: 0x7f080023
+			public const int showCustom = 2131230755;
+			
+			// aapt resource value: 0x7f080024
+			public const int showHome = 2131230756;
+			
+			// aapt resource value: 0x7f080025
+			public const int showTitle = 2131230757;
+			
+			// aapt resource value: 0x7f0800c6
+			public const int sliding_tabs = 2131230918;
+			
+			// aapt resource value: 0x7f08008b
+			public const int smallLabel = 2131230859;
+			
+			// aapt resource value: 0x7f080092
+			public const int snackbar_action = 2131230866;
+			
+			// aapt resource value: 0x7f080091
+			public const int snackbar_text = 2131230865;
+			
+			// aapt resource value: 0x7f080043
+			public const int snap = 2131230787;
+			
+			// aapt resource value: 0x7f080064
+			public const int spacer = 2131230820;
 			
 			// aapt resource value: 0x7f080008
 			public const int split_action_bar = 2131230728;
 			
-			// aapt resource value: 0x7f080028
-			public const int src_atop = 2131230760;
-			
-			// aapt resource value: 0x7f080029
-			public const int src_in = 2131230761;
-			
 			// aapt resource value: 0x7f08002a
-			public const int src_over = 2131230762;
+			public const int src_atop = 2131230762;
 			
-			// aapt resource value: 0x7f08004a
-			public const int start = 2131230794;
+			// aapt resource value: 0x7f08002b
+			public const int src_in = 2131230763;
 			
-			// aapt resource value: 0x7f0800b7
-			public const int status_bar_latest_event_content = 2131230903;
+			// aapt resource value: 0x7f08002c
+			public const int src_over = 2131230764;
 			
-			// aapt resource value: 0x7f080075
-			public const int submenuarrow = 2131230837;
+			// aapt resource value: 0x7f08004b
+			public const int start = 2131230795;
 			
-			// aapt resource value: 0x7f080086
-			public const int submit_area = 2131230854;
+			// aapt resource value: 0x7f0800b8
+			public const int status_bar_latest_event_content = 2131230904;
 			
-			// aapt resource value: 0x7f08001e
-			public const int tabMode = 2131230750;
+			// aapt resource value: 0x7f080076
+			public const int submenuarrow = 2131230838;
+			
+			// aapt resource value: 0x7f080087
+			public const int submit_area = 2131230855;
+			
+			// aapt resource value: 0x7f08001f
+			public const int tabMode = 2131230751;
 			
 			// aapt resource value: 0x7f080019
-			public const int text = 2131230745;
+			public const int tag_transition_group = 2131230745;
 			
 			// aapt resource value: 0x7f08001a
-			public const int text2 = 2131230746;
+			public const int text = 2131230746;
+			
+			// aapt resource value: 0x7f08001b
+			public const int text2 = 2131230747;
+			
+			// aapt resource value: 0x7f08006a
+			public const int textSpacerNoButtons = 2131230826;
 			
 			// aapt resource value: 0x7f080069
-			public const int textSpacerNoButtons = 2131230825;
+			public const int textSpacerNoTitle = 2131230825;
 			
-			// aapt resource value: 0x7f080068
-			public const int textSpacerNoTitle = 2131230824;
-			
-			// aapt resource value: 0x7f080097
-			public const int text_input_password_toggle = 2131230871;
+			// aapt resource value: 0x7f080098
+			public const int text_input_password_toggle = 2131230872;
 			
 			// aapt resource value: 0x7f080014
 			public const int textinput_counter = 2131230740;
@@ -3572,29 +5092,29 @@ namespace FlyPhone.Droid
 			// aapt resource value: 0x7f080015
 			public const int textinput_error = 2131230741;
 			
-			// aapt resource value: 0x7f0800bd
-			public const int time = 2131230909;
+			// aapt resource value: 0x7f0800be
+			public const int time = 2131230910;
 			
-			// aapt resource value: 0x7f08001b
-			public const int title = 2131230747;
+			// aapt resource value: 0x7f08001c
+			public const int title = 2131230748;
 			
-			// aapt resource value: 0x7f080070
-			public const int titleDividerNoCustom = 2131230832;
+			// aapt resource value: 0x7f080071
+			public const int titleDividerNoCustom = 2131230833;
+			
+			// aapt resource value: 0x7f08006f
+			public const int title_template = 2131230831;
+			
+			// aapt resource value: 0x7f0800c7
+			public const int toolbar = 2131230919;
+			
+			// aapt resource value: 0x7f08003e
+			public const int top = 2131230782;
 			
 			// aapt resource value: 0x7f08006e
-			public const int title_template = 2131230830;
+			public const int topPanel = 2131230830;
 			
-			// aapt resource value: 0x7f0800c6
-			public const int toolbar = 2131230918;
-			
-			// aapt resource value: 0x7f08003d
-			public const int top = 2131230781;
-			
-			// aapt resource value: 0x7f08006d
-			public const int topPanel = 2131230829;
-			
-			// aapt resource value: 0x7f08008e
-			public const int touch_outside = 2131230862;
+			// aapt resource value: 0x7f08008f
+			public const int touch_outside = 2131230863;
 			
 			// aapt resource value: 0x7f08000f
 			public const int transition_current_scene = 2131230735;
@@ -3611,29 +5131,29 @@ namespace FlyPhone.Droid
 			// aapt resource value: 0x7f080013
 			public const int transition_transform = 2131230739;
 			
-			// aapt resource value: 0x7f08002c
-			public const int uniform = 2131230764;
+			// aapt resource value: 0x7f08002d
+			public const int uniform = 2131230765;
 			
 			// aapt resource value: 0x7f080009
 			public const int up = 2131230729;
 			
-			// aapt resource value: 0x7f080025
-			public const int useLogo = 2131230757;
+			// aapt resource value: 0x7f080026
+			public const int useLogo = 2131230758;
 			
 			// aapt resource value: 0x7f080016
 			public const int view_offset_helper = 2131230742;
 			
-			// aapt resource value: 0x7f0800c8
-			public const int visible = 2131230920;
+			// aapt resource value: 0x7f0800c9
+			public const int visible = 2131230921;
 			
-			// aapt resource value: 0x7f0800aa
-			public const int volume_item_container = 2131230890;
+			// aapt resource value: 0x7f0800ab
+			public const int volume_item_container = 2131230891;
 			
-			// aapt resource value: 0x7f08003b
-			public const int withText = 2131230779;
+			// aapt resource value: 0x7f08003c
+			public const int withText = 2131230780;
 			
-			// aapt resource value: 0x7f08002d
-			public const int wrap_content = 2131230765;
+			// aapt resource value: 0x7f08002e
+			public const int wrap_content = 2131230766;
 			
 			static Id()
 			{
@@ -3726,205 +5246,202 @@ namespace FlyPhone.Droid
 			public const int abc_action_bar_up_container = 2130903041;
 			
 			// aapt resource value: 0x7f030002
-			public const int abc_action_bar_view_list_nav_layout = 2130903042;
+			public const int abc_action_menu_item_layout = 2130903042;
 			
 			// aapt resource value: 0x7f030003
-			public const int abc_action_menu_item_layout = 2130903043;
+			public const int abc_action_menu_layout = 2130903043;
 			
 			// aapt resource value: 0x7f030004
-			public const int abc_action_menu_layout = 2130903044;
+			public const int abc_action_mode_bar = 2130903044;
 			
 			// aapt resource value: 0x7f030005
-			public const int abc_action_mode_bar = 2130903045;
+			public const int abc_action_mode_close_item_material = 2130903045;
 			
 			// aapt resource value: 0x7f030006
-			public const int abc_action_mode_close_item_material = 2130903046;
+			public const int abc_activity_chooser_view = 2130903046;
 			
 			// aapt resource value: 0x7f030007
-			public const int abc_activity_chooser_view = 2130903047;
+			public const int abc_activity_chooser_view_list_item = 2130903047;
 			
 			// aapt resource value: 0x7f030008
-			public const int abc_activity_chooser_view_list_item = 2130903048;
+			public const int abc_alert_dialog_button_bar_material = 2130903048;
 			
 			// aapt resource value: 0x7f030009
-			public const int abc_alert_dialog_button_bar_material = 2130903049;
+			public const int abc_alert_dialog_material = 2130903049;
 			
 			// aapt resource value: 0x7f03000a
-			public const int abc_alert_dialog_material = 2130903050;
+			public const int abc_alert_dialog_title_material = 2130903050;
 			
 			// aapt resource value: 0x7f03000b
-			public const int abc_alert_dialog_title_material = 2130903051;
+			public const int abc_dialog_title_material = 2130903051;
 			
 			// aapt resource value: 0x7f03000c
-			public const int abc_dialog_title_material = 2130903052;
+			public const int abc_expanded_menu_layout = 2130903052;
 			
 			// aapt resource value: 0x7f03000d
-			public const int abc_expanded_menu_layout = 2130903053;
+			public const int abc_list_menu_item_checkbox = 2130903053;
 			
 			// aapt resource value: 0x7f03000e
-			public const int abc_list_menu_item_checkbox = 2130903054;
+			public const int abc_list_menu_item_icon = 2130903054;
 			
 			// aapt resource value: 0x7f03000f
-			public const int abc_list_menu_item_icon = 2130903055;
+			public const int abc_list_menu_item_layout = 2130903055;
 			
 			// aapt resource value: 0x7f030010
-			public const int abc_list_menu_item_layout = 2130903056;
+			public const int abc_list_menu_item_radio = 2130903056;
 			
 			// aapt resource value: 0x7f030011
-			public const int abc_list_menu_item_radio = 2130903057;
+			public const int abc_popup_menu_header_item_layout = 2130903057;
 			
 			// aapt resource value: 0x7f030012
-			public const int abc_popup_menu_header_item_layout = 2130903058;
+			public const int abc_popup_menu_item_layout = 2130903058;
 			
 			// aapt resource value: 0x7f030013
-			public const int abc_popup_menu_item_layout = 2130903059;
+			public const int abc_screen_content_include = 2130903059;
 			
 			// aapt resource value: 0x7f030014
-			public const int abc_screen_content_include = 2130903060;
+			public const int abc_screen_simple = 2130903060;
 			
 			// aapt resource value: 0x7f030015
-			public const int abc_screen_simple = 2130903061;
+			public const int abc_screen_simple_overlay_action_mode = 2130903061;
 			
 			// aapt resource value: 0x7f030016
-			public const int abc_screen_simple_overlay_action_mode = 2130903062;
+			public const int abc_screen_toolbar = 2130903062;
 			
 			// aapt resource value: 0x7f030017
-			public const int abc_screen_toolbar = 2130903063;
+			public const int abc_search_dropdown_item_icons_2line = 2130903063;
 			
 			// aapt resource value: 0x7f030018
-			public const int abc_search_dropdown_item_icons_2line = 2130903064;
+			public const int abc_search_view = 2130903064;
 			
 			// aapt resource value: 0x7f030019
-			public const int abc_search_view = 2130903065;
+			public const int abc_select_dialog_material = 2130903065;
 			
 			// aapt resource value: 0x7f03001a
-			public const int abc_select_dialog_material = 2130903066;
+			public const int design_bottom_navigation_item = 2130903066;
 			
 			// aapt resource value: 0x7f03001b
-			public const int design_bottom_navigation_item = 2130903067;
+			public const int design_bottom_sheet_dialog = 2130903067;
 			
 			// aapt resource value: 0x7f03001c
-			public const int design_bottom_sheet_dialog = 2130903068;
+			public const int design_layout_snackbar = 2130903068;
 			
 			// aapt resource value: 0x7f03001d
-			public const int design_layout_snackbar = 2130903069;
+			public const int design_layout_snackbar_include = 2130903069;
 			
 			// aapt resource value: 0x7f03001e
-			public const int design_layout_snackbar_include = 2130903070;
+			public const int design_layout_tab_icon = 2130903070;
 			
 			// aapt resource value: 0x7f03001f
-			public const int design_layout_tab_icon = 2130903071;
+			public const int design_layout_tab_text = 2130903071;
 			
 			// aapt resource value: 0x7f030020
-			public const int design_layout_tab_text = 2130903072;
+			public const int design_menu_item_action_area = 2130903072;
 			
 			// aapt resource value: 0x7f030021
-			public const int design_menu_item_action_area = 2130903073;
+			public const int design_navigation_item = 2130903073;
 			
 			// aapt resource value: 0x7f030022
-			public const int design_navigation_item = 2130903074;
+			public const int design_navigation_item_header = 2130903074;
 			
 			// aapt resource value: 0x7f030023
-			public const int design_navigation_item_header = 2130903075;
+			public const int design_navigation_item_separator = 2130903075;
 			
 			// aapt resource value: 0x7f030024
-			public const int design_navigation_item_separator = 2130903076;
+			public const int design_navigation_item_subheader = 2130903076;
 			
 			// aapt resource value: 0x7f030025
-			public const int design_navigation_item_subheader = 2130903077;
+			public const int design_navigation_menu = 2130903077;
 			
 			// aapt resource value: 0x7f030026
-			public const int design_navigation_menu = 2130903078;
+			public const int design_navigation_menu_item = 2130903078;
 			
 			// aapt resource value: 0x7f030027
-			public const int design_navigation_menu_item = 2130903079;
+			public const int design_text_input_password_icon = 2130903079;
 			
 			// aapt resource value: 0x7f030028
-			public const int design_text_input_password_icon = 2130903080;
+			public const int mr_chooser_dialog = 2130903080;
 			
 			// aapt resource value: 0x7f030029
-			public const int mr_chooser_dialog = 2130903081;
+			public const int mr_chooser_list_item = 2130903081;
 			
 			// aapt resource value: 0x7f03002a
-			public const int mr_chooser_list_item = 2130903082;
+			public const int mr_controller_material_dialog_b = 2130903082;
 			
 			// aapt resource value: 0x7f03002b
-			public const int mr_controller_material_dialog_b = 2130903083;
+			public const int mr_controller_volume_item = 2130903083;
 			
 			// aapt resource value: 0x7f03002c
-			public const int mr_controller_volume_item = 2130903084;
+			public const int mr_playback_control = 2130903084;
 			
 			// aapt resource value: 0x7f03002d
-			public const int mr_playback_control = 2130903085;
+			public const int mr_volume_control = 2130903085;
 			
 			// aapt resource value: 0x7f03002e
-			public const int mr_volume_control = 2130903086;
+			public const int notification_action = 2130903086;
 			
 			// aapt resource value: 0x7f03002f
-			public const int notification_action = 2130903087;
+			public const int notification_action_tombstone = 2130903087;
 			
 			// aapt resource value: 0x7f030030
-			public const int notification_action_tombstone = 2130903088;
+			public const int notification_media_action = 2130903088;
 			
 			// aapt resource value: 0x7f030031
-			public const int notification_media_action = 2130903089;
+			public const int notification_media_cancel_action = 2130903089;
 			
 			// aapt resource value: 0x7f030032
-			public const int notification_media_cancel_action = 2130903090;
+			public const int notification_template_big_media = 2130903090;
 			
 			// aapt resource value: 0x7f030033
-			public const int notification_template_big_media = 2130903091;
+			public const int notification_template_big_media_custom = 2130903091;
 			
 			// aapt resource value: 0x7f030034
-			public const int notification_template_big_media_custom = 2130903092;
+			public const int notification_template_big_media_narrow = 2130903092;
 			
 			// aapt resource value: 0x7f030035
-			public const int notification_template_big_media_narrow = 2130903093;
+			public const int notification_template_big_media_narrow_custom = 2130903093;
 			
 			// aapt resource value: 0x7f030036
-			public const int notification_template_big_media_narrow_custom = 2130903094;
+			public const int notification_template_custom_big = 2130903094;
 			
 			// aapt resource value: 0x7f030037
-			public const int notification_template_custom_big = 2130903095;
+			public const int notification_template_icon_group = 2130903095;
 			
 			// aapt resource value: 0x7f030038
-			public const int notification_template_icon_group = 2130903096;
+			public const int notification_template_lines_media = 2130903096;
 			
 			// aapt resource value: 0x7f030039
-			public const int notification_template_lines_media = 2130903097;
+			public const int notification_template_media = 2130903097;
 			
 			// aapt resource value: 0x7f03003a
-			public const int notification_template_media = 2130903098;
+			public const int notification_template_media_custom = 2130903098;
 			
 			// aapt resource value: 0x7f03003b
-			public const int notification_template_media_custom = 2130903099;
+			public const int notification_template_part_chronometer = 2130903099;
 			
 			// aapt resource value: 0x7f03003c
-			public const int notification_template_part_chronometer = 2130903100;
+			public const int notification_template_part_time = 2130903100;
 			
 			// aapt resource value: 0x7f03003d
-			public const int notification_template_part_time = 2130903101;
+			public const int select_dialog_item_material = 2130903101;
 			
 			// aapt resource value: 0x7f03003e
-			public const int select_dialog_item_material = 2130903102;
+			public const int select_dialog_multichoice_material = 2130903102;
 			
 			// aapt resource value: 0x7f03003f
-			public const int select_dialog_multichoice_material = 2130903103;
+			public const int select_dialog_singlechoice_material = 2130903103;
 			
 			// aapt resource value: 0x7f030040
-			public const int select_dialog_singlechoice_material = 2130903104;
+			public const int support_simple_spinner_dropdown_item = 2130903104;
 			
 			// aapt resource value: 0x7f030041
-			public const int support_simple_spinner_dropdown_item = 2130903105;
+			public const int Tabbar = 2130903105;
 			
 			// aapt resource value: 0x7f030042
-			public const int Tabbar = 2130903106;
+			public const int Toolbar = 2130903106;
 			
 			// aapt resource value: 0x7f030043
-			public const int Toolbar = 2130903107;
-			
-			// aapt resource value: 0x7f030044
-			public const int tooltip = 2130903108;
+			public const int tooltip = 2130903107;
 			
 			static Layout()
 			{
@@ -3939,113 +5456,107 @@ namespace FlyPhone.Droid
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f09003f
-			public const int ApplicationName = 2131296319;
+			// aapt resource value: 0x7f09003d
+			public const int ApplicationName = 2131296317;
 			
-			// aapt resource value: 0x7f09003e
-			public const int Hello = 2131296318;
+			// aapt resource value: 0x7f09003c
+			public const int Hello = 2131296316;
 			
 			// aapt resource value: 0x7f090015
 			public const int abc_action_bar_home_description = 2131296277;
 			
 			// aapt resource value: 0x7f090016
-			public const int abc_action_bar_home_description_format = 2131296278;
+			public const int abc_action_bar_up_description = 2131296278;
 			
 			// aapt resource value: 0x7f090017
-			public const int abc_action_bar_home_subtitle_description_format = 2131296279;
+			public const int abc_action_menu_overflow_description = 2131296279;
 			
 			// aapt resource value: 0x7f090018
-			public const int abc_action_bar_up_description = 2131296280;
+			public const int abc_action_mode_done = 2131296280;
 			
 			// aapt resource value: 0x7f090019
-			public const int abc_action_menu_overflow_description = 2131296281;
+			public const int abc_activity_chooser_view_see_all = 2131296281;
 			
 			// aapt resource value: 0x7f09001a
-			public const int abc_action_mode_done = 2131296282;
+			public const int abc_activitychooserview_choose_application = 2131296282;
 			
 			// aapt resource value: 0x7f09001b
-			public const int abc_activity_chooser_view_see_all = 2131296283;
+			public const int abc_capital_off = 2131296283;
 			
 			// aapt resource value: 0x7f09001c
-			public const int abc_activitychooserview_choose_application = 2131296284;
-			
-			// aapt resource value: 0x7f09001d
-			public const int abc_capital_off = 2131296285;
-			
-			// aapt resource value: 0x7f09001e
-			public const int abc_capital_on = 2131296286;
-			
-			// aapt resource value: 0x7f09002a
-			public const int abc_font_family_body_1_material = 2131296298;
-			
-			// aapt resource value: 0x7f09002b
-			public const int abc_font_family_body_2_material = 2131296299;
-			
-			// aapt resource value: 0x7f09002c
-			public const int abc_font_family_button_material = 2131296300;
-			
-			// aapt resource value: 0x7f09002d
-			public const int abc_font_family_caption_material = 2131296301;
-			
-			// aapt resource value: 0x7f09002e
-			public const int abc_font_family_display_1_material = 2131296302;
-			
-			// aapt resource value: 0x7f09002f
-			public const int abc_font_family_display_2_material = 2131296303;
-			
-			// aapt resource value: 0x7f090030
-			public const int abc_font_family_display_3_material = 2131296304;
-			
-			// aapt resource value: 0x7f090031
-			public const int abc_font_family_display_4_material = 2131296305;
-			
-			// aapt resource value: 0x7f090032
-			public const int abc_font_family_headline_material = 2131296306;
-			
-			// aapt resource value: 0x7f090033
-			public const int abc_font_family_menu_material = 2131296307;
-			
-			// aapt resource value: 0x7f090034
-			public const int abc_font_family_subhead_material = 2131296308;
-			
-			// aapt resource value: 0x7f090035
-			public const int abc_font_family_title_material = 2131296309;
-			
-			// aapt resource value: 0x7f09001f
-			public const int abc_search_hint = 2131296287;
-			
-			// aapt resource value: 0x7f090020
-			public const int abc_searchview_description_clear = 2131296288;
-			
-			// aapt resource value: 0x7f090021
-			public const int abc_searchview_description_query = 2131296289;
-			
-			// aapt resource value: 0x7f090022
-			public const int abc_searchview_description_search = 2131296290;
-			
-			// aapt resource value: 0x7f090023
-			public const int abc_searchview_description_submit = 2131296291;
-			
-			// aapt resource value: 0x7f090024
-			public const int abc_searchview_description_voice = 2131296292;
-			
-			// aapt resource value: 0x7f090025
-			public const int abc_shareactionprovider_share_with = 2131296293;
-			
-			// aapt resource value: 0x7f090026
-			public const int abc_shareactionprovider_share_with_application = 2131296294;
+			public const int abc_capital_on = 2131296284;
 			
 			// aapt resource value: 0x7f090027
-			public const int abc_toolbar_collapse_description = 2131296295;
+			public const int abc_font_family_body_1_material = 2131296295;
 			
-			// aapt resource value: 0x7f090036
-			public const int appbar_scrolling_view_behavior = 2131296310;
+			// aapt resource value: 0x7f090028
+			public const int abc_font_family_body_2_material = 2131296296;
 			
-			// aapt resource value: 0x7f090037
-			public const int bottom_sheet_behavior = 2131296311;
+			// aapt resource value: 0x7f090029
+			public const int abc_font_family_button_material = 2131296297;
 			
-			// aapt resource value: 0x7f090038
-			public const int character_counter_pattern = 2131296312;
+			// aapt resource value: 0x7f09002a
+			public const int abc_font_family_caption_material = 2131296298;
+			
+			// aapt resource value: 0x7f09002b
+			public const int abc_font_family_display_1_material = 2131296299;
+			
+			// aapt resource value: 0x7f09002c
+			public const int abc_font_family_display_2_material = 2131296300;
+			
+			// aapt resource value: 0x7f09002d
+			public const int abc_font_family_display_3_material = 2131296301;
+			
+			// aapt resource value: 0x7f09002e
+			public const int abc_font_family_display_4_material = 2131296302;
+			
+			// aapt resource value: 0x7f09002f
+			public const int abc_font_family_headline_material = 2131296303;
+			
+			// aapt resource value: 0x7f090030
+			public const int abc_font_family_menu_material = 2131296304;
+			
+			// aapt resource value: 0x7f090031
+			public const int abc_font_family_subhead_material = 2131296305;
+			
+			// aapt resource value: 0x7f090032
+			public const int abc_font_family_title_material = 2131296306;
+			
+			// aapt resource value: 0x7f09001d
+			public const int abc_search_hint = 2131296285;
+			
+			// aapt resource value: 0x7f09001e
+			public const int abc_searchview_description_clear = 2131296286;
+			
+			// aapt resource value: 0x7f09001f
+			public const int abc_searchview_description_query = 2131296287;
+			
+			// aapt resource value: 0x7f090020
+			public const int abc_searchview_description_search = 2131296288;
+			
+			// aapt resource value: 0x7f090021
+			public const int abc_searchview_description_submit = 2131296289;
+			
+			// aapt resource value: 0x7f090022
+			public const int abc_searchview_description_voice = 2131296290;
+			
+			// aapt resource value: 0x7f090023
+			public const int abc_shareactionprovider_share_with = 2131296291;
+			
+			// aapt resource value: 0x7f090024
+			public const int abc_shareactionprovider_share_with_application = 2131296292;
+			
+			// aapt resource value: 0x7f090025
+			public const int abc_toolbar_collapse_description = 2131296293;
+			
+			// aapt resource value: 0x7f090033
+			public const int appbar_scrolling_view_behavior = 2131296307;
+			
+			// aapt resource value: 0x7f090034
+			public const int bottom_sheet_behavior = 2131296308;
+			
+			// aapt resource value: 0x7f090035
+			public const int character_counter_pattern = 2131296309;
 			
 			// aapt resource value: 0x7f090000
 			public const int mr_button_content_description = 2131296256;
@@ -4110,26 +5621,26 @@ namespace FlyPhone.Droid
 			// aapt resource value: 0x7f090014
 			public const int mr_user_route_category_name = 2131296276;
 			
+			// aapt resource value: 0x7f090036
+			public const int password_toggle_content_description = 2131296310;
+			
+			// aapt resource value: 0x7f090037
+			public const int path_password_eye = 2131296311;
+			
+			// aapt resource value: 0x7f090038
+			public const int path_password_eye_mask_strike_through = 2131296312;
+			
 			// aapt resource value: 0x7f090039
-			public const int password_toggle_content_description = 2131296313;
+			public const int path_password_eye_mask_visible = 2131296313;
 			
 			// aapt resource value: 0x7f09003a
-			public const int path_password_eye = 2131296314;
+			public const int path_password_strike_through = 2131296314;
+			
+			// aapt resource value: 0x7f090026
+			public const int search_menu_title = 2131296294;
 			
 			// aapt resource value: 0x7f09003b
-			public const int path_password_eye_mask_strike_through = 2131296315;
-			
-			// aapt resource value: 0x7f09003c
-			public const int path_password_eye_mask_visible = 2131296316;
-			
-			// aapt resource value: 0x7f09003d
-			public const int path_password_strike_through = 2131296317;
-			
-			// aapt resource value: 0x7f090028
-			public const int search_menu_title = 2131296296;
-			
-			// aapt resource value: 0x7f090029
-			public const int status_bar_notification_info_overflow = 2131296297;
+			public const int status_bar_notification_info_overflow = 2131296315;
 			
 			static String()
 			{
@@ -4144,50 +5655,50 @@ namespace FlyPhone.Droid
 		public partial class Style
 		{
 			
+			// aapt resource value: 0x7f0b00a4
+			public const int AlertDialog_AppCompat = 2131427492;
+			
+			// aapt resource value: 0x7f0b00a5
+			public const int AlertDialog_AppCompat_Light = 2131427493;
+			
+			// aapt resource value: 0x7f0b00a6
+			public const int Animation_AppCompat_Dialog = 2131427494;
+			
+			// aapt resource value: 0x7f0b00a7
+			public const int Animation_AppCompat_DropDownUp = 2131427495;
+			
+			// aapt resource value: 0x7f0b00a8
+			public const int Animation_AppCompat_Tooltip = 2131427496;
+			
+			// aapt resource value: 0x7f0b016e
+			public const int Animation_Design_BottomSheetDialog = 2131427694;
+			
+			// aapt resource value: 0x7f0b0191
+			public const int AppCompatDialogStyle = 2131427729;
+			
+			// aapt resource value: 0x7f0b00a9
+			public const int Base_AlertDialog_AppCompat = 2131427497;
+			
+			// aapt resource value: 0x7f0b00aa
+			public const int Base_AlertDialog_AppCompat_Light = 2131427498;
+			
+			// aapt resource value: 0x7f0b00ab
+			public const int Base_Animation_AppCompat_Dialog = 2131427499;
+			
 			// aapt resource value: 0x7f0b00ac
-			public const int AlertDialog_AppCompat = 2131427500;
+			public const int Base_Animation_AppCompat_DropDownUp = 2131427500;
 			
 			// aapt resource value: 0x7f0b00ad
-			public const int AlertDialog_AppCompat_Light = 2131427501;
-			
-			// aapt resource value: 0x7f0b00ae
-			public const int Animation_AppCompat_Dialog = 2131427502;
-			
-			// aapt resource value: 0x7f0b00af
-			public const int Animation_AppCompat_DropDownUp = 2131427503;
-			
-			// aapt resource value: 0x7f0b00b0
-			public const int Animation_AppCompat_Tooltip = 2131427504;
-			
-			// aapt resource value: 0x7f0b0178
-			public const int Animation_Design_BottomSheetDialog = 2131427704;
-			
-			// aapt resource value: 0x7f0b019b
-			public const int AppCompatDialogStyle = 2131427739;
-			
-			// aapt resource value: 0x7f0b00b1
-			public const int Base_AlertDialog_AppCompat = 2131427505;
-			
-			// aapt resource value: 0x7f0b00b2
-			public const int Base_AlertDialog_AppCompat_Light = 2131427506;
-			
-			// aapt resource value: 0x7f0b00b3
-			public const int Base_Animation_AppCompat_Dialog = 2131427507;
-			
-			// aapt resource value: 0x7f0b00b4
-			public const int Base_Animation_AppCompat_DropDownUp = 2131427508;
-			
-			// aapt resource value: 0x7f0b00b5
-			public const int Base_Animation_AppCompat_Tooltip = 2131427509;
+			public const int Base_Animation_AppCompat_Tooltip = 2131427501;
 			
 			// aapt resource value: 0x7f0b000c
 			public const int Base_CardView = 2131427340;
 			
-			// aapt resource value: 0x7f0b00b6
-			public const int Base_DialogWindowTitle_AppCompat = 2131427510;
+			// aapt resource value: 0x7f0b00ae
+			public const int Base_DialogWindowTitle_AppCompat = 2131427502;
 			
-			// aapt resource value: 0x7f0b00b7
-			public const int Base_DialogWindowTitleBackground_AppCompat = 2131427511;
+			// aapt resource value: 0x7f0b00af
+			public const int Base_DialogWindowTitleBackground_AppCompat = 2131427503;
 			
 			// aapt resource value: 0x7f0b0048
 			public const int Base_TextAppearance_AppCompat = 2131427400;
@@ -4243,8 +5754,8 @@ namespace FlyPhone.Droid
 			// aapt resource value: 0x7f0b0055
 			public const int Base_TextAppearance_AppCompat_Menu = 2131427413;
 			
-			// aapt resource value: 0x7f0b00b8
-			public const int Base_TextAppearance_AppCompat_SearchResult = 2131427512;
+			// aapt resource value: 0x7f0b00b0
+			public const int Base_TextAppearance_AppCompat_SearchResult = 2131427504;
 			
 			// aapt resource value: 0x7f0b0056
 			public const int Base_TextAppearance_AppCompat_SearchResult_Subtitle = 2131427414;
@@ -4270,11 +5781,11 @@ namespace FlyPhone.Droid
 			// aapt resource value: 0x7f0b001f
 			public const int Base_TextAppearance_AppCompat_Title_Inverse = 2131427359;
 			
-			// aapt resource value: 0x7f0b00b9
-			public const int Base_TextAppearance_AppCompat_Tooltip = 2131427513;
+			// aapt resource value: 0x7f0b00b1
+			public const int Base_TextAppearance_AppCompat_Tooltip = 2131427505;
 			
-			// aapt resource value: 0x7f0b009d
-			public const int Base_TextAppearance_AppCompat_Widget_ActionBar_Menu = 2131427485;
+			// aapt resource value: 0x7f0b0095
+			public const int Base_TextAppearance_AppCompat_Widget_ActionBar_Menu = 2131427477;
 			
 			// aapt resource value: 0x7f0b005b
 			public const int Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle = 2131427419;
@@ -4297,17 +5808,17 @@ namespace FlyPhone.Droid
 			// aapt resource value: 0x7f0b0061
 			public const int Base_TextAppearance_AppCompat_Widget_Button = 2131427425;
 			
-			// aapt resource value: 0x7f0b00a4
-			public const int Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored = 2131427492;
+			// aapt resource value: 0x7f0b009c
+			public const int Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored = 2131427484;
 			
-			// aapt resource value: 0x7f0b00a5
-			public const int Base_TextAppearance_AppCompat_Widget_Button_Colored = 2131427493;
+			// aapt resource value: 0x7f0b009d
+			public const int Base_TextAppearance_AppCompat_Widget_Button_Colored = 2131427485;
 			
-			// aapt resource value: 0x7f0b009e
-			public const int Base_TextAppearance_AppCompat_Widget_Button_Inverse = 2131427486;
+			// aapt resource value: 0x7f0b0096
+			public const int Base_TextAppearance_AppCompat_Widget_Button_Inverse = 2131427478;
 			
-			// aapt resource value: 0x7f0b00ba
-			public const int Base_TextAppearance_AppCompat_Widget_DropDownItem = 2131427514;
+			// aapt resource value: 0x7f0b00b2
+			public const int Base_TextAppearance_AppCompat_Widget_DropDownItem = 2131427506;
 			
 			// aapt resource value: 0x7f0b0062
 			public const int Base_TextAppearance_AppCompat_Widget_PopupMenu_Header = 2131427426;
@@ -4324,8 +5835,8 @@ namespace FlyPhone.Droid
 			// aapt resource value: 0x7f0b0066
 			public const int Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem = 2131427430;
 			
-			// aapt resource value: 0x7f0b00bb
-			public const int Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item = 2131427515;
+			// aapt resource value: 0x7f0b00b3
+			public const int Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item = 2131427507;
 			
 			// aapt resource value: 0x7f0b0067
 			public const int Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle = 2131427431;
@@ -4336,8 +5847,8 @@ namespace FlyPhone.Droid
 			// aapt resource value: 0x7f0b0069
 			public const int Base_Theme_AppCompat = 2131427433;
 			
-			// aapt resource value: 0x7f0b00bc
-			public const int Base_Theme_AppCompat_CompactMenu = 2131427516;
+			// aapt resource value: 0x7f0b00b4
+			public const int Base_Theme_AppCompat_CompactMenu = 2131427508;
 			
 			// aapt resource value: 0x7f0b0020
 			public const int Base_Theme_AppCompat_Dialog = 2131427360;
@@ -4345,8 +5856,8 @@ namespace FlyPhone.Droid
 			// aapt resource value: 0x7f0b0021
 			public const int Base_Theme_AppCompat_Dialog_Alert = 2131427361;
 			
-			// aapt resource value: 0x7f0b00bd
-			public const int Base_Theme_AppCompat_Dialog_FixedSize = 2131427517;
+			// aapt resource value: 0x7f0b00b5
+			public const int Base_Theme_AppCompat_Dialog_FixedSize = 2131427509;
 			
 			// aapt resource value: 0x7f0b0022
 			public const int Base_Theme_AppCompat_Dialog_MinWidth = 2131427362;
@@ -4357,8 +5868,8 @@ namespace FlyPhone.Droid
 			// aapt resource value: 0x7f0b006a
 			public const int Base_Theme_AppCompat_Light = 2131427434;
 			
-			// aapt resource value: 0x7f0b00be
-			public const int Base_Theme_AppCompat_Light_DarkActionBar = 2131427518;
+			// aapt resource value: 0x7f0b00b6
+			public const int Base_Theme_AppCompat_Light_DarkActionBar = 2131427510;
 			
 			// aapt resource value: 0x7f0b0023
 			public const int Base_Theme_AppCompat_Light_Dialog = 2131427363;
@@ -4366,8 +5877,8 @@ namespace FlyPhone.Droid
 			// aapt resource value: 0x7f0b0024
 			public const int Base_Theme_AppCompat_Light_Dialog_Alert = 2131427364;
 			
-			// aapt resource value: 0x7f0b00bf
-			public const int Base_Theme_AppCompat_Light_Dialog_FixedSize = 2131427519;
+			// aapt resource value: 0x7f0b00b7
+			public const int Base_Theme_AppCompat_Light_Dialog_FixedSize = 2131427511;
 			
 			// aapt resource value: 0x7f0b0025
 			public const int Base_Theme_AppCompat_Light_Dialog_MinWidth = 2131427365;
@@ -4375,17 +5886,17 @@ namespace FlyPhone.Droid
 			// aapt resource value: 0x7f0b0011
 			public const int Base_Theme_AppCompat_Light_DialogWhenLarge = 2131427345;
 			
-			// aapt resource value: 0x7f0b00c0
-			public const int Base_ThemeOverlay_AppCompat = 2131427520;
+			// aapt resource value: 0x7f0b00b8
+			public const int Base_ThemeOverlay_AppCompat = 2131427512;
 			
-			// aapt resource value: 0x7f0b00c1
-			public const int Base_ThemeOverlay_AppCompat_ActionBar = 2131427521;
+			// aapt resource value: 0x7f0b00b9
+			public const int Base_ThemeOverlay_AppCompat_ActionBar = 2131427513;
 			
-			// aapt resource value: 0x7f0b00c2
-			public const int Base_ThemeOverlay_AppCompat_Dark = 2131427522;
+			// aapt resource value: 0x7f0b00ba
+			public const int Base_ThemeOverlay_AppCompat_Dark = 2131427514;
 			
-			// aapt resource value: 0x7f0b00c3
-			public const int Base_ThemeOverlay_AppCompat_Dark_ActionBar = 2131427523;
+			// aapt resource value: 0x7f0b00bb
+			public const int Base_ThemeOverlay_AppCompat_Dark_ActionBar = 2131427515;
 			
 			// aapt resource value: 0x7f0b0026
 			public const int Base_ThemeOverlay_AppCompat_Dialog = 2131427366;
@@ -4393,8 +5904,8 @@ namespace FlyPhone.Droid
 			// aapt resource value: 0x7f0b0027
 			public const int Base_ThemeOverlay_AppCompat_Dialog_Alert = 2131427367;
 			
-			// aapt resource value: 0x7f0b00c4
-			public const int Base_ThemeOverlay_AppCompat_Light = 2131427524;
+			// aapt resource value: 0x7f0b00bc
+			public const int Base_ThemeOverlay_AppCompat_Light = 2131427516;
 			
 			// aapt resource value: 0x7f0b0028
 			public const int Base_V11_Theme_AppCompat_Dialog = 2131427368;
@@ -4411,8 +5922,8 @@ namespace FlyPhone.Droid
 			// aapt resource value: 0x7f0b0033
 			public const int Base_V12_Widget_AppCompat_EditText = 2131427379;
 			
-			// aapt resource value: 0x7f0b0179
-			public const int Base_V14_Widget_Design_AppBarLayout = 2131427705;
+			// aapt resource value: 0x7f0b016f
+			public const int Base_V14_Widget_Design_AppBarLayout = 2131427695;
 			
 			// aapt resource value: 0x7f0b006b
 			public const int Base_V21_Theme_AppCompat = 2131427435;
@@ -4429,65 +5940,65 @@ namespace FlyPhone.Droid
 			// aapt resource value: 0x7f0b006f
 			public const int Base_V21_ThemeOverlay_AppCompat_Dialog = 2131427439;
 			
-			// aapt resource value: 0x7f0b0175
-			public const int Base_V21_Widget_Design_AppBarLayout = 2131427701;
+			// aapt resource value: 0x7f0b016b
+			public const int Base_V21_Widget_Design_AppBarLayout = 2131427691;
 			
-			// aapt resource value: 0x7f0b009b
-			public const int Base_V22_Theme_AppCompat = 2131427483;
+			// aapt resource value: 0x7f0b0093
+			public const int Base_V22_Theme_AppCompat = 2131427475;
 			
-			// aapt resource value: 0x7f0b009c
-			public const int Base_V22_Theme_AppCompat_Light = 2131427484;
+			// aapt resource value: 0x7f0b0094
+			public const int Base_V22_Theme_AppCompat_Light = 2131427476;
 			
-			// aapt resource value: 0x7f0b009f
-			public const int Base_V23_Theme_AppCompat = 2131427487;
+			// aapt resource value: 0x7f0b0097
+			public const int Base_V23_Theme_AppCompat = 2131427479;
+			
+			// aapt resource value: 0x7f0b0098
+			public const int Base_V23_Theme_AppCompat_Light = 2131427480;
 			
 			// aapt resource value: 0x7f0b00a0
-			public const int Base_V23_Theme_AppCompat_Light = 2131427488;
+			public const int Base_V26_Theme_AppCompat = 2131427488;
 			
-			// aapt resource value: 0x7f0b00a8
-			public const int Base_V26_Theme_AppCompat = 2131427496;
+			// aapt resource value: 0x7f0b00a1
+			public const int Base_V26_Theme_AppCompat_Light = 2131427489;
 			
-			// aapt resource value: 0x7f0b00a9
-			public const int Base_V26_Theme_AppCompat_Light = 2131427497;
+			// aapt resource value: 0x7f0b00a2
+			public const int Base_V26_Widget_AppCompat_Toolbar = 2131427490;
 			
-			// aapt resource value: 0x7f0b00aa
-			public const int Base_V26_Widget_AppCompat_Toolbar = 2131427498;
+			// aapt resource value: 0x7f0b016d
+			public const int Base_V26_Widget_Design_AppBarLayout = 2131427693;
 			
-			// aapt resource value: 0x7f0b0177
-			public const int Base_V26_Widget_Design_AppBarLayout = 2131427703;
+			// aapt resource value: 0x7f0b00bd
+			public const int Base_V7_Theme_AppCompat = 2131427517;
+			
+			// aapt resource value: 0x7f0b00be
+			public const int Base_V7_Theme_AppCompat_Dialog = 2131427518;
+			
+			// aapt resource value: 0x7f0b00bf
+			public const int Base_V7_Theme_AppCompat_Light = 2131427519;
+			
+			// aapt resource value: 0x7f0b00c0
+			public const int Base_V7_Theme_AppCompat_Light_Dialog = 2131427520;
+			
+			// aapt resource value: 0x7f0b00c1
+			public const int Base_V7_ThemeOverlay_AppCompat_Dialog = 2131427521;
+			
+			// aapt resource value: 0x7f0b00c2
+			public const int Base_V7_Widget_AppCompat_AutoCompleteTextView = 2131427522;
+			
+			// aapt resource value: 0x7f0b00c3
+			public const int Base_V7_Widget_AppCompat_EditText = 2131427523;
+			
+			// aapt resource value: 0x7f0b00c4
+			public const int Base_V7_Widget_AppCompat_Toolbar = 2131427524;
 			
 			// aapt resource value: 0x7f0b00c5
-			public const int Base_V7_Theme_AppCompat = 2131427525;
+			public const int Base_Widget_AppCompat_ActionBar = 2131427525;
 			
 			// aapt resource value: 0x7f0b00c6
-			public const int Base_V7_Theme_AppCompat_Dialog = 2131427526;
+			public const int Base_Widget_AppCompat_ActionBar_Solid = 2131427526;
 			
 			// aapt resource value: 0x7f0b00c7
-			public const int Base_V7_Theme_AppCompat_Light = 2131427527;
-			
-			// aapt resource value: 0x7f0b00c8
-			public const int Base_V7_Theme_AppCompat_Light_Dialog = 2131427528;
-			
-			// aapt resource value: 0x7f0b00c9
-			public const int Base_V7_ThemeOverlay_AppCompat_Dialog = 2131427529;
-			
-			// aapt resource value: 0x7f0b00ca
-			public const int Base_V7_Widget_AppCompat_AutoCompleteTextView = 2131427530;
-			
-			// aapt resource value: 0x7f0b00cb
-			public const int Base_V7_Widget_AppCompat_EditText = 2131427531;
-			
-			// aapt resource value: 0x7f0b00cc
-			public const int Base_V7_Widget_AppCompat_Toolbar = 2131427532;
-			
-			// aapt resource value: 0x7f0b00cd
-			public const int Base_Widget_AppCompat_ActionBar = 2131427533;
-			
-			// aapt resource value: 0x7f0b00ce
-			public const int Base_Widget_AppCompat_ActionBar_Solid = 2131427534;
-			
-			// aapt resource value: 0x7f0b00cf
-			public const int Base_Widget_AppCompat_ActionBar_TabBar = 2131427535;
+			public const int Base_Widget_AppCompat_ActionBar_TabBar = 2131427527;
 			
 			// aapt resource value: 0x7f0b0070
 			public const int Base_Widget_AppCompat_ActionBar_TabText = 2131427440;
@@ -4504,11 +6015,11 @@ namespace FlyPhone.Droid
 			// aapt resource value: 0x7f0b0074
 			public const int Base_Widget_AppCompat_ActionButton_Overflow = 2131427444;
 			
-			// aapt resource value: 0x7f0b00d0
-			public const int Base_Widget_AppCompat_ActionMode = 2131427536;
+			// aapt resource value: 0x7f0b00c8
+			public const int Base_Widget_AppCompat_ActionMode = 2131427528;
 			
-			// aapt resource value: 0x7f0b00d1
-			public const int Base_Widget_AppCompat_ActivityChooserView = 2131427537;
+			// aapt resource value: 0x7f0b00c9
+			public const int Base_Widget_AppCompat_ActivityChooserView = 2131427529;
 			
 			// aapt resource value: 0x7f0b0034
 			public const int Base_Widget_AppCompat_AutoCompleteTextView = 2131427380;
@@ -4522,11 +6033,11 @@ namespace FlyPhone.Droid
 			// aapt resource value: 0x7f0b0077
 			public const int Base_Widget_AppCompat_Button_Borderless_Colored = 2131427447;
 			
-			// aapt resource value: 0x7f0b00d2
-			public const int Base_Widget_AppCompat_Button_ButtonBar_AlertDialog = 2131427538;
+			// aapt resource value: 0x7f0b00ca
+			public const int Base_Widget_AppCompat_Button_ButtonBar_AlertDialog = 2131427530;
 			
-			// aapt resource value: 0x7f0b00a1
-			public const int Base_Widget_AppCompat_Button_Colored = 2131427489;
+			// aapt resource value: 0x7f0b0099
+			public const int Base_Widget_AppCompat_Button_Colored = 2131427481;
 			
 			// aapt resource value: 0x7f0b0078
 			public const int Base_Widget_AppCompat_Button_Small = 2131427448;
@@ -4534,8 +6045,8 @@ namespace FlyPhone.Droid
 			// aapt resource value: 0x7f0b0079
 			public const int Base_Widget_AppCompat_ButtonBar = 2131427449;
 			
-			// aapt resource value: 0x7f0b00d3
-			public const int Base_Widget_AppCompat_ButtonBar_AlertDialog = 2131427539;
+			// aapt resource value: 0x7f0b00cb
+			public const int Base_Widget_AppCompat_ButtonBar_AlertDialog = 2131427531;
 			
 			// aapt resource value: 0x7f0b007a
 			public const int Base_Widget_AppCompat_CompoundButton_CheckBox = 2131427450;
@@ -4543,14 +6054,14 @@ namespace FlyPhone.Droid
 			// aapt resource value: 0x7f0b007b
 			public const int Base_Widget_AppCompat_CompoundButton_RadioButton = 2131427451;
 			
-			// aapt resource value: 0x7f0b00d4
-			public const int Base_Widget_AppCompat_CompoundButton_Switch = 2131427540;
+			// aapt resource value: 0x7f0b00cc
+			public const int Base_Widget_AppCompat_CompoundButton_Switch = 2131427532;
 			
 			// aapt resource value: 0x7f0b000f
 			public const int Base_Widget_AppCompat_DrawerArrowToggle = 2131427343;
 			
-			// aapt resource value: 0x7f0b00d5
-			public const int Base_Widget_AppCompat_DrawerArrowToggle_Common = 2131427541;
+			// aapt resource value: 0x7f0b00cd
+			public const int Base_Widget_AppCompat_DrawerArrowToggle_Common = 2131427533;
 			
 			// aapt resource value: 0x7f0b007c
 			public const int Base_Widget_AppCompat_DropDownItem_Spinner = 2131427452;
@@ -4561,14 +6072,14 @@ namespace FlyPhone.Droid
 			// aapt resource value: 0x7f0b007d
 			public const int Base_Widget_AppCompat_ImageButton = 2131427453;
 			
-			// aapt resource value: 0x7f0b00d6
-			public const int Base_Widget_AppCompat_Light_ActionBar = 2131427542;
+			// aapt resource value: 0x7f0b00ce
+			public const int Base_Widget_AppCompat_Light_ActionBar = 2131427534;
 			
-			// aapt resource value: 0x7f0b00d7
-			public const int Base_Widget_AppCompat_Light_ActionBar_Solid = 2131427543;
+			// aapt resource value: 0x7f0b00cf
+			public const int Base_Widget_AppCompat_Light_ActionBar_Solid = 2131427535;
 			
-			// aapt resource value: 0x7f0b00d8
-			public const int Base_Widget_AppCompat_Light_ActionBar_TabBar = 2131427544;
+			// aapt resource value: 0x7f0b00d0
+			public const int Base_Widget_AppCompat_Light_ActionBar_TabBar = 2131427536;
 			
 			// aapt resource value: 0x7f0b007e
 			public const int Base_Widget_AppCompat_Light_ActionBar_TabText = 2131427454;
@@ -4585,8 +6096,8 @@ namespace FlyPhone.Droid
 			// aapt resource value: 0x7f0b0082
 			public const int Base_Widget_AppCompat_Light_PopupMenu_Overflow = 2131427458;
 			
-			// aapt resource value: 0x7f0b00d9
-			public const int Base_Widget_AppCompat_ListMenuView = 2131427545;
+			// aapt resource value: 0x7f0b00d1
+			public const int Base_Widget_AppCompat_ListMenuView = 2131427537;
 			
 			// aapt resource value: 0x7f0b0083
 			public const int Base_Widget_AppCompat_ListPopupWindow = 2131427459;
@@ -4606,8 +6117,8 @@ namespace FlyPhone.Droid
 			// aapt resource value: 0x7f0b0088
 			public const int Base_Widget_AppCompat_PopupMenu_Overflow = 2131427464;
 			
-			// aapt resource value: 0x7f0b00da
-			public const int Base_Widget_AppCompat_PopupWindow = 2131427546;
+			// aapt resource value: 0x7f0b00d2
+			public const int Base_Widget_AppCompat_PopupWindow = 2131427538;
 			
 			// aapt resource value: 0x7f0b002b
 			public const int Base_Widget_AppCompat_ProgressBar = 2131427371;
@@ -4618,23 +6129,23 @@ namespace FlyPhone.Droid
 			// aapt resource value: 0x7f0b0089
 			public const int Base_Widget_AppCompat_RatingBar = 2131427465;
 			
-			// aapt resource value: 0x7f0b00a2
-			public const int Base_Widget_AppCompat_RatingBar_Indicator = 2131427490;
+			// aapt resource value: 0x7f0b009a
+			public const int Base_Widget_AppCompat_RatingBar_Indicator = 2131427482;
 			
-			// aapt resource value: 0x7f0b00a3
-			public const int Base_Widget_AppCompat_RatingBar_Small = 2131427491;
+			// aapt resource value: 0x7f0b009b
+			public const int Base_Widget_AppCompat_RatingBar_Small = 2131427483;
 			
-			// aapt resource value: 0x7f0b00db
-			public const int Base_Widget_AppCompat_SearchView = 2131427547;
+			// aapt resource value: 0x7f0b00d3
+			public const int Base_Widget_AppCompat_SearchView = 2131427539;
 			
-			// aapt resource value: 0x7f0b00dc
-			public const int Base_Widget_AppCompat_SearchView_ActionBar = 2131427548;
+			// aapt resource value: 0x7f0b00d4
+			public const int Base_Widget_AppCompat_SearchView_ActionBar = 2131427540;
 			
 			// aapt resource value: 0x7f0b008a
 			public const int Base_Widget_AppCompat_SeekBar = 2131427466;
 			
-			// aapt resource value: 0x7f0b00dd
-			public const int Base_Widget_AppCompat_SeekBar_Discrete = 2131427549;
+			// aapt resource value: 0x7f0b00d5
+			public const int Base_Widget_AppCompat_SeekBar_Discrete = 2131427541;
 			
 			// aapt resource value: 0x7f0b008b
 			public const int Base_Widget_AppCompat_Spinner = 2131427467;
@@ -4645,17 +6156,17 @@ namespace FlyPhone.Droid
 			// aapt resource value: 0x7f0b008c
 			public const int Base_Widget_AppCompat_TextView_SpinnerItem = 2131427468;
 			
-			// aapt resource value: 0x7f0b00ab
-			public const int Base_Widget_AppCompat_Toolbar = 2131427499;
+			// aapt resource value: 0x7f0b00a3
+			public const int Base_Widget_AppCompat_Toolbar = 2131427491;
 			
 			// aapt resource value: 0x7f0b008d
 			public const int Base_Widget_AppCompat_Toolbar_Button_Navigation = 2131427469;
 			
-			// aapt resource value: 0x7f0b0176
-			public const int Base_Widget_Design_AppBarLayout = 2131427702;
+			// aapt resource value: 0x7f0b016c
+			public const int Base_Widget_Design_AppBarLayout = 2131427692;
 			
-			// aapt resource value: 0x7f0b017a
-			public const int Base_Widget_Design_TabLayout = 2131427706;
+			// aapt resource value: 0x7f0b0170
+			public const int Base_Widget_Design_TabLayout = 2131427696;
 			
 			// aapt resource value: 0x7f0b000b
 			public const int CardView = 2131427339;
@@ -4666,11 +6177,11 @@ namespace FlyPhone.Droid
 			// aapt resource value: 0x7f0b000e
 			public const int CardView_Light = 2131427342;
 			
-			// aapt resource value: 0x7f0b0199
-			public const int MainTheme = 2131427737;
+			// aapt resource value: 0x7f0b018f
+			public const int MainTheme = 2131427727;
 			
-			// aapt resource value: 0x7f0b019a
-			public const int MainTheme_Base = 2131427738;
+			// aapt resource value: 0x7f0b0190
+			public const int MainTheme_Base = 2131427728;
 			
 			// aapt resource value: 0x7f0b002d
 			public const int Platform_AppCompat = 2131427373;
@@ -4705,11 +6216,11 @@ namespace FlyPhone.Droid
 			// aapt resource value: 0x7f0b0092
 			public const int Platform_V21_AppCompat_Light = 2131427474;
 			
-			// aapt resource value: 0x7f0b00a6
-			public const int Platform_V25_AppCompat = 2131427494;
+			// aapt resource value: 0x7f0b009e
+			public const int Platform_V25_AppCompat = 2131427486;
 			
-			// aapt resource value: 0x7f0b00a7
-			public const int Platform_V25_AppCompat_Light = 2131427495;
+			// aapt resource value: 0x7f0b009f
+			public const int Platform_V25_AppCompat_Light = 2131427487;
 			
 			// aapt resource value: 0x7f0b0031
 			public const int Platform_Widget_AppCompat_Spinner = 2131427377;
@@ -4756,230 +6267,203 @@ namespace FlyPhone.Droid
 			// aapt resource value: 0x7f0b0047
 			public const int RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = 2131427399;
 			
+			// aapt resource value: 0x7f0b0192
+			public const int Splashscreen = 2131427730;
+			
+			// aapt resource value: 0x7f0b00d6
+			public const int TextAppearance_AppCompat = 2131427542;
+			
+			// aapt resource value: 0x7f0b00d7
+			public const int TextAppearance_AppCompat_Body1 = 2131427543;
+			
+			// aapt resource value: 0x7f0b00d8
+			public const int TextAppearance_AppCompat_Body2 = 2131427544;
+			
+			// aapt resource value: 0x7f0b00d9
+			public const int TextAppearance_AppCompat_Button = 2131427545;
+			
+			// aapt resource value: 0x7f0b00da
+			public const int TextAppearance_AppCompat_Caption = 2131427546;
+			
+			// aapt resource value: 0x7f0b00db
+			public const int TextAppearance_AppCompat_Display1 = 2131427547;
+			
+			// aapt resource value: 0x7f0b00dc
+			public const int TextAppearance_AppCompat_Display2 = 2131427548;
+			
+			// aapt resource value: 0x7f0b00dd
+			public const int TextAppearance_AppCompat_Display3 = 2131427549;
+			
 			// aapt resource value: 0x7f0b00de
-			public const int TextAppearance_AppCompat = 2131427550;
+			public const int TextAppearance_AppCompat_Display4 = 2131427550;
 			
 			// aapt resource value: 0x7f0b00df
-			public const int TextAppearance_AppCompat_Body1 = 2131427551;
+			public const int TextAppearance_AppCompat_Headline = 2131427551;
 			
 			// aapt resource value: 0x7f0b00e0
-			public const int TextAppearance_AppCompat_Body2 = 2131427552;
+			public const int TextAppearance_AppCompat_Inverse = 2131427552;
 			
 			// aapt resource value: 0x7f0b00e1
-			public const int TextAppearance_AppCompat_Button = 2131427553;
+			public const int TextAppearance_AppCompat_Large = 2131427553;
 			
 			// aapt resource value: 0x7f0b00e2
-			public const int TextAppearance_AppCompat_Caption = 2131427554;
+			public const int TextAppearance_AppCompat_Large_Inverse = 2131427554;
 			
 			// aapt resource value: 0x7f0b00e3
-			public const int TextAppearance_AppCompat_Display1 = 2131427555;
+			public const int TextAppearance_AppCompat_Light_SearchResult_Subtitle = 2131427555;
 			
 			// aapt resource value: 0x7f0b00e4
-			public const int TextAppearance_AppCompat_Display2 = 2131427556;
+			public const int TextAppearance_AppCompat_Light_SearchResult_Title = 2131427556;
 			
 			// aapt resource value: 0x7f0b00e5
-			public const int TextAppearance_AppCompat_Display3 = 2131427557;
+			public const int TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = 2131427557;
 			
 			// aapt resource value: 0x7f0b00e6
-			public const int TextAppearance_AppCompat_Display4 = 2131427558;
+			public const int TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = 2131427558;
 			
 			// aapt resource value: 0x7f0b00e7
-			public const int TextAppearance_AppCompat_Headline = 2131427559;
+			public const int TextAppearance_AppCompat_Medium = 2131427559;
 			
 			// aapt resource value: 0x7f0b00e8
-			public const int TextAppearance_AppCompat_Inverse = 2131427560;
+			public const int TextAppearance_AppCompat_Medium_Inverse = 2131427560;
 			
 			// aapt resource value: 0x7f0b00e9
-			public const int TextAppearance_AppCompat_Large = 2131427561;
+			public const int TextAppearance_AppCompat_Menu = 2131427561;
 			
 			// aapt resource value: 0x7f0b00ea
-			public const int TextAppearance_AppCompat_Large_Inverse = 2131427562;
+			public const int TextAppearance_AppCompat_SearchResult_Subtitle = 2131427562;
 			
 			// aapt resource value: 0x7f0b00eb
-			public const int TextAppearance_AppCompat_Light_SearchResult_Subtitle = 2131427563;
+			public const int TextAppearance_AppCompat_SearchResult_Title = 2131427563;
 			
 			// aapt resource value: 0x7f0b00ec
-			public const int TextAppearance_AppCompat_Light_SearchResult_Title = 2131427564;
+			public const int TextAppearance_AppCompat_Small = 2131427564;
 			
 			// aapt resource value: 0x7f0b00ed
-			public const int TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = 2131427565;
+			public const int TextAppearance_AppCompat_Small_Inverse = 2131427565;
 			
 			// aapt resource value: 0x7f0b00ee
-			public const int TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = 2131427566;
+			public const int TextAppearance_AppCompat_Subhead = 2131427566;
 			
 			// aapt resource value: 0x7f0b00ef
-			public const int TextAppearance_AppCompat_Medium = 2131427567;
+			public const int TextAppearance_AppCompat_Subhead_Inverse = 2131427567;
 			
 			// aapt resource value: 0x7f0b00f0
-			public const int TextAppearance_AppCompat_Medium_Inverse = 2131427568;
+			public const int TextAppearance_AppCompat_Title = 2131427568;
 			
 			// aapt resource value: 0x7f0b00f1
-			public const int TextAppearance_AppCompat_Menu = 2131427569;
-			
-			// aapt resource value: 0x7f0b0093
-			public const int TextAppearance_AppCompat_Notification = 2131427475;
-			
-			// aapt resource value: 0x7f0b0094
-			public const int TextAppearance_AppCompat_Notification_Info = 2131427476;
-			
-			// aapt resource value: 0x7f0b0095
-			public const int TextAppearance_AppCompat_Notification_Info_Media = 2131427477;
-			
-			// aapt resource value: 0x7f0b00f2
-			public const int TextAppearance_AppCompat_Notification_Line2 = 2131427570;
-			
-			// aapt resource value: 0x7f0b00f3
-			public const int TextAppearance_AppCompat_Notification_Line2_Media = 2131427571;
-			
-			// aapt resource value: 0x7f0b0096
-			public const int TextAppearance_AppCompat_Notification_Media = 2131427478;
-			
-			// aapt resource value: 0x7f0b0097
-			public const int TextAppearance_AppCompat_Notification_Time = 2131427479;
-			
-			// aapt resource value: 0x7f0b0098
-			public const int TextAppearance_AppCompat_Notification_Time_Media = 2131427480;
-			
-			// aapt resource value: 0x7f0b0099
-			public const int TextAppearance_AppCompat_Notification_Title = 2131427481;
-			
-			// aapt resource value: 0x7f0b009a
-			public const int TextAppearance_AppCompat_Notification_Title_Media = 2131427482;
-			
-			// aapt resource value: 0x7f0b00f4
-			public const int TextAppearance_AppCompat_SearchResult_Subtitle = 2131427572;
-			
-			// aapt resource value: 0x7f0b00f5
-			public const int TextAppearance_AppCompat_SearchResult_Title = 2131427573;
-			
-			// aapt resource value: 0x7f0b00f6
-			public const int TextAppearance_AppCompat_Small = 2131427574;
-			
-			// aapt resource value: 0x7f0b00f7
-			public const int TextAppearance_AppCompat_Small_Inverse = 2131427575;
-			
-			// aapt resource value: 0x7f0b00f8
-			public const int TextAppearance_AppCompat_Subhead = 2131427576;
-			
-			// aapt resource value: 0x7f0b00f9
-			public const int TextAppearance_AppCompat_Subhead_Inverse = 2131427577;
-			
-			// aapt resource value: 0x7f0b00fa
-			public const int TextAppearance_AppCompat_Title = 2131427578;
-			
-			// aapt resource value: 0x7f0b00fb
-			public const int TextAppearance_AppCompat_Title_Inverse = 2131427579;
+			public const int TextAppearance_AppCompat_Title_Inverse = 2131427569;
 			
 			// aapt resource value: 0x7f0b0039
 			public const int TextAppearance_AppCompat_Tooltip = 2131427385;
 			
+			// aapt resource value: 0x7f0b00f2
+			public const int TextAppearance_AppCompat_Widget_ActionBar_Menu = 2131427570;
+			
+			// aapt resource value: 0x7f0b00f3
+			public const int TextAppearance_AppCompat_Widget_ActionBar_Subtitle = 2131427571;
+			
+			// aapt resource value: 0x7f0b00f4
+			public const int TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = 2131427572;
+			
+			// aapt resource value: 0x7f0b00f5
+			public const int TextAppearance_AppCompat_Widget_ActionBar_Title = 2131427573;
+			
+			// aapt resource value: 0x7f0b00f6
+			public const int TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = 2131427574;
+			
+			// aapt resource value: 0x7f0b00f7
+			public const int TextAppearance_AppCompat_Widget_ActionMode_Subtitle = 2131427575;
+			
+			// aapt resource value: 0x7f0b00f8
+			public const int TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = 2131427576;
+			
+			// aapt resource value: 0x7f0b00f9
+			public const int TextAppearance_AppCompat_Widget_ActionMode_Title = 2131427577;
+			
+			// aapt resource value: 0x7f0b00fa
+			public const int TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = 2131427578;
+			
+			// aapt resource value: 0x7f0b00fb
+			public const int TextAppearance_AppCompat_Widget_Button = 2131427579;
+			
 			// aapt resource value: 0x7f0b00fc
-			public const int TextAppearance_AppCompat_Widget_ActionBar_Menu = 2131427580;
+			public const int TextAppearance_AppCompat_Widget_Button_Borderless_Colored = 2131427580;
 			
 			// aapt resource value: 0x7f0b00fd
-			public const int TextAppearance_AppCompat_Widget_ActionBar_Subtitle = 2131427581;
+			public const int TextAppearance_AppCompat_Widget_Button_Colored = 2131427581;
 			
 			// aapt resource value: 0x7f0b00fe
-			public const int TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = 2131427582;
+			public const int TextAppearance_AppCompat_Widget_Button_Inverse = 2131427582;
 			
 			// aapt resource value: 0x7f0b00ff
-			public const int TextAppearance_AppCompat_Widget_ActionBar_Title = 2131427583;
+			public const int TextAppearance_AppCompat_Widget_DropDownItem = 2131427583;
 			
 			// aapt resource value: 0x7f0b0100
-			public const int TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = 2131427584;
+			public const int TextAppearance_AppCompat_Widget_PopupMenu_Header = 2131427584;
 			
 			// aapt resource value: 0x7f0b0101
-			public const int TextAppearance_AppCompat_Widget_ActionMode_Subtitle = 2131427585;
+			public const int TextAppearance_AppCompat_Widget_PopupMenu_Large = 2131427585;
 			
 			// aapt resource value: 0x7f0b0102
-			public const int TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = 2131427586;
+			public const int TextAppearance_AppCompat_Widget_PopupMenu_Small = 2131427586;
 			
 			// aapt resource value: 0x7f0b0103
-			public const int TextAppearance_AppCompat_Widget_ActionMode_Title = 2131427587;
+			public const int TextAppearance_AppCompat_Widget_Switch = 2131427587;
 			
 			// aapt resource value: 0x7f0b0104
-			public const int TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = 2131427588;
+			public const int TextAppearance_AppCompat_Widget_TextView_SpinnerItem = 2131427588;
 			
-			// aapt resource value: 0x7f0b0105
-			public const int TextAppearance_AppCompat_Widget_Button = 2131427589;
+			// aapt resource value: 0x7f0b0188
+			public const int TextAppearance_Compat_Notification = 2131427720;
 			
-			// aapt resource value: 0x7f0b0106
-			public const int TextAppearance_AppCompat_Widget_Button_Borderless_Colored = 2131427590;
+			// aapt resource value: 0x7f0b0189
+			public const int TextAppearance_Compat_Notification_Info = 2131427721;
 			
-			// aapt resource value: 0x7f0b0107
-			public const int TextAppearance_AppCompat_Widget_Button_Colored = 2131427591;
+			// aapt resource value: 0x7f0b0165
+			public const int TextAppearance_Compat_Notification_Info_Media = 2131427685;
 			
-			// aapt resource value: 0x7f0b0108
-			public const int TextAppearance_AppCompat_Widget_Button_Inverse = 2131427592;
+			// aapt resource value: 0x7f0b018e
+			public const int TextAppearance_Compat_Notification_Line2 = 2131427726;
 			
-			// aapt resource value: 0x7f0b0109
-			public const int TextAppearance_AppCompat_Widget_DropDownItem = 2131427593;
+			// aapt resource value: 0x7f0b0169
+			public const int TextAppearance_Compat_Notification_Line2_Media = 2131427689;
 			
-			// aapt resource value: 0x7f0b010a
-			public const int TextAppearance_AppCompat_Widget_PopupMenu_Header = 2131427594;
+			// aapt resource value: 0x7f0b0166
+			public const int TextAppearance_Compat_Notification_Media = 2131427686;
 			
-			// aapt resource value: 0x7f0b010b
-			public const int TextAppearance_AppCompat_Widget_PopupMenu_Large = 2131427595;
+			// aapt resource value: 0x7f0b018a
+			public const int TextAppearance_Compat_Notification_Time = 2131427722;
 			
-			// aapt resource value: 0x7f0b010c
-			public const int TextAppearance_AppCompat_Widget_PopupMenu_Small = 2131427596;
+			// aapt resource value: 0x7f0b0167
+			public const int TextAppearance_Compat_Notification_Time_Media = 2131427687;
 			
-			// aapt resource value: 0x7f0b010d
-			public const int TextAppearance_AppCompat_Widget_Switch = 2131427597;
+			// aapt resource value: 0x7f0b018b
+			public const int TextAppearance_Compat_Notification_Title = 2131427723;
 			
-			// aapt resource value: 0x7f0b010e
-			public const int TextAppearance_AppCompat_Widget_TextView_SpinnerItem = 2131427598;
-			
-			// aapt resource value: 0x7f0b0192
-			public const int TextAppearance_Compat_Notification = 2131427730;
-			
-			// aapt resource value: 0x7f0b0193
-			public const int TextAppearance_Compat_Notification_Info = 2131427731;
-			
-			// aapt resource value: 0x7f0b016f
-			public const int TextAppearance_Compat_Notification_Info_Media = 2131427695;
-			
-			// aapt resource value: 0x7f0b0198
-			public const int TextAppearance_Compat_Notification_Line2 = 2131427736;
-			
-			// aapt resource value: 0x7f0b0173
-			public const int TextAppearance_Compat_Notification_Line2_Media = 2131427699;
-			
-			// aapt resource value: 0x7f0b0170
-			public const int TextAppearance_Compat_Notification_Media = 2131427696;
-			
-			// aapt resource value: 0x7f0b0194
-			public const int TextAppearance_Compat_Notification_Time = 2131427732;
+			// aapt resource value: 0x7f0b0168
+			public const int TextAppearance_Compat_Notification_Title_Media = 2131427688;
 			
 			// aapt resource value: 0x7f0b0171
-			public const int TextAppearance_Compat_Notification_Time_Media = 2131427697;
-			
-			// aapt resource value: 0x7f0b0195
-			public const int TextAppearance_Compat_Notification_Title = 2131427733;
+			public const int TextAppearance_Design_CollapsingToolbar_Expanded = 2131427697;
 			
 			// aapt resource value: 0x7f0b0172
-			public const int TextAppearance_Compat_Notification_Title_Media = 2131427698;
+			public const int TextAppearance_Design_Counter = 2131427698;
 			
-			// aapt resource value: 0x7f0b017b
-			public const int TextAppearance_Design_CollapsingToolbar_Expanded = 2131427707;
+			// aapt resource value: 0x7f0b0173
+			public const int TextAppearance_Design_Counter_Overflow = 2131427699;
 			
-			// aapt resource value: 0x7f0b017c
-			public const int TextAppearance_Design_Counter = 2131427708;
+			// aapt resource value: 0x7f0b0174
+			public const int TextAppearance_Design_Error = 2131427700;
 			
-			// aapt resource value: 0x7f0b017d
-			public const int TextAppearance_Design_Counter_Overflow = 2131427709;
+			// aapt resource value: 0x7f0b0175
+			public const int TextAppearance_Design_Hint = 2131427701;
 			
-			// aapt resource value: 0x7f0b017e
-			public const int TextAppearance_Design_Error = 2131427710;
+			// aapt resource value: 0x7f0b0176
+			public const int TextAppearance_Design_Snackbar_Message = 2131427702;
 			
-			// aapt resource value: 0x7f0b017f
-			public const int TextAppearance_Design_Hint = 2131427711;
-			
-			// aapt resource value: 0x7f0b0180
-			public const int TextAppearance_Design_Snackbar_Message = 2131427712;
-			
-			// aapt resource value: 0x7f0b0181
-			public const int TextAppearance_Design_Tab = 2131427713;
+			// aapt resource value: 0x7f0b0177
+			public const int TextAppearance_Design_Tab = 2131427703;
 			
 			// aapt resource value: 0x7f0b0000
 			public const int TextAppearance_MediaRouter_PrimaryText = 2131427328;
@@ -4990,20 +6474,20 @@ namespace FlyPhone.Droid
 			// aapt resource value: 0x7f0b0002
 			public const int TextAppearance_MediaRouter_Title = 2131427330;
 			
-			// aapt resource value: 0x7f0b010f
-			public const int TextAppearance_Widget_AppCompat_ExpandedMenu_Item = 2131427599;
+			// aapt resource value: 0x7f0b0105
+			public const int TextAppearance_Widget_AppCompat_ExpandedMenu_Item = 2131427589;
 			
-			// aapt resource value: 0x7f0b0110
-			public const int TextAppearance_Widget_AppCompat_Toolbar_Subtitle = 2131427600;
+			// aapt resource value: 0x7f0b0106
+			public const int TextAppearance_Widget_AppCompat_Toolbar_Subtitle = 2131427590;
 			
-			// aapt resource value: 0x7f0b0111
-			public const int TextAppearance_Widget_AppCompat_Toolbar_Title = 2131427601;
+			// aapt resource value: 0x7f0b0107
+			public const int TextAppearance_Widget_AppCompat_Toolbar_Title = 2131427591;
 			
-			// aapt resource value: 0x7f0b0112
-			public const int Theme_AppCompat = 2131427602;
+			// aapt resource value: 0x7f0b0108
+			public const int Theme_AppCompat = 2131427592;
 			
-			// aapt resource value: 0x7f0b0113
-			public const int Theme_AppCompat_CompactMenu = 2131427603;
+			// aapt resource value: 0x7f0b0109
+			public const int Theme_AppCompat_CompactMenu = 2131427593;
 			
 			// aapt resource value: 0x7f0b0013
 			public const int Theme_AppCompat_DayNight = 2131427347;
@@ -5026,59 +6510,59 @@ namespace FlyPhone.Droid
 			// aapt resource value: 0x7f0b0019
 			public const int Theme_AppCompat_DayNight_NoActionBar = 2131427353;
 			
+			// aapt resource value: 0x7f0b010a
+			public const int Theme_AppCompat_Dialog = 2131427594;
+			
+			// aapt resource value: 0x7f0b010b
+			public const int Theme_AppCompat_Dialog_Alert = 2131427595;
+			
+			// aapt resource value: 0x7f0b010c
+			public const int Theme_AppCompat_Dialog_MinWidth = 2131427596;
+			
+			// aapt resource value: 0x7f0b010d
+			public const int Theme_AppCompat_DialogWhenLarge = 2131427597;
+			
+			// aapt resource value: 0x7f0b010e
+			public const int Theme_AppCompat_Light = 2131427598;
+			
+			// aapt resource value: 0x7f0b010f
+			public const int Theme_AppCompat_Light_DarkActionBar = 2131427599;
+			
+			// aapt resource value: 0x7f0b0110
+			public const int Theme_AppCompat_Light_Dialog = 2131427600;
+			
+			// aapt resource value: 0x7f0b0111
+			public const int Theme_AppCompat_Light_Dialog_Alert = 2131427601;
+			
+			// aapt resource value: 0x7f0b0112
+			public const int Theme_AppCompat_Light_Dialog_MinWidth = 2131427602;
+			
+			// aapt resource value: 0x7f0b0113
+			public const int Theme_AppCompat_Light_DialogWhenLarge = 2131427603;
+			
 			// aapt resource value: 0x7f0b0114
-			public const int Theme_AppCompat_Dialog = 2131427604;
+			public const int Theme_AppCompat_Light_NoActionBar = 2131427604;
 			
 			// aapt resource value: 0x7f0b0115
-			public const int Theme_AppCompat_Dialog_Alert = 2131427605;
+			public const int Theme_AppCompat_NoActionBar = 2131427605;
 			
-			// aapt resource value: 0x7f0b0116
-			public const int Theme_AppCompat_Dialog_MinWidth = 2131427606;
+			// aapt resource value: 0x7f0b0178
+			public const int Theme_Design = 2131427704;
 			
-			// aapt resource value: 0x7f0b0117
-			public const int Theme_AppCompat_DialogWhenLarge = 2131427607;
+			// aapt resource value: 0x7f0b0179
+			public const int Theme_Design_BottomSheetDialog = 2131427705;
 			
-			// aapt resource value: 0x7f0b0118
-			public const int Theme_AppCompat_Light = 2131427608;
+			// aapt resource value: 0x7f0b017a
+			public const int Theme_Design_Light = 2131427706;
 			
-			// aapt resource value: 0x7f0b0119
-			public const int Theme_AppCompat_Light_DarkActionBar = 2131427609;
+			// aapt resource value: 0x7f0b017b
+			public const int Theme_Design_Light_BottomSheetDialog = 2131427707;
 			
-			// aapt resource value: 0x7f0b011a
-			public const int Theme_AppCompat_Light_Dialog = 2131427610;
+			// aapt resource value: 0x7f0b017c
+			public const int Theme_Design_Light_NoActionBar = 2131427708;
 			
-			// aapt resource value: 0x7f0b011b
-			public const int Theme_AppCompat_Light_Dialog_Alert = 2131427611;
-			
-			// aapt resource value: 0x7f0b011c
-			public const int Theme_AppCompat_Light_Dialog_MinWidth = 2131427612;
-			
-			// aapt resource value: 0x7f0b011d
-			public const int Theme_AppCompat_Light_DialogWhenLarge = 2131427613;
-			
-			// aapt resource value: 0x7f0b011e
-			public const int Theme_AppCompat_Light_NoActionBar = 2131427614;
-			
-			// aapt resource value: 0x7f0b011f
-			public const int Theme_AppCompat_NoActionBar = 2131427615;
-			
-			// aapt resource value: 0x7f0b0182
-			public const int Theme_Design = 2131427714;
-			
-			// aapt resource value: 0x7f0b0183
-			public const int Theme_Design_BottomSheetDialog = 2131427715;
-			
-			// aapt resource value: 0x7f0b0184
-			public const int Theme_Design_Light = 2131427716;
-			
-			// aapt resource value: 0x7f0b0185
-			public const int Theme_Design_Light_BottomSheetDialog = 2131427717;
-			
-			// aapt resource value: 0x7f0b0186
-			public const int Theme_Design_Light_NoActionBar = 2131427718;
-			
-			// aapt resource value: 0x7f0b0187
-			public const int Theme_Design_NoActionBar = 2131427719;
+			// aapt resource value: 0x7f0b017d
+			public const int Theme_Design_NoActionBar = 2131427709;
 			
 			// aapt resource value: 0x7f0b0003
 			public const int Theme_MediaRouter = 2131427331;
@@ -5092,26 +6576,26 @@ namespace FlyPhone.Droid
 			// aapt resource value: 0x7f0b0006
 			public const int Theme_MediaRouter_LightControlPanel = 2131427334;
 			
-			// aapt resource value: 0x7f0b0120
-			public const int ThemeOverlay_AppCompat = 2131427616;
+			// aapt resource value: 0x7f0b0116
+			public const int ThemeOverlay_AppCompat = 2131427606;
 			
-			// aapt resource value: 0x7f0b0121
-			public const int ThemeOverlay_AppCompat_ActionBar = 2131427617;
+			// aapt resource value: 0x7f0b0117
+			public const int ThemeOverlay_AppCompat_ActionBar = 2131427607;
 			
-			// aapt resource value: 0x7f0b0122
-			public const int ThemeOverlay_AppCompat_Dark = 2131427618;
+			// aapt resource value: 0x7f0b0118
+			public const int ThemeOverlay_AppCompat_Dark = 2131427608;
 			
-			// aapt resource value: 0x7f0b0123
-			public const int ThemeOverlay_AppCompat_Dark_ActionBar = 2131427619;
+			// aapt resource value: 0x7f0b0119
+			public const int ThemeOverlay_AppCompat_Dark_ActionBar = 2131427609;
 			
-			// aapt resource value: 0x7f0b0124
-			public const int ThemeOverlay_AppCompat_Dialog = 2131427620;
+			// aapt resource value: 0x7f0b011a
+			public const int ThemeOverlay_AppCompat_Dialog = 2131427610;
 			
-			// aapt resource value: 0x7f0b0125
-			public const int ThemeOverlay_AppCompat_Dialog_Alert = 2131427621;
+			// aapt resource value: 0x7f0b011b
+			public const int ThemeOverlay_AppCompat_Dialog_Alert = 2131427611;
 			
-			// aapt resource value: 0x7f0b0126
-			public const int ThemeOverlay_AppCompat_Light = 2131427622;
+			// aapt resource value: 0x7f0b011c
+			public const int ThemeOverlay_AppCompat_Light = 2131427612;
 			
 			// aapt resource value: 0x7f0b0007
 			public const int ThemeOverlay_MediaRouter_Dark = 2131427335;
@@ -5119,260 +6603,260 @@ namespace FlyPhone.Droid
 			// aapt resource value: 0x7f0b0008
 			public const int ThemeOverlay_MediaRouter_Light = 2131427336;
 			
+			// aapt resource value: 0x7f0b011d
+			public const int Widget_AppCompat_ActionBar = 2131427613;
+			
+			// aapt resource value: 0x7f0b011e
+			public const int Widget_AppCompat_ActionBar_Solid = 2131427614;
+			
+			// aapt resource value: 0x7f0b011f
+			public const int Widget_AppCompat_ActionBar_TabBar = 2131427615;
+			
+			// aapt resource value: 0x7f0b0120
+			public const int Widget_AppCompat_ActionBar_TabText = 2131427616;
+			
+			// aapt resource value: 0x7f0b0121
+			public const int Widget_AppCompat_ActionBar_TabView = 2131427617;
+			
+			// aapt resource value: 0x7f0b0122
+			public const int Widget_AppCompat_ActionButton = 2131427618;
+			
+			// aapt resource value: 0x7f0b0123
+			public const int Widget_AppCompat_ActionButton_CloseMode = 2131427619;
+			
+			// aapt resource value: 0x7f0b0124
+			public const int Widget_AppCompat_ActionButton_Overflow = 2131427620;
+			
+			// aapt resource value: 0x7f0b0125
+			public const int Widget_AppCompat_ActionMode = 2131427621;
+			
+			// aapt resource value: 0x7f0b0126
+			public const int Widget_AppCompat_ActivityChooserView = 2131427622;
+			
 			// aapt resource value: 0x7f0b0127
-			public const int Widget_AppCompat_ActionBar = 2131427623;
+			public const int Widget_AppCompat_AutoCompleteTextView = 2131427623;
 			
 			// aapt resource value: 0x7f0b0128
-			public const int Widget_AppCompat_ActionBar_Solid = 2131427624;
+			public const int Widget_AppCompat_Button = 2131427624;
 			
 			// aapt resource value: 0x7f0b0129
-			public const int Widget_AppCompat_ActionBar_TabBar = 2131427625;
+			public const int Widget_AppCompat_Button_Borderless = 2131427625;
 			
 			// aapt resource value: 0x7f0b012a
-			public const int Widget_AppCompat_ActionBar_TabText = 2131427626;
+			public const int Widget_AppCompat_Button_Borderless_Colored = 2131427626;
 			
 			// aapt resource value: 0x7f0b012b
-			public const int Widget_AppCompat_ActionBar_TabView = 2131427627;
+			public const int Widget_AppCompat_Button_ButtonBar_AlertDialog = 2131427627;
 			
 			// aapt resource value: 0x7f0b012c
-			public const int Widget_AppCompat_ActionButton = 2131427628;
+			public const int Widget_AppCompat_Button_Colored = 2131427628;
 			
 			// aapt resource value: 0x7f0b012d
-			public const int Widget_AppCompat_ActionButton_CloseMode = 2131427629;
+			public const int Widget_AppCompat_Button_Small = 2131427629;
 			
 			// aapt resource value: 0x7f0b012e
-			public const int Widget_AppCompat_ActionButton_Overflow = 2131427630;
+			public const int Widget_AppCompat_ButtonBar = 2131427630;
 			
 			// aapt resource value: 0x7f0b012f
-			public const int Widget_AppCompat_ActionMode = 2131427631;
+			public const int Widget_AppCompat_ButtonBar_AlertDialog = 2131427631;
 			
 			// aapt resource value: 0x7f0b0130
-			public const int Widget_AppCompat_ActivityChooserView = 2131427632;
+			public const int Widget_AppCompat_CompoundButton_CheckBox = 2131427632;
 			
 			// aapt resource value: 0x7f0b0131
-			public const int Widget_AppCompat_AutoCompleteTextView = 2131427633;
+			public const int Widget_AppCompat_CompoundButton_RadioButton = 2131427633;
 			
 			// aapt resource value: 0x7f0b0132
-			public const int Widget_AppCompat_Button = 2131427634;
+			public const int Widget_AppCompat_CompoundButton_Switch = 2131427634;
 			
 			// aapt resource value: 0x7f0b0133
-			public const int Widget_AppCompat_Button_Borderless = 2131427635;
+			public const int Widget_AppCompat_DrawerArrowToggle = 2131427635;
 			
 			// aapt resource value: 0x7f0b0134
-			public const int Widget_AppCompat_Button_Borderless_Colored = 2131427636;
+			public const int Widget_AppCompat_DropDownItem_Spinner = 2131427636;
 			
 			// aapt resource value: 0x7f0b0135
-			public const int Widget_AppCompat_Button_ButtonBar_AlertDialog = 2131427637;
+			public const int Widget_AppCompat_EditText = 2131427637;
 			
 			// aapt resource value: 0x7f0b0136
-			public const int Widget_AppCompat_Button_Colored = 2131427638;
+			public const int Widget_AppCompat_ImageButton = 2131427638;
 			
 			// aapt resource value: 0x7f0b0137
-			public const int Widget_AppCompat_Button_Small = 2131427639;
+			public const int Widget_AppCompat_Light_ActionBar = 2131427639;
 			
 			// aapt resource value: 0x7f0b0138
-			public const int Widget_AppCompat_ButtonBar = 2131427640;
+			public const int Widget_AppCompat_Light_ActionBar_Solid = 2131427640;
 			
 			// aapt resource value: 0x7f0b0139
-			public const int Widget_AppCompat_ButtonBar_AlertDialog = 2131427641;
+			public const int Widget_AppCompat_Light_ActionBar_Solid_Inverse = 2131427641;
 			
 			// aapt resource value: 0x7f0b013a
-			public const int Widget_AppCompat_CompoundButton_CheckBox = 2131427642;
+			public const int Widget_AppCompat_Light_ActionBar_TabBar = 2131427642;
 			
 			// aapt resource value: 0x7f0b013b
-			public const int Widget_AppCompat_CompoundButton_RadioButton = 2131427643;
+			public const int Widget_AppCompat_Light_ActionBar_TabBar_Inverse = 2131427643;
 			
 			// aapt resource value: 0x7f0b013c
-			public const int Widget_AppCompat_CompoundButton_Switch = 2131427644;
+			public const int Widget_AppCompat_Light_ActionBar_TabText = 2131427644;
 			
 			// aapt resource value: 0x7f0b013d
-			public const int Widget_AppCompat_DrawerArrowToggle = 2131427645;
+			public const int Widget_AppCompat_Light_ActionBar_TabText_Inverse = 2131427645;
 			
 			// aapt resource value: 0x7f0b013e
-			public const int Widget_AppCompat_DropDownItem_Spinner = 2131427646;
+			public const int Widget_AppCompat_Light_ActionBar_TabView = 2131427646;
 			
 			// aapt resource value: 0x7f0b013f
-			public const int Widget_AppCompat_EditText = 2131427647;
+			public const int Widget_AppCompat_Light_ActionBar_TabView_Inverse = 2131427647;
 			
 			// aapt resource value: 0x7f0b0140
-			public const int Widget_AppCompat_ImageButton = 2131427648;
+			public const int Widget_AppCompat_Light_ActionButton = 2131427648;
 			
 			// aapt resource value: 0x7f0b0141
-			public const int Widget_AppCompat_Light_ActionBar = 2131427649;
+			public const int Widget_AppCompat_Light_ActionButton_CloseMode = 2131427649;
 			
 			// aapt resource value: 0x7f0b0142
-			public const int Widget_AppCompat_Light_ActionBar_Solid = 2131427650;
+			public const int Widget_AppCompat_Light_ActionButton_Overflow = 2131427650;
 			
 			// aapt resource value: 0x7f0b0143
-			public const int Widget_AppCompat_Light_ActionBar_Solid_Inverse = 2131427651;
+			public const int Widget_AppCompat_Light_ActionMode_Inverse = 2131427651;
 			
 			// aapt resource value: 0x7f0b0144
-			public const int Widget_AppCompat_Light_ActionBar_TabBar = 2131427652;
+			public const int Widget_AppCompat_Light_ActivityChooserView = 2131427652;
 			
 			// aapt resource value: 0x7f0b0145
-			public const int Widget_AppCompat_Light_ActionBar_TabBar_Inverse = 2131427653;
+			public const int Widget_AppCompat_Light_AutoCompleteTextView = 2131427653;
 			
 			// aapt resource value: 0x7f0b0146
-			public const int Widget_AppCompat_Light_ActionBar_TabText = 2131427654;
+			public const int Widget_AppCompat_Light_DropDownItem_Spinner = 2131427654;
 			
 			// aapt resource value: 0x7f0b0147
-			public const int Widget_AppCompat_Light_ActionBar_TabText_Inverse = 2131427655;
+			public const int Widget_AppCompat_Light_ListPopupWindow = 2131427655;
 			
 			// aapt resource value: 0x7f0b0148
-			public const int Widget_AppCompat_Light_ActionBar_TabView = 2131427656;
+			public const int Widget_AppCompat_Light_ListView_DropDown = 2131427656;
 			
 			// aapt resource value: 0x7f0b0149
-			public const int Widget_AppCompat_Light_ActionBar_TabView_Inverse = 2131427657;
+			public const int Widget_AppCompat_Light_PopupMenu = 2131427657;
 			
 			// aapt resource value: 0x7f0b014a
-			public const int Widget_AppCompat_Light_ActionButton = 2131427658;
+			public const int Widget_AppCompat_Light_PopupMenu_Overflow = 2131427658;
 			
 			// aapt resource value: 0x7f0b014b
-			public const int Widget_AppCompat_Light_ActionButton_CloseMode = 2131427659;
+			public const int Widget_AppCompat_Light_SearchView = 2131427659;
 			
 			// aapt resource value: 0x7f0b014c
-			public const int Widget_AppCompat_Light_ActionButton_Overflow = 2131427660;
+			public const int Widget_AppCompat_Light_Spinner_DropDown_ActionBar = 2131427660;
 			
 			// aapt resource value: 0x7f0b014d
-			public const int Widget_AppCompat_Light_ActionMode_Inverse = 2131427661;
+			public const int Widget_AppCompat_ListMenuView = 2131427661;
 			
 			// aapt resource value: 0x7f0b014e
-			public const int Widget_AppCompat_Light_ActivityChooserView = 2131427662;
+			public const int Widget_AppCompat_ListPopupWindow = 2131427662;
 			
 			// aapt resource value: 0x7f0b014f
-			public const int Widget_AppCompat_Light_AutoCompleteTextView = 2131427663;
+			public const int Widget_AppCompat_ListView = 2131427663;
 			
 			// aapt resource value: 0x7f0b0150
-			public const int Widget_AppCompat_Light_DropDownItem_Spinner = 2131427664;
+			public const int Widget_AppCompat_ListView_DropDown = 2131427664;
 			
 			// aapt resource value: 0x7f0b0151
-			public const int Widget_AppCompat_Light_ListPopupWindow = 2131427665;
+			public const int Widget_AppCompat_ListView_Menu = 2131427665;
 			
 			// aapt resource value: 0x7f0b0152
-			public const int Widget_AppCompat_Light_ListView_DropDown = 2131427666;
+			public const int Widget_AppCompat_PopupMenu = 2131427666;
 			
 			// aapt resource value: 0x7f0b0153
-			public const int Widget_AppCompat_Light_PopupMenu = 2131427667;
+			public const int Widget_AppCompat_PopupMenu_Overflow = 2131427667;
 			
 			// aapt resource value: 0x7f0b0154
-			public const int Widget_AppCompat_Light_PopupMenu_Overflow = 2131427668;
+			public const int Widget_AppCompat_PopupWindow = 2131427668;
 			
 			// aapt resource value: 0x7f0b0155
-			public const int Widget_AppCompat_Light_SearchView = 2131427669;
+			public const int Widget_AppCompat_ProgressBar = 2131427669;
 			
 			// aapt resource value: 0x7f0b0156
-			public const int Widget_AppCompat_Light_Spinner_DropDown_ActionBar = 2131427670;
+			public const int Widget_AppCompat_ProgressBar_Horizontal = 2131427670;
 			
 			// aapt resource value: 0x7f0b0157
-			public const int Widget_AppCompat_ListMenuView = 2131427671;
+			public const int Widget_AppCompat_RatingBar = 2131427671;
 			
 			// aapt resource value: 0x7f0b0158
-			public const int Widget_AppCompat_ListPopupWindow = 2131427672;
+			public const int Widget_AppCompat_RatingBar_Indicator = 2131427672;
 			
 			// aapt resource value: 0x7f0b0159
-			public const int Widget_AppCompat_ListView = 2131427673;
+			public const int Widget_AppCompat_RatingBar_Small = 2131427673;
 			
 			// aapt resource value: 0x7f0b015a
-			public const int Widget_AppCompat_ListView_DropDown = 2131427674;
+			public const int Widget_AppCompat_SearchView = 2131427674;
 			
 			// aapt resource value: 0x7f0b015b
-			public const int Widget_AppCompat_ListView_Menu = 2131427675;
+			public const int Widget_AppCompat_SearchView_ActionBar = 2131427675;
 			
 			// aapt resource value: 0x7f0b015c
-			public const int Widget_AppCompat_PopupMenu = 2131427676;
+			public const int Widget_AppCompat_SeekBar = 2131427676;
 			
 			// aapt resource value: 0x7f0b015d
-			public const int Widget_AppCompat_PopupMenu_Overflow = 2131427677;
+			public const int Widget_AppCompat_SeekBar_Discrete = 2131427677;
 			
 			// aapt resource value: 0x7f0b015e
-			public const int Widget_AppCompat_PopupWindow = 2131427678;
+			public const int Widget_AppCompat_Spinner = 2131427678;
 			
 			// aapt resource value: 0x7f0b015f
-			public const int Widget_AppCompat_ProgressBar = 2131427679;
+			public const int Widget_AppCompat_Spinner_DropDown = 2131427679;
 			
 			// aapt resource value: 0x7f0b0160
-			public const int Widget_AppCompat_ProgressBar_Horizontal = 2131427680;
+			public const int Widget_AppCompat_Spinner_DropDown_ActionBar = 2131427680;
 			
 			// aapt resource value: 0x7f0b0161
-			public const int Widget_AppCompat_RatingBar = 2131427681;
+			public const int Widget_AppCompat_Spinner_Underlined = 2131427681;
 			
 			// aapt resource value: 0x7f0b0162
-			public const int Widget_AppCompat_RatingBar_Indicator = 2131427682;
+			public const int Widget_AppCompat_TextView_SpinnerItem = 2131427682;
 			
 			// aapt resource value: 0x7f0b0163
-			public const int Widget_AppCompat_RatingBar_Small = 2131427683;
+			public const int Widget_AppCompat_Toolbar = 2131427683;
 			
 			// aapt resource value: 0x7f0b0164
-			public const int Widget_AppCompat_SearchView = 2131427684;
-			
-			// aapt resource value: 0x7f0b0165
-			public const int Widget_AppCompat_SearchView_ActionBar = 2131427685;
-			
-			// aapt resource value: 0x7f0b0166
-			public const int Widget_AppCompat_SeekBar = 2131427686;
-			
-			// aapt resource value: 0x7f0b0167
-			public const int Widget_AppCompat_SeekBar_Discrete = 2131427687;
-			
-			// aapt resource value: 0x7f0b0168
-			public const int Widget_AppCompat_Spinner = 2131427688;
-			
-			// aapt resource value: 0x7f0b0169
-			public const int Widget_AppCompat_Spinner_DropDown = 2131427689;
-			
-			// aapt resource value: 0x7f0b016a
-			public const int Widget_AppCompat_Spinner_DropDown_ActionBar = 2131427690;
-			
-			// aapt resource value: 0x7f0b016b
-			public const int Widget_AppCompat_Spinner_Underlined = 2131427691;
-			
-			// aapt resource value: 0x7f0b016c
-			public const int Widget_AppCompat_TextView_SpinnerItem = 2131427692;
-			
-			// aapt resource value: 0x7f0b016d
-			public const int Widget_AppCompat_Toolbar = 2131427693;
-			
-			// aapt resource value: 0x7f0b016e
-			public const int Widget_AppCompat_Toolbar_Button_Navigation = 2131427694;
-			
-			// aapt resource value: 0x7f0b0196
-			public const int Widget_Compat_NotificationActionContainer = 2131427734;
-			
-			// aapt resource value: 0x7f0b0197
-			public const int Widget_Compat_NotificationActionText = 2131427735;
-			
-			// aapt resource value: 0x7f0b0188
-			public const int Widget_Design_AppBarLayout = 2131427720;
-			
-			// aapt resource value: 0x7f0b0189
-			public const int Widget_Design_BottomNavigationView = 2131427721;
-			
-			// aapt resource value: 0x7f0b018a
-			public const int Widget_Design_BottomSheet_Modal = 2131427722;
-			
-			// aapt resource value: 0x7f0b018b
-			public const int Widget_Design_CollapsingToolbar = 2131427723;
+			public const int Widget_AppCompat_Toolbar_Button_Navigation = 2131427684;
 			
 			// aapt resource value: 0x7f0b018c
-			public const int Widget_Design_CoordinatorLayout = 2131427724;
+			public const int Widget_Compat_NotificationActionContainer = 2131427724;
 			
 			// aapt resource value: 0x7f0b018d
-			public const int Widget_Design_FloatingActionButton = 2131427725;
+			public const int Widget_Compat_NotificationActionText = 2131427725;
 			
-			// aapt resource value: 0x7f0b018e
-			public const int Widget_Design_NavigationView = 2131427726;
+			// aapt resource value: 0x7f0b017e
+			public const int Widget_Design_AppBarLayout = 2131427710;
 			
-			// aapt resource value: 0x7f0b018f
-			public const int Widget_Design_ScrimInsetsFrameLayout = 2131427727;
+			// aapt resource value: 0x7f0b017f
+			public const int Widget_Design_BottomNavigationView = 2131427711;
 			
-			// aapt resource value: 0x7f0b0190
-			public const int Widget_Design_Snackbar = 2131427728;
+			// aapt resource value: 0x7f0b0180
+			public const int Widget_Design_BottomSheet_Modal = 2131427712;
 			
-			// aapt resource value: 0x7f0b0174
-			public const int Widget_Design_TabLayout = 2131427700;
+			// aapt resource value: 0x7f0b0181
+			public const int Widget_Design_CollapsingToolbar = 2131427713;
 			
-			// aapt resource value: 0x7f0b0191
-			public const int Widget_Design_TextInputLayout = 2131427729;
+			// aapt resource value: 0x7f0b0182
+			public const int Widget_Design_CoordinatorLayout = 2131427714;
+			
+			// aapt resource value: 0x7f0b0183
+			public const int Widget_Design_FloatingActionButton = 2131427715;
+			
+			// aapt resource value: 0x7f0b0184
+			public const int Widget_Design_NavigationView = 2131427716;
+			
+			// aapt resource value: 0x7f0b0185
+			public const int Widget_Design_ScrimInsetsFrameLayout = 2131427717;
+			
+			// aapt resource value: 0x7f0b0186
+			public const int Widget_Design_Snackbar = 2131427718;
+			
+			// aapt resource value: 0x7f0b016a
+			public const int Widget_Design_TabLayout = 2131427690;
+			
+			// aapt resource value: 0x7f0b0187
+			public const int Widget_Design_TextInputLayout = 2131427719;
 			
 			// aapt resource value: 0x7f0b0009
 			public const int Widget_MediaRouter_Light_MediaRouteButton = 2131427337;
@@ -6566,18 +8050,30 @@ namespace FlyPhone.Droid
 			public const int FontFamily_fontProviderQuery = 2;
 			
 			public static int[] FontFamilyFont = new int[] {
+					16844082,
+					16844083,
+					16844095,
 					2130772336,
 					2130772337,
 					2130772338};
 			
-			// aapt resource value: 1
-			public const int FontFamilyFont_font = 1;
-			
 			// aapt resource value: 0
-			public const int FontFamilyFont_fontStyle = 0;
+			public const int FontFamilyFont_android_font = 0;
 			
 			// aapt resource value: 2
-			public const int FontFamilyFont_fontWeight = 2;
+			public const int FontFamilyFont_android_fontStyle = 2;
+			
+			// aapt resource value: 1
+			public const int FontFamilyFont_android_fontWeight = 1;
+			
+			// aapt resource value: 4
+			public const int FontFamilyFont_font = 4;
+			
+			// aapt resource value: 3
+			public const int FontFamilyFont_fontStyle = 3;
+			
+			// aapt resource value: 5
+			public const int FontFamilyFont_fontWeight = 5;
 			
 			public static int[] ForegroundLinearLayout = new int[] {
 					16843017,

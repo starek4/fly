@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FlyPhone.Views.DeviceListPage"
+             x:Name="DeviceListView">
+    <ContentPage.Content>
+        <Grid Margin="15">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <ListView Grid.Row="0" IsPullToRefreshEnabled="True" IsRefreshing="{Binding IsRefreshing}" RefreshCommand="{Binding RefreshCommand}" ItemsSource="{Binding Devices}" SelectedItem="{Binding SelectedItem, Mode=TwoWay}" IsVisible="{Binding ToggleBlocks.OtherBlock}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Padding="10,0,10,0" VerticalOptions="Center">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <Label VerticalTextAlignment="Center" TextColor="Black" FontSize="18" Grid.Column="0" Text="{Binding Name}" />
+                                <Image VerticalOptions="Center" Grid.Column="2" Source="green.png" HeightRequest="25" WidthRequest="25" IsVisible="{Binding IsActive}" />
+                                <Image VerticalOptions="Center" Grid.Column="2" Source="red.png" HeightRequest="25" WidthRequest="25" IsVisible="{Binding IsNotActive}" />
+
+                                <Image VerticalOptions="Center" Grid.Column="3" Source="favourite.png" HeightRequest="40" WidthRequest="40" IsVisible="{Binding IsFavourite}">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_OnTapped" />
+                                        <TapGestureRecognizer Command="{Binding Source={x:Reference DeviceListView}, Path=BindingContext.ChangeFavouriteStateButtonCommand}" CommandParameter="{Binding DeviceId}"/>
+                                    </Image.GestureRecognizers>
+                                </Image>
+
+                                <Image VerticalOptions="Center" Grid.Column="3" Source="not_favourite.png" HeightRequest="40" WidthRequest="40" IsVisible="{Binding IsNotFavourite}">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_OnTapped" />
+                                        <TapGestureRecognizer Command="{Binding Source={x:Reference DeviceListView}, Path=BindingContext.ChangeFavouriteStateButtonCommand}" CommandParameter="{Binding DeviceId}"/>
+                                    </Image.GestureRecognizers>
+                                </Image>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Label Grid.Row ="2"  Text="{Binding Status}" HorizontalTextAlignment="Center" />
+            <Button Grid.Row ="3" Text="Logout" Command="{Binding LogoutButtonCommand}" />
+
+            <ActivityIndicator Grid.Row="0" Grid.RowSpan="4" IsRunning="{Binding ToggleBlocks.ActivityIndicator}" HorizontalOptions="Center" VerticalOptions="Center" IsVisible="{Binding ToggleBlocks.ActivityIndicator}" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

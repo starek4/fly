@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <ItemGroup>
     <PublishFile Include="netfx.force.conflicts">
@@ -9,6 +9,16 @@
       <TargetPath>
       </TargetPath>
       <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="System.Net.Http">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
       <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
@@ -47,7 +57,7 @@
     <WarningLevel>4</WarningLevel>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <IsWebBootstrapper>true</IsWebBootstrapper>
-    <PublishUrl>ftp://fly.starekit.cz/client/windows/</PublishUrl>
+    <PublishUrl>ftp://flyclient.starekit.cz/../../var/www/flyclient_starekit/</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Web</InstallFrom>
     <UpdateEnabled>true</UpdateEnabled>
@@ -57,15 +67,15 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <InstallUrl>http://fly.starekit.cz/client/windows/</InstallUrl>
+    <InstallUrl>http://flyclient.starekit.cz/</InstallUrl>
     <TargetCulture>en</TargetCulture>
     <ProductName>Fly client</ProductName>
     <PublisherName>StarekIT</PublisherName>
     <SuiteName>Fly client</SuiteName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.1.0.%2a</ApplicationVersion>
+    <ApplicationRevision>6</ApplicationRevision>
+    <ApplicationVersion>2.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -103,22 +113,31 @@
     <GenerateManifests>true</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CommonServiceLocator, Version=2.0.1.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
-      <HintPath>..\packages\CommonServiceLocator.2.0.1\lib\net45\CommonServiceLocator.dll</HintPath>
+    <Reference Include="Dapplo.Log, Version=1.1.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Dapplo.Log.1.1.4\lib\net45\Dapplo.Log.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapplo.Windows.Common, Version=0.5.50.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Dapplo.Windows.Common.0.5.50\lib\net45\Dapplo.Windows.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapplo.Windows.Input, Version=0.5.50.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Dapplo.Windows.Input.0.5.50\lib\net45\Dapplo.Windows.Input.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapplo.Windows.Messages, Version=0.5.50.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Dapplo.Windows.Messages.0.5.50\lib\net45\Dapplo.Windows.Messages.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapplo.Windows.User32, Version=0.5.50.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Dapplo.Windows.User32.0.5.50\lib\net45\Dapplo.Windows.User32.dll</HintPath>
     </Reference>
     <Reference Include="Hardcodet.Wpf.TaskbarNotification, Version=1.0.5.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Hardcodet.NotifyIcon.Wpf.1.0.8\lib\net451\Hardcodet.Wpf.TaskbarNotification.dll</HintPath>
+      <HintPath>..\..\packages\Hardcodet.NotifyIcon.Wpf.1.0.8\lib\net451\Hardcodet.Wpf.TaskbarNotification.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="PresentationFramework.Aero" />
-    <Reference Include="RichardSzalay.MockHttp, Version=3.2.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\RichardSzalay.MockHttp.3.2.1\lib\net45\RichardSzalay.MockHttp.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -126,6 +145,15 @@
     <Reference Include="System.Management.Automation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Management.Automation.6.1.7601.17515\lib\net45\System.Management.Automation.dll</HintPath>
       <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Reactive.Core, Version=3.0.3000.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Reactive.Core.3.1.1\lib\net46\System.Reactive.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Interfaces, Version=3.0.1000.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Reactive.Interfaces.3.1.1\lib\net45\System.Reactive.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Linq, Version=3.0.3000.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Reactive.Linq.3.1.1\lib\net46\System.Reactive.Linq.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml" />
@@ -149,6 +177,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Compile Include="Action\ActionHandler.cs" />
+    <Compile Include="Action\AudioHelper.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -158,7 +188,7 @@
     <Compile Include="PowerShell\DeviceIdentifierHelper.cs" />
     <Compile Include="PowerShell\DeviceNameHelper.cs" />
     <Compile Include="PowerShell\PowerShellWrapper.cs" />
-    <Compile Include="PowerShell\ShutdownPc.cs" />
+    <Compile Include="Action\ShutdownHelper.cs" />
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Requests\RequestHandler.cs" />
     <Compile Include="TrayIcon\TrayController.cs" />
@@ -188,7 +218,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -198,13 +230,21 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\FlyApi\FlyApi.csproj">
-      <Project>{ab04d04d-2015-4a6a-be49-3bef6b775040}</Project>
-      <Name>FlyApi</Name>
+    <ProjectReference Include="..\..\web\DatabaseController\DatabaseController.csproj">
+      <Project>{44709FF0-5D2F-4373-BE2D-C53476F47B1E}</Project>
+      <Name>DatabaseController</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Shared\Shared.csproj">
-      <Project>{56482B43-92A5-450A-AC76-28823778F6DC}</Project>
-      <Name>Shared</Name>
+    <ProjectReference Include="..\..\web\Models\Models.csproj">
+      <Project>{bf890b32-8fb1-40f1-b2aa-af943fb8f5be}</Project>
+      <Name>Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FlyClientApi\FlyClientApi.csproj">
+      <Project>{AB04D04D-2015-4A6A-BE49-3BEF6B775040}</Project>
+      <Name>FlyClientApi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Logger\Logger.csproj">
+      <Project>{1c3fbb20-35a5-4e1b-a9c8-cc03ab0b1f19}</Project>
+      <Name>Logger</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -224,9 +264,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="shutdown_gray.ico" />
-    <Content Include="System.Net.Http.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

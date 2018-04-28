@@ -1,0 +1,57 @@
+﻿@model UserViewModel
+
+@{
+    ViewData["Title"] = "Login page";
+}
+
+<div class="container login-form">
+    <h2 class="login-title">- Fly manager login -</h2>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <form method="POST">
+                <div style="color: red">@Html.DisplayFor(model => model.Status)</div>
+                <div class="input-group login-userinput">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                    <input id="txtUser" type="text" class="form-control" name="login" placeholder="Username">
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                    <input id="txtPassword" type="password" class="form-control" name="password" placeholder="Password">
+                    <span id="showPassword" class="input-group-btn">
+                        <button class="btn btn-default" type="button"><i class="glyphicon glyphicon-eye-open"></i></button>
+                    </span>
+                </div>
+                <button name="submit" class="btn btn-primary btn-block login-button" type="submit"><i class="fa fa-sign-in"></i> Login</button>
+                <div class="checkbox login-options">
+                    <a asp-area="" asp-controller="User" asp-action="Registration" class="login-forgot">Register here</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    window.onload = function () {
+        $("#showPassword").hide();
+    }
+
+    $("#txtPassword").on('change', function () {
+        if ($("#txtPassword").val()) {
+            $("#showPassword").show();
+        }
+        else {
+            $("#showPassword").hide();
+        }
+    });
+
+    $(".reveal").on('click', function () {
+        var $pwd = $("#txtPassword");
+        if ($pwd.attr('type') === 'password') {
+            $pwd.attr('type', 'text');
+        }
+        else {
+            $pwd.attr('type', 'password');
+        }
+    });
+</script>
+

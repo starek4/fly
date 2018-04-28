@@ -1,0 +1,33 @@
+﻿@model UserViewModel
+
+@{
+    ViewData["Title"] = "Device table";
+}
+
+<div class="container login-form">
+    <h2 class="login-title">- Fly manager registration -</h2>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <form method="POST">
+                @Html.DisplayFor(model => model.Status)
+                <div class="input-group login-userinput">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                    <input id="txtUser" type="text" class="form-control" name="login" placeholder="Username">
+                </div>
+                <div class="input-group login-userinput">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                    <input id="txtPassword" type="password" class="form-control" name="password" placeholder="Password">
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+                    <input id="txtEmail" type="email" class="form-control" name="email" placeholder="E-mail">
+                </div>
+                <button name="submit" class="btn btn-primary btn-block login-button" type="submit"><i class="fa fa-user-plus"></i> Register me</button>
+                <div class="checkbox login-options">
+                    <a asp-controller="User" asp-action="Index" class="login-forgot">Login here</a>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
