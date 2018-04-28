@@ -15,6 +15,7 @@ rm /usr/local/bin/fly 2> /dev/null
 
 mkdir /usr/local/fly
 cp -rp * /usr/local/fly/
+mkdir /usr/local/bin/ 2> /dev/null
 ln -s /usr/local/fly/FlyUnix /usr/local/bin/fly
 echo "Fly client is installed..."
 echo "If you will have any problems with fly client, check prerequisites for running .NET Core apps at:"

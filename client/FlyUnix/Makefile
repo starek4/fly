@@ -11,6 +11,8 @@ pack: pack_linux pack_osx
 pack_linux: publish_linux
 	cp scripts/linux-x64/install.sh ${PUBLISH_PATH_LINUX}
 	cp scripts/linux-x64/uninstall.sh ${PUBLISH_PATH_LINUX}
+	dos2unix ${PUBLISH_PATH_LINUX}/install.sh
+	dos2unix ${PUBLISH_PATH_LINUX}/uninstall.sh
 	cd ${PUBLISH_PATH_LINUX} && zip ${LINUX_ARCHIVE} *
 	cp ${PUBLISH_PATH_LINUX}/${LINUX_ARCHIVE} .
 
@@ -28,6 +30,8 @@ test_linux: pack_linux
 pack_osx: publish_osx
 	cp scripts/osx-x64/install.sh ${PUBLISH_PATH_OSX}
 	cp scripts/osx-x64/uninstall.sh ${PUBLISH_PATH_OSX}
+	dos2unix ${PUBLISH_PATH_OSX}/install.sh
+	dos2unix ${PUBLISH_PATH_OSX}/uninstall.sh
 	cd ${PUBLISH_PATH_OSX} && zip ${OSX_ARCHIVE} *
 	cp ${PUBLISH_PATH_OSX}/${OSX_ARCHIVE} .
 

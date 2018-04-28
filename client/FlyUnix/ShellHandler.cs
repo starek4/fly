@@ -78,13 +78,7 @@ namespace FlyUnix
         {
             if (EnviromentHelper.GetPlatformType() == PlatformType.Linux)
             {
-                string result = ExecuteBashCommand("amixer set Master toggle");
-                if (result != String.Empty)
-                {
-                    string notImplementedMessage = "Sleep is not implemented on this platform.";
-                    EnviromentHelper.GetLogger().Info(notImplementedMessage);
-                    Console.WriteLine(notImplementedMessage);
-                }
+                ExecuteBashCommand("amixer set Master toggle");
             }
             else if (EnviromentHelper.GetPlatformType() == PlatformType.Osx)
                 ExecuteBashCommand("osascript -e \'set volume output muted true\'");
