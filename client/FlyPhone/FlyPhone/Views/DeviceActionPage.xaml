@@ -4,7 +4,7 @@
              xmlns:buttons="clr-namespace:FlyPhone.Views.Buttons;assembly=FlyPhone"
              x:Class="FlyPhone.Views.DeviceActionPage">
     <ContentPage.Content>
-        <Grid Margin="15, 15, 15, 0">
+        <Grid Margin="15, 15, 15, 10">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="*" />
