@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:buttons="clr-namespace:FlyPhone.Views.Buttons;assembly=FlyPhone"
              x:Class="FlyPhone.Views.LoginViewPage">
     <Grid Margin="15">
         <Grid.RowDefinitions>
@@ -18,7 +19,7 @@
         </StackLayout>
 
         <Label Text="{Binding Status}" Grid.Row="2" HorizontalTextAlignment="Center" />
-        <Button Text="Login" Grid.Row="3" Command="{Binding LoginButtonCommand}"></Button>
+        <buttons:DisablingBlueButton Text="Login" Grid.Row="3" Command="{Binding LoginButtonCommand}" />
 
         <ActivityIndicator Grid.Row="0" Grid.RowSpan="4" IsRunning="{Binding ToggleBlocks.ActivityIndicator}" HorizontalOptions="Center" VerticalOptions="Center" IsVisible="{Binding ToggleBlocks.ActivityIndicator}" />
     </Grid>

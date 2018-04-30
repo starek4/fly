@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:buttons="clr-namespace:FlyPhone.Views.Buttons;assembly=FlyPhone"
              x:Class="FlyPhone.Views.DeviceActionPage">
     <ContentPage.Content>
         <Grid Margin="15, 15, 15, 0">
@@ -31,10 +32,10 @@
             </StackLayout>
 
             <StackLayout Grid.Row="2" Orientation="Vertical">
-                <Button Text="Shutdown" Command="{Binding ShutdownButtonCommand}" />
-                <Button Text="Restart" Command="{Binding RestartButtonCommand}" />
-                <Button Text="Sleep" Command="{Binding SleepButtonCommand}" />
-                <Button Text="Mute audio" Command="{Binding MuteButtonCommand}" />
+                <buttons:DisablingBlueButton Text="Shutdown" Command="{Binding ShutdownButtonCommand}" />
+                <buttons:DisablingBlueButton Text="Restart" Command="{Binding RestartButtonCommand}" />
+                <buttons:DisablingBlueButton Text="Sleep" Command="{Binding SleepButtonCommand}" />
+                <buttons:DisablingBlueButton Text="Mute audio" Command="{Binding MuteButtonCommand}" />
             </StackLayout>
 
             <Label Grid.Row="3" Text="{Binding Status}" HorizontalTextAlignment="Center" />
