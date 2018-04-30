@@ -88,6 +88,7 @@ namespace FlyPhone.ViewModels
             {
                 ToggleBlocks.ActivityIndicator = false;
                 Status = "Cannot get devices due to network error";
+                IsRefreshing = false;
                 return;
             }
 

@@ -1,6 +1,7 @@
 ﻿using Foundation;
 using Plugin.Toasts;
 using UIKit;
+using UserNotifications;
 using Xamarin.Forms;
 
 namespace FlyPhone.iOS
@@ -26,6 +27,23 @@ namespace FlyPhone.iOS
             // Registering Toast package
             DependencyService.Register<ToastNotification>();
             ToastNotification.Init();
+
+            // Request Permissions
+            if (UIDevice.CurrentDevice.CheckSystemVersion(10, 0))
+            {
+                // Request Permissions
+                UNUserNotificationCenter.Current.RequestAuthorization(UNAuthorizationOptions.Alert | UNAuthorizationOptions.Badge | UNAuthorizationOptions.Sound, (granted, error) =>
+                {
+                    // Do something if needed
+                });
+            }
+            else if (UIDevice.CurrentDevice.CheckSystemVersion(8, 0))
+            {
+                var notificationSettings = UIUserNotificationSettings.GetSettingsForTypes(
+                    UIUserNotificationType.Alert | UIUserNotificationType.Badge | UIUserNotificationType.Sound, null);
+
+                app.RegisterUserNotificationSettings(notificationSettings);
+            }
 
 
             LoadApplication(new App());
