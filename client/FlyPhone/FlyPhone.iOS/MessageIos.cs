@@ -8,11 +8,11 @@ namespace FlyPhone.iOS
     {
         public void LongAlert(string message)
         {
-            Toast.ShowToast("This is a message").SetDuration(ToastDuration.Long);
+            Toast.ShowToast(message).SetDuration(ToastDuration.Long);
         }
         public void ShortAlert(string message)
         {
-            Toast.ShowToast("This is a message").SetDuration(ToastDuration.Regular);
+            Toast.ShowToast(message).SetDuration(ToastDuration.Regular);
         }
     }
 }
