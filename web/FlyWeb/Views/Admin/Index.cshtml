@@ -30,7 +30,7 @@
                         <div class="cell">@device.Name</div>
                         <div class="cell">
                             @{
-                                if ((DateTime.Now - device.LastActive).TotalSeconds > 60)
+                                if ((DateTime.Now - device.LastActive).TotalSeconds > 10)
                                 {
                                     <img width="20" src="images/red.png"/>
                                 }

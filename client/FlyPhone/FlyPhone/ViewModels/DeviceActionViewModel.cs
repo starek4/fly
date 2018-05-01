@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Threading;
+using FlyClientApi;
 using FlyClientApi.Enums;
+using Plugin.Toasts;
 using Xamarin.Forms;
 
 namespace FlyPhone.ViewModels
@@ -79,8 +81,9 @@ namespace FlyPhone.ViewModels
                 ToggleBlocks.ActivityIndicator = false;
                 return;
             }
+
             Name = device.Name;
-            IsDeviceActive = DateTime.Now.Subtract(device.LastActive).TotalSeconds < 60;
+            IsDeviceActive = QueryTimer.CompareTimes(device.LastActive);
 
             if (!IsDeviceActive)
             {
@@ -142,8 +145,50 @@ namespace FlyPhone.ViewModels
                 ToggleBlocks.ActivityIndicator = false;
             }
 
+            if (action == Actions.Sleep || action == Actions.Shutdown)
+                new Thread(WaitTillSuspendAndMakeNotification).Start();
+
             DependencyService.Get<IMessage>().ShortAlert("Action request was successfully sent...");
             Status = String.Empty;
+        }
+
+        private async void WaitTillSuspendAndMakeNotification()
+        {
+            var notificator = DependencyService.Get<IToastNotificator>();
+            var options = new NotificationOptions
+            {
+                Title = "Action failed",
+                Description = "Device was not suspended successfully"
+            };
+
+            for (int counter = 0; counter < (15 * 60) / QueryTimer.TimeBetweenQuery; counter++)
+            {
+                Thread.Sleep(QueryTimer.TimeBetweenQuery * 1000);
+                try
+                {
+                    var device = await Client.GetDevice(_deviceId);
+                    var isDeviceActive = QueryTimer.CompareTimes(device.LastActive);
+
+                    if (!isDeviceActive)
+                    {
+                        Name = device.Name;
+                        IsDeviceActive = false;
+                        EnableOrDisableAllButtons(false);
+
+                        options.Title = "Action successful";
+                        options.Description = "Device was suspended successfully";
+                        break;
+                    }
+                }
+                catch (Exception)
+                {
+                    options.Title = "Network error";
+                    options.Description = "Please check your network connection";
+                    break;
+                }
+            }
+
+            await notificator.Notify(options);
         }
 
         public Command ShutdownButtonCommand

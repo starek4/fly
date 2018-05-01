@@ -1,5 +1,4 @@
-﻿using Plugin.Toasts;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace FlyPhone
 {
@@ -7,24 +6,12 @@ namespace FlyPhone
     {
         public static void NetworkError()
         {
-            MakeNotification("Network connection error", "Please check your network connection and do action again.");
+            Application.Current.MainPage.DisplayAlert("Network error", "Please check your network connection and do action again.", "Ok");
         }
 
         public static void DatabaseError()
         {
-            MakeNotification("Database error", "Problem with database connection or connection query.");
-        }
-
-        private static async void MakeNotification(string title, string description)
-        {
-            var notificator = DependencyService.Get<IToastNotificator>();
-            var options = new NotificationOptions
-            {
-                Title = title,
-                Description = description
-            };
-
-            await notificator.Notify(options);
+            Application.Current.MainPage.DisplayAlert("Database error", "Problem with database connection or connection query.", "Ok");
         }
     }
 }

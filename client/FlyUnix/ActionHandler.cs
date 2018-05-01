@@ -1,6 +1,4 @@
-﻿using System;
-using System.Threading.Tasks;
-using FlyClientApi;
+﻿using FlyClientApi;
 using FlyClientApi.Enums;
 using Models;
 
@@ -30,12 +28,6 @@ namespace FlyUnix
                 RequestHandler.DoRequest(() => client.ClearAction(device.DeviceId, Actions.Mute).Wait());
                 ShellHandler.Mute();
             }
-        }
-
-        private static async Task DoActionAfterOneSecond(Action action)
-        {
-            await Task.Delay(1000);
-            action.Invoke();
         }
     }
 }

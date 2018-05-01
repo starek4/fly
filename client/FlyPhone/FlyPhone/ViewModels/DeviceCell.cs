@@ -1,4 +1,5 @@
 ﻿using System;
+using FlyClientApi;
 using Models;
 
 namespace FlyPhone.ViewModels
@@ -29,7 +30,7 @@ namespace FlyPhone.ViewModels
 
         public static bool IsActive(DateTime lastActive)
         {
-            return DateTime.Now.Subtract(lastActive).TotalSeconds < 60;
+            return QueryTimer.CompareTimes(lastActive);
         }
     }
 }
