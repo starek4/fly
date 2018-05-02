@@ -36,7 +36,7 @@ iOS 11.1 or higher.
 You can also evoke any command from [Fly website](https://fly.starekit.cz/).
 
 ## 3 How do Fly clients look like?
-*Screens from version 2 will be there soon...*
+![Fly architecture](https://starekit.cz/git/fly_wide.png)
 
 ## 4 Fly architecture
 ![Fly architecture](https://starekit.cz/git/fly_architecture.png)
