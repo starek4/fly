@@ -55,6 +55,32 @@ namespace Tests.IntegrationTests
         }
 
         [Fact]
+        public void ChangeOwnerOfDevice()
+        {
+            UserRepository userRepo = new UserRepository();
+            DeviceRepository deviceRepo = new DeviceRepository();
+            string secondUserUsername = TestUserDevice.User.Login + "2";
+
+            // Adding device to first user
+            deviceRepo.AddDevice(TestUserDevice.User.Login, TestUserDevice.Device.DeviceId, TestUserDevice.Device.Name, false);
+
+            // Adding second user
+            userRepo.AddUser(secondUserUsername, TestUserDevice.User.Password, TestUserDevice.User.Email);
+
+            // Change ownership of device from one user to another
+            deviceRepo.ChangeOwnerOfDevice(secondUserUsername, TestUserDevice.Device.DeviceId);
+
+
+            // Get device owner
+            string username = userRepo.GetUserByDeviceId(TestUserDevice.Device.DeviceId).Login;
+
+            deviceRepo.DeleteDevice(TestUserDevice.Device.DeviceId);
+            userRepo.DeleteUser(secondUserUsername);
+
+            Assert.True(username == secondUserUsername);
+        }
+
+        [Fact]
         public void AddDeviceToNonExistingUser()
         {
             DeviceRepository deviceRepo = new DeviceRepository();

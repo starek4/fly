@@ -72,7 +72,7 @@ namespace FlyWindowsWPF.ViewModels
         
         private async Task ProcessLogin()
         {
-            bool isUserVerified = await RequestHandler.DoRequest(_client.VerifyUserLoginSecuredPassword(Login, _password), TrayController);
+            bool isUserVerified = await RequestHandler.DoRequest(_client.VerifyUserLoginSecuredPassword(Login, _password, DeviceIdentifierHelper.DeviceIdentifier), TrayController);
             Status = isUserVerified ? "Login successfully verified." : "Login denied!";
             if (isUserVerified)
             {

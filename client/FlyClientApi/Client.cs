@@ -22,9 +22,9 @@ namespace FlyClientApi
         private readonly PostRequest _requestHandler = new PostRequest();
         private readonly HttpClient _client = new HttpClient();
 
-        public async Task<bool> VerifyUserLogin(string login, string password)
+        public async Task<bool> VerifyUserLogin(string login, string password, string deviceId)
         {
-            string data = JsonConvert.SerializeObject(new VerifyUserPostModel { Login = login, Password = password });
+            string data = JsonConvert.SerializeObject(new VerifyUserPostModel { Login = login, Password = password, DeviceId = deviceId});
             var apiPath = ApiPathMapper.GetPath(ApiPaths.VerifyUser);
             var httpContent = await _requestHandler.DoRequest(_client, apiPath, data);
             VerifyUserResponseModel response = Convert<VerifyUserResponseModel>(httpContent);
@@ -38,9 +38,9 @@ namespace FlyClientApi
             return false;
         }
         
-        public async Task<bool> VerifyUserLoginSecuredPassword(string login, SecureString password)
+        public async Task<bool> VerifyUserLoginSecuredPassword(string login, SecureString password, string deviceId)
         {
-            return await VerifyUserLogin(login, new NetworkCredential(String.Empty, password).Password);
+            return await VerifyUserLogin(login, new NetworkCredential(String.Empty, password).Password, deviceId);
         }
 
         public async Task<Device> GetDevice(string deviceId)

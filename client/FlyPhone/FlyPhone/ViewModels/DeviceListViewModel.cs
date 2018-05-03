@@ -64,7 +64,7 @@ namespace FlyPhone.ViewModels
 
         private async Task DownloadDevices()
         {
-            string username = await RequestHandler.DoRequest(Client.GetUsername(App.Hostname));
+            string username = await RequestHandler.DoRequest(Client.GetUsername(App.DeviceId));
             var devicesFromServer = await RequestHandler.DoRequest(Client.GetDevices(username));
             var sortedDevicesFromServer = devicesFromServer.OrderBy(device => DeviceCellConvertor.IsActive(device.LastActive)).ThenBy(device => device.IsFavourite).Reverse();
 
@@ -106,7 +106,7 @@ namespace FlyPhone.ViewModels
         {
             try
             {
-                await RequestHandler.DoRequest(Client.SetLoggedState(App.Hostname, false));
+                await RequestHandler.DoRequest(Client.SetLoggedState(App.DeviceId, false));
             }
             catch (PhoneRequestException)
             {

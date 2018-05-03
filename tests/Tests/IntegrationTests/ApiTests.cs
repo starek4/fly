@@ -103,7 +103,7 @@ namespace Tests.IntegrationTests
         [Fact]
         public async void VerifyUser()
         {
-            bool verified = await new Client().VerifyUserLogin(TestUserDevice.User.Login, TestUserDevice.User.Password);
+            bool verified = await new Client().VerifyUserLogin(TestUserDevice.User.Login, TestUserDevice.User.Password, TestUserDevice.Device.DeviceId);
             Assert.True(verified);
         }
 
@@ -115,7 +115,7 @@ namespace Tests.IntegrationTests
             {
                 pass.AppendChar(c);
             }
-            bool verified = await new Client().VerifyUserLoginSecuredPassword(TestUserDevice.User.Login, pass);
+            bool verified = await new Client().VerifyUserLoginSecuredPassword(TestUserDevice.User.Login, pass, TestUserDevice.Device.DeviceId);
             Assert.True(verified);
         }
 

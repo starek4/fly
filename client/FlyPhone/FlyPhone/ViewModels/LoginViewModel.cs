@@ -48,7 +48,7 @@ namespace FlyPhone.ViewModels
             bool loggedState;
             try
             {
-                loggedState = await RequestHandler.DoRequest(Client.GetLoggedState(App.Hostname));
+                loggedState = await RequestHandler.DoRequest(Client.GetLoggedState(App.DeviceId));
             }
             catch (PhoneRequestException)
             {
@@ -89,7 +89,7 @@ namespace FlyPhone.ViewModels
             Status = "Trying to login";
             try
             {
-                bool userVerified = await RequestHandler.DoRequest(Client.VerifyUserLogin(Username, Password));
+                bool userVerified = await RequestHandler.DoRequest(Client.VerifyUserLogin(Username, Password, App.DeviceId));
                 if (!userVerified)
                 {
                     Status = "Wrong username or password";
@@ -109,13 +109,13 @@ namespace FlyPhone.ViewModels
             // Check if device already exist
             try
             {
-                bool deviceVerified = await RequestHandler.DoRequest(Client.VerifyDeviceId(App.Hostname));
+                bool deviceVerified = await RequestHandler.DoRequest(Client.VerifyDeviceId(App.DeviceId));
                 if (!deviceVerified)
                 {
-                    await RequestHandler.DoRequest(Client.AddDevice(Username, App.Hostname, App.Hostname, false));
+                    await RequestHandler.DoRequest(Client.AddDevice(Username, App.DeviceId, App.DeviceId, false));
                 }
 
-                await RequestHandler.DoRequest(Client.SetLoggedState(App.Hostname, true));
+                await RequestHandler.DoRequest(Client.SetLoggedState(App.DeviceId, true));
             }
             catch (PhoneRequestException)
             {

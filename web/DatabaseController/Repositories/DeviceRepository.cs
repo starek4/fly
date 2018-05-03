@@ -29,6 +29,44 @@ namespace DatabaseController.Repositories
             return true;
         }
 
+        public bool ChangeOwnerOfDevice(string newOwnerLogin, string deviceId)
+        {
+            using (var context = new FlyDbContext())
+            {
+                // Find out user by login
+                var userByLogin = FindUser(newOwnerLogin, context);
+                if (userByLogin == null)
+                    return false;
+
+                // Find out user by deviceId
+                User userByDeviceId = null;
+                foreach (User user in context.Users.Include(x => x.Devices))
+                {
+                    foreach (Device device in user.Devices)
+                    {
+                        if (device.DeviceId == deviceId)
+                            userByDeviceId = user;
+                    }
+                }
+                if (userByDeviceId == null)
+                    return false;
+
+                // Find out device by deviceId
+                Device deviceByDeviceId = context.Devices.FirstOrDefault(x => x.DeviceId == deviceId);
+                if (deviceByDeviceId == null)
+                    return false;
+
+                // Remove device from userByDeviceId
+                context.Devices.Remove(deviceByDeviceId);
+                context.SaveChanges();
+
+                // Add device to userByLogin
+                userByLogin.Devices.Add(deviceByDeviceId);
+                context.SaveChanges();
+            }
+            return true;
+        }
+
         public bool DeleteDevice(string deviceId)
         {
             using (var context = new FlyDbContext())

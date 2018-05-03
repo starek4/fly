@@ -15,7 +15,7 @@ namespace FlyPhone
 			MainPage = new LoginViewPage();
 		}
 
-	    public static string Hostname => _hostname ?? (_hostname = DependencyService.Get<IDevice>().GetIdentifier());
+	    public static string DeviceId => _hostname ?? (_hostname = DependencyService.Get<IDevice>().GetIdentifier());
 
         protected override void OnStart ()
 		{

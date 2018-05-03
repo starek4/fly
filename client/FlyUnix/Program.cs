@@ -32,7 +32,7 @@ namespace FlyUnix
                 {
                     _arguments.Password = PasswordGetter.GetPassword();
 
-                    bool isUserVerified = RequestHandler.DoRequest(Client.VerifyUserLoginSecuredPassword(_arguments.Login, _arguments.Password));
+                    bool isUserVerified = RequestHandler.DoRequest(Client.VerifyUserLoginSecuredPassword(_arguments.Login, _arguments.Password, _deviceId));
                     if (!isUserVerified)
                     {
                         Console.WriteLine("Wrong credentials.");
