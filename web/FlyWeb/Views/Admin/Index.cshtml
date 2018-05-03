@@ -30,8 +30,11 @@
                         <div class="cell">@device.Name</div>
                         <div class="cell">
                             @{
-                                if ((DateTime.Now - device.LastActive).TotalSeconds > 10)
+                                bool isActive = (DateTime.Now - device.LastActive).TotalSeconds < 10;
+                                string buttonDisabled = string.Empty;
+                                if (!isActive)
                                 {
+                                    buttonDisabled = "disabled";
                                     <img width="20" src="images/red.png"/>
                                 }
                                 else
@@ -41,11 +44,13 @@
                             }
                         </div>
                         <div class="cell">
-                            <button onclick="SetShutdownState(this.name)" id="shutdown" name="@device.DeviceId">Shutdown</button>
-                            <button onclick="SetRestartState(this.name)" id="restart" name="@device.DeviceId">Restart</button>
-                            <button onclick="SetSleepState(this.name)" id="sleep" name="@device.DeviceId">Sleep</button>
-                            <button onclick="SetMuteState(this.name)" id="mute" name="@device.DeviceId">Mute</button>
-                            <button onclick="DeleteDevice(this.name);" id="deleteDevice" name="@device.DeviceId">Delete device</button>
+                            <button type="button" class="btn btn-info" onclick="SetShutdownState(this.name)" id="shutdown" name="@device.DeviceId" @buttonDisabled>Shutdown</button>
+                            <button type="button" class="btn btn-info" onclick="SetRestartState(this.name)" id="restart" name="@device.DeviceId" @buttonDisabled>Restart</button>
+                            <button type="button" class="btn btn-info" onclick="SetSleepState(this.name)" id="sleep" name="@device.DeviceId" @buttonDisabled>Sleep</button>
+                            <button type="button" class="btn btn-info" onclick="SetMuteState(this.name)" id="mute" name="@device.DeviceId" @buttonDisabled>Mute</button>
+
+                            <button type="button" class="btn btn-primary" onclick="RenameDevice(this.name);" id="renameDevice" name="@device.DeviceId">Rename device</button>
+                            <button type="button" class="btn btn-danger" onclick="DeleteDevice(this.name);" id="deleteDevice" name="@device.DeviceId">Delete device</button>
                         </div>
                     </div>
                 }

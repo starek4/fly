@@ -64,5 +64,15 @@ namespace FlyWeb.Controllers
             return RedirectToAction("Index", "Admin");
         }
 
+        [HttpPost]
+        public IActionResult Rename(string deviceId, string newName)
+        {
+            Device device = _deviceRepository.GetDevice(deviceId);
+            device.Name = newName;
+            _deviceRepository.UpdateDevice(device);
+            
+            return RedirectToAction("Index", "Admin");
+        }
+
     }
 }

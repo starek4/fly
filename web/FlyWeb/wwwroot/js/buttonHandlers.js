@@ -1,8 +1,14 @@
-function DeleteDevice(name)
+function RenameDevice(name)
 {
-    $.post("/Admin/Delete",
+    var newName = prompt("Enter new device name", "My awesome device");
+    if (newName === null || newName === "")
     {
-        DeviceId: name
+        return;
+    }
+    $.post("/Admin/Rename",
+    {
+        DeviceId: name,
+        newName: newName
     },
     function(data, status)
     {
@@ -11,6 +17,26 @@ function DeleteDevice(name)
 
     setTimeout(function()
     {
+        // Refresh page to reload table
+        location.reload(true);
+    }, 200);
+}
+
+function DeleteDevice(name)
+{
+    if (!confirm("Do you really want to delete this device?"))
+    {
+        return
+    }
+    $.post("/Admin/Delete",
+        {
+            DeviceId: name
+        },
+        function (data, status) {
+            // TODO: Check return status...
+        });
+
+    setTimeout(function () {
         // Refresh page to reload table
         location.reload(true);
     }, 200);
@@ -59,8 +85,6 @@ function SetSleepState(name)
     });
     alert("Device " + name + "has been set to sleep");
 }
-
-
 
 function SetMuteState(name)
 {
