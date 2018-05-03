@@ -18,7 +18,8 @@ namespace FlyWindowsWPF
                 Device device = await RequestHandler.DoRequest(client.GetDevice(DeviceIdentifierHelper.DeviceIdentifier), controller);
                 if (device == null)
                     ErrorHandler.DeletedDevice();
-                ActionHandler.DoActions(device, controller, client);
+                else
+                    ActionHandler.DoActions(device, controller, client);
                 Thread.Sleep(QueryTimer.TimeBetweenQuery * 1000);
 
             }

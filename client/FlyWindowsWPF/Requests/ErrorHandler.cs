@@ -7,6 +7,7 @@ namespace FlyWindowsWPF.Requests
 {
     public static class ErrorHandler
     {
+        public static bool IsNetworkError;
         private static void KillApp(string message)
         {
             MessageBox.Show(message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
@@ -26,7 +27,8 @@ namespace FlyWindowsWPF.Requests
 
         public static void DeletedDevice()
         {
-            KillApp("Device was deleted. You must login again into fly application.");
+            if (!IsNetworkError)
+                KillApp("Device was deleted. You must login again into fly application.");
         }
     }
 }
