@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using DatabaseController.Repositories;
 using FlyClientApi.Enums;
 using FlyWeb.Models;
@@ -17,7 +18,7 @@ namespace FlyWeb.Controllers
         public IActionResult Index()
         {
             string login = HttpContext.Session.GetString(LoginSessionKey);
-            var devices = new List<Device>(_deviceRepository.GetDevicesByLogin(login));
+            var devices = new List<Device>(_deviceRepository.GetDevicesByLogin(login)).OrderByDescending(device => device.LastActive).ThenBy(device => device.IsFavourite);
             List<Device> filteredDevices = new List<Device>();
             foreach (var device in devices)
             {
