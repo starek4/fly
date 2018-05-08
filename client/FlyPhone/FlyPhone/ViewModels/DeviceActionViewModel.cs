@@ -154,6 +154,7 @@ namespace FlyPhone.ViewModels
 
         private async void WaitTillSuspendAndMakeNotification()
         {
+            EnableOrDisableAllButtons(false);
             var notificator = DependencyService.Get<IToastNotificator>();
             var options = new NotificationOptions
             {
