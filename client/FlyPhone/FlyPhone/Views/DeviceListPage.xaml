@@ -12,7 +12,7 @@
                 <RowDefinition Height="Auto"></RowDefinition>
                 <RowDefinition Height="Auto"></RowDefinition>
             </Grid.RowDefinitions>
-            <ListView x:Name="devicesListView" Grid.Row="0" IsPullToRefreshEnabled="True" IsRefreshing="{Binding IsRefreshing}" RefreshCommand="{Binding RefreshCommand}" ItemsSource="{Binding Devices}" SelectedItem="{Binding SelectedItem, Mode=TwoWay}" IsVisible="{Binding ToggleBlocks.OtherBlock}">
+            <ListView Grid.Row="0" IsPullToRefreshEnabled="True" IsRefreshing="{Binding IsRefreshing}" RefreshCommand="{Binding RefreshCommand}" ItemsSource="{Binding Devices}" SelectedItem="{Binding SelectedItem, Mode=TwoWay}" IsVisible="{Binding ToggleBlocks.OtherBlock}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -27,41 +27,53 @@
                                 <Image VerticalOptions="Center" Grid.Column="2" Source="green.png" HeightRequest="25" WidthRequest="25" IsVisible="{Binding IsActive}" />
                                 <Image VerticalOptions="Center" Grid.Column="2" Source="red.png" HeightRequest="25" WidthRequest="25" IsVisible="{Binding IsNotActive}" />
 
-                                <!--<Image VerticalOptions="Center" Grid.Column="3" Source="favourite.png" HeightRequest="40" WidthRequest="40" IsVisible="{Binding IsFavourite}">
-                                    <Image.GestureRecognizers>
-                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_OnTapped" />
-                                        <TapGestureRecognizer Command="{Binding Source={x:Reference DeviceListView}, Path=BindingContext.ChangeFavouriteStateButtonCommand}" CommandParameter="{Binding DeviceId}"/>
-                                    </Image.GestureRecognizers>
-                                </Image>
+                                 <!-- Xamarin.Forms package has issue for UWP app that causing unable to use GestureRecognizer in item from listview cell. So there is needed workaround for this, which is working just for UPW app. -->
+                                <ContentView Grid.Column="3">
+                                    <OnPlatform x:TypeArguments="View">
+                                        <On Platform="Android, iOS">
+                                            <StackLayout>
+                                                <Image VerticalOptions="Center" Source="favourite.png" HeightRequest="40" WidthRequest="40" IsVisible="{Binding IsFavourite}">
+                                                    <Image.GestureRecognizers>
+                                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_OnTapped" />
+                                                        <TapGestureRecognizer Command="{Binding Source={x:Reference DeviceListView}, Path=BindingContext.ChangeFavouriteStateButtonCommand}" CommandParameter="{Binding DeviceId}"/>
+                                                    </Image.GestureRecognizers>
+                                                </Image>
 
-                                <Image VerticalOptions="Center" Grid.Column="3" Source="not_favourite.png" HeightRequest="40" WidthRequest="40" IsVisible="{Binding IsNotFavourite}">
-                                    <Image.GestureRecognizers>
-                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_OnTapped" />
-                                        <TapGestureRecognizer Command="{Binding Source={x:Reference DeviceListView}, Path=BindingContext.ChangeFavouriteStateButtonCommand}" CommandParameter="{Binding DeviceId}"/>
-                                    </Image.GestureRecognizers>
-                                </Image>-->
+                                                <Image VerticalOptions="Center" Source="not_favourite.png" HeightRequest="40" WidthRequest="40" IsVisible="{Binding IsNotFavourite}">
+                                                    <Image.GestureRecognizers>
+                                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_OnTapped" />
+                                                        <TapGestureRecognizer Command="{Binding Source={x:Reference DeviceListView}, Path=BindingContext.ChangeFavouriteStateButtonCommand}" CommandParameter="{Binding DeviceId}"/>
+                                                    </Image.GestureRecognizers>
+                                                </Image>
+                                            </StackLayout>
+                                        </On>
+                                        <OnPlatform.WinPhone>
+                                            <StackLayout>
+                                                <Grid IsVisible="{Binding IsFavourite}">
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="40"></RowDefinition>
+                                                    </Grid.RowDefinitions>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="40"></ColumnDefinition>
+                                                    </Grid.ColumnDefinitions>
+                                                    <Image x:Name="FavouriteImage" Grid.Row="0" Grid.Column="0" HeightRequest="40" WidthRequest="40" VerticalOptions="Center" Source="favourite.png" />
+                                                    <Button Grid.Row="0" Grid.Column="0" HeightRequest="40" WidthRequest="40" Clicked="TapGestureRecognizer_OnTapped" Command="{Binding Source={x:Reference DeviceListView}, Path=BindingContext.ChangeFavouriteStateButtonCommand}" CommandParameter="{Binding DeviceId}" Opacity="0" />
+                                                </Grid>
 
-                                <Grid Grid.Column="3" IsVisible="{Binding IsFavourite}">
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="40"></RowDefinition>
-                                    </Grid.RowDefinitions>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="40"></ColumnDefinition>
-                                    </Grid.ColumnDefinitions>
-                                    <Image x:Name="FavouriteImage" Grid.Row="0" Grid.Column="0" HeightRequest="40" WidthRequest="40" VerticalOptions="Center" Source="favourite.png" />
-                                    <Button Grid.Row="0" Grid.Column="0" HeightRequest="40" WidthRequest="40" Clicked="TapGestureRecognizer_OnTapped" Command="{Binding Source={x:Reference DeviceListView}, Path=BindingContext.ChangeFavouriteStateButtonCommand}" CommandParameter="{Binding DeviceId}" Opacity="0" />
-                                </Grid>
-
-                                <Grid Grid.Column="3" IsVisible="{Binding IsNotFavourite}">
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="40"></RowDefinition>
-                                    </Grid.RowDefinitions>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="40"></ColumnDefinition>
-                                    </Grid.ColumnDefinitions>
-                                    <Image x:Name="NotFavouriteImage" Grid.Row="0" Grid.Column="0" HeightRequest="40" WidthRequest="40" VerticalOptions="Center" Source="not_favourite.png" />
-                                    <Button Grid.Row="0" Grid.Column="0" HeightRequest="40" WidthRequest="40" Clicked="TapGestureRecognizer_OnTapped" Command="{Binding Source={x:Reference DeviceListView}, Path=BindingContext.ChangeFavouriteStateButtonCommand}" CommandParameter="{Binding DeviceId}" Opacity="0" />
-                                </Grid>
+                                                <Grid IsVisible="{Binding IsNotFavourite}">
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="40"></RowDefinition>
+                                                    </Grid.RowDefinitions>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="40"></ColumnDefinition>
+                                                    </Grid.ColumnDefinitions>
+                                                    <Image x:Name="NotFavouriteImage" Grid.Row="0" Grid.Column="0" HeightRequest="40" WidthRequest="40" VerticalOptions="Center" Source="not_favourite.png" />
+                                                    <Button Grid.Row="0" Grid.Column="0" HeightRequest="40" WidthRequest="40" Clicked="TapGestureRecognizer_OnTapped" Command="{Binding Source={x:Reference DeviceListView}, Path=BindingContext.ChangeFavouriteStateButtonCommand}" CommandParameter="{Binding DeviceId}" Opacity="0" />
+                                                </Grid>
+                                            </StackLayout>
+                                        </OnPlatform.WinPhone>
+                                    </OnPlatform>
+                                </ContentView>
 
                             </Grid>
                         </ViewCell>
