@@ -1,5 +1,5 @@
 # Fly - remotely control your device
-Remotely control your device from a website or mobile application. You can shutdown, restart or sleep any device with Fly client. Windows devices also support mute.
+Remotely control your device from a website or mobile application. You can shutdown, restart, sleep or mute any device with Fly client.
 
 ## 1 Using fly
 You need to register on [Fly website](https://fly.starekit.cz/) first. As soon as you have a valid account you are able to log into any Fly client. If you have running Fly client on some device, you can shut down your devices from Fly website or from the mobile application.
