@@ -32,7 +32,10 @@ Android Lollipop (API 21) or higher.
 #### 2.2.2 iOS
 iOS 11.1 or higher.
 
-#### 2.2.3 WWW
+#### 2.2.3 UWP
+Windows 10 build at least 16299.
+
+#### 2.2.4 WWW
 You can also evoke any command from [Fly website](https://fly.starekit.cz/).
 
 ## 3 How do Fly clients look like?
