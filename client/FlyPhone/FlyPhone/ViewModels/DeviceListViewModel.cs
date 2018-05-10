@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using FlyPhone.Views;
+using Logger.Enviroment;
 using Xamarin.Forms;
 
 namespace FlyPhone.ViewModels
@@ -46,6 +47,16 @@ namespace FlyPhone.ViewModels
             }
         }
 
+        public double ButtonHeightRequest
+        {
+            get
+            {
+                if (EnviromentHelper.GetPlatformType() == PlatformType.Windows)
+                    return 35; // For UWP set 35
+                return -1; // For iOS and Android set default value
+            }
+        }
+
         public bool IsRefreshing
         {
             get => _isRefreshing;
@@ -68,11 +79,11 @@ namespace FlyPhone.ViewModels
             var devicesFromServer = await RequestHandler.DoRequest(Client.GetDevices(username));
             var sortedDevicesFromServer = devicesFromServer.OrderBy(device => DeviceCellConvertor.IsActive(device.LastActive)).ThenBy(device => device.IsFavourite).Reverse();
 
-            Devices.Clear();
+            Device.BeginInvokeOnMainThread(() => Devices.Clear());
 
             foreach (var device in sortedDevicesFromServer)
                 if (device.IsActionable)
-                    Devices.Add(DeviceCellConvertor.Convert(device));
+                    Device.BeginInvokeOnMainThread(() => Devices.Add(DeviceCellConvertor.Convert(device)));
         }
 
         private async void GetDevices()
@@ -92,7 +103,7 @@ namespace FlyPhone.ViewModels
                 return;
             }
 
-            Status = Devices.Count == 0 ? "No device found" : String.Empty;
+            Device.BeginInvokeOnMainThread(() => Status = Devices.Count == 0 ? "No device found" : String.Empty);
             ToggleBlocks.ActivityIndicator = false;
         }
 

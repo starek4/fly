@@ -3,27 +3,29 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2009
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlyUnix", "client\FlyUnix\FlyUnix.csproj", "{F6605AE6-3109-43CB-BE2C-2645A6384C2E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlyUnix", "client\FlyUnix\FlyUnix.csproj", "{F6605AE6-3109-43CB-BE2C-2645A6384C2E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlyWindowsWPF", "client\FlyWindowsWPF\FlyWindowsWPF.csproj", "{8F4F82E7-4438-4DFD-8161-5051C2CB5C58}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlyClientApi", "client\FlyClientApi\FlyClientApi.csproj", "{AB04D04D-2015-4A6A-BE49-3BEF6B775040}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlyClientApi", "client\FlyClientApi\FlyClientApi.csproj", "{AB04D04D-2015-4A6A-BE49-3BEF6B775040}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logger", "client\Logger\Logger.csproj", "{1C3FBB20-35A5-4E1B-A9C8-CC03AB0B1F19}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logger", "client\Logger\Logger.csproj", "{1C3FBB20-35A5-4E1B-A9C8-CC03AB0B1F19}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlyPhone.Android", "client\FlyPhone\FlyPhone.Android\FlyPhone.Android.csproj", "{05BB8D71-7714-44B2-8C96-9D3A406E202D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlyPhone.iOS", "client\FlyPhone\FlyPhone.iOS\FlyPhone.iOS.csproj", "{45D65FE3-C971-4FB9-9842-B16140E106BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlyPhone", "client\FlyPhone\FlyPhone\FlyPhone.csproj", "{D5A23ADA-7537-41ED-BCBB-305C6EB309A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlyPhone", "client\FlyPhone\FlyPhone\FlyPhone.csproj", "{D5A23ADA-7537-41ED-BCBB-305C6EB309A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseController", "web\DatabaseController\DatabaseController.csproj", "{44709FF0-5D2F-4373-BE2D-C53476F47B1E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DatabaseController", "web\DatabaseController\DatabaseController.csproj", "{44709FF0-5D2F-4373-BE2D-C53476F47B1E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlyWeb", "web\FlyWeb\FlyWeb.csproj", "{E6E61FFA-94B2-4330-A80D-05623221515A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlyWeb", "web\FlyWeb\FlyWeb.csproj", "{E6E61FFA-94B2-4330-A80D-05623221515A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "web\Models\Models.csproj", "{BF890B32-8FB1-40F1-B2AA-AF943FB8F5BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Models", "web\Models\Models.csproj", "{BF890B32-8FB1-40F1-B2AA-AF943FB8F5BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "tests\Tests\Tests.csproj", "{477656C4-5A73-443D-8BD8-A860B1831B16}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests", "tests\Tests\Tests.csproj", "{477656C4-5A73-443D-8BD8-A860B1831B16}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlyPhone.UWP", "client\FlyPhone\FlyPhone.UWP\FlyPhone.UWP.csproj", "{477EE0BA-4284-46FE-8710-0B8A10B1BF45}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -589,6 +591,66 @@ Global
 		{477656C4-5A73-443D-8BD8-A860B1831B16}.Release|x64.Build.0 = Release|Any CPU
 		{477656C4-5A73-443D-8BD8-A860B1831B16}.Release|x86.ActiveCfg = Release|Any CPU
 		{477656C4-5A73-443D-8BD8-A860B1831B16}.Release|x86.Build.0 = Release|Any CPU
+		{477EE0BA-4284-46FE-8710-0B8A10B1BF45}.Ad-Hoc|Any CPU.ActiveCfg = Release|x86
+		{477EE0BA-4284-46FE-8710-0B8A10B1BF45}.Ad-Hoc|Any CPU.Build.0 = Release|x86
+		{477EE0BA-4284-46FE-8710-0B8A10B1BF45}.Ad-Hoc|Any CPU.Deploy.0 = Release|x86
+		{477EE0BA-4284-46FE-8710-0B8A10B1BF45}.Ad-Hoc|ARM.ActiveCfg = Release|ARM
+		{477EE0BA-4284-46FE-8710-0B8A10B1BF45}.Ad-Hoc|ARM.Build.0 = Release|ARM
+		{477EE0BA-4284-46FE-8710-0B8A10B1BF45}.Ad-Hoc|ARM.Deploy.0 = Release|ARM
+		{477EE0BA-4284-46FE-8710-0B8A10B1BF45}.Ad-Hoc|iPhone.ActiveCfg = Release|x86
+		{477EE0BA-4284-46FE-8710-0B8A10B1BF45}.Ad-Hoc|iPhone.Build.0 = Release|x86
+		{477EE0BA-4284-46FE-8710-0B8A10B1BF45}.Ad-Hoc|iPhone.Deploy.0 = Release|x86
+		{477EE0BA-4284-46FE-8710-0B8A10B1BF45}.Ad-Hoc|iPhoneSimulator.ActiveCfg = Release|x86
+		{477EE0BA-4284-46FE-8710-0B8A10B1BF45}.Ad-Hoc|iPhoneSimulator.Build.0 = Release|x86
+		{477EE0BA-4284-46FE-8710-0B8A10B1BF45}.Ad-Hoc|iPhoneSimulator.Deploy.0 = Release|x86
+		{477EE0BA-4284-46FE-8710-0B8A10B1BF45}.Ad-Hoc|x64.ActiveCfg = Release|x64
+		{477EE0BA-4284-46FE-8710-0B8A10B1BF45}.Ad-Hoc|x64.Build.0 = Release|x64
+		{477EE0BA-4284-46FE-8710-0B8A10B1BF45}.Ad-Hoc|x64.Deploy.0 = Release|x64
+		{477EE0BA-4284-46FE-8710-0B8A10B1BF45}.Ad-Hoc|x86.ActiveCfg = Release|x86
+		{477EE0BA-4284-46FE-8710-0B8A10B1BF45}.Ad-Hoc|x86.Build.0 = Release|x86
+		{477EE0BA-4284-46FE-8710-0B8A10B1BF45}.Ad-Hoc|x86.Deploy.0 = Release|x86
+		{477EE0BA-4284-46FE-8710-0B8A10B1BF45}.AppStore|Any CPU.ActiveCfg = Release|x86
+		{477EE0BA-4284-46FE-8710-0B8A10B1BF45}.AppStore|Any CPU.Build.0 = Release|x86
+		{477EE0BA-4284-46FE-8710-0B8A10B1BF45}.AppStore|Any CPU.Deploy.0 = Release|x86
+		{477EE0BA-4284-46FE-8710-0B8A10B1BF45}.AppStore|ARM.ActiveCfg = Release|ARM
+		{477EE0BA-4284-46FE-8710-0B8A10B1BF45}.AppStore|ARM.Build.0 = Release|ARM
+		{477EE0BA-4284-46FE-8710-0B8A10B1BF45}.AppStore|ARM.Deploy.0 = Release|ARM
+		{477EE0BA-4284-46FE-8710-0B8A10B1BF45}.AppStore|iPhone.ActiveCfg = Release|x86
+		{477EE0BA-4284-46FE-8710-0B8A10B1BF45}.AppStore|iPhone.Build.0 = Release|x86
+		{477EE0BA-4284-46FE-8710-0B8A10B1BF45}.AppStore|iPhone.Deploy.0 = Release|x86
+		{477EE0BA-4284-46FE-8710-0B8A10B1BF45}.AppStore|iPhoneSimulator.ActiveCfg = Release|x86
+		{477EE0BA-4284-46FE-8710-0B8A10B1BF45}.AppStore|iPhoneSimulator.Build.0 = Release|x86
+		{477EE0BA-4284-46FE-8710-0B8A10B1BF45}.AppStore|iPhoneSimulator.Deploy.0 = Release|x86
+		{477EE0BA-4284-46FE-8710-0B8A10B1BF45}.AppStore|x64.ActiveCfg = Release|x64
+		{477EE0BA-4284-46FE-8710-0B8A10B1BF45}.AppStore|x64.Build.0 = Release|x64
+		{477EE0BA-4284-46FE-8710-0B8A10B1BF45}.AppStore|x64.Deploy.0 = Release|x64
+		{477EE0BA-4284-46FE-8710-0B8A10B1BF45}.AppStore|x86.ActiveCfg = Release|x86
+		{477EE0BA-4284-46FE-8710-0B8A10B1BF45}.AppStore|x86.Build.0 = Release|x86
+		{477EE0BA-4284-46FE-8710-0B8A10B1BF45}.AppStore|x86.Deploy.0 = Release|x86
+		{477EE0BA-4284-46FE-8710-0B8A10B1BF45}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{477EE0BA-4284-46FE-8710-0B8A10B1BF45}.Debug|ARM.ActiveCfg = Debug|ARM
+		{477EE0BA-4284-46FE-8710-0B8A10B1BF45}.Debug|ARM.Build.0 = Debug|ARM
+		{477EE0BA-4284-46FE-8710-0B8A10B1BF45}.Debug|ARM.Deploy.0 = Debug|ARM
+		{477EE0BA-4284-46FE-8710-0B8A10B1BF45}.Debug|iPhone.ActiveCfg = Debug|x86
+		{477EE0BA-4284-46FE-8710-0B8A10B1BF45}.Debug|iPhoneSimulator.ActiveCfg = Debug|x86
+		{477EE0BA-4284-46FE-8710-0B8A10B1BF45}.Debug|x64.ActiveCfg = Debug|x64
+		{477EE0BA-4284-46FE-8710-0B8A10B1BF45}.Debug|x64.Build.0 = Debug|x64
+		{477EE0BA-4284-46FE-8710-0B8A10B1BF45}.Debug|x64.Deploy.0 = Debug|x64
+		{477EE0BA-4284-46FE-8710-0B8A10B1BF45}.Debug|x86.ActiveCfg = Debug|x86
+		{477EE0BA-4284-46FE-8710-0B8A10B1BF45}.Debug|x86.Build.0 = Debug|x86
+		{477EE0BA-4284-46FE-8710-0B8A10B1BF45}.Debug|x86.Deploy.0 = Debug|x86
+		{477EE0BA-4284-46FE-8710-0B8A10B1BF45}.Release|Any CPU.ActiveCfg = Release|x86
+		{477EE0BA-4284-46FE-8710-0B8A10B1BF45}.Release|ARM.ActiveCfg = Release|ARM
+		{477EE0BA-4284-46FE-8710-0B8A10B1BF45}.Release|ARM.Build.0 = Release|ARM
+		{477EE0BA-4284-46FE-8710-0B8A10B1BF45}.Release|ARM.Deploy.0 = Release|ARM
+		{477EE0BA-4284-46FE-8710-0B8A10B1BF45}.Release|iPhone.ActiveCfg = Release|x86
+		{477EE0BA-4284-46FE-8710-0B8A10B1BF45}.Release|iPhoneSimulator.ActiveCfg = Release|x86
+		{477EE0BA-4284-46FE-8710-0B8A10B1BF45}.Release|x64.ActiveCfg = Release|x64
+		{477EE0BA-4284-46FE-8710-0B8A10B1BF45}.Release|x64.Build.0 = Release|x64
+		{477EE0BA-4284-46FE-8710-0B8A10B1BF45}.Release|x64.Deploy.0 = Release|x64
+		{477EE0BA-4284-46FE-8710-0B8A10B1BF45}.Release|x86.ActiveCfg = Release|x86
+		{477EE0BA-4284-46FE-8710-0B8A10B1BF45}.Release|x86.Build.0 = Release|x86
+		{477EE0BA-4284-46FE-8710-0B8A10B1BF45}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

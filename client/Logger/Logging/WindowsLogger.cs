@@ -34,7 +34,8 @@ namespace Logger.Logging
         {
             try
             {
-                File.AppendAllText(Path, FormatLog(DateTime.Now.ToString(CultureInfo.InvariantCulture), type, msg, Environment.NewLine));
+                // TODO: Find out how do logging universaly on UWP and WPF
+                //File.AppendAllText(Path, FormatLog(DateTime.Now.ToString(CultureInfo.InvariantCulture), type, msg, Environment.NewLine));
             }
             catch (Exception exception)
             {

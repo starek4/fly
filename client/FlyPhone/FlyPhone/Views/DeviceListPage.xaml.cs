@@ -14,11 +14,18 @@ namespace FlyPhone.Views
 
 	    private async void TapGestureRecognizer_OnTapped(object sender, EventArgs e)
 	    {
-	        if (sender is Image image)
+	        if (sender is Button button)
 	        {
-	            await image.FadeTo(0.2, 100);
-	            await image.FadeTo(1, 0);
+	            Grid grid = (Grid)button.Parent;
+	            foreach (var gridChild in grid.Children)
+	            {
+	                if (gridChild is Image image)
+	                {
+	                    await image.FadeTo(0.2, 100);
+	                    await image.FadeTo(1, 0);
+                    }
+	            }
 	        }
 	    }
-	}
+    }
 }
