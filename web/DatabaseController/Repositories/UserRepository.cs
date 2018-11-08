@@ -6,6 +6,14 @@ namespace DatabaseController.Repositories
 {
     public class UserRepository
     {
+        public UserRepository()
+        {
+            using (var context = new FlyDbContext())
+            {
+                context.Database.EnsureCreated();
+            }
+        }
+
         public bool CheckIfUserExist(string login)
         {
             using (var context = new FlyDbContext())

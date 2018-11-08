@@ -7,6 +7,13 @@ namespace DatabaseController.Repositories
 {
     public class DeviceRepository
     {
+        public DeviceRepository()
+        {
+            using (var context = new FlyDbContext())
+            {
+                context.Database.EnsureCreated();
+            }
+        }
         private User FindUser(string login, FlyDbContext context)
         {
             return context.Users.Include(x => x.Devices).FirstOrDefault(x => x.Login == login);
