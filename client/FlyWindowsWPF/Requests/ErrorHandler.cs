@@ -17,7 +17,6 @@ namespace FlyWindowsWPF.Requests
         public static void NetworkError(TrayController controller)
         {
             controller.MakeIconGray();
-            controller.MakeTooltip("Fly client", "Something wrong with internet connection...", BalloonIcon.None);
         }
 
         public static void DatabaseError()
