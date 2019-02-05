@@ -42,4 +42,4 @@ You can also evoke any command from [Fly website](https://fly.starekit.cz/).
 ![Fly architecture](https://starekit.cz/git/fly_wide.png)
 
 ## 4 Fly architecture
-![Fly architecture](https://starekit.cz/git/fly_architecture_v21.png)
+![Fly architecture](https://starekit.cz/git/fly_architecture_v22.png)
